@@ -8,6 +8,7 @@
 
 ## CKES Development Artifacts
 
+- [Reference Implementation Role and Domain Independence](../Architecture/Reference_Implementation_Role_and_Domain_Independence.md) — foundational architectural direction for domain and source independence
 - [Pragmatic Canonicalization Research and Validation](Pragmatic_Canonicalization_Research_and_Validation.md) — research direction and validation program
 - [CRA Findings Report](CRA_Findings_Report.md) — labeled experimental findings for CRA review
 - [Recipe Vault Source Integration](../Architecture/Recipe_Vault_Source_Integration.md) — authoritative TRV integration architecture

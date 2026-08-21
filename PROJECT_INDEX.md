@@ -15,6 +15,7 @@ Primary documentation hub for humans and AI assistants working on CKES.
 - [Architecture Decisions](ARCHITECTURE_DECISIONS.md)
 - [ASR Bootstrap Report](ASR_BOOTSTRAP_REPORT.md)
 - [Architecture](docs/Architecture/README.md)
+- [Reference Implementation Role and Domain Independence](docs/Architecture/Reference_Implementation_Role_and_Domain_Independence.md) — foundational CKES architectural direction
 - [Specifications](docs/Specifications/README.md)
 - [Development](docs/Development/README.md)
 - [Pragmatic Canonicalization Research and Validation](docs/Development/Pragmatic_Canonicalization_Research_and_Validation.md) — research direction and validation program

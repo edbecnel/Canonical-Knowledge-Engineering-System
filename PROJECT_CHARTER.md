@@ -68,6 +68,7 @@ Determine how CRA-adopting systems can acquire, organize, evaluate, canonicalize
 
 - [Project Index](PROJECT_INDEX.md)
 - [CKES-0000](CKES-0000.md)
+- [Reference Implementation Role and Domain Independence](docs/Architecture/Reference_Implementation_Role_and_Domain_Independence.md)
 - [Architecture](docs/Architecture/README.md)
 - [POC README](poc/README.md)
 - [ASR Bootstrap Report](ASR_BOOTSTRAP_REPORT.md)
