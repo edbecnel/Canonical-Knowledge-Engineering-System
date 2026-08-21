@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "name": "CALS Culinary Knowledge Canonicalization Policy",
+  "classification": "CALS domain policy (experimental)",
+  "rules": {
+    "conceptCreation": {
+      "requireMeaningfulDistinction": true,
+      "preferReuseOverCreation": true,
+      "rejectSynonymOnlyCreation": true
+    },
+    "knowledgeAdmission": {
+      "autoAdmitSyntheticProvenance": true,
+      "autoAdmitLowRisk": true,
+      "escalateHighRisk": true,
+      "highRiskCategories": ["food_safety", "allergen", "toxicity", "preservation_safety"]
+    },
+    "semanticActions": {
+      "EQUIVALENT": "reuse_existing",
+      "SUBSUMED_BY_EXISTING": "reject_new_identity",
+      "MORE_SPECIFIC_THAN_EXISTING": "extend_or_evidence",
+      "MORE_GENERAL_THAN_EXISTING": "defer",
+      "PARTIALLY_OVERLAPS": "evidence_only",
+      "EXTENDS_EXISTING": "propose_extension",
+      "CONTRADICTS": "preserve_conflict",
+      "DISTINCT": "evaluate_new_identity",
+      "UNCERTAIN": "defer"
+    },
+    "canonicalEconomy": {
+      "maxNewConceptsPerThousandSourceItems": 15,
+      "warnLinearGrowth": true
+    },
+    "riskTiers": {
+      "low": ["terminology", "cuisine_classification", "stylistic_practice"],
+      "ordinary": ["recipe", "technique", "ingredient_behavior"],
+      "high": ["food_safety", "allergen", "toxicity"]
+    }
+  },
+  "thresholds": {
+    "equivalentConfidence": 0.85,
+    "distinctConfidence": 0.75,
+    "deferBelow": 0.6
+  }
+}

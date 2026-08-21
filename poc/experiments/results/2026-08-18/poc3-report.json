@@ -1,0 +1,41 @@
+{
+  "metrics": {
+    "corpusStage": "poc3",
+    "inputChanges": 500,
+    "skippedUnchanged": 0,
+    "analyzed": 500,
+    "mappedToExisting": 3460,
+    "evidenceOnly": 0,
+    "deferred": 1120,
+    "conflicts": 0,
+    "newConceptsProposed": 7,
+    "newRelationshipsProposed": 0,
+    "newKnowledgeObjects": 0,
+    "automaticallyAdmitted": 1941,
+    "escalated": 0,
+    "aiCalls": 0,
+    "aiTokens": 0,
+    "aiCostUsd": 0,
+    "avgCandidateSetSize": 1.2461303684325267,
+    "processingTimeMs": 1939
+  },
+  "growth": {
+    "corpusStage": "poc3",
+    "sourceItemCount": 25000,
+    "newConceptsPer1000": 0.28,
+    "newRelationshipsPer1000": 0,
+    "newKnowledgeObjectsPer1000": 0,
+    "mappingRate": 6.92,
+    "evidenceOnlyRate": 0,
+    "aiCostPerSourceItem": 0
+  },
+  "groundTruth": {
+    "corpusId": "CALS-POC-001",
+    "totalGroundTruth": 25237,
+    "evaluated": 0,
+    "correctMappings": 0,
+    "precision": 0,
+    "recall": 0
+  },
+  "report": "CKES CALS Canonicalization Run\n\nCorpus stage: poc3\nInput source changes: 500\nSkipped (unchanged hash): 0\nAnalyzed: 500\nMapped to existing knowledge: 3460\nEvidence only: 0\nDeferred: 1120\nConflicts: 0\nNew concepts proposed: 7\nNew relationships proposed: 0\nNew canonical knowledge objects: 0\nAutomatically admitted: 1941\nEscalated: 0\nAI calls: 0\nAI tokens: 0\nAI cost (USD): 0.0000\nAvg candidate set size: 1.25\nProcessing time (ms): 1939\n\nCommitted changes: 1941"
+}

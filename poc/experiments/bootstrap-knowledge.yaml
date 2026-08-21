@@ -1,0 +1,34 @@
+concepts:
+  - label: Chicken
+    description: Poultry used in culinary preparations
+  - label: Beef
+  - label: Deep Frying
+    description: Cooking food submerged in hot oil
+  - label: Pan Frying
+  - label: Stir-Frying
+  - label: Roux
+  - label: Stock
+  - label: Broth
+  - label: Marination
+  - label: Dredging
+  - label: Baking
+  - label: Steaming
+  - label: Fried Chicken
+    description: Chicken coated and fried until crisp
+relationships:
+  - from: Fried Chicken
+    to: Deep Frying
+    type: uses-technique
+  - from: Fried Chicken
+    to: Chicken
+    type: is-a-kind-of
+  - from: Fried Chicken
+    to: Marination
+    type: has-preparation-stage
+knowledgeObjects:
+  - subject: Fried Chicken
+    aspect: Marination
+    text: Marinate chicken pieces in seasoned buttermilk for at least 4 hours before dredging and frying.
+  - subject: Roux
+    aspect: Preparation
+    text: Cook equal parts fat and flour until desired color for thickening sauces and gumbo.

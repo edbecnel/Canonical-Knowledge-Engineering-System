@@ -1,0 +1,53 @@
+corpus: CALS-POC-001
+generationSeed: 18427
+schemaVersion: "1.10"
+syntheticMarkers:
+  - POC
+  - SYNTHETIC
+  - NON-AUTHORITATIVE
+stages:
+  seed:
+    targetCount: 50
+  poc1:
+    targetCount: 500
+  poc2:
+    targetCount: 5000
+  poc3:
+    targetCount: 25000
+families:
+  FriedChicken:
+    baseRecipes: 2
+    paraphrasesPerBase: 2
+    nearDuplicates: 2
+    regionalVariants: 1
+    extensions: 1
+    contradictions: 1
+    erroneousVariants: 1
+  Gumbo:
+    baseRecipes: 2
+    paraphrasesPerBase: 1
+    nearDuplicates: 1
+    contradictions: 1
+  Bread:
+    baseRecipes: 2
+    paraphrasesPerBase: 1
+    nearDuplicates: 1
+  Sauces:
+    baseRecipes: 1
+    paraphrasesPerBase: 1
+  Stocks:
+    baseRecipes: 1
+    paraphrasesPerBase: 1
+lifecycleSimulation:
+  schedule:
+    - day: 1
+      creates: 10
+    - day: 2
+      modifies: 3
+      deletes: 1
+    - day: 3
+      imports: 5
+      modifies: 2
+    - day: 14
+      modifies: 5
+      deletes: 2

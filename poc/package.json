@@ -1,0 +1,35 @@
+{
+  "name": "ckes-poc",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:reset": "tsx scripts/reset-db.ts",
+    "bootstrap:knowledge": "tsx scripts/bootstrap-knowledge.ts",
+    "corpus:seed": "tsx scripts/generate-corpus.ts --manifest experiments/manifests/CALS-POC-001.yaml --stage seed",
+    "corpus:poc1": "tsx scripts/generate-corpus.ts --manifest experiments/manifests/CALS-POC-001.yaml --stage poc1",
+    "corpus:poc2": "tsx scripts/generate-corpus.ts --manifest experiments/manifests/CALS-POC-001.yaml --stage poc2",
+    "corpus:poc3": "tsx scripts/generate-corpus.ts --manifest experiments/manifests/CALS-POC-001.yaml --stage poc3",
+    "lifecycle:run": "tsx scripts/run-lifecycle.ts",
+    "pipeline:run": "tsx scripts/run-pipeline.ts",
+    "experiment:progressive": "tsx scripts/run-progressive-experiment.ts",
+    "evaluate": "tsx scripts/evaluate-ground-truth.ts",
+    "reproduce": "bash scripts/reproduce-experiment.sh"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/pg": "^8.11.10",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "openai": "^4.77.0",
+    "pg": "^8.13.1",
+    "uuid": "^11.0.3",
+    "yaml": "^2.6.1"
+  }
+}

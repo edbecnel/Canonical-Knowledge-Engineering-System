@@ -1,0 +1,170 @@
+[
+  {
+    "stage": "seed",
+    "metrics": {
+      "corpusStage": "seed",
+      "inputChanges": 13,
+      "skippedUnchanged": 3,
+      "analyzed": 10,
+      "mappedToExisting": 67,
+      "evidenceOnly": 0,
+      "deferred": 29,
+      "conflicts": 0,
+      "newConceptsProposed": 1,
+      "newRelationshipsProposed": 0,
+      "newKnowledgeObjects": 0,
+      "automaticallyAdmitted": 31,
+      "escalated": 0,
+      "aiCalls": 0,
+      "aiTokens": 0,
+      "aiCostUsd": 0,
+      "avgCandidateSetSize": 1,
+      "processingTimeMs": 80
+    },
+    "growth": {
+      "corpusStage": "seed",
+      "sourceItemCount": 50,
+      "newConceptsPer1000": 20,
+      "newRelationshipsPer1000": 0,
+      "newKnowledgeObjectsPer1000": 0,
+      "mappingRate": 6.7,
+      "evidenceOnlyRate": 0,
+      "aiCostPerSourceItem": 0
+    },
+    "groundTruth": {
+      "corpusId": "CALS-POC-001",
+      "totalGroundTruth": 53,
+      "evaluated": 0,
+      "correctMappings": 0,
+      "precision": 0,
+      "recall": 0
+    },
+    "report": "CKES CALS Canonicalization Run\n\nCorpus stage: seed\nInput source changes: 13\nSkipped (unchanged hash): 3\nAnalyzed: 10\nMapped to existing knowledge: 67\nEvidence only: 0\nDeferred: 29\nConflicts: 0\nNew concepts proposed: 1\nNew relationships proposed: 0\nNew canonical knowledge objects: 0\nAutomatically admitted: 31\nEscalated: 0\nAI calls: 0\nAI tokens: 0\nAI cost (USD): 0.0000\nAvg candidate set size: 1.00\nProcessing time (ms): 80\n\nCommitted changes: 31"
+  },
+  {
+    "stage": "poc1",
+    "metrics": {
+      "corpusStage": "poc1",
+      "inputChanges": 456,
+      "skippedUnchanged": 0,
+      "analyzed": 456,
+      "mappedToExisting": 2392,
+      "evidenceOnly": 0,
+      "deferred": 1777,
+      "conflicts": 0,
+      "newConceptsProposed": 7,
+      "newRelationshipsProposed": 0,
+      "newKnowledgeObjects": 0,
+      "automaticallyAdmitted": 953,
+      "escalated": 0,
+      "aiCalls": 0,
+      "aiTokens": 0,
+      "aiCostUsd": 0,
+      "avgCandidateSetSize": 0.9252873563218391,
+      "processingTimeMs": 1685
+    },
+    "growth": {
+      "corpusStage": "poc1",
+      "sourceItemCount": 500,
+      "newConceptsPer1000": 14,
+      "newRelationshipsPer1000": 0,
+      "newKnowledgeObjectsPer1000": 0,
+      "mappingRate": 5.245614035087719,
+      "evidenceOnlyRate": 0,
+      "aiCostPerSourceItem": 0
+    },
+    "groundTruth": {
+      "corpusId": "CALS-POC-001",
+      "totalGroundTruth": 509,
+      "evaluated": 0,
+      "correctMappings": 0,
+      "precision": 0,
+      "recall": 0
+    },
+    "report": "CKES CALS Canonicalization Run\n\nCorpus stage: poc1\nInput source changes: 456\nSkipped (unchanged hash): 0\nAnalyzed: 456\nMapped to existing knowledge: 2392\nEvidence only: 0\nDeferred: 1777\nConflicts: 0\nNew concepts proposed: 7\nNew relationships proposed: 0\nNew canonical knowledge objects: 0\nAutomatically admitted: 953\nEscalated: 0\nAI calls: 0\nAI tokens: 0\nAI cost (USD): 0.0000\nAvg candidate set size: 0.93\nProcessing time (ms): 1685\n\nCommitted changes: 953"
+  },
+  {
+    "stage": "poc2",
+    "metrics": {
+      "corpusStage": "poc2",
+      "inputChanges": 500,
+      "skippedUnchanged": 0,
+      "analyzed": 500,
+      "mappedToExisting": 3546,
+      "evidenceOnly": 0,
+      "deferred": 1173,
+      "conflicts": 0,
+      "newConceptsProposed": 8,
+      "newRelationshipsProposed": 0,
+      "newKnowledgeObjects": 0,
+      "automaticallyAdmitted": 1868,
+      "escalated": 0,
+      "aiCalls": 0,
+      "aiTokens": 0,
+      "aiCostUsd": 0,
+      "avgCandidateSetSize": 1.1760101544319865,
+      "processingTimeMs": 1942
+    },
+    "growth": {
+      "corpusStage": "poc2",
+      "sourceItemCount": 5000,
+      "newConceptsPer1000": 1.6,
+      "newRelationshipsPer1000": 0,
+      "newKnowledgeObjectsPer1000": 0,
+      "mappingRate": 7.092,
+      "evidenceOnlyRate": 0,
+      "aiCostPerSourceItem": 0
+    },
+    "groundTruth": {
+      "corpusId": "CALS-POC-001",
+      "totalGroundTruth": 5119,
+      "evaluated": 0,
+      "correctMappings": 0,
+      "precision": 0,
+      "recall": 0
+    },
+    "report": "CKES CALS Canonicalization Run\n\nCorpus stage: poc2\nInput source changes: 500\nSkipped (unchanged hash): 0\nAnalyzed: 500\nMapped to existing knowledge: 3546\nEvidence only: 0\nDeferred: 1173\nConflicts: 0\nNew concepts proposed: 8\nNew relationships proposed: 0\nNew canonical knowledge objects: 0\nAutomatically admitted: 1868\nEscalated: 0\nAI calls: 0\nAI tokens: 0\nAI cost (USD): 0.0000\nAvg candidate set size: 1.18\nProcessing time (ms): 1942\n\nCommitted changes: 1868"
+  },
+  {
+    "stage": "poc3",
+    "metrics": {
+      "corpusStage": "poc3",
+      "inputChanges": 500,
+      "skippedUnchanged": 0,
+      "analyzed": 500,
+      "mappedToExisting": 3460,
+      "evidenceOnly": 0,
+      "deferred": 1120,
+      "conflicts": 0,
+      "newConceptsProposed": 7,
+      "newRelationshipsProposed": 0,
+      "newKnowledgeObjects": 0,
+      "automaticallyAdmitted": 1941,
+      "escalated": 0,
+      "aiCalls": 0,
+      "aiTokens": 0,
+      "aiCostUsd": 0,
+      "avgCandidateSetSize": 1.2461303684325267,
+      "processingTimeMs": 1939
+    },
+    "growth": {
+      "corpusStage": "poc3",
+      "sourceItemCount": 25000,
+      "newConceptsPer1000": 0.28,
+      "newRelationshipsPer1000": 0,
+      "newKnowledgeObjectsPer1000": 0,
+      "mappingRate": 6.92,
+      "evidenceOnlyRate": 0,
+      "aiCostPerSourceItem": 0
+    },
+    "groundTruth": {
+      "corpusId": "CALS-POC-001",
+      "totalGroundTruth": 25237,
+      "evaluated": 0,
+      "correctMappings": 0,
+      "precision": 0,
+      "recall": 0
+    },
+    "report": "CKES CALS Canonicalization Run\n\nCorpus stage: poc3\nInput source changes: 500\nSkipped (unchanged hash): 0\nAnalyzed: 500\nMapped to existing knowledge: 3460\nEvidence only: 0\nDeferred: 1120\nConflicts: 0\nNew concepts proposed: 7\nNew relationships proposed: 0\nNew canonical knowledge objects: 0\nAutomatically admitted: 1941\nEscalated: 0\nAI calls: 0\nAI tokens: 0\nAI cost (USD): 0.0000\nAvg candidate set size: 1.25\nProcessing time (ms): 1939\n\nCommitted changes: 1941"
+  }
+]

@@ -1,0 +1,9 @@
+reports/conformance/
+node_modules/
+dist/
+.env
+.env.local
+*.log
+.DS_Store
+poc/experiments/results/**/raw/
+.obsidian/

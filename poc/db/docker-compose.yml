@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: ckes_poc_postgres
+    environment:
+      POSTGRES_USER: ckes
+      POSTGRES_PASSWORD: ckes_dev
+      POSTGRES_DB: ckes_poc
+    ports:
+      - "5433:5432"
+    volumes:
+      - ckes_poc_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ckes -d ckes_poc"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  ckes_poc_pgdata:

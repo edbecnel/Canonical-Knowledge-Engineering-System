@@ -1,0 +1,14 @@
+{
+  "name": "@ckes/corpus",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "dependencies": {
+    "@ckes/adapter": "*",
+    "pg": "^8.13.1",
+    "uuid": "^11.0.3",
+    "yaml": "^2.6.1"
+  }
+}
