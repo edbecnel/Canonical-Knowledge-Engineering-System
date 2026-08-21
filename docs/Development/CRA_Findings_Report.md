@@ -5,7 +5,7 @@
 > **Status:** Draft
 > **Owner:** Architecture Team
 > **Classification:** Candidate CRA findings (experimental)
-> **Last Reviewed:** 2026-08-18
+> **Last Reviewed:** 2026-08-22
 
 ## Purpose
 
@@ -20,6 +20,7 @@ Labeled findings from CKES POC experiments that may inform CRA specifications, w
 | CKES implementation choice | Technology-specific; not architectural |
 | CALS domain policy | Culinary-specific |
 | Experimental result | Measured outcome |
+| Candidate CRA principle | Proposed in [CRA Pragmatic Canonicality and Delegated Authority](https://github.com/edbecnel/Canonical-Representation-Architecture/blob/main/docs/Architecture/Discovery_Records/Pragmatic_Canonicality_and_Delegated_Authority.md) §17; under CRA evaluation via [AWI-0005](https://github.com/edbecnel/Canonical-Representation-Architecture/blob/main/docs/Architecture/Watch_Items/AWI-0005-delegated-authority-and-pragmatic-canonicalization.md) |
 | Candidate CRA finding | May warrant formalization |
 
 ## Findings

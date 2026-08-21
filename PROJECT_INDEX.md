@@ -32,7 +32,7 @@ Primary documentation hub for humans and AI assistants working on CKES.
 
 | Project | Link |
 |---------|------|
-| CRA | [Canonical-Representation-Architecture](https://github.com/edbecnel/Canonical-Representation-Architecture) |
+| CRA | [Canonical-Representation-Architecture](https://github.com/edbecnel/Canonical-Representation-Architecture) — see [Pragmatic Canonicality and Delegated Authority](https://github.com/edbecnel/Canonical-Representation-Architecture/blob/main/docs/Architecture/Discovery_Records/Pragmatic_Canonicality_and_Delegated_Authority.md) (third-wave CRA discovery; §17 candidate principles) |
 | CALS | [Culinary-Arts-Learning-System](https://github.com/edbecnel/Culinary-Arts-Learning-System) |
 | Recipe Vault | [TheRecipeVault](https://github.com/edbecnel/TheRecipeVault) |
 | EDF | [Engineering-Documentation-Framework](https://github.com/edbecnel/Engineering-Documentation-Framework) |
@@ -50,4 +50,4 @@ AI assistants should begin here, follow links to authoritative documents, classi
 
 ## Last Reviewed
 
-2026-08-18
+2026-08-22
