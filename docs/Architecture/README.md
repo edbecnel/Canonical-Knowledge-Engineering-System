@@ -10,6 +10,8 @@ System architecture, technical design, diagrams, and architecture decisions.
 
 - [Architecture Decision Records](ADRs/README.md)
 - [Project Architecture Decisions](../../ARCHITECTURE_DECISIONS.md)
+- [Source Change Contract](Source_Change_Contract.md)
+- [Recipe Vault Source Integration](Recipe_Vault_Source_Integration.md)
 
 ## What Belongs Here
 

@@ -46,7 +46,16 @@ interface KnowledgeSourceChange {
 - Idempotency key: `(source_system, source_object_id, source_revision)`
 - Expensive semantic processing triggered only when `contentHash` differs from last processed
 
+## Adapter implementation notes
+
+- `sourceRevision` is a **string**—timestamp, semver, or UUID are valid; an integer revision column on the source is optional.
+- `contentHash` may be **computed by the adapter** from fetched content; a source-stored fingerprint is an optimization.
+- Change feeds may be **adapter-synthesized** (poll + diff) rather than requiring a source-native outbox table.
+
+See [Recipe Vault Source Integration](Recipe_Vault_Source_Integration.md) for production Recipe Vault mapping.
+
 ## Related Documents
 
-- [ADR-0002](../ADRs/ADR-0002-poc-typescript-postgresql.md)
-- [Recipe Vault Change Proposals](../../Development/Recipe_Vault_Change_Proposals.md)
+- [ADR-0002](ADRs/ADR-0002-poc-typescript-postgresql.md)
+- [Recipe Vault Source Integration](Recipe_Vault_Source_Integration.md)
+- [Recipe Vault Change Proposals](../Development/Recipe_Vault_Change_Proposals.md) — superseded framing; POC schema notes only

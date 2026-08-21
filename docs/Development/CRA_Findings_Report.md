@@ -93,5 +93,6 @@ Out of POC scope. Single `ckes:cals` scope only.
 ## Related Documents
 
 - [CKES Watch Items](../Architecture/Watch_Items/README.md)
-- [Recipe Vault Change Proposals](Recipe_Vault_Change_Proposals.md)
+- [Recipe Vault Source Integration](../Architecture/Recipe_Vault_Source_Integration.md)
+- [Recipe Vault Change Proposals](Recipe_Vault_Change_Proposals.md) — superseded framing
 - [POC Results](../../poc/experiments/results/)

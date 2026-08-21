@@ -26,6 +26,7 @@ Primary documentation hub for humans and AI assistants working on CKES.
 
 - [POC README](poc/README.md) — experimental, non-normative reference implementation
 - [Source Change Contract](docs/Architecture/Source_Change_Contract.md)
+- [Recipe Vault Source Integration](docs/Architecture/Recipe_Vault_Source_Integration.md) — TRV capabilities and CKES adapter mapping
 - [CALS Canonicalization Policy](poc/packages/policy/CALS_Culinary_Knowledge_Canonicalization_Policy.md)
 
 ## External References

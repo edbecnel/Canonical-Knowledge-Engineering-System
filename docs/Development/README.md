@@ -10,7 +10,8 @@
 
 - [Pragmatic Canonicalization Research and Validation](Pragmatic_Canonicalization_Research_and_Validation.md) — research direction and validation program
 - [CRA Findings Report](CRA_Findings_Report.md) — labeled experimental findings for CRA review
-- [Recipe Vault Change Proposals](Recipe_Vault_Change_Proposals.md) — proposed source-system improvements
+- [Recipe Vault Source Integration](../Architecture/Recipe_Vault_Source_Integration.md) — authoritative TRV integration architecture
+- [Recipe Vault Change Proposals](Recipe_Vault_Change_Proposals.md) — superseded; POC synthetic schema notes
 - [POC README](../../poc/README.md) — experimental reference implementation
 
 ## Related Documents
