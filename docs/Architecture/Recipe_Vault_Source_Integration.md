@@ -370,6 +370,7 @@ When CKES is ready to consume live TRV:
 ### Recipe Vault (external)
 
 - [TheRecipeVault](https://github.com/edbecnel/TheRecipeVault)
+- TRV `docs/CKES_Source_Integration_Handover.md` — **deferred TRV change proposals for TRV review**
 - TRV `public/schemas/recipe.v1.json`
 - TRV Launch 1.0 gap matrix and MASTER_TASK_LIST (VH, provenance)
 
