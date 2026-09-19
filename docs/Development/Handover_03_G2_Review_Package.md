@@ -112,7 +112,7 @@ None observed during generation/qualification (no execution runs in G2). Constru
 
 ## Git commit
 
-Recorded after commit (see `git log -1`).
+**`b291e5c`** — Add Handover 3 G2 candidate benchmark packs and review package.
 
 ## Architect decision requested
 
