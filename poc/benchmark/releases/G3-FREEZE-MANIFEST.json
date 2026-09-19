@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "gate": "G3",
+  "frozenAt": "2026-09-19T12:00:00.000Z",
+  "packs": [
+    {
+      "packId": "CKES-BENCHMARK-ANCHOR-001",
+      "packVersion": "1.0.0",
+      "contentHash": "2d65a6cf59c486ffba20c3571d69a918ac414f1d89d2641d25973f29e249a76c",
+      "canonicalSeedHash": "ebdc65c2068ba38c301a7b3f2b796c7843d65090c259dcd2dc203fcfacd50cb9",
+      "releasedScenarios": 40,
+      "jsonPath": "benchmark/releases/anchor/CKES-BENCHMARK-ANCHOR-001.json",
+      "mdPath": "benchmark/releases/anchor/CKES-BENCHMARK-ANCHOR-001.md"
+    },
+    {
+      "packId": "CKES-BENCHMARK-STATISTICAL-001",
+      "packVersion": "1.0.0",
+      "contentHash": "5e5d0af0a409548ba0f889f8c0f4d5d96334d2c2412d746a8a535ff057dfcc18",
+      "canonicalSeedHash": "06d9a7ab6345e22ad65d4c1e17e741d68f4661ae987a2a0b6b350fc833fb2cd2",
+      "releasedScenarios": 200,
+      "jsonPath": "benchmark/releases/statistical/CKES-BENCHMARK-STATISTICAL-001.json",
+      "mdPath": "benchmark/releases/statistical/CKES-BENCHMARK-STATISTICAL-001.md"
+    },
+    {
+      "packId": "CKES-BENCHMARK-CHALLENGE-001",
+      "packVersion": "1.0.0",
+      "contentHash": "00d339d3c33c09d6c2276ac9222c588d22c1a28d1510b2c310da8da40e954ecc",
+      "canonicalSeedHash": "439cf1e5cfcda62b9f5cf88e329e145a9f5857a9749c41d690308bf83f32d41c",
+      "releasedScenarios": 80,
+      "jsonPath": "benchmark/releases/challenge/CKES-BENCHMARK-CHALLENGE-001.json",
+      "mdPath": "benchmark/releases/challenge/CKES-BENCHMARK-CHALLENGE-001.md"
+    }
+  ]
+}

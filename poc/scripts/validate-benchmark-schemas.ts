@@ -66,6 +66,31 @@ function main(): void {
     throw new Error('Derived Markdown drift: run npm run benchmark:render-md -- --write');
   }
   console.log('OK derived Markdown matches committed example');
+
+  const releaseSuites = ['anchor', 'statistical', 'challenge'];
+  const mdAt = '2026-09-19T12:00:00.000Z';
+  for (const suite of releaseSuites) {
+    const relDir = join(root, 'benchmark/releases', suite);
+    for (const file of readdirSync(relDir).filter((f) => f.endsWith('.json'))) {
+      const doc = load(`benchmark/releases/${suite}/${file}`);
+      validateBenchmarkPack(doc);
+      console.log(`OK release pack: ${suite}/${file}`);
+      const mdPath = join(relDir, file.replace('.json', '.md'));
+      const rendered = renderBenchmarkPackMarkdown(doc, {
+        sourceArtifactId: file,
+        schemaVersion: doc.schemaVersion as string,
+        contentVersion: (doc.pack as { packVersion: string }).packVersion,
+        contentHash: (doc.pack as { contentHash: string }).contentHash,
+        generatedAt: mdAt,
+      });
+      const expected = readFileSync(mdPath, 'utf8');
+      const norm = (s: string) => stripNonDeterministicMarkdown(s).trim();
+      if (norm(rendered) !== norm(expected)) {
+        throw new Error(`Release Markdown drift: ${suite}/${file}`);
+      }
+      console.log(`OK release Markdown: ${suite}/${file}`);
+    }
+  }
 }
 
 main();

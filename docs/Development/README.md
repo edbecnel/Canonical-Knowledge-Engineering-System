@@ -21,7 +21,8 @@
 - [CKES POC Handover 02 brief](CKES_POC_Handover_02_Scenario_Harness_and_Lab.md) — archived handover source (integrated)
 - [Handover 03 Implementation Plan](Handover_03_Implementation_Plan.md) — benchmark generation, qualification, Reference Baseline 001 (G1 complete)
 - [Handover 03 G1 Implementation Report](Handover_03_G1_Implementation_Report.md) — qualification/scoring tooling (2026-09-19)
-- [Handover 03 G2 Review Package](Handover_03_G2_Review_Package.md) — candidate benchmark packs (awaiting G3)
+- [Handover 03 G2 Review Package](Handover_03_G2_Review_Package.md) — candidate benchmark packs (G2 accepted)
+- [Handover 03 G3 Freeze and G4 Readiness Report](Handover_03_G3_Freeze_and_G4_Readiness_Report.md) — official frozen packs (awaiting G4)
 - [CKES POC Handover 03 brief](CKES_POC_Handover_03_Benchmark_Generation_and_Reference_Baseline.md) — handover source (planning)
 
 ## Related Documents

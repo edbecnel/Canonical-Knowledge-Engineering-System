@@ -1,0 +1,3759 @@
+{
+  "schemaVersion": "1.0.0",
+  "pack": {
+    "packId": "CKES-BENCHMARK-STATISTICAL-001",
+    "name": "CKES Statistical Benchmark 001",
+    "suiteClass": "statistical",
+    "packVersion": "1.0.0",
+    "status": "released",
+    "description": "Official frozen benchmark release (Handover 3 G3). Immutable for scored runs; corrections require new packVersion.",
+    "createdAt": "2026-09-19T07:24:48.303Z",
+    "canonicalSeedHash": "06d9a7ab6345e22ad65d4c1e17e741d68f4661ae987a2a0b6b350fc833fb2cd2",
+    "domains": [
+      "culinary",
+      "electronics"
+    ],
+    "generationMethod": "deterministic_construction",
+    "generatingTool": "ckes-g2-pack-generator/1.0.0",
+    "promptTemplateVersion": "construction-rules-v1",
+    "humanReviewStatus": "g3_frozen_released",
+    "compatibleHarnessVersions": [
+      "0.1.0"
+    ],
+    "contentHash": "5e5d0af0a409548ba0f889f8c0f4d5d96334d2c2412d746a8a535ff057dfcc18"
+  },
+  "executionRequirements": {
+    "supportedExecutionModes": [
+      "decision_slice",
+      "full_pipeline"
+    ],
+    "defaultExecutionMode": "decision_slice",
+    "databaseProfile": "clean",
+    "scenarioIsolationRequired": true,
+    "retrievalModesAllowed": [
+      "deterministic_fixture"
+    ],
+    "llmPolicy": "allowed"
+  },
+  "canonicalSeedMaterial": [
+    {
+      "seedId": "CK-CUL-02",
+      "entityType": "concept",
+      "label": "Maillard browning",
+      "statement": "Maillard reactions create flavor when proteins and sugars heat.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-CUL-03",
+      "entityType": "concept",
+      "label": "Sous vide",
+      "statement": "Sous vide cooks food in a temperature-controlled water bath.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-CUL-04",
+      "entityType": "concept",
+      "label": "Emulsify vinaigrette",
+      "statement": "Emulsification binds oil and acid into a stable dressing.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-CUL-05",
+      "entityType": "concept",
+      "label": "Proof bread dough",
+      "statement": "Proofing allows yeast fermentation before baking.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-CUL-06",
+      "entityType": "concept",
+      "label": "Deglaze pan",
+      "statement": "Deglazing dissolves fond with liquid to make sauce.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-CUL-07",
+      "entityType": "concept",
+      "label": "Blanch vegetables",
+      "statement": "Blanching briefly boils then shocks vegetables in ice water.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-CUL-08",
+      "entityType": "concept",
+      "label": "Caramelize onions",
+      "statement": "Slow cooking onions until sugars brown is caramelization.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-CUL-12",
+      "entityType": "concept",
+      "label": "Clarify stock",
+      "statement": "Clarification removes particulates for clear broth.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-ELS-03",
+      "entityType": "concept",
+      "label": "PWM duty cycle",
+      "statement": "PWM duty cycle is the fraction of time a signal is high.",
+      "domain": "electronics"
+    },
+    {
+      "seedId": "CK-ELS-05",
+      "entityType": "concept",
+      "label": "Decoupling capacitor",
+      "statement": "Decoupling capacitors filter local supply noise.",
+      "domain": "electronics"
+    },
+    {
+      "seedId": "CK-ELS-06",
+      "entityType": "concept",
+      "label": "ADC sampling",
+      "statement": "An ADC converts analog voltage to digital samples.",
+      "domain": "electronics"
+    },
+    {
+      "seedId": "CK-ELS-07",
+      "entityType": "concept",
+      "label": "UART framing",
+      "statement": "UART frames bytes with start and stop bits.",
+      "domain": "electronics"
+    },
+    {
+      "seedId": "CK-ELS-08",
+      "entityType": "concept",
+      "label": "Ground plane",
+      "statement": "A ground plane provides low-impedance return path.",
+      "domain": "electronics"
+    },
+    {
+      "seedId": "CK-ELS-09",
+      "entityType": "concept",
+      "label": "ESD protection",
+      "statement": "ESD diodes shunt static discharge away from IC pins.",
+      "domain": "electronics"
+    },
+    {
+      "seedId": "CK-ELS-10",
+      "entityType": "concept",
+      "label": "Crystal oscillator",
+      "statement": "A crystal sets a stable clock frequency for a MCU.",
+      "domain": "electronics"
+    },
+    {
+      "seedId": "CK-CUL-01",
+      "entityType": "concept",
+      "label": "Deep fry",
+      "statement": "Deep frying submerges food in hot oil.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-CUL-09",
+      "entityType": "concept",
+      "label": "Rest meat",
+      "statement": "Resting meat redistributes juices after cooking.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-CUL-11",
+      "entityType": "concept",
+      "label": "Ferment kimchi",
+      "statement": "Lacto-fermentation preserves and flavors vegetables.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-ELS-01",
+      "entityType": "concept",
+      "label": "GPIO pin",
+      "statement": "A GPIO pin is a general-purpose digital I/O line.",
+      "domain": "electronics"
+    },
+    {
+      "seedId": "CK-ELS-02",
+      "entityType": "concept",
+      "label": "Pull-up resistor",
+      "statement": "A pull-up resistor holds a line high when undriven.",
+      "domain": "electronics"
+    },
+    {
+      "seedId": "CK-ELS-04",
+      "entityType": "concept",
+      "label": "I2C bus",
+      "statement": "I2C is a two-wire serial bus for peripherals.",
+      "domain": "electronics"
+    },
+    {
+      "seedId": "CK-CUL-10",
+      "entityType": "concept",
+      "label": "Temper chocolate",
+      "statement": "Tempering stabilizes cocoa butter crystals in chocolate.",
+      "domain": "culinary"
+    }
+  ],
+  "scenarios": [
+    {
+      "scenarioId": "STA-0001",
+      "title": "terminology_substitution_same_identity / Maillard browning",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Maillard browning"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "terminology_substitution_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-02"
+      }
+    },
+    {
+      "scenarioId": "STA-0002",
+      "title": "narrow_applicability / Sous vide",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Sous"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "narrow_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-03"
+      }
+    },
+    {
+      "scenarioId": "STA-0003",
+      "title": "broaden_applicability / Emulsify vinaigrette",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Emulsify vinaigrette method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "broaden_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-04"
+      }
+    },
+    {
+      "scenarioId": "STA-0004",
+      "title": "change_subject_object_context / Proof bread dough",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "proof bread dough"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "change_subject_object_context",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-05"
+      }
+    },
+    {
+      "scenarioId": "STA-0005",
+      "title": "objective_to_method / Deglaze pan",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Deglaze pan"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "objective_to_method",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-06"
+      }
+    },
+    {
+      "scenarioId": "STA-0006",
+      "title": "method_to_objective / Blanch vegetables",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Blanch"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "method_to_objective",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-07"
+      }
+    },
+    {
+      "scenarioId": "STA-0007",
+      "title": "supporting_observation / Caramelize onions",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Caramelize onions method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "supporting_observation",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-08"
+      }
+    },
+    {
+      "scenarioId": "STA-0008",
+      "title": "contradiction / Rest meat",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "rest meat"
+      },
+      "expectedDecisionClass": "contradict_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0009",
+      "title": "qualification / Temper chocolate",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Temper chocolate"
+      },
+      "expectedDecisionClass": "qualify_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0010",
+      "title": "related_distinct / Ferment kimchi",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Ferment"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0011",
+      "title": "compound_assertion / Clarify stock",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Clarify stock method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "compound_assertion",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-12"
+      }
+    },
+    {
+      "scenarioId": "STA-0012",
+      "title": "genuinely_novel / GPIO pin",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "novel synthetic concept 12 for electronics"
+      },
+      "expectedDecisionClass": "propose_new_identity",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0013",
+      "title": "irrelevant_near_neighbor / Pull-up resistor",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Pull-up resistor"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0014",
+      "title": "adversarial_false_merge_candidate / PWM duty cycle",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "PWM duty cycle"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "adversarial_false_merge_candidate",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-03"
+      },
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-ELS-03"
+        }
+      ]
+    },
+    {
+      "scenarioId": "STA-0015",
+      "title": "emerging_process_revalidation / I2C bus",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "I2C bus method"
+      },
+      "expectedDecisionClass": "revalidation_candidate",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0016",
+      "title": "paraphrase_same_identity / Decoupling capacitor",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "decoupling capacitor"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "paraphrase_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-05"
+      }
+    },
+    {
+      "scenarioId": "STA-0017",
+      "title": "terminology_substitution_same_identity / ADC sampling",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "full_pipeline",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: ADC sampling"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "terminology_substitution_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-06"
+      }
+    },
+    {
+      "scenarioId": "STA-0018",
+      "title": "narrow_applicability / UART framing",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of UART"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "narrow_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-07"
+      }
+    },
+    {
+      "scenarioId": "STA-0019",
+      "title": "broaden_applicability / Ground plane",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Ground plane method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "broaden_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-08"
+      }
+    },
+    {
+      "scenarioId": "STA-0020",
+      "title": "change_subject_object_context / ESD protection",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "esd protection"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "change_subject_object_context",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-09"
+      }
+    },
+    {
+      "scenarioId": "STA-0021",
+      "title": "objective_to_method / Crystal oscillator",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Crystal oscillator"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "objective_to_method",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-10"
+      }
+    },
+    {
+      "scenarioId": "STA-0022",
+      "title": "method_to_objective / Deep fry",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Deep"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "method_to_objective",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-01"
+      }
+    },
+    {
+      "scenarioId": "STA-0023",
+      "title": "supporting_observation / Maillard browning",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 23"
+      },
+      "expectedDecisionClass": "defer_llm",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "supporting_observation"
+    },
+    {
+      "scenarioId": "STA-0024",
+      "title": "contradiction / Sous vide",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "sous vide"
+      },
+      "expectedDecisionClass": "contradict_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0025",
+      "title": "qualification / Emulsify vinaigrette",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Emulsify vinaigrette"
+      },
+      "expectedDecisionClass": "qualify_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0026",
+      "title": "related_distinct / Proof bread dough",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Proof"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0027",
+      "title": "compound_assertion / Deglaze pan",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Deglaze pan method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "compound_assertion",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-06"
+      }
+    },
+    {
+      "scenarioId": "STA-0028",
+      "title": "genuinely_novel / Blanch vegetables",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "novel synthetic concept 28 for culinary"
+      },
+      "expectedDecisionClass": "propose_new_identity",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0029",
+      "title": "irrelevant_near_neighbor / Caramelize onions",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Caramelize onions"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0030",
+      "title": "adversarial_false_merge_candidate / Rest meat",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Rest meat"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "adversarial_false_merge_candidate",
+      "failureSeverity": "high",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-09"
+      },
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-CUL-09"
+        }
+      ]
+    },
+    {
+      "scenarioId": "STA-0031",
+      "title": "emerging_process_revalidation / Temper chocolate",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Temper chocolate method"
+      },
+      "expectedDecisionClass": "revalidation_candidate",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0032",
+      "title": "paraphrase_same_identity / Ferment kimchi",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ferment kimchi"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "paraphrase_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-11"
+      }
+    },
+    {
+      "scenarioId": "STA-0033",
+      "title": "terminology_substitution_same_identity / Clarify stock",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Clarify stock"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "terminology_substitution_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-12"
+      }
+    },
+    {
+      "scenarioId": "STA-0034",
+      "title": "narrow_applicability / GPIO pin",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "full_pipeline",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of GPIO"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "narrow_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-01"
+      }
+    },
+    {
+      "scenarioId": "STA-0035",
+      "title": "broaden_applicability / Pull-up resistor",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Pull-up resistor method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "broaden_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-02"
+      }
+    },
+    {
+      "scenarioId": "STA-0036",
+      "title": "change_subject_object_context / PWM duty cycle",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "pwm duty cycle"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "change_subject_object_context",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-03"
+      }
+    },
+    {
+      "scenarioId": "STA-0037",
+      "title": "objective_to_method / I2C bus",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: I2C bus"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "objective_to_method",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-04"
+      }
+    },
+    {
+      "scenarioId": "STA-0038",
+      "title": "method_to_objective / Decoupling capacitor",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Decoupling"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "method_to_objective",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-05"
+      }
+    },
+    {
+      "scenarioId": "STA-0039",
+      "title": "supporting_observation / ADC sampling",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ADC sampling method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "supporting_observation",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-06"
+      }
+    },
+    {
+      "scenarioId": "STA-0040",
+      "title": "contradiction / UART framing",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "uart framing"
+      },
+      "expectedDecisionClass": "contradict_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0041",
+      "title": "qualification / Ground plane",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Ground plane"
+      },
+      "expectedDecisionClass": "qualify_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0042",
+      "title": "related_distinct / ESD protection",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of ESD"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0043",
+      "title": "compound_assertion / Crystal oscillator",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Crystal oscillator method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "compound_assertion",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-10"
+      }
+    },
+    {
+      "scenarioId": "STA-0044",
+      "title": "genuinely_novel / Deep fry",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "novel synthetic concept 44 for culinary"
+      },
+      "expectedDecisionClass": "propose_new_identity",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0045",
+      "title": "irrelevant_near_neighbor / Maillard browning",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Maillard browning"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0046",
+      "title": "adversarial_false_merge_candidate / Sous vide",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 46"
+      },
+      "expectedDecisionClass": "defer_llm",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "adversarial_false_merge_candidate",
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-CUL-03"
+        }
+      ]
+    },
+    {
+      "scenarioId": "STA-0047",
+      "title": "emerging_process_revalidation / Emulsify vinaigrette",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Emulsify vinaigrette method"
+      },
+      "expectedDecisionClass": "revalidation_candidate",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0048",
+      "title": "paraphrase_same_identity / Proof bread dough",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "proof bread dough"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "paraphrase_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-05"
+      }
+    },
+    {
+      "scenarioId": "STA-0049",
+      "title": "terminology_substitution_same_identity / Deglaze pan",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Deglaze pan"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "terminology_substitution_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-06"
+      }
+    },
+    {
+      "scenarioId": "STA-0050",
+      "title": "narrow_applicability / Blanch vegetables",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Blanch"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "narrow_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-07"
+      }
+    },
+    {
+      "scenarioId": "STA-0051",
+      "title": "broaden_applicability / Caramelize onions",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "full_pipeline",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Caramelize onions method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "broaden_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-08"
+      }
+    },
+    {
+      "scenarioId": "STA-0052",
+      "title": "change_subject_object_context / Rest meat",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "rest meat"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "change_subject_object_context",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-09"
+      }
+    },
+    {
+      "scenarioId": "STA-0053",
+      "title": "objective_to_method / Temper chocolate",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Temper chocolate"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "objective_to_method",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-10"
+      }
+    },
+    {
+      "scenarioId": "STA-0054",
+      "title": "method_to_objective / Ferment kimchi",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Ferment"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "method_to_objective",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-11"
+      }
+    },
+    {
+      "scenarioId": "STA-0055",
+      "title": "supporting_observation / Clarify stock",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Clarify stock method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "supporting_observation",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-12"
+      }
+    },
+    {
+      "scenarioId": "STA-0056",
+      "title": "contradiction / GPIO pin",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "gpio pin"
+      },
+      "expectedDecisionClass": "contradict_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0057",
+      "title": "qualification / Pull-up resistor",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Pull-up resistor"
+      },
+      "expectedDecisionClass": "qualify_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0058",
+      "title": "related_distinct / PWM duty cycle",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of PWM"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0059",
+      "title": "compound_assertion / I2C bus",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "I2C bus method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "compound_assertion",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-04"
+      }
+    },
+    {
+      "scenarioId": "STA-0060",
+      "title": "genuinely_novel / Decoupling capacitor",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "novel synthetic concept 60 for electronics"
+      },
+      "expectedDecisionClass": "propose_new_identity",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0061",
+      "title": "irrelevant_near_neighbor / ADC sampling",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: ADC sampling"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0062",
+      "title": "adversarial_false_merge_candidate / UART framing",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "UART framing"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "adversarial_false_merge_candidate",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-07"
+      },
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-ELS-07"
+        }
+      ]
+    },
+    {
+      "scenarioId": "STA-0063",
+      "title": "emerging_process_revalidation / Ground plane",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Ground plane method"
+      },
+      "expectedDecisionClass": "revalidation_candidate",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0064",
+      "title": "paraphrase_same_identity / ESD protection",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "esd protection"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "paraphrase_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-09"
+      }
+    },
+    {
+      "scenarioId": "STA-0065",
+      "title": "terminology_substitution_same_identity / Crystal oscillator",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Crystal oscillator"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "terminology_substitution_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-10"
+      }
+    },
+    {
+      "scenarioId": "STA-0066",
+      "title": "narrow_applicability / Deep fry",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Deep"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "narrow_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-01"
+      }
+    },
+    {
+      "scenarioId": "STA-0067",
+      "title": "broaden_applicability / Maillard browning",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Maillard browning method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "broaden_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-02"
+      }
+    },
+    {
+      "scenarioId": "STA-0068",
+      "title": "change_subject_object_context / Sous vide",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "full_pipeline",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "sous vide"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "change_subject_object_context",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-03"
+      }
+    },
+    {
+      "scenarioId": "STA-0069",
+      "title": "objective_to_method / Emulsify vinaigrette",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 69"
+      },
+      "expectedDecisionClass": "defer_llm",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "objective_to_method"
+    },
+    {
+      "scenarioId": "STA-0070",
+      "title": "method_to_objective / Proof bread dough",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Proof"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "method_to_objective",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-05"
+      }
+    },
+    {
+      "scenarioId": "STA-0071",
+      "title": "supporting_observation / Deglaze pan",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Deglaze pan method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "supporting_observation",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-06"
+      }
+    },
+    {
+      "scenarioId": "STA-0072",
+      "title": "contradiction / Blanch vegetables",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "blanch vegetables"
+      },
+      "expectedDecisionClass": "contradict_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0073",
+      "title": "qualification / Caramelize onions",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Caramelize onions"
+      },
+      "expectedDecisionClass": "qualify_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0074",
+      "title": "related_distinct / Rest meat",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Rest"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0075",
+      "title": "compound_assertion / Temper chocolate",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Temper chocolate method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "compound_assertion",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-10"
+      }
+    },
+    {
+      "scenarioId": "STA-0076",
+      "title": "genuinely_novel / Ferment kimchi",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "novel synthetic concept 76 for culinary"
+      },
+      "expectedDecisionClass": "propose_new_identity",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0077",
+      "title": "irrelevant_near_neighbor / Clarify stock",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Clarify stock"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0078",
+      "title": "adversarial_false_merge_candidate / GPIO pin",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "GPIO pin"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "adversarial_false_merge_candidate",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-01"
+      },
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-ELS-01"
+        }
+      ]
+    },
+    {
+      "scenarioId": "STA-0079",
+      "title": "emerging_process_revalidation / Pull-up resistor",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Pull-up resistor method"
+      },
+      "expectedDecisionClass": "revalidation_candidate",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0080",
+      "title": "paraphrase_same_identity / PWM duty cycle",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "pwm duty cycle"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "paraphrase_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-03"
+      }
+    },
+    {
+      "scenarioId": "STA-0081",
+      "title": "terminology_substitution_same_identity / I2C bus",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: I2C bus"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "terminology_substitution_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-04"
+      }
+    },
+    {
+      "scenarioId": "STA-0082",
+      "title": "narrow_applicability / Decoupling capacitor",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Decoupling"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "narrow_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-05"
+      }
+    },
+    {
+      "scenarioId": "STA-0083",
+      "title": "broaden_applicability / ADC sampling",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ADC sampling method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "broaden_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-06"
+      }
+    },
+    {
+      "scenarioId": "STA-0084",
+      "title": "change_subject_object_context / UART framing",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "uart framing"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "change_subject_object_context",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-07"
+      }
+    },
+    {
+      "scenarioId": "STA-0085",
+      "title": "objective_to_method / Ground plane",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "full_pipeline",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Ground plane"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "objective_to_method",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-08"
+      }
+    },
+    {
+      "scenarioId": "STA-0086",
+      "title": "method_to_objective / ESD protection",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of ESD"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "method_to_objective",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-09"
+      }
+    },
+    {
+      "scenarioId": "STA-0087",
+      "title": "supporting_observation / Crystal oscillator",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Crystal oscillator method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "supporting_observation",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-10"
+      }
+    },
+    {
+      "scenarioId": "STA-0088",
+      "title": "contradiction / Deep fry",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "deep fry"
+      },
+      "expectedDecisionClass": "contradict_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0089",
+      "title": "qualification / Maillard browning",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Maillard browning"
+      },
+      "expectedDecisionClass": "qualify_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0090",
+      "title": "related_distinct / Sous vide",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Sous"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0091",
+      "title": "compound_assertion / Emulsify vinaigrette",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Emulsify vinaigrette method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "compound_assertion",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-04"
+      }
+    },
+    {
+      "scenarioId": "STA-0092",
+      "title": "genuinely_novel / Proof bread dough",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 92"
+      },
+      "expectedDecisionClass": "defer_llm",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0093",
+      "title": "irrelevant_near_neighbor / Deglaze pan",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Deglaze pan"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0094",
+      "title": "adversarial_false_merge_candidate / Blanch vegetables",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Blanch vegetables"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "adversarial_false_merge_candidate",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-07"
+      },
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-CUL-07"
+        }
+      ]
+    },
+    {
+      "scenarioId": "STA-0095",
+      "title": "emerging_process_revalidation / Caramelize onions",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Caramelize onions method"
+      },
+      "expectedDecisionClass": "revalidation_candidate",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0096",
+      "title": "paraphrase_same_identity / Rest meat",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "rest meat"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "paraphrase_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-09"
+      }
+    },
+    {
+      "scenarioId": "STA-0097",
+      "title": "terminology_substitution_same_identity / Temper chocolate",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Temper chocolate"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "terminology_substitution_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-10"
+      }
+    },
+    {
+      "scenarioId": "STA-0098",
+      "title": "narrow_applicability / Ferment kimchi",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Ferment"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "narrow_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-11"
+      }
+    },
+    {
+      "scenarioId": "STA-0099",
+      "title": "broaden_applicability / Clarify stock",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Clarify stock method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "broaden_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-12"
+      }
+    },
+    {
+      "scenarioId": "STA-0100",
+      "title": "change_subject_object_context / GPIO pin",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "gpio pin"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "change_subject_object_context",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-01"
+      }
+    },
+    {
+      "scenarioId": "STA-0101",
+      "title": "objective_to_method / Pull-up resistor",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Pull-up resistor"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "objective_to_method",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-02"
+      }
+    },
+    {
+      "scenarioId": "STA-0102",
+      "title": "method_to_objective / PWM duty cycle",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "full_pipeline",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of PWM"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "method_to_objective",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-03"
+      }
+    },
+    {
+      "scenarioId": "STA-0103",
+      "title": "supporting_observation / I2C bus",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "I2C bus method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "supporting_observation",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-04"
+      }
+    },
+    {
+      "scenarioId": "STA-0104",
+      "title": "contradiction / Decoupling capacitor",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "decoupling capacitor"
+      },
+      "expectedDecisionClass": "contradict_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0105",
+      "title": "qualification / ADC sampling",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: ADC sampling"
+      },
+      "expectedDecisionClass": "qualify_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0106",
+      "title": "related_distinct / UART framing",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of UART"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0107",
+      "title": "compound_assertion / Ground plane",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Ground plane method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "compound_assertion",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-08"
+      }
+    },
+    {
+      "scenarioId": "STA-0108",
+      "title": "genuinely_novel / ESD protection",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "novel synthetic concept 108 for electronics"
+      },
+      "expectedDecisionClass": "propose_new_identity",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0109",
+      "title": "irrelevant_near_neighbor / Crystal oscillator",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Crystal oscillator"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0110",
+      "title": "adversarial_false_merge_candidate / Deep fry",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Deep fry"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "adversarial_false_merge_candidate",
+      "failureSeverity": "high",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-01"
+      },
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-CUL-01"
+        }
+      ]
+    },
+    {
+      "scenarioId": "STA-0111",
+      "title": "emerging_process_revalidation / Maillard browning",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Maillard browning method"
+      },
+      "expectedDecisionClass": "revalidation_candidate",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0112",
+      "title": "paraphrase_same_identity / Sous vide",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "sous vide"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "paraphrase_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-03"
+      }
+    },
+    {
+      "scenarioId": "STA-0113",
+      "title": "terminology_substitution_same_identity / Emulsify vinaigrette",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Emulsify vinaigrette"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "terminology_substitution_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-04"
+      }
+    },
+    {
+      "scenarioId": "STA-0114",
+      "title": "narrow_applicability / Proof bread dough",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Proof"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "narrow_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-05"
+      }
+    },
+    {
+      "scenarioId": "STA-0115",
+      "title": "broaden_applicability / Deglaze pan",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 115"
+      },
+      "expectedDecisionClass": "defer_llm",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "broaden_applicability"
+    },
+    {
+      "scenarioId": "STA-0116",
+      "title": "change_subject_object_context / Blanch vegetables",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "blanch vegetables"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "change_subject_object_context",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-07"
+      }
+    },
+    {
+      "scenarioId": "STA-0117",
+      "title": "objective_to_method / Caramelize onions",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Caramelize onions"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "objective_to_method",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-08"
+      }
+    },
+    {
+      "scenarioId": "STA-0118",
+      "title": "method_to_objective / Rest meat",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Rest"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "method_to_objective",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-09"
+      }
+    },
+    {
+      "scenarioId": "STA-0119",
+      "title": "supporting_observation / Temper chocolate",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "full_pipeline",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Temper chocolate method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "supporting_observation",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-10"
+      }
+    },
+    {
+      "scenarioId": "STA-0120",
+      "title": "contradiction / Ferment kimchi",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ferment kimchi"
+      },
+      "expectedDecisionClass": "contradict_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0121",
+      "title": "qualification / Clarify stock",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Clarify stock"
+      },
+      "expectedDecisionClass": "qualify_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0122",
+      "title": "related_distinct / GPIO pin",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of GPIO"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0123",
+      "title": "compound_assertion / Pull-up resistor",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Pull-up resistor method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "compound_assertion",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-02"
+      }
+    },
+    {
+      "scenarioId": "STA-0124",
+      "title": "genuinely_novel / PWM duty cycle",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "novel synthetic concept 124 for electronics"
+      },
+      "expectedDecisionClass": "propose_new_identity",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0125",
+      "title": "irrelevant_near_neighbor / I2C bus",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: I2C bus"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0126",
+      "title": "adversarial_false_merge_candidate / Decoupling capacitor",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Decoupling capacitor"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "adversarial_false_merge_candidate",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-05"
+      },
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-ELS-05"
+        }
+      ]
+    },
+    {
+      "scenarioId": "STA-0127",
+      "title": "emerging_process_revalidation / ADC sampling",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ADC sampling method"
+      },
+      "expectedDecisionClass": "revalidation_candidate",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0128",
+      "title": "paraphrase_same_identity / UART framing",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "uart framing"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "paraphrase_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-07"
+      }
+    },
+    {
+      "scenarioId": "STA-0129",
+      "title": "terminology_substitution_same_identity / Ground plane",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Ground plane"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "terminology_substitution_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-08"
+      }
+    },
+    {
+      "scenarioId": "STA-0130",
+      "title": "narrow_applicability / ESD protection",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of ESD"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "narrow_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-09"
+      }
+    },
+    {
+      "scenarioId": "STA-0131",
+      "title": "broaden_applicability / Crystal oscillator",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Crystal oscillator method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "broaden_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-10"
+      }
+    },
+    {
+      "scenarioId": "STA-0132",
+      "title": "change_subject_object_context / Deep fry",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "deep fry"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "change_subject_object_context",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-01"
+      }
+    },
+    {
+      "scenarioId": "STA-0133",
+      "title": "objective_to_method / Maillard browning",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Maillard browning"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "objective_to_method",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-02"
+      }
+    },
+    {
+      "scenarioId": "STA-0134",
+      "title": "method_to_objective / Sous vide",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Sous"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "method_to_objective",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-03"
+      }
+    },
+    {
+      "scenarioId": "STA-0135",
+      "title": "supporting_observation / Emulsify vinaigrette",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Emulsify vinaigrette method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "supporting_observation",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-04"
+      }
+    },
+    {
+      "scenarioId": "STA-0136",
+      "title": "contradiction / Proof bread dough",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "full_pipeline",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "proof bread dough"
+      },
+      "expectedDecisionClass": "contradict_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0137",
+      "title": "qualification / Deglaze pan",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Deglaze pan"
+      },
+      "expectedDecisionClass": "qualify_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0138",
+      "title": "related_distinct / Blanch vegetables",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 138"
+      },
+      "expectedDecisionClass": "defer_llm",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0139",
+      "title": "compound_assertion / Caramelize onions",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Caramelize onions method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "compound_assertion",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-08"
+      }
+    },
+    {
+      "scenarioId": "STA-0140",
+      "title": "genuinely_novel / Rest meat",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "novel synthetic concept 140 for culinary"
+      },
+      "expectedDecisionClass": "propose_new_identity",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0141",
+      "title": "irrelevant_near_neighbor / Temper chocolate",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Temper chocolate"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0142",
+      "title": "adversarial_false_merge_candidate / Ferment kimchi",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Ferment kimchi"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "adversarial_false_merge_candidate",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-11"
+      },
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-CUL-11"
+        }
+      ]
+    },
+    {
+      "scenarioId": "STA-0143",
+      "title": "emerging_process_revalidation / Clarify stock",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Clarify stock method"
+      },
+      "expectedDecisionClass": "revalidation_candidate",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0144",
+      "title": "paraphrase_same_identity / GPIO pin",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "gpio pin"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "paraphrase_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-01"
+      }
+    },
+    {
+      "scenarioId": "STA-0145",
+      "title": "terminology_substitution_same_identity / Pull-up resistor",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Pull-up resistor"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "terminology_substitution_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-02"
+      }
+    },
+    {
+      "scenarioId": "STA-0146",
+      "title": "narrow_applicability / PWM duty cycle",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of PWM"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "narrow_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-03"
+      }
+    },
+    {
+      "scenarioId": "STA-0147",
+      "title": "broaden_applicability / I2C bus",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "I2C bus method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "broaden_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-04"
+      }
+    },
+    {
+      "scenarioId": "STA-0148",
+      "title": "change_subject_object_context / Decoupling capacitor",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "decoupling capacitor"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "change_subject_object_context",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-05"
+      }
+    },
+    {
+      "scenarioId": "STA-0149",
+      "title": "objective_to_method / ADC sampling",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: ADC sampling"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "objective_to_method",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-06"
+      }
+    },
+    {
+      "scenarioId": "STA-0150",
+      "title": "method_to_objective / UART framing",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of UART"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "method_to_objective",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-07"
+      }
+    },
+    {
+      "scenarioId": "STA-0151",
+      "title": "supporting_observation / Ground plane",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Ground plane method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "supporting_observation",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-08"
+      }
+    },
+    {
+      "scenarioId": "STA-0152",
+      "title": "contradiction / ESD protection",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "esd protection"
+      },
+      "expectedDecisionClass": "contradict_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0153",
+      "title": "qualification / Crystal oscillator",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "full_pipeline",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Crystal oscillator"
+      },
+      "expectedDecisionClass": "qualify_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0154",
+      "title": "related_distinct / Deep fry",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Deep"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0155",
+      "title": "compound_assertion / Maillard browning",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Maillard browning method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "compound_assertion",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-02"
+      }
+    },
+    {
+      "scenarioId": "STA-0156",
+      "title": "genuinely_novel / Sous vide",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "novel synthetic concept 156 for culinary"
+      },
+      "expectedDecisionClass": "propose_new_identity",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0157",
+      "title": "irrelevant_near_neighbor / Emulsify vinaigrette",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Emulsify vinaigrette"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0158",
+      "title": "adversarial_false_merge_candidate / Proof bread dough",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Proof bread dough"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "adversarial_false_merge_candidate",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-05"
+      },
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-CUL-05"
+        }
+      ]
+    },
+    {
+      "scenarioId": "STA-0159",
+      "title": "emerging_process_revalidation / Deglaze pan",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Deglaze pan method"
+      },
+      "expectedDecisionClass": "revalidation_candidate",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0160",
+      "title": "paraphrase_same_identity / Blanch vegetables",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "blanch vegetables"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "paraphrase_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-07"
+      }
+    },
+    {
+      "scenarioId": "STA-0161",
+      "title": "terminology_substitution_same_identity / Caramelize onions",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 161"
+      },
+      "expectedDecisionClass": "defer_llm",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "STA-0162",
+      "title": "narrow_applicability / Rest meat",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Rest"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "narrow_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-09"
+      }
+    },
+    {
+      "scenarioId": "STA-0163",
+      "title": "broaden_applicability / Temper chocolate",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Temper chocolate method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "broaden_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-10"
+      }
+    },
+    {
+      "scenarioId": "STA-0164",
+      "title": "change_subject_object_context / Ferment kimchi",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ferment kimchi"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "change_subject_object_context",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-11"
+      }
+    },
+    {
+      "scenarioId": "STA-0165",
+      "title": "objective_to_method / Clarify stock",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Clarify stock"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "objective_to_method",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-12"
+      }
+    },
+    {
+      "scenarioId": "STA-0166",
+      "title": "method_to_objective / GPIO pin",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of GPIO"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "method_to_objective",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-01"
+      }
+    },
+    {
+      "scenarioId": "STA-0167",
+      "title": "supporting_observation / Pull-up resistor",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Pull-up resistor method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "supporting_observation",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-02"
+      }
+    },
+    {
+      "scenarioId": "STA-0168",
+      "title": "contradiction / PWM duty cycle",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "pwm duty cycle"
+      },
+      "expectedDecisionClass": "contradict_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0169",
+      "title": "qualification / I2C bus",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: I2C bus"
+      },
+      "expectedDecisionClass": "qualify_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0170",
+      "title": "related_distinct / Decoupling capacitor",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "full_pipeline",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Decoupling"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0171",
+      "title": "compound_assertion / ADC sampling",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ADC sampling method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "compound_assertion",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-06"
+      }
+    },
+    {
+      "scenarioId": "STA-0172",
+      "title": "genuinely_novel / UART framing",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "novel synthetic concept 172 for electronics"
+      },
+      "expectedDecisionClass": "propose_new_identity",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0173",
+      "title": "irrelevant_near_neighbor / Ground plane",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Ground plane"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0174",
+      "title": "adversarial_false_merge_candidate / ESD protection",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ESD protection"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "adversarial_false_merge_candidate",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-09"
+      },
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-ELS-09"
+        }
+      ]
+    },
+    {
+      "scenarioId": "STA-0175",
+      "title": "emerging_process_revalidation / Crystal oscillator",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Crystal oscillator method"
+      },
+      "expectedDecisionClass": "revalidation_candidate",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0176",
+      "title": "paraphrase_same_identity / Deep fry",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "deep fry"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "paraphrase_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-01"
+      }
+    },
+    {
+      "scenarioId": "STA-0177",
+      "title": "terminology_substitution_same_identity / Maillard browning",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Maillard browning"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "terminology_substitution_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-02"
+      }
+    },
+    {
+      "scenarioId": "STA-0178",
+      "title": "narrow_applicability / Sous vide",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Sous"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "narrow_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-03"
+      }
+    },
+    {
+      "scenarioId": "STA-0179",
+      "title": "broaden_applicability / Emulsify vinaigrette",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Emulsify vinaigrette method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "broaden_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-04"
+      }
+    },
+    {
+      "scenarioId": "STA-0180",
+      "title": "change_subject_object_context / Proof bread dough",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "proof bread dough"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "change_subject_object_context",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-05"
+      }
+    },
+    {
+      "scenarioId": "STA-0181",
+      "title": "objective_to_method / Deglaze pan",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Deglaze pan"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "objective_to_method",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-06"
+      }
+    },
+    {
+      "scenarioId": "STA-0182",
+      "title": "method_to_objective / Blanch vegetables",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Blanch"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "method_to_objective",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-07"
+      }
+    },
+    {
+      "scenarioId": "STA-0183",
+      "title": "supporting_observation / Caramelize onions",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Caramelize onions method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "supporting_observation",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-08"
+      }
+    },
+    {
+      "scenarioId": "STA-0184",
+      "title": "contradiction / Rest meat",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 184"
+      },
+      "expectedDecisionClass": "defer_llm",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0185",
+      "title": "qualification / Temper chocolate",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Temper chocolate"
+      },
+      "expectedDecisionClass": "qualify_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0186",
+      "title": "related_distinct / Ferment kimchi",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Ferment"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0187",
+      "title": "compound_assertion / Clarify stock",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "full_pipeline",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Clarify stock method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "compound_assertion",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-12"
+      }
+    },
+    {
+      "scenarioId": "STA-0188",
+      "title": "genuinely_novel / GPIO pin",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "novel synthetic concept 188 for electronics"
+      },
+      "expectedDecisionClass": "propose_new_identity",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0189",
+      "title": "irrelevant_near_neighbor / Pull-up resistor",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Pull-up resistor"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0190",
+      "title": "adversarial_false_merge_candidate / PWM duty cycle",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "PWM duty cycle"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "adversarial_false_merge_candidate",
+      "failureSeverity": "high",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-03"
+      },
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-ELS-03"
+        }
+      ]
+    },
+    {
+      "scenarioId": "STA-0191",
+      "title": "emerging_process_revalidation / I2C bus",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "I2C bus method"
+      },
+      "expectedDecisionClass": "revalidation_candidate",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0192",
+      "title": "paraphrase_same_identity / Decoupling capacitor",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "decoupling capacitor"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "paraphrase_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-05"
+      }
+    },
+    {
+      "scenarioId": "STA-0193",
+      "title": "terminology_substitution_same_identity / ADC sampling",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: ADC sampling"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "terminology_substitution_same_identity",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-06"
+      }
+    },
+    {
+      "scenarioId": "STA-0194",
+      "title": "narrow_applicability / UART framing",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of UART"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "narrow_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-07"
+      }
+    },
+    {
+      "scenarioId": "STA-0195",
+      "title": "broaden_applicability / Ground plane",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Ground plane method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "broaden_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-08"
+      }
+    },
+    {
+      "scenarioId": "STA-0196",
+      "title": "change_subject_object_context / ESD protection",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "esd protection"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "change_subject_object_context",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-09"
+      }
+    },
+    {
+      "scenarioId": "STA-0197",
+      "title": "objective_to_method / Crystal oscillator",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Crystal oscillator"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "objective_to_method",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-10"
+      }
+    },
+    {
+      "scenarioId": "STA-0198",
+      "title": "method_to_objective / Deep fry",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Deep"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "method_to_objective",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-01"
+      }
+    },
+    {
+      "scenarioId": "STA-0199",
+      "title": "supporting_observation / Maillard browning",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Maillard browning method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "supporting_observation",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-02"
+      }
+    },
+    {
+      "scenarioId": "STA-0200",
+      "title": "contradiction / Sous vide",
+      "status": "released",
+      "suite": "statistical",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "sous vide"
+      },
+      "expectedDecisionClass": "contradict_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "contradiction"
+    }
+  ]
+}

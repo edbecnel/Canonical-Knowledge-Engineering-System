@@ -1,0 +1,8 @@
+{
+  "packId": "CKES-BENCHMARK-ANCHOR-001",
+  "packVersion": "1.0.0",
+  "contentHash": "2d65a6cf59c486ffba20c3571d69a918ac414f1d89d2641d25973f29e249a76c",
+  "canonicalSeedHash": "ebdc65c2068ba38c301a7b3f2b796c7843d65090c259dcd2dc203fcfacd50cb9",
+  "candidateSource": "benchmark/candidates/anchor/CKES-BENCHMARK-ANCHOR-001.json",
+  "candidateContentHash": "93471b95fb8f279731f5a8c432c7a801f5bf7508c290fa7ccd4def03ea3e5b3e"
+}

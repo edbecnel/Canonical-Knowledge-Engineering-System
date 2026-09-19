@@ -41,7 +41,8 @@
     "reviewerModelFamily": "independent-llm-review-gpt-family-simulated",
     "independentOfGenerator": false,
     "independenceLimitation": "POC G2 uses one construction generator; stratified AI review simulated in review-log; all critical/high false-merge traps receive documented human review events.",
-    "humanApprovalEvent": "g2-candidate-batch-2026-09-19-pending-architect"
+    "humanApprovalEvent": "g2-architect-accepted-2026-09-19",
+    "g3FreezeAt": "2026-09-19T12:00:00.000Z"
   },
   "counts": {
     "generated": 81,
@@ -53,5 +54,11 @@
     ]
   },
   "constructionRulesDocumented": true,
-  "constructionRulesRef": "poc/scripts/generate-g2-benchmark-candidates.ts"
+  "constructionRulesRef": "poc/scripts/generate-g2-benchmark-candidates.ts",
+  "g3OfficialRelease": {
+    "releasePath": "benchmark/releases/challenge/CKES-BENCHMARK-CHALLENGE-001.json",
+    "contentHash": "00d339d3c33c09d6c2276ac9222c588d22c1a28d1510b2c310da8da40e954ecc",
+    "packVersion": "1.0.0",
+    "releasedScenarioCount": 80
+  }
 }

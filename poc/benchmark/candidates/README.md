@@ -8,4 +8,4 @@
 
 Provenance: `benchmark/generation/<packId>/`.
 
-Official freeze (`released` + committed derived Markdown under `benchmark/releases/`) requires **G3** authorization.
+**Superseded for official runs** by frozen releases under `benchmark/releases/` (G3 complete). Candidates retained for G2 audit trail.

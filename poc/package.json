@@ -31,6 +31,7 @@
     "benchmark:profile-validate": "tsx scripts/benchmark-profile-validate.ts",
     "benchmark:integrity": "tsx scripts/benchmark-integrity.ts",
     "benchmark:generate-g2-candidates": "tsx scripts/generate-g2-benchmark-candidates.ts",
+    "benchmark:freeze-g3": "tsx scripts/freeze-g3-benchmark-packs.ts",
     "harness:test": "npm run test --workspace @ckes/harness",
     "scenario-lab:api": "tsx packages/scenario-lab-api/src/server.ts",
     "scenario-lab:dev": "npm run dev --workspace ckes-scenario-lab"

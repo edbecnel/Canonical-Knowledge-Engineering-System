@@ -1,0 +1,8 @@
+{
+  "packId": "CKES-BENCHMARK-STATISTICAL-001",
+  "packVersion": "1.0.0",
+  "contentHash": "5e5d0af0a409548ba0f889f8c0f4d5d96334d2c2412d746a8a535ff057dfcc18",
+  "canonicalSeedHash": "06d9a7ab6345e22ad65d4c1e17e741d68f4661ae987a2a0b6b350fc833fb2cd2",
+  "candidateSource": "benchmark/candidates/statistical/CKES-BENCHMARK-STATISTICAL-001.json",
+  "candidateContentHash": "a822be3a6455177f263101c06ee233bd128189afb3c87c87ddbfeaa7da1171ff"
+}

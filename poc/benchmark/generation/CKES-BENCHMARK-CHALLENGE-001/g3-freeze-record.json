@@ -1,0 +1,8 @@
+{
+  "packId": "CKES-BENCHMARK-CHALLENGE-001",
+  "packVersion": "1.0.0",
+  "contentHash": "00d339d3c33c09d6c2276ac9222c588d22c1a28d1510b2c310da8da40e954ecc",
+  "canonicalSeedHash": "439cf1e5cfcda62b9f5cf88e329e145a9f5857a9749c41d690308bf83f32d41c",
+  "candidateSource": "benchmark/candidates/challenge/CKES-BENCHMARK-CHALLENGE-001.json",
+  "candidateContentHash": "0cf461f86949a3926e404b8e74d6b3d1b0bb096b4349afb6ce3727be3335cf7b"
+}
