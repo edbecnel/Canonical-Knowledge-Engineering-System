@@ -1,0 +1,11 @@
+{
+  "packId": "CKES-BENCHMARK-CHALLENGE-001",
+  "reason": "G2 dispute resolution — scenarios rejected before candidate inclusion",
+  "scenarios": [
+    {
+      "scenarioId": "CHL-REJECT-001",
+      "reason": "research_unresolved label after generator pass",
+      "status": "quarantined"
+    }
+  ]
+}

@@ -1,0 +1,1512 @@
+{
+  "schemaVersion": "1.0.0",
+  "pack": {
+    "packId": "CKES-BENCHMARK-CHALLENGE-001",
+    "name": "CKES Challenge Benchmark 001 (G2 candidate)",
+    "suiteClass": "challenge",
+    "packVersion": "1.0.0-candidate-g2",
+    "status": "reviewed",
+    "description": "G2 candidate pack (80 scenarios). Not G3-frozen. Awaiting architect approval before release freeze.",
+    "createdAt": "2026-09-19T07:24:48.306Z",
+    "contentHash": "0cf461f86949a3926e404b8e74d6b3d1b0bb096b4349afb6ce3727be3335cf7b",
+    "canonicalSeedHash": "439cf1e5cfcda62b9f5cf88e329e145a9f5857a9749c41d690308bf83f32d41c",
+    "domains": [
+      "culinary",
+      "electronics"
+    ],
+    "generationMethod": "deterministic_construction",
+    "generatingTool": "ckes-g2-pack-generator/1.0.0",
+    "promptTemplateVersion": "construction-rules-v1",
+    "humanReviewStatus": "g2_candidate_review_complete",
+    "compatibleHarnessVersions": [
+      "0.1.0"
+    ]
+  },
+  "executionRequirements": {
+    "supportedExecutionModes": [
+      "decision_slice",
+      "full_pipeline"
+    ],
+    "defaultExecutionMode": "decision_slice",
+    "databaseProfile": "clean",
+    "scenarioIsolationRequired": true,
+    "retrievalModesAllowed": [
+      "deterministic_fixture"
+    ],
+    "llmPolicy": "allowed"
+  },
+  "canonicalSeedMaterial": [
+    {
+      "seedId": "CK-CUL-05",
+      "entityType": "concept",
+      "label": "Proof bread dough",
+      "statement": "Proofing allows yeast fermentation before baking.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-ELS-07",
+      "entityType": "concept",
+      "label": "UART framing",
+      "statement": "UART frames bytes with start and stop bits.",
+      "domain": "electronics"
+    },
+    {
+      "seedId": "CK-CUL-04",
+      "entityType": "concept",
+      "label": "Emulsify vinaigrette",
+      "statement": "Emulsification binds oil and acid into a stable dressing.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-ELS-03",
+      "entityType": "concept",
+      "label": "PWM duty cycle",
+      "statement": "PWM duty cycle is the fraction of time a signal is high.",
+      "domain": "electronics"
+    },
+    {
+      "seedId": "CK-CUL-07",
+      "entityType": "concept",
+      "label": "Blanch vegetables",
+      "statement": "Blanching briefly boils then shocks vegetables in ice water.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-CUL-11",
+      "entityType": "concept",
+      "label": "Ferment kimchi",
+      "statement": "Lacto-fermentation preserves and flavors vegetables.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-CUL-10",
+      "entityType": "concept",
+      "label": "Temper chocolate",
+      "statement": "Tempering stabilizes cocoa butter crystals in chocolate.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-CUL-09",
+      "entityType": "concept",
+      "label": "Rest meat",
+      "statement": "Resting meat redistributes juices after cooking.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-ELS-01",
+      "entityType": "concept",
+      "label": "GPIO pin",
+      "statement": "A GPIO pin is a general-purpose digital I/O line.",
+      "domain": "electronics"
+    },
+    {
+      "seedId": "CK-CUL-03",
+      "entityType": "concept",
+      "label": "Sous vide",
+      "statement": "Sous vide cooks food in a temperature-controlled water bath.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-ELS-04",
+      "entityType": "concept",
+      "label": "I2C bus",
+      "statement": "I2C is a two-wire serial bus for peripherals.",
+      "domain": "electronics"
+    },
+    {
+      "seedId": "CK-ELS-09",
+      "entityType": "concept",
+      "label": "ESD protection",
+      "statement": "ESD diodes shunt static discharge away from IC pins.",
+      "domain": "electronics"
+    },
+    {
+      "seedId": "CK-CUL-01",
+      "entityType": "concept",
+      "label": "Deep fry",
+      "statement": "Deep frying submerges food in hot oil.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-CUL-02",
+      "entityType": "concept",
+      "label": "Maillard browning",
+      "statement": "Maillard reactions create flavor when proteins and sugars heat.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-CUL-06",
+      "entityType": "concept",
+      "label": "Deglaze pan",
+      "statement": "Deglazing dissolves fond with liquid to make sauce.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-CUL-08",
+      "entityType": "concept",
+      "label": "Caramelize onions",
+      "statement": "Slow cooking onions until sugars brown is caramelization.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-CUL-12",
+      "entityType": "concept",
+      "label": "Clarify stock",
+      "statement": "Clarification removes particulates for clear broth.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-ELS-02",
+      "entityType": "concept",
+      "label": "Pull-up resistor",
+      "statement": "A pull-up resistor holds a line high when undriven.",
+      "domain": "electronics"
+    },
+    {
+      "seedId": "CK-ELS-05",
+      "entityType": "concept",
+      "label": "Decoupling capacitor",
+      "statement": "Decoupling capacitors filter local supply noise.",
+      "domain": "electronics"
+    },
+    {
+      "seedId": "CK-ELS-06",
+      "entityType": "concept",
+      "label": "ADC sampling",
+      "statement": "An ADC converts analog voltage to digital samples.",
+      "domain": "electronics"
+    },
+    {
+      "seedId": "CK-ELS-08",
+      "entityType": "concept",
+      "label": "Ground plane",
+      "statement": "A ground plane provides low-impedance return path.",
+      "domain": "electronics"
+    },
+    {
+      "seedId": "CK-ELS-10",
+      "entityType": "concept",
+      "label": "Crystal oscillator",
+      "statement": "A crystal sets a stable clock frequency for a MCU.",
+      "domain": "electronics"
+    }
+  ],
+  "scenarios": [
+    {
+      "scenarioId": "CHL-0001",
+      "title": "broaden_applicability / Caramelize onions",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 1"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "broaden_applicability"
+    },
+    {
+      "scenarioId": "CHL-0002",
+      "title": "method_to_objective / PWM duty cycle",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 2"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "method_to_objective"
+    },
+    {
+      "scenarioId": "CHL-0003",
+      "title": "qualification / Crystal oscillator",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 3"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "qualification",
+      "failureSeverity": "high"
+    },
+    {
+      "scenarioId": "CHL-0004",
+      "title": "genuinely_novel / Blanch vegetables",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "novel synthetic concept 4 for culinary"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "CHL-0005",
+      "title": "emerging_process_revalidation / Pull-up resistor",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 5"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "CHL-0006",
+      "title": "narrow_applicability / ESD protection",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 6"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "narrow_applicability",
+      "failureSeverity": "critical"
+    },
+    {
+      "scenarioId": "CHL-0007",
+      "title": "objective_to_method / Deglaze pan",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 7"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "objective_to_method"
+    },
+    {
+      "scenarioId": "CHL-0008",
+      "title": "contradiction / GPIO pin",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "gpio pin"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "CHL-0009",
+      "title": "compound_assertion / Ground plane",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 9"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "compound_assertion",
+      "failureSeverity": "high"
+    },
+    {
+      "scenarioId": "CHL-0010",
+      "title": "adversarial_false_merge_candidate / Proof bread dough",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 10"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "adversarial_false_merge_candidate",
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-CUL-05"
+        }
+      ]
+    },
+    {
+      "scenarioId": "CHL-0011",
+      "title": "terminology_substitution_same_identity / Clarify stock",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Clarify stock method"
+      },
+      "expectedDecisionClass": "propose_new_identity",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "CHL-0012",
+      "title": "change_subject_object_context / UART framing",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "uart framing"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "change_subject_object_context",
+      "failureSeverity": "critical",
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-ELS-07"
+        }
+      ]
+    },
+    {
+      "scenarioId": "CHL-0013",
+      "title": "supporting_observation / Emulsify vinaigrette",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Emulsify vinaigrette"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "supporting_observation",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-04"
+      }
+    },
+    {
+      "scenarioId": "CHL-0014",
+      "title": "related_distinct / Ferment kimchi",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 14"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "CHL-0015",
+      "title": "irrelevant_near_neighbor / ADC sampling",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 15"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "irrelevant_near_neighbor",
+      "failureSeverity": "high"
+    },
+    {
+      "scenarioId": "CHL-0016",
+      "title": "paraphrase_same_identity / Sous vide",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "sous vide"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "CHL-0017",
+      "title": "broaden_applicability / Temper chocolate",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "full_pipeline",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 17"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "broaden_applicability"
+    },
+    {
+      "scenarioId": "CHL-0018",
+      "title": "method_to_objective / Decoupling capacitor",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 18"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "method_to_objective",
+      "failureSeverity": "critical"
+    },
+    {
+      "scenarioId": "CHL-0019",
+      "title": "qualification / Maillard browning",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 19"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "CHL-0020",
+      "title": "genuinely_novel / Rest meat",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "novel synthetic concept 20 for culinary"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "CHL-0021",
+      "title": "emerging_process_revalidation / I2C bus",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 21"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "emerging_process_revalidation",
+      "failureSeverity": "high"
+    },
+    {
+      "scenarioId": "CHL-0022",
+      "title": "narrow_applicability / Deep fry",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Deep"
+      },
+      "expectedDecisionClass": "propose_new_identity",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "narrow_applicability"
+    },
+    {
+      "scenarioId": "CHL-0023",
+      "title": "objective_to_method / Caramelize onions",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 23"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "objective_to_method"
+    },
+    {
+      "scenarioId": "CHL-0024",
+      "title": "contradiction / PWM duty cycle",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "pwm duty cycle"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "contradiction",
+      "failureSeverity": "critical",
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-ELS-03"
+        }
+      ]
+    },
+    {
+      "scenarioId": "CHL-0025",
+      "title": "compound_assertion / Crystal oscillator",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 25"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "compound_assertion"
+    },
+    {
+      "scenarioId": "CHL-0026",
+      "title": "adversarial_false_merge_candidate / Blanch vegetables",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Blanch vegetables"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "adversarial_false_merge_candidate",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-07"
+      },
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-CUL-07"
+        }
+      ]
+    },
+    {
+      "scenarioId": "CHL-0027",
+      "title": "terminology_substitution_same_identity / Pull-up resistor",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 27"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "terminology_substitution_same_identity",
+      "failureSeverity": "high"
+    },
+    {
+      "scenarioId": "CHL-0028",
+      "title": "change_subject_object_context / ESD protection",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "esd protection"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "change_subject_object_context"
+    },
+    {
+      "scenarioId": "CHL-0029",
+      "title": "supporting_observation / Deglaze pan",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 29"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "supporting_observation"
+    },
+    {
+      "scenarioId": "CHL-0030",
+      "title": "related_distinct / GPIO pin",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 30"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "related_distinct",
+      "failureSeverity": "critical"
+    },
+    {
+      "scenarioId": "CHL-0031",
+      "title": "irrelevant_near_neighbor / Ground plane",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 31"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "CHL-0032",
+      "title": "paraphrase_same_identity / Proof bread dough",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "proof bread dough"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "CHL-0033",
+      "title": "broaden_applicability / Clarify stock",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Clarify stock"
+      },
+      "expectedDecisionClass": "propose_new_identity",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "broaden_applicability",
+      "failureSeverity": "high"
+    },
+    {
+      "scenarioId": "CHL-0034",
+      "title": "method_to_objective / UART framing",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "full_pipeline",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 34"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "method_to_objective"
+    },
+    {
+      "scenarioId": "CHL-0035",
+      "title": "qualification / Emulsify vinaigrette",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 35"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "CHL-0036",
+      "title": "genuinely_novel / Ferment kimchi",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "novel synthetic concept 36 for culinary"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "genuinely_novel",
+      "failureSeverity": "critical",
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-CUL-11"
+        }
+      ]
+    },
+    {
+      "scenarioId": "CHL-0037",
+      "title": "emerging_process_revalidation / ADC sampling",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 37"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "CHL-0038",
+      "title": "narrow_applicability / Sous vide",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 38"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "narrow_applicability"
+    },
+    {
+      "scenarioId": "CHL-0039",
+      "title": "objective_to_method / Temper chocolate",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Temper chocolate method"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "objective_to_method",
+      "failureSeverity": "high",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-CUL-10"
+      }
+    },
+    {
+      "scenarioId": "CHL-0040",
+      "title": "contradiction / Decoupling capacitor",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "decoupling capacitor"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "CHL-0041",
+      "title": "compound_assertion / Maillard browning",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 41"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "compound_assertion"
+    },
+    {
+      "scenarioId": "CHL-0042",
+      "title": "adversarial_false_merge_candidate / Rest meat",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 42"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "adversarial_false_merge_candidate",
+      "failureSeverity": "critical",
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-CUL-09"
+        }
+      ]
+    },
+    {
+      "scenarioId": "CHL-0043",
+      "title": "terminology_substitution_same_identity / I2C bus",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 43"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "CHL-0044",
+      "title": "change_subject_object_context / Deep fry",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "deep fry"
+      },
+      "expectedDecisionClass": "propose_new_identity",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "change_subject_object_context"
+    },
+    {
+      "scenarioId": "CHL-0045",
+      "title": "supporting_observation / Caramelize onions",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 45"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "supporting_observation",
+      "failureSeverity": "high"
+    },
+    {
+      "scenarioId": "CHL-0046",
+      "title": "related_distinct / PWM duty cycle",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 46"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "CHL-0047",
+      "title": "irrelevant_near_neighbor / Crystal oscillator",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 47"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "CHL-0048",
+      "title": "paraphrase_same_identity / Blanch vegetables",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "blanch vegetables"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "paraphrase_same_identity",
+      "failureSeverity": "critical",
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-CUL-07"
+        }
+      ]
+    },
+    {
+      "scenarioId": "CHL-0049",
+      "title": "broaden_applicability / Pull-up resistor",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 49"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "broaden_applicability"
+    },
+    {
+      "scenarioId": "CHL-0050",
+      "title": "method_to_objective / ESD protection",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 50"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "method_to_objective"
+    },
+    {
+      "scenarioId": "CHL-0051",
+      "title": "qualification / Deglaze pan",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "full_pipeline",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 51"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "qualification",
+      "failureSeverity": "high"
+    },
+    {
+      "scenarioId": "CHL-0052",
+      "title": "genuinely_novel / GPIO pin",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "novel synthetic concept 52 for electronics"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "genuinely_novel",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-01"
+      }
+    },
+    {
+      "scenarioId": "CHL-0053",
+      "title": "emerging_process_revalidation / Ground plane",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 53"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "CHL-0054",
+      "title": "narrow_applicability / Proof bread dough",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 54"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "narrow_applicability",
+      "failureSeverity": "critical"
+    },
+    {
+      "scenarioId": "CHL-0055",
+      "title": "objective_to_method / Clarify stock",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Clarify stock method"
+      },
+      "expectedDecisionClass": "propose_new_identity",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "objective_to_method"
+    },
+    {
+      "scenarioId": "CHL-0056",
+      "title": "contradiction / UART framing",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "uart framing"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "CHL-0057",
+      "title": "compound_assertion / Emulsify vinaigrette",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 57"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "compound_assertion",
+      "failureSeverity": "high"
+    },
+    {
+      "scenarioId": "CHL-0058",
+      "title": "adversarial_false_merge_candidate / Ferment kimchi",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 58"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "adversarial_false_merge_candidate",
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-CUL-11"
+        }
+      ]
+    },
+    {
+      "scenarioId": "CHL-0059",
+      "title": "terminology_substitution_same_identity / ADC sampling",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 59"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "CHL-0060",
+      "title": "change_subject_object_context / Sous vide",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "sous vide"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "change_subject_object_context",
+      "failureSeverity": "critical",
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-CUL-03"
+        }
+      ]
+    },
+    {
+      "scenarioId": "CHL-0061",
+      "title": "supporting_observation / Temper chocolate",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 61"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "supporting_observation"
+    },
+    {
+      "scenarioId": "CHL-0062",
+      "title": "related_distinct / Decoupling capacitor",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 62"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "CHL-0063",
+      "title": "irrelevant_near_neighbor / Maillard browning",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 63"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "irrelevant_near_neighbor",
+      "failureSeverity": "high"
+    },
+    {
+      "scenarioId": "CHL-0064",
+      "title": "paraphrase_same_identity / Rest meat",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "rest meat"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "CHL-0065",
+      "title": "broaden_applicability / I2C bus",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: I2C bus"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "broaden_applicability",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-04"
+      }
+    },
+    {
+      "scenarioId": "CHL-0066",
+      "title": "method_to_objective / Deep fry",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Deep"
+      },
+      "expectedDecisionClass": "propose_new_identity",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "method_to_objective",
+      "failureSeverity": "critical"
+    },
+    {
+      "scenarioId": "CHL-0067",
+      "title": "qualification / Caramelize onions",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 67"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "CHL-0068",
+      "title": "genuinely_novel / PWM duty cycle",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "full_pipeline",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "novel synthetic concept 68 for electronics"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "CHL-0069",
+      "title": "emerging_process_revalidation / Crystal oscillator",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 69"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "emerging_process_revalidation",
+      "failureSeverity": "high"
+    },
+    {
+      "scenarioId": "CHL-0070",
+      "title": "narrow_applicability / Blanch vegetables",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 70"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "narrow_applicability"
+    },
+    {
+      "scenarioId": "CHL-0071",
+      "title": "objective_to_method / Pull-up resistor",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 71"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "objective_to_method"
+    },
+    {
+      "scenarioId": "CHL-0072",
+      "title": "contradiction / ESD protection",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "esd protection"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "contradiction",
+      "failureSeverity": "critical",
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-ELS-09"
+        }
+      ]
+    },
+    {
+      "scenarioId": "CHL-0073",
+      "title": "compound_assertion / Deglaze pan",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 73"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "compound_assertion"
+    },
+    {
+      "scenarioId": "CHL-0074",
+      "title": "adversarial_false_merge_candidate / GPIO pin",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 74"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "adversarial_false_merge_candidate",
+      "mustNotMatchIdentities": [
+        {
+          "referenceKind": "local",
+          "seedId": "CK-ELS-01"
+        }
+      ]
+    },
+    {
+      "scenarioId": "CHL-0075",
+      "title": "terminology_substitution_same_identity / Ground plane",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 75"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "terminology_substitution_same_identity",
+      "failureSeverity": "high"
+    },
+    {
+      "scenarioId": "CHL-0076",
+      "title": "change_subject_object_context / Proof bread dough",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "proof bread dough"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "change_subject_object_context"
+    },
+    {
+      "scenarioId": "CHL-0077",
+      "title": "supporting_observation / Clarify stock",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Clarify stock"
+      },
+      "expectedDecisionClass": "propose_new_identity",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "supporting_observation"
+    },
+    {
+      "scenarioId": "CHL-0078",
+      "title": "related_distinct / UART framing",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of UART"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation",
+      "transformationType": "related_distinct",
+      "failureSeverity": "critical",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-07"
+      }
+    },
+    {
+      "scenarioId": "CHL-0079",
+      "title": "irrelevant_near_neighbor / Emulsify vinaigrette",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous culinary process 79"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "CHL-0080",
+      "title": "paraphrase_same_identity / Ferment kimchi",
+      "status": "reviewed",
+      "suite": "challenge",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ferment kimchi"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "deterministic_by_construction",
+      "transformationType": "paraphrase_same_identity"
+    }
+  ]
+}

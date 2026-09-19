@@ -1,0 +1,55 @@
+{
+  "packId": "CKES-BENCHMARK-STATISTICAL-001",
+  "generator": {
+    "tool": "ckes-g2-pack-generator",
+    "modelId": "deterministic-construction/1.0.0",
+    "promptTemplateVersionOrHash": "sha256:construction-rules-v1",
+    "seedSourceHash": "06d9a7ab6345e22ad65d4c1e17e741d68f4661ae987a2a0b6b350fc833fb2cd2"
+  },
+  "distributions": {
+    "transformationType": {
+      "terminology_substitution_same_identity": 13,
+      "narrow_applicability": 13,
+      "broaden_applicability": 13,
+      "change_subject_object_context": 13,
+      "objective_to_method": 13,
+      "method_to_objective": 13,
+      "supporting_observation": 13,
+      "contradiction": 13,
+      "qualification": 12,
+      "related_distinct": 12,
+      "compound_assertion": 12,
+      "genuinely_novel": 12,
+      "irrelevant_near_neighbor": 12,
+      "adversarial_false_merge_candidate": 12,
+      "emerging_process_revalidation": 12,
+      "paraphrase_same_identity": 12
+    },
+    "domain": {
+      "culinary": 110,
+      "electronics": 90
+    },
+    "labelConfidenceClass": {
+      "deterministic_by_construction": 25,
+      "strong_expectation": 168,
+      "expected_deferral": 7
+    }
+  },
+  "review": {
+    "method": "automated_construction_plus_human_spot_review",
+    "reviewerId": "human-reviewer-pseudonym-H3-G2-01",
+    "reviewerModelFamily": "independent-llm-review-gpt-family-simulated",
+    "independentOfGenerator": false,
+    "independenceLimitation": "POC G2 uses one construction generator; stratified AI review simulated in review-log; all critical/high false-merge traps receive documented human review events.",
+    "humanApprovalEvent": "g2-candidate-batch-2026-09-19-pending-architect"
+  },
+  "counts": {
+    "generated": 200,
+    "rejected": 0,
+    "disputed": 0,
+    "released": 0,
+    "exclusionReasons": []
+  },
+  "constructionRulesDocumented": true,
+  "constructionRulesRef": "poc/scripts/generate-g2-benchmark-candidates.ts"
+}

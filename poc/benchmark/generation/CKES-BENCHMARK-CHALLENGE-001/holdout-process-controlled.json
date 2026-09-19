@@ -1,0 +1,24 @@
+{
+  "holdoutKind": "process_controlled_tuning_holdout",
+  "notHidden": true,
+  "confidentialityEnforced": false,
+  "procedure": "Do not use holdout scenario IDs for tuning feedback; expectations remain in candidate JSON.",
+  "scenarioIds": [
+    "CHL-0001",
+    "CHL-0006",
+    "CHL-0011",
+    "CHL-0016",
+    "CHL-0021",
+    "CHL-0026",
+    "CHL-0031",
+    "CHL-0036",
+    "CHL-0041",
+    "CHL-0046",
+    "CHL-0051",
+    "CHL-0056",
+    "CHL-0061",
+    "CHL-0066",
+    "CHL-0071",
+    "CHL-0076"
+  ]
+}

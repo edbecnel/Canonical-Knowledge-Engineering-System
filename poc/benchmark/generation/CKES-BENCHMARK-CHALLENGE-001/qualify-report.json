@@ -1,0 +1,17 @@
+{
+  "packId": "CKES-BENCHMARK-CHALLENGE-001",
+  "packVersion": "1.0.0-candidate-g2",
+  "suiteClass": "challenge",
+  "packStatus": "reviewed",
+  "counts": {
+    "scenariosTotal": 80,
+    "released": 0,
+    "reviewed": 80,
+    "draft": 0,
+    "retired": 0,
+    "disputed": 0
+  },
+  "issues": [],
+  "passed": true,
+  "freezeReady": false
+}

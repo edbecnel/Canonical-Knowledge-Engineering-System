@@ -1,0 +1,17 @@
+{
+  "packId": "CKES-BENCHMARK-STATISTICAL-001",
+  "packVersion": "1.0.0-candidate-g2",
+  "suiteClass": "statistical",
+  "packStatus": "reviewed",
+  "counts": {
+    "scenariosTotal": 200,
+    "released": 0,
+    "reviewed": 200,
+    "draft": 0,
+    "retired": 0,
+    "disputed": 0
+  },
+  "issues": [],
+  "passed": true,
+  "freezeReady": false
+}

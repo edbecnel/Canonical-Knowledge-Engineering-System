@@ -1,0 +1,17 @@
+{
+  "packId": "CKES-BENCHMARK-ANCHOR-001",
+  "packVersion": "1.0.0-candidate-g2",
+  "suiteClass": "anchor",
+  "packStatus": "reviewed",
+  "counts": {
+    "scenariosTotal": 40,
+    "released": 0,
+    "reviewed": 40,
+    "draft": 0,
+    "retired": 0,
+    "disputed": 0
+  },
+  "issues": [],
+  "passed": true,
+  "freezeReady": false
+}
