@@ -1,7 +1,12 @@
 import { mapEvaluationRefToBenchmarkSeedId, type PackSeedEntry } from '@ckes/benchmark';
 
 export function buildScenarioEvaluationCapture(
-  evaluationRef: { present: boolean; canonicalLabel?: string; reason?: string },
+  evaluationRef: {
+    present: boolean;
+    canonicalLabel?: string;
+    canonicalId?: string;
+    reason?: string;
+  },
   seeds: PackSeedEntry[],
 ) {
   return mapEvaluationRefToBenchmarkSeedId(evaluationRef, seeds);

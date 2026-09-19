@@ -1,10 +1,24 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import { mapEvaluationRefToBenchmarkSeedId } from '../src/seed-mapping.js';
+import { deterministicConceptIdForSeed } from '../src/harness-seed-id.js';
 import { scoreScenario } from '../src/scoring.js';
 
 describe('benchmark seed mapping (G3.1)', () => {
   const seeds = [{ seedId: 'CK-CUL-01', label: 'Deep fry' }];
+
+  it('maps canonicalId to benchmark seedId when harness UUID matches', () => {
+    const cap = mapEvaluationRefToBenchmarkSeedId(
+      {
+        present: true,
+        canonicalLabel: 'display mismatch ok',
+        canonicalId: deterministicConceptIdForSeed('CK-CUL-01'),
+      },
+      seeds,
+    );
+    assert.equal(cap.identityEvidenceStatus, 'present_mapped');
+    assert.equal(cap.benchmarkLocalSeedId, 'CK-CUL-01');
+  });
 
   it('maps canonical label to benchmark seedId', () => {
     const cap = mapEvaluationRefToBenchmarkSeedId(

@@ -1,0 +1,241 @@
+{
+  "generatedAt": "2026-09-19T07:54:48.483Z",
+  "preFlight": {
+    "gitCommit": "956c93f9e7b2e2a519fbc8a909667df9de8f454c",
+    "profileContentHash": "a69d5677856931ab7617ef64eb0072e2fb1b52254952077035d0acbcc14586de",
+    "scorerVersion": "1.0.0-g1",
+    "scorerContentHash": "bd2c0c6bed3375f4ec43b922b9946b33c4e81a7845172393f8f9772e0d925d55",
+    "evaluationInfrastructureRevision": "g4.1-baseline-validity-2026-09-19"
+  },
+  "supersededHistoricalRunsPreservedUnder": "experiments/baseline-evidence/g4-official-runs",
+  "runs": [
+    {
+      "officialRunId": "RUN-REF-CLEAN-ANCHOR-002",
+      "supersededRunId": "RUN-REF-CLEAN-ANCHOR-001",
+      "resultContentHash": "c5e690b260f5a061b24b59bb1cb5835adbf211d5ec418ea108af2b8f752ac573",
+      "evaluationCapture": {
+        "byStatus": {
+          "present_mapped": 30,
+          "absent_no_merge": 4,
+          "absent_no_retrieval": 6
+        },
+        "presentUnmapped": [],
+        "infrastructureErrorCount": 0
+      },
+      "fullPipelineSmoke": [
+        {
+          "id": "ANC-0017",
+          "outcome": "fail",
+          "explanation": "policy=reuse_existing"
+        },
+        {
+          "id": "ANC-0034",
+          "outcome": "pass",
+          "explanation": "policy=evaluate_new_identity"
+        },
+        {
+          "id": "STA-0017"
+        },
+        {
+          "id": "CHL-0017"
+        }
+      ],
+      "derivedFalseMerge": {
+        "falseMergeCount": 18,
+        "falseMergeRate": 0.45,
+        "falseMergeRateCi95": {
+          "lower": 0.30705075280944705,
+          "upper": 0.6017117011155924
+        },
+        "bySeverity": {
+          "critical": 4,
+          "unspecified": 14
+        },
+        "byTransformationType": {
+          "related_distinct": 1,
+          "adversarial_false_merge_candidate": 4,
+          "contradiction": 1,
+          "qualification": 1,
+          "emerging_process_revalidation": 2,
+          "objective_to_method": 1,
+          "method_to_objective": 2,
+          "compound_assertion": 1,
+          "paraphrase_same_identity": 1,
+          "narrow_applicability": 1,
+          "broaden_applicability": 1,
+          "change_subject_object_context": 1,
+          "supporting_observation": 1
+        },
+        "byDomain": {
+          "culinary": 9,
+          "electronics": 9
+        },
+        "highSeverityScenarioIds": [],
+        "criticalSeverityScenarioIds": [
+          "ANC-0017",
+          "ANC-0018",
+          "ANC-0019",
+          "ANC-0020"
+        ]
+      },
+      "aggregates": {
+        "passCount": 17,
+        "failCount": 23,
+        "falseMergeCount": 18,
+        "byExecutionMode": {
+          "decision_slice": 38,
+          "full_pipeline": 2
+        }
+      },
+      "baselineStructural": "structural assertDesignatableReferenceBaseline: ok",
+      "postVerificationPassed": true
+    },
+    {
+      "officialRunId": "RUN-REF-CLEAN-STAT-002",
+      "supersededRunId": "RUN-REF-CLEAN-STAT-001",
+      "resultContentHash": "46da0ab91b9fd5971f38121b0dc51de7622bd0d30c6afa979f677220e6ae0464",
+      "evaluationCapture": {
+        "byStatus": {
+          "present_mapped": 144,
+          "absent_no_retrieval": 43,
+          "absent_no_merge": 13
+        },
+        "presentUnmapped": [],
+        "infrastructureErrorCount": 0
+      },
+      "fullPipelineSmoke": [
+        {
+          "id": "ANC-0017"
+        },
+        {
+          "id": "ANC-0034"
+        },
+        {
+          "id": "STA-0017",
+          "outcome": "pass",
+          "explanation": "policy=reject_new_identity"
+        },
+        {
+          "id": "CHL-0017"
+        }
+      ],
+      "derivedFalseMerge": {
+        "falseMergeCount": 59,
+        "falseMergeRate": 0.295,
+        "falseMergeRateCi95": {
+          "lower": 0.23613844271901735,
+          "upper": 0.3615884197074943
+        },
+        "bySeverity": {
+          "unspecified": 56,
+          "high": 3
+        },
+        "byTransformationType": {
+          "contradiction": 12,
+          "qualification": 12,
+          "irrelevant_near_neighbor": 12,
+          "adversarial_false_merge_candidate": 11,
+          "emerging_process_revalidation": 12
+        },
+        "byDomain": {
+          "culinary": 31,
+          "electronics": 28
+        },
+        "highSeverityScenarioIds": [
+          "STA-0030",
+          "STA-0110",
+          "STA-0190"
+        ],
+        "criticalSeverityScenarioIds": []
+      },
+      "aggregates": {
+        "passCount": 107,
+        "failCount": 93,
+        "falseMergeCount": 59,
+        "byExecutionMode": {
+          "decision_slice": 189,
+          "full_pipeline": 11
+        }
+      },
+      "baselineStructural": "n/a",
+      "postVerificationPassed": true
+    },
+    {
+      "officialRunId": "RUN-REF-CLEAN-CHALLENGE-002",
+      "supersededRunId": "RUN-REF-CLEAN-CHALLENGE-001",
+      "resultContentHash": "3b07c3a6d9477cf6be89bb38fd8ad687a3c37fcf5d38d3f236a7c689302f9f5a",
+      "evaluationCapture": {
+        "byStatus": {
+          "absent_no_retrieval": 57,
+          "present_mapped": 23
+        },
+        "presentUnmapped": [],
+        "infrastructureErrorCount": 0
+      },
+      "fullPipelineSmoke": [
+        {
+          "id": "ANC-0017"
+        },
+        {
+          "id": "ANC-0034"
+        },
+        {
+          "id": "STA-0017"
+        },
+        {
+          "id": "CHL-0017",
+          "outcome": "fail",
+          "explanation": "policy=evaluate_new_identity"
+        }
+      ],
+      "derivedFalseMerge": {
+        "falseMergeCount": 20,
+        "falseMergeRate": 0.25,
+        "falseMergeRateCi95": {
+          "lower": 0.1680610581209431,
+          "upper": 0.35484881001134444
+        },
+        "bySeverity": {
+          "unspecified": 14,
+          "critical": 5,
+          "high": 1
+        },
+        "byTransformationType": {
+          "contradiction": 5,
+          "terminology_substitution_same_identity": 1,
+          "change_subject_object_context": 5,
+          "paraphrase_same_identity": 5,
+          "adversarial_false_merge_candidate": 1,
+          "broaden_applicability": 1,
+          "objective_to_method": 1,
+          "supporting_observation": 1
+        },
+        "byDomain": {
+          "electronics": 7,
+          "culinary": 13
+        },
+        "highSeverityScenarioIds": [
+          "CHL-0033"
+        ],
+        "criticalSeverityScenarioIds": [
+          "CHL-0012",
+          "CHL-0024",
+          "CHL-0048",
+          "CHL-0060",
+          "CHL-0072"
+        ]
+      },
+      "aggregates": {
+        "passCount": 9,
+        "failCount": 71,
+        "falseMergeCount": 20,
+        "byExecutionMode": {
+          "decision_slice": 76,
+          "full_pipeline": 4
+        }
+      },
+      "baselineStructural": "n/a",
+      "postVerificationPassed": true
+    }
+  ]
+}

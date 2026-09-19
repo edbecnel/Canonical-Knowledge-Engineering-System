@@ -45,11 +45,29 @@ function pickAllowlisted(scenario: Record<string, unknown>): PipelineScenarioInp
 /**
  * Allowlist projection — does not clone full scenario and delete fields.
  */
+/**
+ * Frozen benchmark full_pipeline scenarios carry `directCandidate`; pipeline extraction expects `sourceText`.
+ * Derivation is harness projection only — does not change pack JSON or CKES adjudication/policy.
+ */
+export function deriveSourceTextForFullPipeline(projected: PipelineScenarioInput): string | undefined {
+  if (projected.sourceText?.trim()) {
+    return projected.sourceText;
+  }
+  const fromDirect = projected.directCandidate?.text?.trim();
+  return fromDirect || undefined;
+}
+
 export function toPipelineInput(
   scenario: Record<string, unknown>,
   _packContext?: { packId: string; packVersion: string },
 ): PipelineScenarioInput {
   const projected = pickAllowlisted(scenario);
+  if (projected.executionMode === 'full_pipeline') {
+    const derived = deriveSourceTextForFullPipeline(projected);
+    if (derived) {
+      projected.sourceText = derived;
+    }
+  }
   const forbidden = collectForbiddenKeys(projected);
   if (forbidden.length > 0) {
     throw new Error(`Projected pipeline input contains forbidden keys: ${forbidden.join(', ')}`);

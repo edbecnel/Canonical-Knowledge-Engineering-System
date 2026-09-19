@@ -1,4 +1,5 @@
 import { normalizeLabel } from '@ckes/adapter';
+import { deterministicConceptIdForSeed } from './harness-seed-id.js';
 
 export interface PackSeedEntry {
   seedId: string;
@@ -18,7 +19,12 @@ export interface BenchmarkEvaluationCapture {
 }
 
 export function mapEvaluationRefToBenchmarkSeedId(
-  evaluationRef: { present: boolean; canonicalLabel?: string; reason?: string },
+  evaluationRef: {
+    present: boolean;
+    canonicalLabel?: string;
+    canonicalId?: string;
+    reason?: string;
+  },
   seeds: PackSeedEntry[],
 ): BenchmarkEvaluationCapture {
   if (!evaluationRef.present) {
@@ -29,6 +35,18 @@ export function mapEvaluationRefToBenchmarkSeedId(
       evaluationMatchedIdentityRef: evaluationRef as Record<string, unknown>,
       identityEvidenceStatus: status,
     };
+  }
+  if (evaluationRef.canonicalId) {
+    const byId = seeds.find(
+      (s) => deterministicConceptIdForSeed(s.seedId) === evaluationRef.canonicalId,
+    );
+    if (byId) {
+      return {
+        evaluationMatchedIdentityRef: evaluationRef as Record<string, unknown>,
+        benchmarkLocalSeedId: byId.seedId,
+        identityEvidenceStatus: 'present_mapped',
+      };
+    }
   }
   const labelNorm = normalizeLabel(evaluationRef.canonicalLabel ?? '');
   const hit = seeds.find((s) => normalizeLabel(s.label) === labelNorm);

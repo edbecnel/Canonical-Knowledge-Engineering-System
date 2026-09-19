@@ -13,3 +13,4 @@ export * from './profile-hash.js';
 export * from './qualify.js';
 export * from './report.js';
 export * from './seed-mapping.js';
+export * from './harness-seed-id.js';

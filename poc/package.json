@@ -33,6 +33,7 @@
     "benchmark:generate-g2-candidates": "tsx scripts/generate-g2-benchmark-candidates.ts",
     "benchmark:freeze-g3": "tsx scripts/freeze-g3-benchmark-packs.ts",
     "benchmark:g4-official": "tsx scripts/g4-official-execute.ts",
+    "benchmark:g41-official": "tsx scripts/g41-official-execute.ts",
     "harness:test": "npm run test --workspace @ckes/harness",
     "scenario-lab:api": "tsx packages/scenario-lab-api/src/server.ts",
     "scenario-lab:dev": "npm run dev --workspace ckes-scenario-lab"

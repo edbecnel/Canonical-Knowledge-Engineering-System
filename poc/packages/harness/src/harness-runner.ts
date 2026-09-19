@@ -20,7 +20,7 @@ import { runDecisionSlice, runFullPipelineSlice } from '@ckes/pipeline';
 import { writeFileAtomic } from './atomic-write.js';
 import { ensureDir } from './paths.js';
 import { resetHarnessSandbox, HARNESS_CONCURRENCY_MAX } from './isolation.js';
-import { loadPackSeedMaterial } from './pack-seeds.js';
+import { loadPackSeedMaterial, resetCanonicalCorpusForBenchmarkPack } from './pack-seeds.js';
 import { buildScenarioEvaluationCapture, matchedSeedIdForScoring } from './evaluation-capture.js';
 import type { RunLifecycleState } from './run-state.js';
 import { isTerminalState } from './run-state.js';
@@ -93,11 +93,16 @@ export class HarnessRunner extends EventEmitter {
     let lifecycle: RunLifecycleState = 'preparing';
     this.emitEvent('run_state', runId, { state: lifecycle });
     await resetHarnessSandbox(options.pool);
+    const databaseProfile =
+      options.databaseProfile ?? (profile?.databaseProfile as 'clean' | 'warm') ?? 'clean';
     const seedMaterial = (options.pack.canonicalSeedMaterial ?? []) as Array<{
       seedId: string;
       label: string;
       statement?: string;
     }>;
+    if (databaseProfile === 'clean' && seedMaterial.length > 0) {
+      await resetCanonicalCorpusForBenchmarkPack(options.pool);
+    }
     await loadPackSeedMaterial(options.pool, seedMaterial);
     const packSeedsForMapping = seedMaterial.map((s) => ({ seedId: s.seedId, label: s.label }));
 
@@ -203,7 +208,11 @@ export class HarnessRunner extends EventEmitter {
           };
           const evaluationCapture = buildScenarioEvaluationCapture(
             evalRef.present
-              ? { present: true, canonicalLabel: evalRef.canonicalLabel }
+              ? {
+                  present: true,
+                  canonicalLabel: evalRef.canonicalLabel,
+                  canonicalId: evalRef.canonicalId,
+                }
               : { present: false, reason: evalRef.reason },
             packSeedsForMapping,
           );

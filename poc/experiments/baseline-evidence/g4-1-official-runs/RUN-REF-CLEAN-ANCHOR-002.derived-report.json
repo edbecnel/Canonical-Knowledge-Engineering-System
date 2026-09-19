@@ -1,0 +1,328 @@
+{
+  "reportKind": "derived_run_report",
+  "schemaVersion": "1.0.0",
+  "scorerVersion": "1.0.0-g1",
+  "scorerContentHash": "bd2c0c6bed3375f4ec43b922b9946b33c4e81a7845172393f8f9772e0d925d55",
+  "sourceRunId": "RUN-REF-CLEAN-ANCHOR-002",
+  "sourceRunResultPath": "/Users/edbecnel/Development/GitHub/Canonical-Knowledge-Engineering-System/poc/experiments/baseline-evidence/g4-1-official-runs/RUN-REF-CLEAN-ANCHOR-002.json",
+  "sourceRunResultHash": "c5e690b260f5a061b24b59bb1cb5835adbf211d5ec418ea108af2b8f752ac573",
+  "generatedAt": "2026-09-19T07:54:46.685Z",
+  "dryRun": false,
+  "falseMergeSafety": {
+    "falseMergeCount": 18,
+    "falseMergeRate": 0.45,
+    "falseMergeRateCi95": {
+      "lower": 0.30705075280944705,
+      "upper": 0.6017117011155924
+    },
+    "bySeverity": {
+      "critical": 4,
+      "unspecified": 14
+    },
+    "byTransformationType": {
+      "related_distinct": 1,
+      "adversarial_false_merge_candidate": 4,
+      "contradiction": 1,
+      "qualification": 1,
+      "emerging_process_revalidation": 2,
+      "objective_to_method": 1,
+      "method_to_objective": 2,
+      "compound_assertion": 1,
+      "paraphrase_same_identity": 1,
+      "narrow_applicability": 1,
+      "broaden_applicability": 1,
+      "change_subject_object_context": 1,
+      "supporting_observation": 1
+    },
+    "byDomain": {
+      "culinary": 9,
+      "electronics": 9
+    },
+    "highSeverityScenarioIds": [],
+    "criticalSeverityScenarioIds": [
+      "ANC-0017",
+      "ANC-0018",
+      "ANC-0019",
+      "ANC-0020"
+    ]
+  },
+  "rates": {
+    "passRate": 0.425,
+    "missedMatchRate": 0.1,
+    "unnecessaryDeferralRate": 0.025,
+    "infrastructureFailureRate": 0
+  },
+  "scenarioOutcomes": [
+    {
+      "scenarioId": "ANC-0001",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "ANC-0002",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "culinary",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "ANC-0003",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "ANC-0004",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "ANC-0005",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "ANC-0006",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "culinary",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "ANC-0007",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "ANC-0008",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "ANC-0009",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "ANC-0010",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "electronics",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "ANC-0011",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "ANC-0012",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "ANC-0013",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "ANC-0014",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "electronics",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "ANC-0015",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "ANC-0016",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "ANC-0017",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "failureSeverity": "critical",
+      "domain": "culinary",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "ANC-0018",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "failureSeverity": "critical",
+      "domain": "electronics",
+      "transformationType": "adversarial_false_merge_candidate"
+    },
+    {
+      "scenarioId": "ANC-0019",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "failureSeverity": "critical",
+      "domain": "culinary",
+      "transformationType": "adversarial_false_merge_candidate"
+    },
+    {
+      "scenarioId": "ANC-0020",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "failureSeverity": "critical",
+      "domain": "electronics",
+      "transformationType": "adversarial_false_merge_candidate"
+    },
+    {
+      "scenarioId": "ANC-0021",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "ANC-0022",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "ANC-0023",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "ANC-0024",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "ANC-0025",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "ANC-0026",
+      "outcome": "fail",
+      "failureClassification": "unnecessary_deferral",
+      "domain": "electronics",
+      "transformationType": "defer"
+    },
+    {
+      "scenarioId": "ANC-0027",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "objective_to_method"
+    },
+    {
+      "scenarioId": "ANC-0028",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "method_to_objective"
+    },
+    {
+      "scenarioId": "ANC-0029",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "compound_assertion"
+    },
+    {
+      "scenarioId": "ANC-0030",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "ANC-0031",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "adversarial_false_merge_candidate"
+    },
+    {
+      "scenarioId": "ANC-0032",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "ANC-0033",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "ANC-0034",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "ANC-0035",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "narrow_applicability"
+    },
+    {
+      "scenarioId": "ANC-0036",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "broaden_applicability"
+    },
+    {
+      "scenarioId": "ANC-0037",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "change_subject_object_context"
+    },
+    {
+      "scenarioId": "ANC-0038",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "objective_to_method"
+    },
+    {
+      "scenarioId": "ANC-0039",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "method_to_objective"
+    },
+    {
+      "scenarioId": "ANC-0040",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "supporting_observation"
+    }
+  ],
+  "limitations": [
+    "POC rates are not production accuracy or prevalence estimates.",
+    "Composite pass rate must not override false-merge safety findings."
+  ]
+}
