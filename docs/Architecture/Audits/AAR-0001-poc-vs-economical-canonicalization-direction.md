@@ -25,8 +25,8 @@ This audit is **not** deferred until `CKES-0001` exists: AAR-0001 evaluates **im
 | Requirement | Link | Status | In scope |
 |---|---|---|---|
 | EDF ASR bootstrap; CKES-0001+ deferred | [ADR-0001](../ADRs/ADR-0001-ckes-adopts-edf-asr-bootstrap.md) | Accepted | Yes |
-| Economical canonicalization direction | [ADR-0003](../ADRs/ADR-0003-economical-llm-canonicalization-cascade.md) | Proposed | Yes (directional) |
-| Provisional requirements | [Economical LLM direction](../Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md) § CKES-PAR | Pre-normative | Yes |
+| Economical canonicalization direction | [ADR-0003](../ADRs/ADR-0003-economical-llm-canonicalization-cascade.md) | Accepted | Yes |
+| Provisional requirements | [Economical LLM direction](../Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md) § CKES-PAR | Confirmed (pre-normative) | Yes |
 | Charter POC-before-spec gate | [PROJECT_CHARTER](../../../PROJECT_CHARTER.md) | Approved | Yes |
 | Reference implementation role | [Reference Implementation](../Reference_Implementation_Role_and_Domain_Independence.md) | Foundational direction | Yes |
 

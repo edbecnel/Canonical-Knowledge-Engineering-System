@@ -71,4 +71,4 @@ Linked to [integration report](../docs/Development/Economical_Canonicalization_H
 - [Economical LLM-Assisted Canonicalization, Discovery, and Revalidation](../docs/Architecture/Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md)
 - [Source Change Contract](../docs/Architecture/Source_Change_Contract.md)
 - [ADR-0002](../docs/Architecture/ADRs/ADR-0002-poc-typescript-postgresql.md)
-- [ADR-0003](../docs/Architecture/ADRs/ADR-0003-economical-llm-canonicalization-cascade.md) (Proposed)
+- [ADR-0003](../docs/Architecture/ADRs/ADR-0003-economical-llm-canonicalization-cascade.md) (Accepted)

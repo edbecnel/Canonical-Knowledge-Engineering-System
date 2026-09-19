@@ -2,8 +2,9 @@
 
 [Home](../../../README.md) › [Project Index](../../../PROJECT_INDEX.md) › [Architecture](../README.md) › [ADRs](README.md) › ADR-0003
 
-> **Status:** Proposed
+> **Status:** Accepted
 > **Date:** 2026-09-19
+> **Accepted:** 2026-09-19 (architect)
 > **Owner:** Architecture Team
 > **Supersedes:** None
 > **Related ADRs:** [ADR-0001](ADR-0001-ckes-adopts-edf-asr-bootstrap.md) (remains authoritative on CKES-0001 deferral)
@@ -16,8 +17,8 @@ CKES must canonicalize large volumes of candidate knowledge without treating eve
 
 ## Decision
 
-1. CKES **proposes** to adopt the economical LLM-assisted canonicalization, discovery, and revalidation architecture documented in [Economical LLM-Assisted Canonicalization, Discovery, and Revalidation](../Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md).
-2. Traceable requirements for this architecture SHALL remain **provisional** (`CKES-PAR-*`) in that document until the human promotion gate defined therein is satisfied and [ADR-0001](ADR-0001-ckes-adopts-edf-asr-bootstrap.md)’s specification gate is met.
+1. CKES **adopts** the economical LLM-assisted canonicalization, discovery, and revalidation architecture documented in [Economical LLM-Assisted Canonicalization, Discovery, and Revalidation](../Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md).
+2. Traceable requirements for this architecture remain **provisional** (`CKES-PAR-*`, architect-**Confirmed** 2026-09-19) in that document until the promotion gate defined therein is satisfied and [ADR-0001](ADR-0001-ckes-adopts-edf-asr-bootstrap.md)’s specification gate is met. **Confirmed** is not ratification under `CKES-0001`.
 3. CKES SHALL **not** create `CKES-0001` or begin the numbered normative specification series as part of this decision.
 4. The POC SHALL prioritize evidence collection aligned with the direction document’s validation matrix and POC evidence program (matching accuracy, false merges, escalation, LLM-cost reduction, prior-decision reuse, batching, vector-index rebuild, revalidation, multi-domain applicability).
 
@@ -32,8 +33,6 @@ CKES must canonicalize large volumes of candidate knowledge without treating eve
 ### Negative
 
 - POC implementation gaps remain until traceable work items are executed ([AAR-0001](../Audits/AAR-0001-poc-vs-economical-canonicalization-direction.md))
-- Architect acceptance of this ADR is required before **Accepted** status
-
 ## Related Documents
 
 - [Economical LLM-Assisted Canonicalization, Discovery, and Revalidation](../Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md)

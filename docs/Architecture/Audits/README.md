@@ -21,5 +21,5 @@ EDF reference: [AAR-0001: Architectural Audit Records](https://github.com/edbecn
 
 ## Related Documents
 
-- [ADR-0003](../ADRs/ADR-0003-economical-llm-canonicalization-cascade.md) (Proposed)
+- [ADR-0003](../ADRs/ADR-0003-economical-llm-canonicalization-cascade.md) (Accepted)
 - [Economical Canonicalization Handover Integration Report](../../Development/Economical_Canonicalization_Handover_Integration_Report.md)

@@ -2,16 +2,18 @@
 
 [Home](../../README.md) › [Project Index](../../PROJECT_INDEX.md) › [Architecture](README.md) › Economical LLM-Assisted Canonicalization, Discovery, and Revalidation
 
-> **Status:** Draft Foundational Architectural Direction
+> **Status:** Accepted Foundational Architectural Direction
 > **Owner:** Architecture Team
 > **Applies To:** CKES generic core, POC alignment, future normative specifications
 > **Classification:** CKES architectural direction — includes **pre-normative** `CKES-PAR-*` requirements (not ratified `CKES-0001+`)
 > **Last Reviewed:** 2026-09-19
-> **Related ADR:** [ADR-0003](ADRs/ADR-0003-economical-llm-canonicalization-cascade.md) (Proposed)
+> **Related ADR:** [ADR-0003](ADRs/ADR-0003-economical-llm-canonicalization-cascade.md) (Accepted)
 
 ## Pre-normative requirements notice
 
 Requirements in this document use identifiers **`CKES-PAR-NNNN`** (Provisional Architectural Requirement). They are **not** ratified CKES specification requirements. [ADR-0001](ADRs/ADR-0001-ckes-adopts-edf-asr-bootstrap.md) defers `CKES-0001+` until POC evidence is reviewed.
+
+**Architect confirmation (2026-09-19):** `CKES-PAR-0001` through `CKES-PAR-0036` are **Confirmed** as the authoritative provisional set for POC implementation, AAR traceability, and the validation matrix. **Confirmed** does not equate to normative `CKES-0001` requirements; promotion follows §13.
 
 Each `CKES-PAR-*` entry may state **Provisional requirement strength: MUST if promoted** (or SHOULD / MAY) to preserve testable intent without implying current normative force.
 
@@ -189,44 +191,44 @@ Extracted candidate; possible match found; match unresolved; proposed new identi
 
 ### 8.1 Requirement registry
 
-| ID | Summary | Strength if promoted | Status | Provenance |
+| ID | Summary | Strength if promoted | Architect status | Provenance |
 |----|---------|----------------------|--------|------------|
-| CKES-PAR-0001 | LLM canonicality assessment is a first-class CKES capability | SHOULD | Proposed | Handover §1 |
-| CKES-PAR-0002 | LLM output is not authoritative solely because a model produced it | MUST | Proposed | Handover §1 |
-| CKES-PAR-0003 | Persist governed LLM/adjudication outcomes for reuse | SHOULD | Proposed | Handover §2 |
-| CKES-PAR-0004 | Distinguish durable canonical knowledge from model assessment records | MUST | Proposed | Handover §2 |
-| CKES-PAR-0005 | Reuse cascade before new LLM adjudication | SHOULD | Proposed | Handover §3 |
-| CKES-PAR-0006 | Auto-link thresholds conservative, explainable, testable | MUST | Proposed | Handover §3 |
-| CKES-PAR-0007 | Piggyback candidate work on existing AI when economical | SHOULD | Under experiment | Handover §4 |
-| CKES-PAR-0008 | Batch assessment with per-candidate provenance and isolation | SHOULD | Proposed | Handover §5 |
-| CKES-PAR-0009 | Explicit separation discovery / adjudication / governance / persistence | MUST | Proposed | Handover §6 |
-| CKES-PAR-0010 | Canonical store correct if all embeddings/vector indexes deleted | MUST | Proposed | Handover §7 |
-| CKES-PAR-0011 | Rebuilding embeddings must not change canonical identity or accepted relationships | MUST | Proposed | Handover §7 |
-| CKES-PAR-0012 | NLP/lexical signals are discovery evidence, not identity proof | MUST | Proposed | Handover §8 |
-| CKES-PAR-0013 | Compatibility analysis uses type, applicability, relationships | SHOULD | Proposed | Handover §9 |
-| CKES-PAR-0014 | Escalation policy multi-factor, not single similarity threshold | SHOULD | Proposed | Handover §10 |
-| CKES-PAR-0015 | Explicit candidate lifecycle states | MUST | Proposed | Handover §11 |
-| CKES-PAR-0016 | Candidate/processing ID must not imply accepted canonical identity | MUST | Proposed | Handover §11, CRA-8 |
-| CKES-PAR-0017 | Preserve source expression and provenance layers | MUST | Proposed | Handover §12 |
-| CKES-PAR-0018 | Semantic anchoring; canonical wording optional | MAY | Proposed | Handover §13 |
-| CKES-PAR-0019 | Evidence-driven revalidation | MUST | Proposed | Handover §14 |
-| CKES-PAR-0020 | Revalidation outcomes historical; no silent overwrite | MUST | Proposed | Handover §15 |
-| CKES-PAR-0021 | Emerging clusters are signals only | SHOULD | Proposed | Handover §16 |
-| CKES-PAR-0022 | Economic metrics without lowering correctness standards | MUST | Proposed | Handover §17 |
-| CKES-PAR-0023 | Canonical integrity must not depend on live LLM or vector service | MUST | Proposed | Handover failure § |
-| CKES-PAR-0024 | Tenancy/authorization boundaries in batching and prompts | MUST | Proposed | Handover privacy § |
-| CKES-PAR-0025 | Defined failure behavior (LLM, budget, partial batch, index corruption) | MUST | Proposed | Handover failure § |
-| CKES-PAR-0026 | Configurable human review; reviewer decisions reusable | SHOULD | Proposed | Handover governance § |
-| CKES-PAR-0027 | Eight identity layers distinguished in data model and APIs | MUST | Proposed | Architect amendment §6 |
-| CKES-PAR-0028 | Similarity alone must not establish canonical identity | MUST | Proposed | CRA constraint 2 |
-| CKES-PAR-0029 | LLM match recommendation does not establish equivalence | MUST | Proposed | Architect amendment §6 |
-| CKES-PAR-0030 | High-confidence retrieval does not constitute accepted identity | MUST | Proposed | Architect amendment §6 |
-| CKES-PAR-0031 | Detect false merges via audits, contradictions, human review, metrics | MUST | Proposed | Handover failure § |
-| CKES-PAR-0032 | Rollback: separate incorrect provenance; restore or split identities | MUST | Proposed | Architect amendment §7 |
-| CKES-PAR-0033 | On correction: invalidate affected derived indexes/caches; rebuild | MUST | Proposed | Architect amendment §7 |
-| CKES-PAR-0034 | Record corrective decision; retain erroneous decision in history | MUST | Proposed | Architect amendment §7 |
-| CKES-PAR-0035 | Identify downstream consumers; reprocess/notify per policy | SHOULD | Proposed | Architect amendment §7 |
-| CKES-PAR-0036 | Deferred processing idempotent and retryable with correlation IDs | MUST | Proposed | Handover failure § |
+| CKES-PAR-0001 | LLM canonicality assessment is a first-class CKES capability | SHOULD | Confirmed | Handover §1 |
+| CKES-PAR-0002 | LLM output is not authoritative solely because a model produced it | MUST | Confirmed | Handover §1 |
+| CKES-PAR-0003 | Persist governed LLM/adjudication outcomes for reuse | SHOULD | Confirmed | Handover §2 |
+| CKES-PAR-0004 | Distinguish durable canonical knowledge from model assessment records | MUST | Confirmed | Handover §2 |
+| CKES-PAR-0005 | Reuse cascade before new LLM adjudication | SHOULD | Confirmed | Handover §3 |
+| CKES-PAR-0006 | Auto-link thresholds conservative, explainable, testable | MUST | Confirmed | Handover §3 |
+| CKES-PAR-0007 | Piggyback candidate work on existing AI when economical | SHOULD | Confirmed | Handover §4 |
+| CKES-PAR-0008 | Batch assessment with per-candidate provenance and isolation | SHOULD | Confirmed | Handover §5 |
+| CKES-PAR-0009 | Explicit separation discovery / adjudication / governance / persistence | MUST | Confirmed | Handover §6 |
+| CKES-PAR-0010 | Canonical store correct if all embeddings/vector indexes deleted | MUST | Confirmed | Handover §7 |
+| CKES-PAR-0011 | Rebuilding embeddings must not change canonical identity or accepted relationships | MUST | Confirmed | Handover §7 |
+| CKES-PAR-0012 | NLP/lexical signals are discovery evidence, not identity proof | MUST | Confirmed | Handover §8 |
+| CKES-PAR-0013 | Compatibility analysis uses type, applicability, relationships | SHOULD | Confirmed | Handover §9 |
+| CKES-PAR-0014 | Escalation policy multi-factor, not single similarity threshold | SHOULD | Confirmed | Handover §10 |
+| CKES-PAR-0015 | Explicit candidate lifecycle states | MUST | Confirmed | Handover §11 |
+| CKES-PAR-0016 | Candidate/processing ID must not imply accepted canonical identity | MUST | Confirmed | Handover §11, CRA-8 |
+| CKES-PAR-0017 | Preserve source expression and provenance layers | MUST | Confirmed | Handover §12 |
+| CKES-PAR-0018 | Semantic anchoring; canonical wording optional | MAY | Confirmed | Handover §13 |
+| CKES-PAR-0019 | Evidence-driven revalidation | MUST | Confirmed | Handover §14 |
+| CKES-PAR-0020 | Revalidation outcomes historical; no silent overwrite | MUST | Confirmed | Handover §15 |
+| CKES-PAR-0021 | Emerging clusters are signals only | SHOULD | Confirmed | Handover §16 |
+| CKES-PAR-0022 | Economic metrics without lowering correctness standards | MUST | Confirmed | Handover §17 |
+| CKES-PAR-0023 | Canonical integrity must not depend on live LLM or vector service | MUST | Confirmed | Handover failure § |
+| CKES-PAR-0024 | Tenancy/authorization boundaries in batching and prompts | MUST | Confirmed | Handover privacy § |
+| CKES-PAR-0025 | Defined failure behavior (LLM, budget, partial batch, index corruption) | MUST | Confirmed | Handover failure § |
+| CKES-PAR-0026 | Configurable human review; reviewer decisions reusable | SHOULD | Confirmed | Handover governance § |
+| CKES-PAR-0027 | Eight identity layers distinguished in data model and APIs | MUST | Confirmed | Architect amendment §6 |
+| CKES-PAR-0028 | Similarity alone must not establish canonical identity | MUST | Confirmed | CRA constraint 2 |
+| CKES-PAR-0029 | LLM match recommendation does not establish equivalence | MUST | Confirmed | Architect amendment §6 |
+| CKES-PAR-0030 | High-confidence retrieval does not constitute accepted identity | MUST | Confirmed | Architect amendment §6 |
+| CKES-PAR-0031 | Detect false merges via audits, contradictions, human review, metrics | MUST | Confirmed | Handover failure § |
+| CKES-PAR-0032 | Rollback: separate incorrect provenance; restore or split identities | MUST | Confirmed | Architect amendment §7 |
+| CKES-PAR-0033 | On correction: invalidate affected derived indexes/caches; rebuild | MUST | Confirmed | Architect amendment §7 |
+| CKES-PAR-0034 | Record corrective decision; retain erroneous decision in history | MUST | Confirmed | Architect amendment §7 |
+| CKES-PAR-0035 | Identify downstream consumers; reprocess/notify per policy | SHOULD | Confirmed | Architect amendment §7 |
+| CKES-PAR-0036 | Deferred processing idempotent and retryable with correlation IDs | MUST | Confirmed | Handover failure § |
 
 ### 8.2 Implementation hypotheses (POC evidence required)
 
@@ -335,12 +337,12 @@ Matching accuracy; false merges; escalation paths; LLM-cost reduction; prior-dec
 
 ## 13. Human promotion gate for `CKES-0001`
 
-**Not satisfied by this documentation pass.**
+**Architect confirmed (2026-09-19):** Gate criteria and process below are correct. The gate is **not** satisfied until steps 1 and 3–7 are complete.
 
 | Step | Requirement |
 |------|-------------|
 | 1 | [ADR-0001](ADRs/ADR-0001-ckes-adopts-edf-asr-bootstrap.md) evidence gate closed (human decision recorded—typically amended ADR or charter update) |
-| 2 | [ADR-0003](ADRs/ADR-0003-economical-llm-canonicalization-cascade.md) **Accepted** by architect |
+| 2 | [ADR-0003](ADRs/ADR-0003-economical-llm-canonicalization-cascade.md) **Accepted** by architect — **done** (2026-09-19) |
 | 3 | POC evidence reviewed; findings classified in [CRA Findings Report](../Development/CRA_Findings_Report.md) |
 | 4 | Validation matrix rows marked **evidence satisfied** for in-scope PAR |
 | 5 | **≥2 materially different domains** (e.g. culinary + electronics/ELS-style); culinary-only evidence **insufficient** |
@@ -383,7 +385,7 @@ See integrated handover example: refrigerated pastry resting vs cookie-dough war
 
 ## 17. Related documents
 
-- [ADR-0003](ADRs/ADR-0003-economical-llm-canonicalization-cascade.md) (Proposed)
+- [ADR-0003](ADRs/ADR-0003-economical-llm-canonicalization-cascade.md) (Accepted)
 - [AAR-0001](Audits/AAR-0001-poc-vs-economical-canonicalization-direction.md) (Open)
 - [Reference Implementation Role and Domain Independence](Reference_Implementation_Role_and_Domain_Independence.md)
 - [Pragmatic Canonicalization Research and Validation](../Development/Pragmatic_Canonicalization_Research_and_Validation.md)

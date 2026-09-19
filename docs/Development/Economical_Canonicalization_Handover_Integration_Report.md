@@ -26,7 +26,7 @@ Agent integration instructions from the handover are summarized here; they are n
 | Document | Change |
 |----------|--------|
 | [Economical LLM direction](../Architecture/Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md) | Created (primary) |
-| [ADR-0003](../Architecture/ADRs/ADR-0003-economical-llm-canonicalization-cascade.md) | Created (Proposed) |
+| [ADR-0003](../Architecture/ADRs/ADR-0003-economical-llm-canonicalization-cascade.md) | Accepted (2026-09-19, architect) |
 | [AAR-0001](../Architecture/Audits/AAR-0001-poc-vs-economical-canonicalization-direction.md) | Created (Open) |
 | [ARCHITECTURE_DECISIONS.md](../../ARCHITECTURE_DECISIONS.md) | ADR-0003 index |
 | [PROJECT_INDEX.md](../../PROJECT_INDEX.md) | Navigation |
@@ -120,7 +120,7 @@ Follow-up: improve navigation breadcrumbs on new audit domain files; expand AI h
 
 ## Open follow-ups
 
-- Architect review: [ADR-0003](../Architecture/ADRs/ADR-0003-economical-llm-canonicalization-cascade.md) Proposed → Accepted
+- **Done (2026-09-19):** ADR-0003 Accepted; `CKES-PAR-*` Confirmed; promotion gate confirmed (gate not satisfied until POC evidence + ADR-0001 spec gate)
 - Update CRA mapping when CRA-0004/0005 governed
 - Execute POC baselines per direction doc §12
 
