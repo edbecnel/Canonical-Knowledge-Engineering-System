@@ -138,6 +138,18 @@
             "expectedDecisionClass": { "type": "string" },
             "expectedVersusActual": { "type": "object", "additionalProperties": true }
           }
+        },
+        "evaluationCapture": {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "benchmarkLocalSeedId": { "type": "string" },
+            "identityEvidenceStatus": {
+              "type": "string",
+              "enum": ["present_mapped", "present_unmapped", "absent_no_merge", "absent_no_retrieval"]
+            },
+            "evaluationMatchedIdentityRef": { "type": "object", "additionalProperties": true }
+          }
         }
       }
     },

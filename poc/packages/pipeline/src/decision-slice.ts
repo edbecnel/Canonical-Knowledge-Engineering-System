@@ -5,6 +5,10 @@ import type { PipelineScenarioInput } from '@ckes/benchmark';
 import { discoverCandidates, type DiscoveredCandidate } from './discovery.js';
 import { hybridRetrieve } from './retrieval.js';
 import { adjudicateSemantic } from './adjudication.js';
+import {
+  deriveEvaluationMatchedIdentityRef,
+  type EvaluationMatchedIdentityRef,
+} from './evaluation-identity.js';
 
 export interface DecisionSliceOptions {
   openaiKey?: string;
@@ -28,6 +32,8 @@ export interface DecisionSliceResult {
   usedAi: boolean;
   latencyMs: number;
   failureLayer?: 'extraction' | 'retrieval' | 'adjudication' | 'policy';
+  /** Evaluation-only; does not affect adjudication or policy. */
+  evaluationMatchedIdentityRef?: EvaluationMatchedIdentityRef;
 }
 
 function inputToCandidate(input: PipelineScenarioInput): DiscoveredCandidate {
@@ -107,6 +113,12 @@ export async function runDecisionSlice(
     ],
   );
 
+  const evaluationMatchedIdentityRef = deriveEvaluationMatchedIdentityRef(
+    matches,
+    adjudication.classification,
+    policyResult.action,
+  );
+
   return {
     pipelineRunId,
     candidateId,
@@ -120,6 +132,7 @@ export async function runDecisionSlice(
     usedAi: adjudication.usedAi,
     latencyMs: Date.now() - start,
     failureLayer: 'decision_slice_outcome' as DecisionSliceResult['failureLayer'],
+    evaluationMatchedIdentityRef,
   };
 }
 

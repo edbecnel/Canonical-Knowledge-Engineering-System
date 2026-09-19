@@ -12,3 +12,4 @@ export * from './trial-policy.js';
 export * from './profile-hash.js';
 export * from './qualify.js';
 export * from './report.js';
+export * from './seed-mapping.js';

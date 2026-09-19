@@ -20,6 +20,8 @@ import { runDecisionSlice, runFullPipelineSlice } from '@ckes/pipeline';
 import { writeFileAtomic } from './atomic-write.js';
 import { ensureDir } from './paths.js';
 import { resetHarnessSandbox, HARNESS_CONCURRENCY_MAX } from './isolation.js';
+import { loadPackSeedMaterial } from './pack-seeds.js';
+import { buildScenarioEvaluationCapture, matchedSeedIdForScoring } from './evaluation-capture.js';
 import type { RunLifecycleState } from './run-state.js';
 import { isTerminalState } from './run-state.js';
 
@@ -89,6 +91,13 @@ export class HarnessRunner extends EventEmitter {
     let lifecycle: RunLifecycleState = 'preparing';
     this.emitEvent('run_state', runId, { state: lifecycle });
     await resetHarnessSandbox(options.pool);
+    const seedMaterial = (options.pack.canonicalSeedMaterial ?? []) as Array<{
+      seedId: string;
+      label: string;
+      statement?: string;
+    }>;
+    await loadPackSeedMaterial(options.pool, seedMaterial);
+    const packSeedsForMapping = seedMaterial.map((s) => ({ seedId: s.seedId, label: s.label }));
 
     let totalCost = 0;
     let modelCalls = 0;
@@ -145,6 +154,7 @@ export class HarnessRunner extends EventEmitter {
         const trialRows: Record<string, unknown>[] = [];
         let trialsCompleted = 0;
         let lastSlice: Awaited<ReturnType<typeof runDecisionSlice>> | undefined;
+        let scenarioEvaluationCapture: ReturnType<typeof buildScenarioEvaluationCapture> | undefined;
 
         for (let trialIndex = 0; trialIndex < trialsRequested; trialIndex += 1) {
           if (trialPolicy?.modelCallLimit != null && modelCalls >= trialPolicy.modelCallLimit) {
@@ -185,11 +195,22 @@ export class HarnessRunner extends EventEmitter {
               | undefined,
             labelConfidenceClass: scenario.labelConfidenceClass as string,
           };
+          const evalRef = sliceResult.evaluationMatchedIdentityRef ?? {
+            present: false,
+            reason: 'no_merge_identity_in_decision' as const,
+          };
+          const evaluationCapture = buildScenarioEvaluationCapture(
+            evalRef.present
+              ? { present: true, canonicalLabel: evalRef.canonicalLabel }
+              : { present: false, reason: evalRef.reason },
+            packSeedsForMapping,
+          );
           const score = scoreScenario(expectations, {
             adjudicationClass: sliceResult.adjudicationClass,
             policyAction: sliceResult.policyAction,
-            matchedSeedId: undefined,
+            matchedSeedId: matchedSeedIdForScoring(evaluationCapture),
           });
+          scenarioEvaluationCapture = evaluationCapture;
           trialScores.push(score);
           trialRows.push({
             trialIndex,
@@ -250,6 +271,7 @@ export class HarnessRunner extends EventEmitter {
               policyAction: sliceResult?.policyAction,
             },
           },
+          evaluationCapture: scenarioEvaluationCapture,
         });
         this.emitEvent('scenario_completed', runId, { scenarioId });
       } catch (err) {

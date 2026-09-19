@@ -6,3 +6,5 @@ export * from './compare.js';
 export * from './run-state.js';
 export * from './atomic-write.js';
 export * from './run-integrity.js';
+export * from './pack-seeds.js';
+export * from './evaluation-capture.js';

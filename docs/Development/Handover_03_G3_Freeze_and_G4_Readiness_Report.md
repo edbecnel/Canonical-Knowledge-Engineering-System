@@ -115,7 +115,7 @@ Smallest **evaluation-only** change (does not alter adjudication/policy semantic
 
 ## Git commit
 
-See repository `git log` for G3 freeze commit.
+**`0e93c13`** — Freeze Handover 3 G3 official benchmark packs and derived Markdown.
 
 ## Limitations
 
