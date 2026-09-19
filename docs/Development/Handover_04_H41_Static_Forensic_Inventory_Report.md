@@ -179,7 +179,7 @@ Informs H4.2, H4.3, and optional H4.O — **no instrumentation implemented**.
 
 ## Git commit
 
-Recorded after commit.
+`0fcd46a4a7575b0ef1ec008e015cb9da0b1c3be5` — Complete Handover 04 H4.1 static forensic inventory from RB001 evidence.
 
 ---
 
