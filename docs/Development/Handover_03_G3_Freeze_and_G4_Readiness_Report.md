@@ -115,7 +115,7 @@ Smallest **evaluation-only** change (does not alter adjudication/policy semantic
 
 ## Git commit
 
-Recorded after commit (`git log -1`).
+See repository `git log` for G3 freeze commit.
 
 ## Limitations
 
