@@ -37,6 +37,7 @@
     "benchmark:g5-designate": "tsx scripts/g5-designate-reference-baseline.ts",
     "benchmark:g6-closeout": "tsx scripts/g6-finalize-evidence-manifest.ts",
     "benchmark:h41-inventory": "tsx scripts/h41-static-inventory.ts",
+    "benchmark:h42-clustering": "tsx scripts/h42-causal-clustering.ts",
     "harness:test": "npm run test --workspace @ckes/harness",
     "scenario-lab:api": "tsx packages/scenario-lab-api/src/server.ts",
     "scenario-lab:dev": "npm run dev --workspace ckes-scenario-lab"

@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "1.0.0",
+  "gate": "H4.2",
+  "controls": [
+    {
+      "scenarioId": "ANC-0030",
+      "role": "pass_control",
+      "pairsWith": [
+        "ANC-0040"
+      ],
+      "note": "irrelevant_near_neighbor → DISTINCT pass"
+    },
+    {
+      "scenarioId": "ANC-0038",
+      "role": "pass_control",
+      "pairsWith": [
+        "ANC-0027",
+        "ANC-0028",
+        "ANC-0039"
+      ],
+      "note": "objective_to_method → DISTINCT pass"
+    },
+    {
+      "scenarioId": "ANC-0034",
+      "role": "pass_control",
+      "pairsWith": [
+        "ANC-0032"
+      ],
+      "note": "terminology_substitution related_distinct pass"
+    },
+    {
+      "scenarioId": "ANC-0001",
+      "role": "pass_control",
+      "pairsWith": [
+        "ANC-0002"
+      ],
+      "note": "paraphrase_same_identity match pass vs missed_match ANC-0002"
+    },
+    {
+      "scenarioId": "CHL-0004",
+      "role": "challenge_pass_contrast",
+      "pairsWith": [
+        "CHL-0014"
+      ],
+      "note": "Challenge related_distinct pass vs unnecessary deferral on defer_human"
+    }
+  ],
+  "missedMatchRelevance": [
+    {
+      "scenarioId": "ANC-0002",
+      "failureClassification": "missed_match",
+      "row": {
+        "scenarioId": "ANC-0002",
+        "transformationType": "paraphrase_same_identity",
+        "domain": "culinary",
+        "executionMode": "decision_slice",
+        "expectedDecisionClass": "match_existing",
+        "actualDecisionClass": "DISTINCT",
+        "policyAction": "evaluate_new_identity",
+        "candidateText": "process of Maillard",
+        "mustNotMatch": false,
+        "outcome": "fail",
+        "failureClassification": "missed_match"
+      },
+      "h42Role": "Contrast over-conservative DISTINCT vs false-merge hypotheses; optional P2 Debug with pass control"
+    },
+    {
+      "scenarioId": "ANC-0006",
+      "failureClassification": "missed_match",
+      "row": {
+        "scenarioId": "ANC-0006",
+        "transformationType": "paraphrase_same_identity",
+        "domain": "culinary",
+        "executionMode": "decision_slice",
+        "expectedDecisionClass": "match_existing",
+        "actualDecisionClass": "DISTINCT",
+        "policyAction": "evaluate_new_identity",
+        "candidateText": "process of Deglaze",
+        "mustNotMatch": false,
+        "outcome": "fail",
+        "failureClassification": "missed_match"
+      },
+      "h42Role": "Contrast over-conservative DISTINCT vs false-merge hypotheses; optional P2 Debug with pass control"
+    },
+    {
+      "scenarioId": "ANC-0010",
+      "failureClassification": "missed_match",
+      "row": {
+        "scenarioId": "ANC-0010",
+        "transformationType": "terminology_substitution_same_identity",
+        "domain": "electronics",
+        "executionMode": "decision_slice",
+        "expectedDecisionClass": "match_existing",
+        "actualDecisionClass": "DISTINCT",
+        "policyAction": "evaluate_new_identity",
+        "candidateText": "process of Pull-up",
+        "mustNotMatch": false,
+        "outcome": "fail",
+        "failureClassification": "missed_match"
+      },
+      "h42Role": "Contrast over-conservative DISTINCT vs false-merge hypotheses; optional P2 Debug with pass control"
+    },
+    {
+      "scenarioId": "ANC-0014",
+      "failureClassification": "missed_match",
+      "row": {
+        "scenarioId": "ANC-0014",
+        "transformationType": "terminology_substitution_same_identity",
+        "domain": "electronics",
+        "executionMode": "decision_slice",
+        "expectedDecisionClass": "match_existing",
+        "actualDecisionClass": "DISTINCT",
+        "policyAction": "evaluate_new_identity",
+        "candidateText": "process of ADC",
+        "mustNotMatch": false,
+        "outcome": "fail",
+        "failureClassification": "missed_match"
+      },
+      "h42Role": "Contrast over-conservative DISTINCT vs false-merge hypotheses; optional P2 Debug with pass control"
+    }
+  ]
+}

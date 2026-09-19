@@ -1,0 +1,117 @@
+{
+  "gate": "H4.2",
+  "generatedAt": "2026-09-19T11:09:21.063Z",
+  "anchorFalseMergeCount": 18,
+  "clusterCount": 9,
+  "fmToClusters": {
+    "ANC-0017": [
+      "CL-EQUIV-REUSE",
+      "CL-FULL-PIPELINE"
+    ],
+    "ANC-0018": [
+      "CL-MNMT-ADVERSARIAL",
+      "CL-EQUIV-REUSE"
+    ],
+    "ANC-0019": [
+      "CL-MNMT-ADVERSARIAL",
+      "CL-EQUIV-REUSE"
+    ],
+    "ANC-0020": [
+      "CL-MNMT-ADVERSARIAL",
+      "CL-EQUIV-REUSE"
+    ],
+    "ANC-0023": [
+      "CL-SUBSUMED-REJECT",
+      "CL-CONTRADICTION"
+    ],
+    "ANC-0024": [
+      "CL-EQUIV-REUSE",
+      "CL-SCOPE-QUALIFIER"
+    ],
+    "ANC-0025": [
+      "CL-SUBSUMED-REJECT",
+      "CL-REVALIDATION"
+    ],
+    "ANC-0027": [
+      "CL-SUBSUMED-REJECT",
+      "CL-RELATION-DIRECTION"
+    ],
+    "ANC-0028": [
+      "CL-EQUIV-REUSE",
+      "CL-RELATION-DIRECTION"
+    ],
+    "ANC-0029": [
+      "CL-SUBSUMED-REJECT",
+      "CL-COMPOUND"
+    ],
+    "ANC-0031": [
+      "CL-MNMT-ADVERSARIAL",
+      "CL-EQUIV-REUSE"
+    ],
+    "ANC-0032": [
+      "CL-EQUIV-REUSE",
+      "CL-REVALIDATION"
+    ],
+    "ANC-0033": [
+      "CL-SUBSUMED-REJECT"
+    ],
+    "ANC-0035": [
+      "CL-SUBSUMED-REJECT",
+      "CL-SCOPE-QUALIFIER"
+    ],
+    "ANC-0036": [
+      "CL-EQUIV-REUSE",
+      "CL-SCOPE-QUALIFIER"
+    ],
+    "ANC-0037": [
+      "CL-SUBSUMED-REJECT"
+    ],
+    "ANC-0039": [
+      "CL-SUBSUMED-REJECT",
+      "CL-RELATION-DIRECTION"
+    ],
+    "ANC-0040": [
+      "CL-EQUIV-REUSE"
+    ]
+  },
+  "tier0MnmtStrategy": {
+    "tier0": [
+      "ANC-0017",
+      "ANC-0018",
+      "ANC-0019",
+      "ANC-0020",
+      "ANC-0031"
+    ],
+    "mnmtTriple": [
+      "ANC-0018",
+      "ANC-0019",
+      "ANC-0020"
+    ],
+    "assessment": "Three independent diagnostic cases AND controlled variants of one mechanism (adversarial + literal label overlap + scorer-only mustNotMatch). ANC-0031 adds second MNMT on culinary Rest meat vs CK-CUL-09.",
+    "debugEfficiency": "Single shared checklist for adversarial MNMT triple; record separate INV-* per scenario; vary domain/seed in notes"
+  },
+  "ordinaryRepresentativeIds": [
+    "ANC-0023",
+    "ANC-0024",
+    "ANC-0027",
+    "ANC-0029",
+    "ANC-0035",
+    "ANC-0040"
+  ],
+  "controlScenarioIds": [
+    "ANC-0030",
+    "ANC-0038",
+    "ANC-0034",
+    "ANC-0001",
+    "CHL-0004"
+  ],
+  "investigationMatrixRowCount": 32,
+  "debugRequiredRowCount": 24,
+  "immutabilityVerification": {
+    "passed": true
+  },
+  "newBenchmarkRuns": false,
+  "debugModeUsed": false,
+  "ckesBehavioralChanges": false,
+  "rootCauseEstablished": false
+}

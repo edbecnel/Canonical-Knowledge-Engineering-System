@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0.0",
+  "gate": "H4.2",
+  "legend": {
+    "A": "available through normal Debug inspection at H4.3",
+    "B": "available through existing artifacts/code (read-only)",
+    "C": "unavailable without disposable local tracing during repro",
+    "D": "requires persistent instrumentation (H4.O)"
+  },
+  "anchorFmInvestigations": {
+    "defaultRequired": [
+      {
+        "observation": "hybridRetrieve full matches[]",
+        "availability": "C",
+        "h4oIfPersistent": false
+      },
+      {
+        "observation": "matches[0] only used in adjudicateSemantic",
+        "availability": "B",
+        "source": "adjudication.ts"
+      },
+      {
+        "observation": "deterministic EQUIVALENT on score>=0.95 or label equality",
+        "availability": "B",
+        "source": "adjudication.ts"
+      },
+      {
+        "observation": "mustNotMatchIdentities not in pipeline projection",
+        "availability": "B",
+        "source": "forbidden-keys.ts"
+      },
+      {
+        "observation": "adjudication rationale in run JSON",
+        "availability": "D",
+        "h4oIfPersistent": true
+      },
+      {
+        "observation": "retrieval scores in run JSON",
+        "availability": "D",
+        "h4oIfPersistent": true
+      }
+    ]
+  },
+  "proposedH4oTriggers": [
+    {
+      "trigger": "If architect requires ranked retrieval persisted in run artifacts for all suites",
+      "category": "D",
+      "gate": "H4.O"
+    }
+  ]
+}

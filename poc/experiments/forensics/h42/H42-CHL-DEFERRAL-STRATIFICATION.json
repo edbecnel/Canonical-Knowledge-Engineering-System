@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "1.0.0",
+  "gate": "H4.2",
+  "total": 49,
+  "allExpectedDecisionClass": "defer_human",
+  "allActualDecisionClass": "DISTINCT",
+  "byDomain": {
+    "culinary": 23,
+    "electronics": 26
+  },
+  "byExecutionMode": {
+    "decision_slice": 46,
+    "full_pipeline": 3
+  },
+  "byTransformationType": {
+    "broaden_applicability": 3,
+    "method_to_objective": 4,
+    "qualification": 5,
+    "emerging_process_revalidation": 5,
+    "narrow_applicability": 4,
+    "objective_to_method": 3,
+    "compound_assertion": 5,
+    "adversarial_false_merge_candidate": 4,
+    "related_distinct": 4,
+    "irrelevant_near_neighbor": 5,
+    "terminology_substitution_same_identity": 4,
+    "supporting_observation": 3
+  },
+  "byPolicyAction": {
+    "evaluate_new_identity": 49
+  },
+  "appropriateDeferPassCount": 0,
+  "h43Sample": [
+    {
+      "scenarioId": "CHL-0003",
+      "transformationType": "qualification",
+      "domain": "electronics"
+    },
+    {
+      "scenarioId": "CHL-0010",
+      "transformationType": "adversarial_false_merge_candidate",
+      "domain": "culinary"
+    },
+    {
+      "scenarioId": "CHL-0002",
+      "transformationType": "method_to_objective",
+      "domain": "electronics"
+    },
+    {
+      "scenarioId": "CHL-0006",
+      "transformationType": "narrow_applicability",
+      "domain": "electronics"
+    },
+    {
+      "scenarioId": "CHL-0009",
+      "transformationType": "compound_assertion",
+      "domain": "electronics"
+    },
+    {
+      "scenarioId": "CHL-0014",
+      "transformationType": "related_distinct",
+      "domain": "culinary"
+    },
+    {
+      "scenarioId": "CHL-0005",
+      "transformationType": "emerging_process_revalidation",
+      "domain": "electronics"
+    },
+    {
+      "scenarioId": "CHL-0025",
+      "transformationType": "contradiction",
+      "domain": "culinary"
+    }
+  ],
+  "staticHypothesisBuckets": [
+    "confidence_behavior",
+    "adjudication_uncertainty",
+    "policy_routing",
+    "insufficient_evidence",
+    "challenge_construction",
+    "scorer_expectation_mismatch"
+  ],
+  "controlCandidates": [
+    {
+      "scenarioId": "CHL-0004",
+      "note": "Challenge related_distinct pass — CKES did not defer when deferral not expected"
+    },
+    {
+      "scenarioId": "ANC-0026",
+      "note": "Anchor unnecessary_deferral — defer transformation on Anchor pack"
+    }
+  ]
+}

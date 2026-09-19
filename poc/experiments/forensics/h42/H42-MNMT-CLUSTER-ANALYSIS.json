@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "1.0.0",
+  "gate": "H4.2",
+  "scenarios": [
+    {
+      "scenarioId": "ANC-0018",
+      "expectedSemanticPreservation": "Benchmark expects related_distinct (not equivalent) relative to corpus; mustNotMatch forbids merge to listed seed",
+      "candidateText": "GPIO pin",
+      "forbidden": [
+        {
+          "seedId": "CK-ELS-01",
+          "seedLabel": "GPIO pin",
+          "seedStatement": "A GPIO pin is a general-purpose digital I/O line."
+        }
+      ],
+      "matchedSeed": "CK-ELS-01",
+      "distinguishingInfoInCandidateVsSeed": {
+        "candidateEqualsForbiddenLabel": true,
+        "seedStatementRicherThanCandidate": true,
+        "mustNotMatchVisibleToPipeline": false,
+        "note": "projection excludes mustNotMatchIdentities (forbidden-keys); static code review"
+      },
+      "representationSufficiencyQuestion": "If only candidate label is presented, distinguishing semantics may be insufficient without extra context",
+      "negativeIdentityConclusion": "not_determined_pending_h4_3"
+    },
+    {
+      "scenarioId": "ANC-0019",
+      "expectedSemanticPreservation": "Benchmark expects related_distinct (not equivalent) relative to corpus; mustNotMatch forbids merge to listed seed",
+      "candidateText": "Sous vide",
+      "forbidden": [
+        {
+          "seedId": "CK-CUL-03",
+          "seedLabel": "Sous vide",
+          "seedStatement": "Sous vide cooks food in a temperature-controlled water bath."
+        }
+      ],
+      "matchedSeed": "CK-CUL-03",
+      "distinguishingInfoInCandidateVsSeed": {
+        "candidateEqualsForbiddenLabel": true,
+        "seedStatementRicherThanCandidate": true,
+        "mustNotMatchVisibleToPipeline": false,
+        "note": "projection excludes mustNotMatchIdentities (forbidden-keys); static code review"
+      },
+      "representationSufficiencyQuestion": "If only candidate label is presented, distinguishing semantics may be insufficient without extra context",
+      "negativeIdentityConclusion": "not_determined_pending_h4_3"
+    },
+    {
+      "scenarioId": "ANC-0020",
+      "expectedSemanticPreservation": "Benchmark expects related_distinct (not equivalent) relative to corpus; mustNotMatch forbids merge to listed seed",
+      "candidateText": "I2C bus",
+      "forbidden": [
+        {
+          "seedId": "CK-ELS-04",
+          "seedLabel": "I2C bus",
+          "seedStatement": "I2C is a two-wire serial bus for peripherals."
+        }
+      ],
+      "matchedSeed": "CK-ELS-04",
+      "distinguishingInfoInCandidateVsSeed": {
+        "candidateEqualsForbiddenLabel": true,
+        "seedStatementRicherThanCandidate": true,
+        "mustNotMatchVisibleToPipeline": false,
+        "note": "projection excludes mustNotMatchIdentities (forbidden-keys); static code review"
+      },
+      "representationSufficiencyQuestion": "If only candidate label is presented, distinguishing semantics may be insufficient without extra context",
+      "negativeIdentityConclusion": "not_determined_pending_h4_3"
+    },
+    {
+      "scenarioId": "ANC-0031",
+      "expectedSemanticPreservation": "Benchmark expects related_distinct (not equivalent) relative to corpus; mustNotMatch forbids merge to listed seed",
+      "candidateText": "Rest meat",
+      "forbidden": [
+        {
+          "seedId": "CK-CUL-09",
+          "seedLabel": "Rest meat",
+          "seedStatement": "Resting meat redistributes juices after cooking."
+        }
+      ],
+      "matchedSeed": "CK-CUL-09",
+      "distinguishingInfoInCandidateVsSeed": {
+        "candidateEqualsForbiddenLabel": true,
+        "seedStatementRicherThanCandidate": true,
+        "mustNotMatchVisibleToPipeline": false,
+        "note": "projection excludes mustNotMatchIdentities (forbidden-keys); static code review"
+      },
+      "representationSufficiencyQuestion": "If only candidate label is presented, distinguishing semantics may be insufficient without extra context",
+      "negativeIdentityConclusion": "not_determined_pending_h4_3"
+    }
+  ],
+  "tier0MnmtStrategy": {
+    "tier0": [
+      "ANC-0017",
+      "ANC-0018",
+      "ANC-0019",
+      "ANC-0020",
+      "ANC-0031"
+    ],
+    "mnmtTriple": [
+      "ANC-0018",
+      "ANC-0019",
+      "ANC-0020"
+    ],
+    "assessment": "Three independent diagnostic cases AND controlled variants of one mechanism (adversarial + literal label overlap + scorer-only mustNotMatch). ANC-0031 adds second MNMT on culinary Rest meat vs CK-CUL-09.",
+    "debugEfficiency": "Single shared checklist for adversarial MNMT triple; record separate INV-* per scenario; vary domain/seed in notes"
+  }
+}

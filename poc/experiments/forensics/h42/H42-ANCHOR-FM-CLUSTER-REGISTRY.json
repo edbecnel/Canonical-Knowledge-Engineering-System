@@ -1,0 +1,671 @@
+{
+  "schemaVersion": "1.0.0",
+  "gate": "H4.2",
+  "clusters": [
+    {
+      "clusterId": "CL-MNMT-ADVERSARIAL",
+      "name": "Must-not-match adversarial false-merge",
+      "rationale": "Benchmark expects related_distinct while forbidding merge to a specific seed; eval capture shows forbidden seed matched. Shares adversarial_false_merge_candidate construction across domains.",
+      "scenarioIds": [
+        "ANC-0018",
+        "ANC-0019",
+        "ANC-0020",
+        "ANC-0031"
+      ],
+      "mechanismSummary": "Candidate text often equals or tightly overlaps forbidden seed label; mustNotMatch is scorer-only (not in pipeline projection).",
+      "memberCount": 4,
+      "members": [
+        {
+          "scenarioId": "ANC-0018",
+          "transformationType": "adversarial_false_merge_candidate",
+          "domain": "electronics",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "EQUIVALENT",
+          "policyAction": "reuse_existing",
+          "matchedSeed": "CK-ELS-01",
+          "candidateText": "GPIO pin",
+          "mustNotMatch": true,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0019",
+          "transformationType": "adversarial_false_merge_candidate",
+          "domain": "culinary",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "EQUIVALENT",
+          "policyAction": "reuse_existing",
+          "matchedSeed": "CK-CUL-03",
+          "candidateText": "Sous vide",
+          "mustNotMatch": true,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0020",
+          "transformationType": "adversarial_false_merge_candidate",
+          "domain": "electronics",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "EQUIVALENT",
+          "policyAction": "reuse_existing",
+          "matchedSeed": "CK-ELS-04",
+          "candidateText": "I2C bus",
+          "mustNotMatch": true,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0031",
+          "transformationType": "adversarial_false_merge_candidate",
+          "domain": "culinary",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "EQUIVALENT",
+          "policyAction": "reuse_existing",
+          "matchedSeed": "CK-CUL-09",
+          "candidateText": "Rest meat",
+          "mustNotMatch": true,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        }
+      ]
+    },
+    {
+      "clusterId": "CL-EQUIV-REUSE",
+      "name": "EQUIVALENT + reuse_existing collapse",
+      "rationale": "Terminal merge-class EQUIVALENT with policy reuse_existing where benchmark expected non-equivalence (mostly related_distinct).",
+      "scenarioIds": [
+        "ANC-0017",
+        "ANC-0018",
+        "ANC-0019",
+        "ANC-0020",
+        "ANC-0024",
+        "ANC-0028",
+        "ANC-0031",
+        "ANC-0032",
+        "ANC-0036",
+        "ANC-0040"
+      ],
+      "mechanismSummary": "Suggests top-match adjudication treating candidate as equivalent to retrieved identity; policy follows merge classes.",
+      "memberCount": 10,
+      "members": [
+        {
+          "scenarioId": "ANC-0017",
+          "transformationType": "related_distinct",
+          "domain": "culinary",
+          "executionMode": "full_pipeline",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "EQUIVALENT",
+          "policyAction": "reuse_existing",
+          "matchedSeed": "CK-CUL-01",
+          "candidateText": "technique: Deep fry",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0018",
+          "transformationType": "adversarial_false_merge_candidate",
+          "domain": "electronics",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "EQUIVALENT",
+          "policyAction": "reuse_existing",
+          "matchedSeed": "CK-ELS-01",
+          "candidateText": "GPIO pin",
+          "mustNotMatch": true,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0019",
+          "transformationType": "adversarial_false_merge_candidate",
+          "domain": "culinary",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "EQUIVALENT",
+          "policyAction": "reuse_existing",
+          "matchedSeed": "CK-CUL-03",
+          "candidateText": "Sous vide",
+          "mustNotMatch": true,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0020",
+          "transformationType": "adversarial_false_merge_candidate",
+          "domain": "electronics",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "EQUIVALENT",
+          "policyAction": "reuse_existing",
+          "matchedSeed": "CK-ELS-04",
+          "candidateText": "I2C bus",
+          "mustNotMatch": true,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0024",
+          "transformationType": "qualification",
+          "domain": "electronics",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "qualify_existing",
+          "actualDecisionClass": "EQUIVALENT",
+          "policyAction": "reuse_existing",
+          "matchedSeed": "CK-ELS-07",
+          "candidateText": "uart framing",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0028",
+          "transformationType": "method_to_objective",
+          "domain": "electronics",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "EQUIVALENT",
+          "policyAction": "reuse_existing",
+          "matchedSeed": "CK-ELS-09",
+          "candidateText": "esd protection",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0031",
+          "transformationType": "adversarial_false_merge_candidate",
+          "domain": "culinary",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "EQUIVALENT",
+          "policyAction": "reuse_existing",
+          "matchedSeed": "CK-CUL-09",
+          "candidateText": "Rest meat",
+          "mustNotMatch": true,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0032",
+          "transformationType": "emerging_process_revalidation",
+          "domain": "culinary",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "EQUIVALENT",
+          "policyAction": "reuse_existing",
+          "matchedSeed": "CK-CUL-10",
+          "candidateText": "temper chocolate",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0036",
+          "transformationType": "broaden_applicability",
+          "domain": "electronics",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "EQUIVALENT",
+          "policyAction": "reuse_existing",
+          "matchedSeed": "CK-ELS-02",
+          "candidateText": "pull-up resistor",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0040",
+          "transformationType": "supporting_observation",
+          "domain": "electronics",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "EQUIVALENT",
+          "policyAction": "reuse_existing",
+          "matchedSeed": "CK-ELS-06",
+          "candidateText": "adc sampling",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        }
+      ]
+    },
+    {
+      "clusterId": "CL-SUBSUMED-REJECT",
+      "name": "SUBSUMED_BY_EXISTING with reject_new_identity",
+      "rationale": "Adjudication emits subsumption merge signal but policy rejects new identity; scorer still records false_merge when semantic expectation differs.",
+      "scenarioIds": [
+        "ANC-0023",
+        "ANC-0025",
+        "ANC-0027",
+        "ANC-0029",
+        "ANC-0033",
+        "ANC-0035",
+        "ANC-0037",
+        "ANC-0039"
+      ],
+      "mechanismSummary": "Distinguishes partial merge signal vs policy gate; still wrong vs benchmark expected class (related_distinct, contradict, revalidation).",
+      "memberCount": 8,
+      "members": [
+        {
+          "scenarioId": "ANC-0023",
+          "transformationType": "contradiction",
+          "domain": "culinary",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "contradict_existing",
+          "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+          "policyAction": "reject_new_identity",
+          "matchedSeed": "CK-CUL-07",
+          "candidateText": "Blanch vegetables method",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0025",
+          "transformationType": "emerging_process_revalidation",
+          "domain": "culinary",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "revalidation_candidate",
+          "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+          "policyAction": "reject_new_identity",
+          "matchedSeed": "CK-CUL-08",
+          "candidateText": "technique: Caramelize onions",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0027",
+          "transformationType": "objective_to_method",
+          "domain": "culinary",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+          "policyAction": "reject_new_identity",
+          "matchedSeed": "CK-CUL-09",
+          "candidateText": "Rest meat method",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0029",
+          "transformationType": "compound_assertion",
+          "domain": "culinary",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+          "policyAction": "reject_new_identity",
+          "matchedSeed": "CK-CUL-10",
+          "candidateText": "technique: Temper chocolate",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0033",
+          "transformationType": "paraphrase_same_identity",
+          "domain": "culinary",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+          "policyAction": "reject_new_identity",
+          "matchedSeed": "CK-CUL-11",
+          "candidateText": "technique: Ferment kimchi",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0035",
+          "transformationType": "narrow_applicability",
+          "domain": "electronics",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+          "policyAction": "reject_new_identity",
+          "matchedSeed": "CK-ELS-01",
+          "candidateText": "GPIO pin method",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0037",
+          "transformationType": "change_subject_object_context",
+          "domain": "electronics",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+          "policyAction": "reject_new_identity",
+          "matchedSeed": "CK-ELS-03",
+          "candidateText": "technique: PWM duty cycle",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0039",
+          "transformationType": "method_to_objective",
+          "domain": "electronics",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+          "policyAction": "reject_new_identity",
+          "matchedSeed": "CK-ELS-05",
+          "candidateText": "Decoupling capacitor method",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        }
+      ]
+    },
+    {
+      "clusterId": "CL-RELATION-DIRECTION",
+      "name": "Objective/method direction confusion",
+      "rationale": "Transformation flips objective vs method framing; failures cluster with direction transforms; nearby pass control exists.",
+      "scenarioIds": [
+        "ANC-0027",
+        "ANC-0028",
+        "ANC-0039"
+      ],
+      "mechanismSummary": "Tests whether CKES preserves directional semantic role between candidate and corpus neighbor.",
+      "memberCount": 3,
+      "members": [
+        {
+          "scenarioId": "ANC-0027",
+          "transformationType": "objective_to_method",
+          "domain": "culinary",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+          "policyAction": "reject_new_identity",
+          "matchedSeed": "CK-CUL-09",
+          "candidateText": "Rest meat method",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0028",
+          "transformationType": "method_to_objective",
+          "domain": "electronics",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "EQUIVALENT",
+          "policyAction": "reuse_existing",
+          "matchedSeed": "CK-ELS-09",
+          "candidateText": "esd protection",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0039",
+          "transformationType": "method_to_objective",
+          "domain": "electronics",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+          "policyAction": "reject_new_identity",
+          "matchedSeed": "CK-ELS-05",
+          "candidateText": "Decoupling capacitor method",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        }
+      ]
+    },
+    {
+      "clusterId": "CL-SCOPE-QUALIFIER",
+      "name": "Scope / qualification / applicability",
+      "rationale": "narrow_applicability, broaden_applicability, qualification transformations — scope boundaries expected to matter.",
+      "scenarioIds": [
+        "ANC-0024",
+        "ANC-0035",
+        "ANC-0036"
+      ],
+      "mechanismSummary": "Qualifier or applicability text may be absent from directCandidate text presented to decision slice.",
+      "memberCount": 3,
+      "members": [
+        {
+          "scenarioId": "ANC-0024",
+          "transformationType": "qualification",
+          "domain": "electronics",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "qualify_existing",
+          "actualDecisionClass": "EQUIVALENT",
+          "policyAction": "reuse_existing",
+          "matchedSeed": "CK-ELS-07",
+          "candidateText": "uart framing",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0035",
+          "transformationType": "narrow_applicability",
+          "domain": "electronics",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+          "policyAction": "reject_new_identity",
+          "matchedSeed": "CK-ELS-01",
+          "candidateText": "GPIO pin method",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0036",
+          "transformationType": "broaden_applicability",
+          "domain": "electronics",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "EQUIVALENT",
+          "policyAction": "reuse_existing",
+          "matchedSeed": "CK-ELS-02",
+          "candidateText": "pull-up resistor",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        }
+      ]
+    },
+    {
+      "clusterId": "CL-CONTRADICTION",
+      "name": "Contradiction mishandled as merge",
+      "rationale": "Expected contradict_existing but adjudication produced SUBSUMED_BY_EXISTING.",
+      "scenarioIds": [
+        "ANC-0023"
+      ],
+      "mechanismSummary": "Isolated contradiction family in Anchor; tests CONTRADICTS vs merge collapse.",
+      "memberCount": 1,
+      "members": [
+        {
+          "scenarioId": "ANC-0023",
+          "transformationType": "contradiction",
+          "domain": "culinary",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "contradict_existing",
+          "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+          "policyAction": "reject_new_identity",
+          "matchedSeed": "CK-CUL-07",
+          "candidateText": "Blanch vegetables method",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        }
+      ]
+    },
+    {
+      "clusterId": "CL-COMPOUND",
+      "name": "Compound assertion",
+      "rationale": "Single scenario tests multi-claim candidate vs single seed neighbor.",
+      "scenarioIds": [
+        "ANC-0029"
+      ],
+      "mechanismSummary": "Compound structure may be lost in directCandidate string.",
+      "memberCount": 1,
+      "members": [
+        {
+          "scenarioId": "ANC-0029",
+          "transformationType": "compound_assertion",
+          "domain": "culinary",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+          "policyAction": "reject_new_identity",
+          "matchedSeed": "CK-CUL-10",
+          "candidateText": "technique: Temper chocolate",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        }
+      ]
+    },
+    {
+      "clusterId": "CL-FULL-PIPELINE",
+      "name": "Full-pipeline execution outlier",
+      "rationale": "Only Anchor false merge on full_pipeline; related_distinct transformation with extraction path.",
+      "scenarioIds": [
+        "ANC-0017"
+      ],
+      "mechanismSummary": "May share mechanism with decision_slice after fallback to directCandidate; execution path must be verified in H4.3.",
+      "memberCount": 1,
+      "members": [
+        {
+          "scenarioId": "ANC-0017",
+          "transformationType": "related_distinct",
+          "domain": "culinary",
+          "executionMode": "full_pipeline",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "EQUIVALENT",
+          "policyAction": "reuse_existing",
+          "matchedSeed": "CK-CUL-01",
+          "candidateText": "technique: Deep fry",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        }
+      ]
+    },
+    {
+      "clusterId": "CL-REVALIDATION",
+      "name": "Emerging process / revalidation",
+      "rationale": "Expected revalidation_candidate or related_distinct with process-evolution framing.",
+      "scenarioIds": [
+        "ANC-0025",
+        "ANC-0032"
+      ],
+      "mechanismSummary": "Tests non-static identity / process change vs merge to existing seed.",
+      "memberCount": 2,
+      "members": [
+        {
+          "scenarioId": "ANC-0025",
+          "transformationType": "emerging_process_revalidation",
+          "domain": "culinary",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "revalidation_candidate",
+          "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+          "policyAction": "reject_new_identity",
+          "matchedSeed": "CK-CUL-08",
+          "candidateText": "technique: Caramelize onions",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        },
+        {
+          "scenarioId": "ANC-0032",
+          "transformationType": "emerging_process_revalidation",
+          "domain": "culinary",
+          "executionMode": "decision_slice",
+          "expectedDecisionClass": "related_distinct",
+          "actualDecisionClass": "EQUIVALENT",
+          "policyAction": "reuse_existing",
+          "matchedSeed": "CK-CUL-10",
+          "candidateText": "temper chocolate",
+          "mustNotMatch": false,
+          "outcome": "fail",
+          "failureClassification": "false_merge"
+        }
+      ]
+    }
+  ],
+  "fmToClusters": {
+    "ANC-0017": [
+      "CL-EQUIV-REUSE",
+      "CL-FULL-PIPELINE"
+    ],
+    "ANC-0018": [
+      "CL-MNMT-ADVERSARIAL",
+      "CL-EQUIV-REUSE"
+    ],
+    "ANC-0019": [
+      "CL-MNMT-ADVERSARIAL",
+      "CL-EQUIV-REUSE"
+    ],
+    "ANC-0020": [
+      "CL-MNMT-ADVERSARIAL",
+      "CL-EQUIV-REUSE"
+    ],
+    "ANC-0023": [
+      "CL-SUBSUMED-REJECT",
+      "CL-CONTRADICTION"
+    ],
+    "ANC-0024": [
+      "CL-EQUIV-REUSE",
+      "CL-SCOPE-QUALIFIER"
+    ],
+    "ANC-0025": [
+      "CL-SUBSUMED-REJECT",
+      "CL-REVALIDATION"
+    ],
+    "ANC-0027": [
+      "CL-SUBSUMED-REJECT",
+      "CL-RELATION-DIRECTION"
+    ],
+    "ANC-0028": [
+      "CL-EQUIV-REUSE",
+      "CL-RELATION-DIRECTION"
+    ],
+    "ANC-0029": [
+      "CL-SUBSUMED-REJECT",
+      "CL-COMPOUND"
+    ],
+    "ANC-0031": [
+      "CL-MNMT-ADVERSARIAL",
+      "CL-EQUIV-REUSE"
+    ],
+    "ANC-0032": [
+      "CL-EQUIV-REUSE",
+      "CL-REVALIDATION"
+    ],
+    "ANC-0033": [
+      "CL-SUBSUMED-REJECT"
+    ],
+    "ANC-0035": [
+      "CL-SUBSUMED-REJECT",
+      "CL-SCOPE-QUALIFIER"
+    ],
+    "ANC-0036": [
+      "CL-EQUIV-REUSE",
+      "CL-SCOPE-QUALIFIER"
+    ],
+    "ANC-0037": [
+      "CL-SUBSUMED-REJECT"
+    ],
+    "ANC-0039": [
+      "CL-SUBSUMED-REJECT",
+      "CL-RELATION-DIRECTION"
+    ],
+    "ANC-0040": [
+      "CL-EQUIV-REUSE"
+    ]
+  }
+}

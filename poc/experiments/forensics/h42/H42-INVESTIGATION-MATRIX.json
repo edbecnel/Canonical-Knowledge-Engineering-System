@@ -1,0 +1,1510 @@
+{
+  "schemaVersion": "1.0.0",
+  "gate": "H4.2",
+  "investigations": [
+    {
+      "scenarioId": "ANC-0017",
+      "suite": "anchor",
+      "priority": "P0-tier0",
+      "clusters": [
+        "CL-EQUIV-REUSE",
+        "CL-FULL-PIPELINE"
+      ],
+      "reasonSelected": "Mandatory Tier 0 / MNMT per Handover 04",
+      "competingHypotheses": [
+        "HYP-H42-RETRIEVAL-TOP1",
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-REPRESENTATION-INSUFFICIENT"
+      ],
+      "controlScenarioId": "ANC-0034",
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "Establish first divergence layer for critical safety cluster",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "ANC-0018",
+      "suite": "anchor",
+      "priority": "P0-tier0",
+      "clusters": [
+        "CL-MNMT-ADVERSARIAL",
+        "CL-EQUIV-REUSE"
+      ],
+      "reasonSelected": "Mandatory Tier 0 / MNMT per Handover 04",
+      "competingHypotheses": [
+        "HYP-H42-RETRIEVAL-TOP1",
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-REPRESENTATION-INSUFFICIENT",
+        "HYP-H42-MNMT-BENCHMARK-ONLY"
+      ],
+      "controlScenarioId": "ANC-0035",
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "Establish first divergence layer for critical safety cluster",
+      "h4oRequired": false,
+      "mnmtBatchNote": "Three controlled variants (0018/0020 electronics, 0019 culinary); separate INV records; shared Debug checklist acceptable"
+    },
+    {
+      "scenarioId": "ANC-0019",
+      "suite": "anchor",
+      "priority": "P0-tier0",
+      "clusters": [
+        "CL-MNMT-ADVERSARIAL",
+        "CL-EQUIV-REUSE"
+      ],
+      "reasonSelected": "Mandatory Tier 0 / MNMT per Handover 04",
+      "competingHypotheses": [
+        "HYP-H42-RETRIEVAL-TOP1",
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-REPRESENTATION-INSUFFICIENT",
+        "HYP-H42-MNMT-BENCHMARK-ONLY"
+      ],
+      "controlScenarioId": null,
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "Establish first divergence layer for critical safety cluster",
+      "h4oRequired": false,
+      "mnmtBatchNote": "Three controlled variants (0018/0020 electronics, 0019 culinary); separate INV records; shared Debug checklist acceptable"
+    },
+    {
+      "scenarioId": "ANC-0020",
+      "suite": "anchor",
+      "priority": "P0-tier0",
+      "clusters": [
+        "CL-MNMT-ADVERSARIAL",
+        "CL-EQUIV-REUSE"
+      ],
+      "reasonSelected": "Mandatory Tier 0 / MNMT per Handover 04",
+      "competingHypotheses": [
+        "HYP-H42-RETRIEVAL-TOP1",
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-REPRESENTATION-INSUFFICIENT",
+        "HYP-H42-MNMT-BENCHMARK-ONLY"
+      ],
+      "controlScenarioId": null,
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "Establish first divergence layer for critical safety cluster",
+      "h4oRequired": false,
+      "mnmtBatchNote": "Three controlled variants (0018/0020 electronics, 0019 culinary); separate INV records; shared Debug checklist acceptable"
+    },
+    {
+      "scenarioId": "ANC-0031",
+      "suite": "anchor",
+      "priority": "P0-tier0",
+      "clusters": [
+        "CL-MNMT-ADVERSARIAL",
+        "CL-EQUIV-REUSE"
+      ],
+      "reasonSelected": "Mandatory Tier 0 / MNMT per Handover 04",
+      "competingHypotheses": [
+        "HYP-H42-RETRIEVAL-TOP1",
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-REPRESENTATION-INSUFFICIENT",
+        "HYP-H42-MNMT-BENCHMARK-ONLY"
+      ],
+      "controlScenarioId": "ANC-0038",
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "Establish first divergence layer for critical safety cluster",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "ANC-0023",
+      "suite": "anchor",
+      "priority": "P1-representative",
+      "clusters": [
+        "CL-CONTRADICTION",
+        "CL-SUBSUMED-REJECT"
+      ],
+      "reasonSelected": "Only contradict_existing FM; tests CONTRADICTS vs SUBSUMED.",
+      "competingHypotheses": [
+        "HYP-H42-RETRIEVAL-TOP1",
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-REPRESENTATION-INSUFFICIENT",
+        "HYP-H42-POLICY-MANIFESTATION"
+      ],
+      "controlScenarioId": null,
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "Only contradict_existing FM; tests CONTRADICTS vs SUBSUMED.",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "ANC-0024",
+      "suite": "anchor",
+      "priority": "P1-representative",
+      "clusters": [
+        "CL-SCOPE-QUALIFIER",
+        "CL-EQUIV-REUSE"
+      ],
+      "reasonSelected": "qualify_existing → EQUIVALENT; qualifier loss vs adjudication.",
+      "competingHypotheses": [
+        "HYP-H42-RETRIEVAL-TOP1",
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-REPRESENTATION-INSUFFICIENT",
+        "HYP-H42-POLICY-MANIFESTATION"
+      ],
+      "controlScenarioId": null,
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "qualify_existing → EQUIVALENT; qualifier loss vs adjudication.",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "ANC-0027",
+      "suite": "anchor",
+      "priority": "P1-representative",
+      "clusters": [
+        "CL-RELATION-DIRECTION",
+        "CL-SUBSUMED-REJECT"
+      ],
+      "reasonSelected": "objective_to_method fail vs ANC-0038 pass (same transformation family).",
+      "competingHypotheses": [
+        "HYP-H42-RETRIEVAL-TOP1",
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-REPRESENTATION-INSUFFICIENT",
+        "HYP-H42-POLICY-MANIFESTATION"
+      ],
+      "controlScenarioId": "ANC-0038",
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "objective_to_method fail vs ANC-0038 pass (same transformation family).",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "ANC-0029",
+      "suite": "anchor",
+      "priority": "P1-representative",
+      "clusters": [
+        "CL-COMPOUND",
+        "CL-SUBSUMED-REJECT"
+      ],
+      "reasonSelected": "compound_assertion handling.",
+      "competingHypotheses": [
+        "HYP-H42-RETRIEVAL-TOP1",
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-REPRESENTATION-INSUFFICIENT",
+        "HYP-H42-POLICY-MANIFESTATION"
+      ],
+      "controlScenarioId": null,
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "compound_assertion handling.",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "ANC-0035",
+      "suite": "anchor",
+      "priority": "P1-representative",
+      "clusters": [
+        "CL-SCOPE-QUALIFIER",
+        "CL-SUBSUMED-REJECT",
+        "CL-MNMT-ADVERSARIAL"
+      ],
+      "reasonSelected": "GPIO pin method vs GPIO pin seed; scope/method qualifier.",
+      "competingHypotheses": [
+        "HYP-H42-RETRIEVAL-TOP1",
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-REPRESENTATION-INSUFFICIENT",
+        "HYP-H42-POLICY-MANIFESTATION"
+      ],
+      "controlScenarioId": "ANC-0018",
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "GPIO pin method vs GPIO pin seed; scope/method qualifier.",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "ANC-0040",
+      "suite": "anchor",
+      "priority": "P1-representative",
+      "clusters": [
+        "CL-EQUIV-REUSE"
+      ],
+      "reasonSelected": "supporting_observation vs ANC-0030 irrelevant_near_neighbor pass.",
+      "competingHypotheses": [
+        "HYP-H42-RETRIEVAL-TOP1",
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-REPRESENTATION-INSUFFICIENT",
+        "HYP-H42-POLICY-MANIFESTATION"
+      ],
+      "controlScenarioId": "ANC-0030",
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "supporting_observation vs ANC-0030 irrelevant_near_neighbor pass.",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "ANC-0030",
+      "suite": "anchor",
+      "priority": "P2-control",
+      "clusters": [
+        "control"
+      ],
+      "reasonSelected": "irrelevant_near_neighbor → DISTINCT pass",
+      "competingHypotheses": [
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-REPRESENTATION-INSUFFICIENT"
+      ],
+      "controlScenarioId": null,
+      "pairsWithFailures": [
+        "ANC-0040"
+      ],
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "Contrast signal present in pass but absent in paired failure",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "ANC-0038",
+      "suite": "anchor",
+      "priority": "P2-control",
+      "clusters": [
+        "control"
+      ],
+      "reasonSelected": "objective_to_method → DISTINCT pass",
+      "competingHypotheses": [
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-REPRESENTATION-INSUFFICIENT"
+      ],
+      "controlScenarioId": null,
+      "pairsWithFailures": [
+        "ANC-0027",
+        "ANC-0028",
+        "ANC-0039"
+      ],
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "Contrast signal present in pass but absent in paired failure",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "ANC-0034",
+      "suite": "anchor",
+      "priority": "P2-control",
+      "clusters": [
+        "control"
+      ],
+      "reasonSelected": "terminology_substitution related_distinct pass",
+      "competingHypotheses": [
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-REPRESENTATION-INSUFFICIENT"
+      ],
+      "controlScenarioId": null,
+      "pairsWithFailures": [
+        "ANC-0032"
+      ],
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "Contrast signal present in pass but absent in paired failure",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "ANC-0001",
+      "suite": "anchor",
+      "priority": "P2-control",
+      "clusters": [
+        "control"
+      ],
+      "reasonSelected": "paraphrase_same_identity match pass vs missed_match ANC-0002",
+      "competingHypotheses": [
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-REPRESENTATION-INSUFFICIENT"
+      ],
+      "controlScenarioId": null,
+      "pairsWithFailures": [
+        "ANC-0002"
+      ],
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "Contrast signal present in pass but absent in paired failure",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "CHL-0003",
+      "suite": "challenge",
+      "priority": "P2-deferral-sample",
+      "clusters": [
+        "CHL-UNNECESSARY-DEFERRAL"
+      ],
+      "reasonSelected": "Stratified defer_human unnecessary_deferral (qualification)",
+      "competingHypotheses": [
+        "confidence_behavior",
+        "adjudication_uncertainty",
+        "policy_routing",
+        "insufficient_evidence"
+      ],
+      "controlScenarioId": "CHL-0004",
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        },
+        {
+          "observation": "why_DISTINCT_not_defer_human",
+          "availability": "C"
+        }
+      ],
+      "expectedDiagnosticValue": "Separate appropriate refusal from over-conservative DISTINCT",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "CHL-0010",
+      "suite": "challenge",
+      "priority": "P2-deferral-sample",
+      "clusters": [
+        "CHL-UNNECESSARY-DEFERRAL"
+      ],
+      "reasonSelected": "Stratified defer_human unnecessary_deferral (adversarial_false_merge_candidate)",
+      "competingHypotheses": [
+        "confidence_behavior",
+        "adjudication_uncertainty",
+        "policy_routing",
+        "insufficient_evidence"
+      ],
+      "controlScenarioId": "CHL-0004",
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        },
+        {
+          "observation": "why_DISTINCT_not_defer_human",
+          "availability": "C"
+        }
+      ],
+      "expectedDiagnosticValue": "Separate appropriate refusal from over-conservative DISTINCT",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "CHL-0002",
+      "suite": "challenge",
+      "priority": "P2-deferral-sample",
+      "clusters": [
+        "CHL-UNNECESSARY-DEFERRAL"
+      ],
+      "reasonSelected": "Stratified defer_human unnecessary_deferral (method_to_objective)",
+      "competingHypotheses": [
+        "confidence_behavior",
+        "adjudication_uncertainty",
+        "policy_routing",
+        "insufficient_evidence"
+      ],
+      "controlScenarioId": "CHL-0004",
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        },
+        {
+          "observation": "why_DISTINCT_not_defer_human",
+          "availability": "C"
+        }
+      ],
+      "expectedDiagnosticValue": "Separate appropriate refusal from over-conservative DISTINCT",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "CHL-0006",
+      "suite": "challenge",
+      "priority": "P2-deferral-sample",
+      "clusters": [
+        "CHL-UNNECESSARY-DEFERRAL"
+      ],
+      "reasonSelected": "Stratified defer_human unnecessary_deferral (narrow_applicability)",
+      "competingHypotheses": [
+        "confidence_behavior",
+        "adjudication_uncertainty",
+        "policy_routing",
+        "insufficient_evidence"
+      ],
+      "controlScenarioId": "CHL-0004",
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        },
+        {
+          "observation": "why_DISTINCT_not_defer_human",
+          "availability": "C"
+        }
+      ],
+      "expectedDiagnosticValue": "Separate appropriate refusal from over-conservative DISTINCT",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "CHL-0009",
+      "suite": "challenge",
+      "priority": "P2-deferral-sample",
+      "clusters": [
+        "CHL-UNNECESSARY-DEFERRAL"
+      ],
+      "reasonSelected": "Stratified defer_human unnecessary_deferral (compound_assertion)",
+      "competingHypotheses": [
+        "confidence_behavior",
+        "adjudication_uncertainty",
+        "policy_routing",
+        "insufficient_evidence"
+      ],
+      "controlScenarioId": "CHL-0004",
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        },
+        {
+          "observation": "why_DISTINCT_not_defer_human",
+          "availability": "C"
+        }
+      ],
+      "expectedDiagnosticValue": "Separate appropriate refusal from over-conservative DISTINCT",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "CHL-0014",
+      "suite": "challenge",
+      "priority": "P2-deferral-sample",
+      "clusters": [
+        "CHL-UNNECESSARY-DEFERRAL"
+      ],
+      "reasonSelected": "Stratified defer_human unnecessary_deferral (related_distinct)",
+      "competingHypotheses": [
+        "confidence_behavior",
+        "adjudication_uncertainty",
+        "policy_routing",
+        "insufficient_evidence"
+      ],
+      "controlScenarioId": "CHL-0004",
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        },
+        {
+          "observation": "why_DISTINCT_not_defer_human",
+          "availability": "C"
+        }
+      ],
+      "expectedDiagnosticValue": "Separate appropriate refusal from over-conservative DISTINCT",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "CHL-0005",
+      "suite": "challenge",
+      "priority": "P2-deferral-sample",
+      "clusters": [
+        "CHL-UNNECESSARY-DEFERRAL"
+      ],
+      "reasonSelected": "Stratified defer_human unnecessary_deferral (emerging_process_revalidation)",
+      "competingHypotheses": [
+        "confidence_behavior",
+        "adjudication_uncertainty",
+        "policy_routing",
+        "insufficient_evidence"
+      ],
+      "controlScenarioId": "CHL-0004",
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        },
+        {
+          "observation": "why_DISTINCT_not_defer_human",
+          "availability": "C"
+        }
+      ],
+      "expectedDiagnosticValue": "Separate appropriate refusal from over-conservative DISTINCT",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "CHL-0025",
+      "suite": "challenge",
+      "priority": "P2-deferral-sample",
+      "clusters": [
+        "CHL-UNNECESSARY-DEFERRAL"
+      ],
+      "reasonSelected": "Stratified defer_human unnecessary_deferral (contradiction)",
+      "competingHypotheses": [
+        "confidence_behavior",
+        "adjudication_uncertainty",
+        "policy_routing",
+        "insufficient_evidence"
+      ],
+      "controlScenarioId": "CHL-0004",
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        },
+        {
+          "observation": "why_DISTINCT_not_defer_human",
+          "availability": "C"
+        }
+      ],
+      "expectedDiagnosticValue": "Separate appropriate refusal from over-conservative DISTINCT",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "STA-0014",
+      "suite": "statistical",
+      "priority": "P3-stat-crosscheck",
+      "clusters": [
+        "CL-MNMT-ADVERSARIAL"
+      ],
+      "reasonSelected": "Cross-suite check for CL-MNMT-ADVERSARIAL",
+      "competingHypotheses": [
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-RETRIEVAL-TOP1"
+      ],
+      "controlScenarioId": null,
+      "reproductionRequired": true,
+      "debugRequired": false,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "After Anchor INV pattern known, confirm mechanism recurrence without per-scenario Debug unless discrepancy",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "STA-0030",
+      "suite": "statistical",
+      "priority": "P3-stat-crosscheck",
+      "clusters": [
+        "CL-MNMT-ADVERSARIAL"
+      ],
+      "reasonSelected": "Cross-suite check for CL-MNMT-ADVERSARIAL",
+      "competingHypotheses": [
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-RETRIEVAL-TOP1"
+      ],
+      "controlScenarioId": null,
+      "reproductionRequired": true,
+      "debugRequired": false,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "After Anchor INV pattern known, confirm mechanism recurrence without per-scenario Debug unless discrepancy",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "STA-0008",
+      "suite": "statistical",
+      "priority": "P3-stat-crosscheck",
+      "clusters": [
+        "CL-CONTRADICTION"
+      ],
+      "reasonSelected": "Cross-suite check for CL-CONTRADICTION",
+      "competingHypotheses": [
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-RETRIEVAL-TOP1"
+      ],
+      "controlScenarioId": null,
+      "reproductionRequired": true,
+      "debugRequired": false,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "After Anchor INV pattern known, confirm mechanism recurrence without per-scenario Debug unless discrepancy",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "STA-0009",
+      "suite": "statistical",
+      "priority": "P3-stat-crosscheck",
+      "clusters": [
+        "CL-SCOPE-QUALIFIER"
+      ],
+      "reasonSelected": "Cross-suite check for CL-SCOPE-QUALIFIER",
+      "competingHypotheses": [
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-RETRIEVAL-TOP1"
+      ],
+      "controlScenarioId": null,
+      "reproductionRequired": true,
+      "debugRequired": false,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "After Anchor INV pattern known, confirm mechanism recurrence without per-scenario Debug unless discrepancy",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "STA-0013",
+      "suite": "statistical",
+      "priority": "P3-stat-crosscheck",
+      "clusters": [
+        "CL-SUBSUMED-REJECT"
+      ],
+      "reasonSelected": "Cross-suite check for CL-SUBSUMED-REJECT",
+      "competingHypotheses": [
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-RETRIEVAL-TOP1"
+      ],
+      "controlScenarioId": null,
+      "reproductionRequired": true,
+      "debugRequired": false,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "After Anchor INV pattern known, confirm mechanism recurrence without per-scenario Debug unless discrepancy",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "STA-0015",
+      "suite": "statistical",
+      "priority": "P3-stat-crosscheck",
+      "clusters": [
+        "CL-REVALIDATION"
+      ],
+      "reasonSelected": "Cross-suite check for CL-REVALIDATION",
+      "competingHypotheses": [
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-RETRIEVAL-TOP1"
+      ],
+      "controlScenarioId": null,
+      "reproductionRequired": true,
+      "debugRequired": false,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "After Anchor INV pattern known, confirm mechanism recurrence without per-scenario Debug unless discrepancy",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "STA-0040",
+      "suite": "statistical",
+      "priority": "P3-stat-crosscheck",
+      "clusters": [
+        "CL-CONTRADICTION"
+      ],
+      "reasonSelected": "Cross-suite check for CL-CONTRADICTION",
+      "competingHypotheses": [
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-RETRIEVAL-TOP1"
+      ],
+      "controlScenarioId": null,
+      "reproductionRequired": true,
+      "debugRequired": false,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "After Anchor INV pattern known, confirm mechanism recurrence without per-scenario Debug unless discrepancy",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "STA-0062",
+      "suite": "statistical",
+      "priority": "P3-stat-crosscheck",
+      "clusters": [
+        "CL-EQUIV-REUSE"
+      ],
+      "reasonSelected": "Cross-suite check for CL-EQUIV-REUSE",
+      "competingHypotheses": [
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE",
+        "HYP-H42-RETRIEVAL-TOP1"
+      ],
+      "controlScenarioId": null,
+      "reproductionRequired": true,
+      "debugRequired": false,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "After Anchor INV pattern known, confirm mechanism recurrence without per-scenario Debug unless discrepancy",
+      "h4oRequired": false
+    },
+    {
+      "scenarioId": "ANC-0002",
+      "suite": "anchor",
+      "priority": "P2-missed-match-contrast",
+      "clusters": [
+        "missed_match_contrast"
+      ],
+      "reasonSelected": "missed_match vs pass ANC-0001 — over-conservative DISTINCT",
+      "competingHypotheses": [
+        "HYP-H42-ADJ-DETERMINISTIC-COLLAPSE"
+      ],
+      "controlScenarioId": "ANC-0001",
+      "reproductionRequired": true,
+      "debugRequired": true,
+      "requiredObservations": [
+        {
+          "observation": "full_ranked_retrieval_list",
+          "availability": "C"
+        },
+        {
+          "observation": "retrieval_scores",
+          "availability": "C"
+        },
+        {
+          "observation": "primary_match_label_and_id",
+          "availability": "C"
+        },
+        {
+          "observation": "candidate_representation",
+          "availability": "B"
+        },
+        {
+          "observation": "adjudication_class_confidence_rationale",
+          "availability": "C"
+        },
+        {
+          "observation": "policy_action_inputs",
+          "availability": "B"
+        }
+      ],
+      "expectedDiagnosticValue": "Contrast false-merge vs missed-match threshold behavior",
+      "h4oRequired": false
+    }
+  ]
+}

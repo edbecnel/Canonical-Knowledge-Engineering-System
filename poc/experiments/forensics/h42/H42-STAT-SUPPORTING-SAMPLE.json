@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1.0.0",
+  "gate": "H4.2",
+  "purpose": "cross_suite_mechanism_check",
+  "sample": [
+    {
+      "scenarioId": "STA-0014",
+      "transformationType": "adversarial_false_merge_candidate",
+      "mapsToCluster": "CL-MNMT-ADVERSARIAL",
+      "note": "electronics domain",
+      "domain": "electronics",
+      "failureClassification": "false_merge",
+      "actualDecisionClass": "EQUIVALENT"
+    },
+    {
+      "scenarioId": "STA-0030",
+      "transformationType": "adversarial_false_merge_candidate",
+      "mapsToCluster": "CL-MNMT-ADVERSARIAL",
+      "note": "culinary domain cross-check",
+      "domain": "culinary",
+      "failureClassification": "false_merge",
+      "actualDecisionClass": "EQUIVALENT"
+    },
+    {
+      "scenarioId": "STA-0008",
+      "transformationType": "contradiction",
+      "mapsToCluster": "CL-CONTRADICTION",
+      "domain": "culinary",
+      "failureClassification": "false_merge",
+      "actualDecisionClass": "EQUIVALENT"
+    },
+    {
+      "scenarioId": "STA-0009",
+      "transformationType": "qualification",
+      "mapsToCluster": "CL-SCOPE-QUALIFIER",
+      "domain": "culinary",
+      "failureClassification": "false_merge",
+      "actualDecisionClass": "SUBSUMED_BY_EXISTING"
+    },
+    {
+      "scenarioId": "STA-0013",
+      "transformationType": "irrelevant_near_neighbor",
+      "mapsToCluster": "CL-SUBSUMED-REJECT",
+      "note": "Statistical FM pattern is SUBSUMED not EQUIVALENT",
+      "domain": "electronics",
+      "failureClassification": "false_merge",
+      "actualDecisionClass": "SUBSUMED_BY_EXISTING"
+    },
+    {
+      "scenarioId": "STA-0015",
+      "transformationType": "emerging_process_revalidation",
+      "mapsToCluster": "CL-REVALIDATION",
+      "domain": "electronics",
+      "failureClassification": "false_merge",
+      "actualDecisionClass": "SUBSUMED_BY_EXISTING"
+    },
+    {
+      "scenarioId": "STA-0040",
+      "transformationType": "contradiction",
+      "mapsToCluster": "CL-CONTRADICTION",
+      "note": "second contradiction draw",
+      "domain": "electronics",
+      "failureClassification": "false_merge",
+      "actualDecisionClass": "EQUIVALENT"
+    },
+    {
+      "scenarioId": "STA-0062",
+      "transformationType": "adversarial_false_merge_candidate",
+      "mapsToCluster": "CL-EQUIV-REUSE",
+      "note": "recurrence check across stat grid",
+      "domain": "electronics",
+      "failureClassification": "false_merge",
+      "actualDecisionClass": "EQUIVALENT"
+    }
+  ]
+}
