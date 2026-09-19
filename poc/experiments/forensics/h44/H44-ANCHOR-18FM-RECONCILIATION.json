@@ -1,0 +1,247 @@
+{
+  "schemaVersion": "1.0.0",
+  "gate": "H4.4",
+  "scenarios": [
+    {
+      "scenarioId": "ANC-0017",
+      "semanticFailureType": "related_distinct_after_extraction",
+      "adjudicationClass": "EQUIVALENT",
+      "policyAction": "reuse_existing",
+      "mechanismBranch": "deterministic_equivalent",
+      "status": "established_direct_inv",
+      "primaryMechanism": "adjudication_collapse",
+      "evidenceRefs": [
+        "FM-ANC-0017",
+        "INV-ANC-0017"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0018",
+      "semanticFailureType": "adversarial_mnmt_label_identity",
+      "adjudicationClass": "EQUIVALENT",
+      "policyAction": "reuse_existing",
+      "mechanismBranch": "deterministic_equivalent",
+      "status": "established_direct_inv",
+      "primaryMechanism": "adjudication_collapse",
+      "evidenceRefs": [
+        "FM-ANC-0018",
+        "INV-ANC-0018",
+        "MNMT-ANC-0018"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0019",
+      "semanticFailureType": "adversarial_mnmt_label_identity",
+      "adjudicationClass": "EQUIVALENT",
+      "policyAction": "reuse_existing",
+      "mechanismBranch": "deterministic_equivalent",
+      "status": "established_direct_inv",
+      "primaryMechanism": "adjudication_collapse",
+      "evidenceRefs": [
+        "FM-ANC-0019",
+        "INV-ANC-0019",
+        "MNMT-ANC-0019"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0020",
+      "semanticFailureType": "adversarial_mnmt_label_identity",
+      "adjudicationClass": "EQUIVALENT",
+      "policyAction": "reuse_existing",
+      "mechanismBranch": "deterministic_equivalent",
+      "status": "established_direct_inv",
+      "primaryMechanism": "adjudication_collapse",
+      "evidenceRefs": [
+        "FM-ANC-0020",
+        "INV-ANC-0020",
+        "MNMT-ANC-0020"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0031",
+      "semanticFailureType": "adversarial_mnmt_related_distinct",
+      "adjudicationClass": "EQUIVALENT",
+      "policyAction": "reuse_existing",
+      "mechanismBranch": "deterministic_equivalent",
+      "status": "established_direct_inv",
+      "primaryMechanism": "adjudication_collapse",
+      "evidenceRefs": [
+        "FM-ANC-0031",
+        "INV-ANC-0031",
+        "MNMT-ANC-0031"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0023",
+      "semanticFailureType": "contradiction_as_subsumption",
+      "adjudicationClass": "SUBSUMED_BY_EXISTING",
+      "policyAction": "reject_new_identity",
+      "mechanismBranch": "deterministic_subsumed",
+      "status": "established_direct_inv",
+      "primaryMechanism": "adjudication_collapse",
+      "evidenceRefs": [
+        "FM-ANC-0023",
+        "INV-ANC-0023"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0024",
+      "semanticFailureType": "qualification_as_equivalence",
+      "adjudicationClass": "EQUIVALENT",
+      "policyAction": "reuse_existing",
+      "mechanismBranch": "deterministic_equivalent",
+      "status": "established_direct_inv",
+      "primaryMechanism": "adjudication_collapse",
+      "evidenceRefs": [
+        "FM-ANC-0024",
+        "INV-ANC-0024"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0025",
+      "semanticFailureType": "revalidation_as_subsumption",
+      "adjudicationClass": "SUBSUMED_BY_EXISTING",
+      "policyAction": "reject_new_identity",
+      "mechanismBranch": "deterministic_subsumed",
+      "status": "strong_transfer_same_adjudication_branch",
+      "primaryMechanism": "adjudication_collapse",
+      "evidenceRefs": [
+        "FM-ANC-0025"
+      ],
+      "transferFrom": "ANC-0027"
+    },
+    {
+      "scenarioId": "ANC-0027",
+      "semanticFailureType": "objective_to_method_subsumed",
+      "adjudicationClass": "SUBSUMED_BY_EXISTING",
+      "policyAction": "reject_new_identity",
+      "mechanismBranch": "deterministic_subsumed",
+      "status": "established_direct_inv",
+      "primaryMechanism": "adjudication_collapse",
+      "evidenceRefs": [
+        "FM-ANC-0027",
+        "INV-ANC-0027",
+        "INV-ANC-0038"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0028",
+      "semanticFailureType": "method_to_objective_equivalent",
+      "adjudicationClass": "EQUIVALENT",
+      "policyAction": "reuse_existing",
+      "mechanismBranch": "deterministic_equivalent",
+      "status": "strong_transfer_same_adjudication_branch",
+      "primaryMechanism": "adjudication_collapse",
+      "evidenceRefs": [
+        "FM-ANC-0028"
+      ],
+      "transferFrom": "ANC-0040"
+    },
+    {
+      "scenarioId": "ANC-0029",
+      "semanticFailureType": "compound_assertion_subsumed",
+      "adjudicationClass": "SUBSUMED_BY_EXISTING",
+      "policyAction": "reject_new_identity",
+      "mechanismBranch": "deterministic_subsumed",
+      "status": "established_direct_inv",
+      "primaryMechanism": "adjudication_collapse",
+      "evidenceRefs": [
+        "FM-ANC-0029",
+        "INV-ANC-0029"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0032",
+      "semanticFailureType": "revalidation_as_equivalence",
+      "adjudicationClass": "EQUIVALENT",
+      "policyAction": "reuse_existing",
+      "mechanismBranch": "deterministic_equivalent",
+      "status": "strong_transfer_same_adjudication_branch",
+      "primaryMechanism": "adjudication_collapse",
+      "evidenceRefs": [
+        "FM-ANC-0032"
+      ],
+      "transferFrom": "ANC-0019"
+    },
+    {
+      "scenarioId": "ANC-0033",
+      "semanticFailureType": "paraphrase_related_distinct_subsumed",
+      "adjudicationClass": "SUBSUMED_BY_EXISTING",
+      "policyAction": "reject_new_identity",
+      "mechanismBranch": "deterministic_subsumed",
+      "status": "strong_transfer_same_adjudication_branch",
+      "primaryMechanism": "adjudication_collapse",
+      "evidenceRefs": [
+        "FM-ANC-0033"
+      ],
+      "transferFrom": "ANC-0029"
+    },
+    {
+      "scenarioId": "ANC-0035",
+      "semanticFailureType": "narrow_applicability_subsumed",
+      "adjudicationClass": "SUBSUMED_BY_EXISTING",
+      "policyAction": "reject_new_identity",
+      "mechanismBranch": "deterministic_subsumed",
+      "status": "established_direct_inv",
+      "primaryMechanism": "adjudication_collapse",
+      "evidenceRefs": [
+        "FM-ANC-0035",
+        "INV-ANC-0035",
+        "INV-ANC-0018"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0036",
+      "semanticFailureType": "broaden_applicability_equivalent",
+      "adjudicationClass": "EQUIVALENT",
+      "policyAction": "reuse_existing",
+      "mechanismBranch": "deterministic_equivalent",
+      "status": "strong_transfer_same_adjudication_branch",
+      "primaryMechanism": "adjudication_collapse",
+      "evidenceRefs": [
+        "FM-ANC-0036"
+      ],
+      "transferFrom": "ANC-0024"
+    },
+    {
+      "scenarioId": "ANC-0037",
+      "semanticFailureType": "subject_object_context_subsumed",
+      "adjudicationClass": "SUBSUMED_BY_EXISTING",
+      "policyAction": "reject_new_identity",
+      "mechanismBranch": "deterministic_subsumed",
+      "status": "strong_transfer_same_adjudication_branch",
+      "primaryMechanism": "adjudication_collapse",
+      "evidenceRefs": [
+        "FM-ANC-0037"
+      ],
+      "transferFrom": "ANC-0029"
+    },
+    {
+      "scenarioId": "ANC-0039",
+      "semanticFailureType": "method_to_objective_subsumed",
+      "adjudicationClass": "SUBSUMED_BY_EXISTING",
+      "policyAction": "reject_new_identity",
+      "mechanismBranch": "deterministic_subsumed",
+      "status": "strong_transfer_same_adjudication_branch",
+      "primaryMechanism": "adjudication_collapse",
+      "evidenceRefs": [
+        "FM-ANC-0039"
+      ],
+      "transferFrom": "ANC-0027"
+    },
+    {
+      "scenarioId": "ANC-0040",
+      "semanticFailureType": "supporting_observation_equivalent",
+      "adjudicationClass": "EQUIVALENT",
+      "policyAction": "reuse_existing",
+      "mechanismBranch": "deterministic_equivalent",
+      "status": "established_direct_inv",
+      "primaryMechanism": "adjudication_collapse",
+      "evidenceRefs": [
+        "FM-ANC-0040",
+        "INV-ANC-0040",
+        "INV-ANC-0030"
+      ]
+    }
+  ]
+}

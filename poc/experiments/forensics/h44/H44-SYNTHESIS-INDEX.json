@@ -1,0 +1,17 @@
+{
+  "gate": "H4.4",
+  "generatedAt": "2026-09-19T11:28:12.320Z",
+  "report": "docs/Development/Handover_04_Forensic_Analysis_Report.md",
+  "inputs": [
+    "H4.1 inventory",
+    "H4.2 clustering",
+    "H4.3 INV artifacts"
+  ],
+  "artifacts": [
+    "H44-ANCHOR-18FM-RECONCILIATION.json",
+    "H44-MECHANISM-QUANTIFICATION.json",
+    "H44-LAYER-OWNERSHIP.json"
+  ],
+  "h45NotStarted": true,
+  "ckesRemediation": false
+}

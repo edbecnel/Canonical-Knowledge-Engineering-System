@@ -40,6 +40,7 @@
     "benchmark:h42-clustering": "tsx scripts/h42-causal-clustering.ts",
     "benchmark:h43-investigate": "tsx scripts/h43-forensic-investigate.ts",
     "benchmark:h43-closeout": "tsx scripts/h43-generate-closeout.ts",
+    "benchmark:h44-synthesis": "tsx scripts/h44-forensic-synthesis.ts",
     "harness:test": "npm run test --workspace @ckes/harness",
     "scenario-lab:api": "tsx packages/scenario-lab-api/src/server.ts",
     "scenario-lab:dev": "npm run dev --workspace ckes-scenario-lab"

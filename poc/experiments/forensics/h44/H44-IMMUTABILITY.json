@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checkedAt": "2026-09-19T11:28:12.320Z",
+  "anchorPackContentHash": "2d65a6cf59c486ffba20c3571d69a918ac414f1d89d2641d25973f29e249a76c",
+  "anchorRunHash": "c5e690b260f5a061b24b59bb1cb5835adbf211d5ec418ea108af2b8f752ac573",
+  "statRunHash": "46da0ab91b9fd5971f38121b0dc51de7622bd0d30c6afa979f677220e6ae0464",
+  "challengeRunHash": "3b07c3a6d9477cf6be89bb38fd8ad687a3c37fcf5d38d3f236a7c689302f9f5a",
+  "manifestSha256": "67ff15095e9b8d1ee5fb22a99412b0407a3de8e19bea123ff5abef32ff55bae0",
+  "designationSidecarFileHash": "0e085fefa4d1d59645fc82f4c480cf629ff9d2721e13c299a7a3e58ca4a967a2"
+}

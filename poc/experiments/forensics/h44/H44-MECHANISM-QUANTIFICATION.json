@@ -1,0 +1,22 @@
+{
+  "anchorFalseMergeCount": 18,
+  "byStatus": {
+    "established_direct_inv": 11,
+    "strong_transfer_same_adjudication_branch": 7
+  },
+  "byMechanismBranch": {
+    "deterministic_equivalent": 10,
+    "deterministic_subsumed": 8
+  },
+  "primaryMechanism": {
+    "adjudication_collapse": 18
+  },
+  "contributing": {
+    "retrieval_exact_or_fuzzy_match": 18,
+    "candidate_label_only_representation": 16,
+    "extraction_normalization_anc_0017": 1,
+    "policy_downstream_manifestation_only": 10
+  },
+  "unresolved": 0,
+  "directInvCount": 11
+}

@@ -28,10 +28,11 @@
 - [Handover 03 G4.1 Baseline Validity and G5 Readiness Report](Handover_03_G41_Baseline_Validity_and_G5_Readiness_Report.md) — measurement remediation + `-002` runs (G4.1 accepted)
 - [Handover 03 G5 Reference Baseline Designation and G6 Readiness Report](Handover_03_G5_Reference_Baseline_Designation_and_G6_Readiness_Report.md) — `reference_baseline_001` (G5 accepted)
 - [Handover 03 G6 Final Evidence and Governance Closeout Report](Handover_03_G6_Final_Evidence_and_Governance_Closeout_Report.md) — evidence manifest + Handover 03 **closed**
-- [Handover 04 Implementation Plan](Handover_04_Implementation_Plan.md) — post-baseline forensic analysis (**H4.3 complete**)
+- [Handover 04 Implementation Plan](Handover_04_Implementation_Plan.md) — post-baseline forensic analysis (**H4.4 complete**)
 - [Handover 04 H4.1 Static Forensic Inventory Report](Handover_04_H41_Static_Forensic_Inventory_Report.md) — 18 FM records + MNMT inventory
 - [Handover 04 H4.2 Causal Clustering Report](Handover_04_H42_Causal_Clustering_Report.md) — clusters + H4.3 investigation matrix
 - [Handover 04 H4.3 Debug Forensic Investigation Report](Handover_04_H43_Debug_Forensic_Investigation_Report.md) — INV artifacts + causal findings
+- [Handover 04 Forensic Analysis Report (H4.4)](Handover_04_Forensic_Analysis_Report.md) — RB001 synthesis and 18/18 FM reconciliation
 - [Reference Baseline 001 evidence report](../../poc/experiments/baseline-evidence/REFERENCE-BASELINE-001-evidence-report.md) — human-readable baseline findings
 - [CKES POC Handover 03 brief](CKES_POC_Handover_03_Benchmark_Generation_and_Reference_Baseline.md) — handover source (planning)
 

@@ -1,0 +1,87 @@
+{
+  "gate": "H4.4",
+  "scope": "Reference Baseline 001 REF-CLEAN deterministic_ai_off deterministic_fixture",
+  "layers": [
+    {
+      "layer": "benchmark_projection",
+      "observedRole": "Allowlists pipeline fields; excludes mustNotMatch and expected classes",
+      "establishedLimitation": "Benchmark-only relationship constraints not visible to CKES",
+      "evidence": "forbidden-keys.ts; H4.3 INV traces",
+      "confidence": "high",
+      "downstreamEffects": "Scorer applies MNMT post-hoc",
+      "openQuestions": "Whether future projection should carry structured qualifiers"
+    },
+    {
+      "layer": "candidate_construction",
+      "observedRole": "directCandidate.text or full_pipeline extraction to concept string",
+      "establishedLimitation": "ANC-0017 extraction strips to technique label; qualifiers often absent",
+      "evidence": "INV-ANC-0017 extractionTrace",
+      "confidence": "high",
+      "downstreamEffects": "Impoverished adjudication input",
+      "openQuestions": "Whether pack fields (applicability) should project in future designs"
+    },
+    {
+      "layer": "canonical_representation",
+      "observedRole": "Seed label + statement stored in DB description",
+      "establishedLimitation": "Deterministic adjudication does not consume statement text",
+      "evidence": "INV-ANC-0018 dbConceptDescription vs adjudication rationale",
+      "confidence": "high",
+      "downstreamEffects": "Richer corpus semantics unused at adjudication",
+      "openQuestions": "AI adjudication prompt partial text only (not tested in RB001)"
+    },
+    {
+      "layer": "retrieval",
+      "observedRole": "hybridRetrieve ranks by exact/fuzzy label similarity",
+      "establishedLimitation": "Returns plausible top match; not proven wrong for RB001 FMs",
+      "evidence": "INV traces ranked lists",
+      "confidence": "medium",
+      "downstreamEffects": "Supplies matches[0] to adjudication",
+      "openQuestions": "Whether alternate rank would change outcome without adjudication fix"
+    },
+    {
+      "layer": "top_1_selection",
+      "observedRole": "adjudicateSemantic uses matches[0] only",
+      "establishedLimitation": "Architectural constraint; not established as root cause in H4.3",
+      "evidence": "decision-slice.ts; no multi-candidate experiments run",
+      "confidence": "high_for_constraint_low_for_remediation",
+      "downstreamEffects": "Single comparison identity",
+      "openQuestions": "Hypothesis only: multi-match adjudication might help some families"
+    },
+    {
+      "layer": "adjudication",
+      "observedRole": "Deterministic label/score rules under REF-CLEAN",
+      "establishedLimitation": "EQUIVALENT on equality/high score; SUBSUMED at score≥0.7",
+      "evidence": "adjudication.ts; all Tier0 INV",
+      "confidence": "high",
+      "downstreamEffects": "Incorrect merge classes for benchmark semantics",
+      "openQuestions": "Behavior under live LLM adjudication not characterized in RB001"
+    },
+    {
+      "layer": "confidence",
+      "observedRole": "Fixed high confidence on deterministic branches",
+      "establishedLimitation": "Does not reflect semantic uncertainty in Challenge defer cases",
+      "evidence": "INV-CHL-* DISTINCT 0.9",
+      "confidence": "medium",
+      "downstreamEffects": "Policy does not defer on confidence for DISTINCT",
+      "openQuestions": "Calibration under AI mode"
+    },
+    {
+      "layer": "policy",
+      "observedRole": "Maps adjudication class to action",
+      "establishedLimitation": "Faithful executor for incorrect adjudication (FM); DISTINCT→evaluate not defer",
+      "evidence": "cals-policy.v1.json; INV policy blocks",
+      "confidence": "high",
+      "downstreamEffects": "reuse_existing / evaluate_new_identity manifestations",
+      "openQuestions": "Governance mapping for defer_human expectations"
+    },
+    {
+      "layer": "scorer_evaluation",
+      "observedRole": "Compares terminal class/policy to pack expectations",
+      "establishedLimitation": "Surfaces false_merge and unnecessary_deferral",
+      "evidence": "RB001 derived reports",
+      "confidence": "high",
+      "downstreamEffects": "Measurement only",
+      "openQuestions": "n/a"
+    }
+  ]
+}
