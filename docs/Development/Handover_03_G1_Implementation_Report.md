@@ -36,7 +36,7 @@ See git commit implementing G1 (`git show --stat`). Summary:
 
 ## 2. Git commit(s)
 
-Recorded after `git commit` for G1 (see repository `git log -1`).
+**`6b9e4a3`** — *Implement Handover 3 G1 benchmark qualification and scoring tooling.*
 
 ## 3. Tests and validation executed
 
