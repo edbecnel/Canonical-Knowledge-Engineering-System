@@ -206,7 +206,7 @@ Regenerate: `npm run benchmark:h42-clustering` (from `poc/`).
 
 ## Git commit
 
-Recorded after commit.
+`9bd0db109d78fd8d2b1be0d393ceeff2bc5e938d` — Complete Handover 04 H4.2 causal clustering and H4.3 investigation matrix.
 
 ---
 
