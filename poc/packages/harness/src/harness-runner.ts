@@ -174,9 +174,15 @@ export class HarnessRunner extends EventEmitter {
           trialsCompleted += 1;
           const expectations = {
             expectedDecisionClass: scenario.expectedDecisionClass as string,
-            expectedIdentity: scenario.expectedIdentity as Record<string, unknown> | undefined,
-            mustNotMatchIdentities: scenario.mustNotMatchIdentities as unknown[],
-            acceptableAlternatives: scenario.acceptableAlternatives as unknown[],
+            expectedIdentity: scenario.expectedIdentity as
+              | import('@ckes/benchmark').ScenarioExpectations['expectedIdentity']
+              | undefined,
+            mustNotMatchIdentities: scenario.mustNotMatchIdentities as
+              | import('@ckes/benchmark').ScenarioExpectations['mustNotMatchIdentities']
+              | undefined,
+            acceptableAlternatives: scenario.acceptableAlternatives as
+              | import('@ckes/benchmark').ScenarioExpectations['acceptableAlternatives']
+              | undefined,
             labelConfidenceClass: scenario.labelConfidenceClass as string,
           };
           const score = scoreScenario(expectations, {

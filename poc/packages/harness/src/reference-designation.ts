@@ -59,7 +59,7 @@ export async function designateReference(params: {
   };
   await appendDesignation(params.designationsDir, event);
   await writeFileAtomic(
-    join(designationsDir, `reference-${params.runId}.json`),
+    join(params.designationsDir, `reference-${params.runId}.json`),
     JSON.stringify(event, null, 2),
   );
   return event;

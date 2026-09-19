@@ -1,5 +1,5 @@
 import { mkdir, realpath } from 'node:fs/promises';
-import { join, resolve } from 'node:path';
+import { dirname, join, resolve } from 'node:path';
 
 export async function resolveAllowlistedPath(
   roots: string[],

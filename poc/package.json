@@ -1,6 +1,7 @@
 {
   "name": "ckes-poc",
   "private": true,
+  "type": "module",
   "workspaces": [
     "packages/*",
     "scenario-lab"
