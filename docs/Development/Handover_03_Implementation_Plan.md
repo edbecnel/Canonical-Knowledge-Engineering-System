@@ -2,7 +2,7 @@
 
 [Home](../../README.md) › [Project Index](../../PROJECT_INDEX.md) › [Development](README.md) › Handover 03 Implementation Plan
 
-> **Status:** Approved — **G1 implemented** (awaiting G1 report review; G2–G6 not authorized)
+> **Status:** **Closed** — G1–G6 complete; Reference Baseline `reference_baseline_001` established ([G6 report](Handover_03_G6_Final_Evidence_and_Governance_Closeout_Report.md))
 > **Owner:** Architecture Team
 > **Applies To:** CKES POC Handover 3 of 3
 > **Last Reviewed:** 2026-09-19

@@ -18,6 +18,7 @@ EDF reference: [AAR-0001: Architectural Audit Records](https://github.com/edbecn
 | Audit ID | Title | Status |
 |----------|-------|--------|
 | [AAR-0001](AAR-0001-poc-vs-economical-canonicalization-direction.md) | POC vs economical canonicalization direction | Open |
+| [AAR-0002](AAR-0002-handover-03-reference-baseline-establishment.md) | Handover 03 Reference Baseline 001 establishment | Closed |
 
 ## Related Documents
 

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0.0",
+  "executedAt": "2026-09-19T09:37:20Z",
+  "command": "Engineering-Documentation-Framework/scripts/run_conformance_validation.sh <repo-root>",
+  "localReportPath": "reports/conformance/framework-advisor-20260919-173720.txt",
+  "exitCode": 0,
+  "scores": {
+    "overall": 0.27,
+    "structure": 0.89,
+    "ai": 0.2,
+    "navigation": 0,
+    "governance": 0
+  },
+  "handover03Scope": "Documentation-tier conformance recorded at G6; not evidence of canonicalization correctness.",
+  "deferredFollowUps": [
+    "Navigation breadcrumbs and orphan linking",
+    "Governance domain documentation",
+    "AI handbook modules",
+    "edf-project-context.yaml"
+  ]
+}

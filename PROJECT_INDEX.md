@@ -41,11 +41,18 @@ Primary documentation hub for humans and AI assistants working on CKES.
 | Recipe Vault | [TheRecipeVault](https://github.com/edbecnel/TheRecipeVault) |
 | EDF | [Engineering-Documentation-Framework](https://github.com/edbecnel/Engineering-Documentation-Framework) |
 
+## Reference Baseline 001 (Handover 03)
+
+- **Designation:** `reference_baseline_001` → run `RUN-REF-CLEAN-ANCHOR-002`
+- **Evidence manifest:** [REFERENCE-BASELINE-001-evidence-manifest.json](poc/experiments/baseline-evidence/REFERENCE-BASELINE-001-evidence-manifest.json)
+- **Designation sidecar:** [reference_baseline_001.json](poc/experiments/reference-designations/reference_baseline_001.json)
+- **Closeout:** [Handover 03 G6 Report](docs/Development/Handover_03_G6_Final_Evidence_and_Governance_Closeout_Report.md)
+
 ## Current Priorities
 
-1. Vertical slice: synthetic recipe → canonical commit with metrics
-2. Seed corpus and evaluator ground-truth evaluation (`npm run benchmark:validate` in `poc/`)
-3. Progressive POC-1/2/3 experiments with preserved knowledge
+1. Post-baseline CKES improvement (requires new architect authorization; compare against Reference Baseline 001 manifest)
+2. [AAR-0001](docs/Architecture/Audits/AAR-0001-poc-vs-economical-canonicalization-direction.md) implementation gaps (vectors, batching, reuse)
+3. EDF navigation/governance documentation follow-ups (Framework Advisor)
 4. Document labeled findings for CRA and Recipe Vault review
 
 ## AI Context

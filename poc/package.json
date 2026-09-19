@@ -35,6 +35,7 @@
     "benchmark:g4-official": "tsx scripts/g4-official-execute.ts",
     "benchmark:g41-official": "tsx scripts/g41-official-execute.ts",
     "benchmark:g5-designate": "tsx scripts/g5-designate-reference-baseline.ts",
+    "benchmark:g6-closeout": "tsx scripts/g6-finalize-evidence-manifest.ts",
     "harness:test": "npm run test --workspace @ckes/harness",
     "scenario-lab:api": "tsx packages/scenario-lab-api/src/server.ts",
     "scenario-lab:dev": "npm run dev --workspace ckes-scenario-lab"
