@@ -17,6 +17,7 @@ Primary documentation hub for humans and AI assistants working on CKES.
 - [Architecture](docs/Architecture/README.md)
 - [Reference Implementation Role and Domain Independence](docs/Architecture/Reference_Implementation_Role_and_Domain_Independence.md) — foundational CKES architectural direction
 - [Economical LLM-Assisted Canonicalization, Discovery, and Revalidation](docs/Architecture/Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md) — cascade, `CKES-PAR-*` provisionals, validation matrix, promotion gate
+- [Benchmark Evaluation Architecture](docs/Architecture/Benchmark_Evaluation_Architecture.md) — JSON benchmark contracts, three evaluation facilities (Handover 1)
 - [Specifications](docs/Specifications/README.md)
 - [Development](docs/Development/README.md)
 - [Pragmatic Canonicalization Research and Validation](docs/Development/Pragmatic_Canonicalization_Research_and_Validation.md) — research direction and validation program
@@ -43,7 +44,7 @@ Primary documentation hub for humans and AI assistants working on CKES.
 ## Current Priorities
 
 1. Vertical slice: synthetic recipe → canonical commit with metrics
-2. Seed corpus and ground-truth evaluation
+2. Seed corpus and evaluator ground-truth evaluation (`npm run benchmark:validate` in `poc/`)
 3. Progressive POC-1/2/3 experiments with preserved knowledge
 4. Document labeled findings for CRA and Recipe Vault review
 

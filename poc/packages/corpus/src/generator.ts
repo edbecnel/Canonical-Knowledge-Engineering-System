@@ -2,6 +2,11 @@ import type { Pool } from 'pg';
 import { v4 as uuidv4 } from 'uuid';
 import { contentFingerprint, type RecipeJson } from '@ckes/adapter';
 import type { CorpusManifest, ExpectedRelationship, FamilySpec } from './manifest.js';
+import {
+  recordEvaluatorCandidateGroundTruth,
+  recordLegacyRecipeGroundTruth,
+  syncEvaluatorRelationshipFromRecipeGt,
+} from './evaluator-ground-truth.js';
 
 const FAMILY_TEMPLATES: Record<string, { title: string; ingredients: string[]; instructions: string[] }> = {
   FriedChicken: {
@@ -132,12 +137,13 @@ async function recordGroundTruth(
   relationship: ExpectedRelationship,
   family: string,
   method: string,
+  recipeJson?: RecipeJson,
 ): Promise<void> {
-  await pool.query(
-    `INSERT INTO synthetic.ground_truth (corpus_id, source_recipe_id, derived_recipe_id, expected_relationship, family, generation_method)
-     VALUES ($1,$2,$3,$4,$5,$6)`,
-    [corpusId, sourceId, derivedId, relationship, family, method],
-  );
+  await recordLegacyRecipeGroundTruth(pool, corpusId, sourceId, derivedId, relationship, family, method);
+  if (recipeJson) {
+    await recordEvaluatorCandidateGroundTruth(pool, corpusId, derivedId, sourceId, recipeJson);
+    await syncEvaluatorRelationshipFromRecipeGt(pool, corpusId, derivedId, relationship);
+  }
 }
 
 async function generateFamily(
@@ -156,7 +162,7 @@ async function generateFamily(
     const recipe = buildRecipe(template, family, 'base', i);
     await insertRecipe(pool, userId, recipe);
     ids.push(recipe.id);
-    await recordGroundTruth(pool, corpusId, null, recipe.id, 'NOVEL', family, 'base');
+    await recordGroundTruth(pool, corpusId, null, recipe.id, 'NOVEL', family, 'base', recipe);
   }
 
   for (const baseId of ids.slice(0, spec.baseRecipes)) {
@@ -174,7 +180,7 @@ async function generateFamily(
         })),
       }));
       await insertRecipe(pool, userId, derived);
-      await recordGroundTruth(pool, corpusId, baseId, derived.id, 'PARAPHRASE', family, 'paraphrase');
+      await recordGroundTruth(pool, corpusId, baseId, derived.id, 'PARAPHRASE', family, 'paraphrase', derived);
     }
 
     for (let n = 0; n < (spec.nearDuplicates ?? 0); n++) {
@@ -190,7 +196,16 @@ async function generateFamily(
         })),
       }));
       await insertRecipe(pool, userId, derived);
-      await recordGroundTruth(pool, corpusId, baseId, derived.id, 'NEAR_DUPLICATE', family, 'near_duplicate');
+      await recordGroundTruth(
+        pool,
+        corpusId,
+        baseId,
+        derived.id,
+        'NEAR_DUPLICATE',
+        family,
+        'near_duplicate',
+        derived,
+      );
     }
 
     for (let c = 0; c < (spec.contradictions ?? 0); c++) {
@@ -200,7 +215,16 @@ async function generateFamily(
         instructions: [{ step: 1, text: 'Do not cook the chicken; serve completely raw.' }, ...r.instructions.slice(1)],
       }));
       await insertRecipe(pool, userId, derived);
-      await recordGroundTruth(pool, corpusId, baseId, derived.id, 'CONTRADICTION', family, 'contradiction');
+      await recordGroundTruth(
+        pool,
+        corpusId,
+        baseId,
+        derived.id,
+        'CONTRADICTION',
+        family,
+        'contradiction',
+        derived,
+      );
     }
   }
 

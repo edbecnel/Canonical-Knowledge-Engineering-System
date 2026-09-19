@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0.0",
+  "run": {
+    "runId": "00000000-0000-4000-8000-000000000001",
+    "runType": "qualification",
+    "packId": "CKES-EXAMPLE-PACK-001",
+    "packVersion": "1.0.0",
+    "packContentHash": "89752fc1c3e5d6277f1a0e08159030c629dab27f8e5cb3a398d81b81a166b03e",
+    "startedAt": "2026-09-19T12:00:00.000Z",
+    "completedAt": "2026-09-19T12:00:01.000Z",
+    "databaseProfile": "clean",
+    "executionMode": "decision_slice",
+    "retrievalMode": "deterministic_fixture",
+    "policyVersion": "1.0.0"
+  },
+  "scenarios": [
+    {
+      "scenarioId": "H1-EX-001",
+      "executionMode": "decision_slice",
+      "outcome": "not_evaluated",
+      "explanation": "Static contract example; execution deferred to Handover 2 HarnessRunner.",
+      "trialsRequested": 1,
+      "trialsCompleted": 0,
+      "incompleteTrialReason": "harness_not_implemented",
+      "trials": [
+        {
+          "trialIndex": 0,
+          "outcome": "not_evaluated"
+        }
+      ],
+      "economics": {
+        "currency": "USD",
+        "costKind": "zero",
+        "amountUsd": 0,
+        "pricingSnapshotId": "handover1-static",
+        "tokenCountSource": "none",
+        "latencyMs": 0,
+        "latencyUnit": "ms",
+        "cachedTokensTreatment": "excluded",
+        "infrastructureOverheadIncluded": false
+      }
+    }
+  ],
+  "aggregates": {
+    "passCount": 0,
+    "failCount": 0,
+    "falseMergeCount": 0,
+    "byRetrievalMode": {
+      "deterministic_fixture": 1
+    }
+  }
+}

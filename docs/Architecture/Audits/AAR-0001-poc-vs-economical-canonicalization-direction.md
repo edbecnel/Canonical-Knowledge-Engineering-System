@@ -117,7 +117,19 @@ This audit is **not** deferred until `CKES-0001` exists: AAR-0001 evaluates **im
 | **Evidence** | `poc/packages/metrics/`, `poc/experiments/results/` |
 | **Remediation** | Execute baseline run per integration report § POC baselines |
 
-### Finding 8: CRA semantics not redefined by direction doc
+### Finding 8: Benchmark JSON contracts and evaluator ground truth (Handover 1)
+
+| Field | Value |
+|---|---|
+| **Classification** | Partial (contract + corpus path) |
+| **Requirement** | Handover 01 benchmark architecture; matrix economics / false-merge measurement direction |
+| **Expected** | Versioned JSON packs; leakage-safe evaluation; candidate-level GT direction |
+| **Observed** | `@ckes/benchmark`, `poc/benchmark/schemas/`, evaluator GT table, structural joins; **no** HarnessRunner or reference baseline |
+| **Evidence tier** | (1) schemas/docs, (2) GT repair + library, (3) `benchmark:smoke` — not full runner evidence |
+| **Evidence** | `poc/packages/benchmark/`, `poc/db/synthetic/002_evaluator_ground_truth.sql`, [Handover 01 report](../../Development/Handover_01_Benchmark_Integration_Report.md) |
+| **Remediation** | Handover 2 runner; Handover 3 packs/baseline; partial GT labeling (`knowledge_object` only) |
+
+### Finding 9: CRA semantics not redefined by direction doc
 
 | Field | Value |
 |---|---|
@@ -133,6 +145,7 @@ This audit is **not** deferred until `CKES-0001` exists: AAR-0001 evaluates **im
 | Classification | Count |
 |---|---|
 | Conformant | 3 |
+| Partial | 1 |
 | Gap | 4 |
 | Violation | 0 |
 | Deferred | 1 |

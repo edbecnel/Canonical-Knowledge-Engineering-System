@@ -1,6 +1,9 @@
 import type { RecipeJson } from '@ckes/adapter';
 import { normalizeLabel } from '@ckes/adapter';
 
+export const DISCOVERY_EXTRACTOR_ID = 'ckes.discovery';
+export const DISCOVERY_EXTRACTOR_VERSION = '1.0.0';
+
 export interface DiscoveredCandidate {
   candidateType: 'concept' | 'knowledge_object' | 'relationship';
   text: string;
@@ -8,6 +11,10 @@ export interface DiscoveredCandidate {
   aspect?: string;
   techniqueLabels: string[];
   ingredientLabels: string[];
+  sourcePath: string;
+  candidateRole: string;
+  occurrenceKey: string;
+  contentFingerprint?: string;
 }
 
 const TECHNIQUE_PATTERNS = [
@@ -28,20 +35,29 @@ export function discoverCandidates(recipe: RecipeJson): DiscoveredCandidate[] {
   const title = recipe.title ?? 'Untitled';
   const instructionText = recipe.instructions.map((s) => s.text).join(' ');
 
-  for (const group of recipe.ingredients ?? []) {
-    for (const item of group.items ?? []) {
+  let ingredientIndex = 0;
+  for (let gi = 0; gi < (recipe.ingredients ?? []).length; gi++) {
+    const group = recipe.ingredients![gi];
+    for (let ii = 0; ii < (group.items ?? []).length; ii++) {
+      const item = group.items![ii];
       const label = item.name?.trim();
       if (!label) continue;
+      const path = `recipe.ingredients[${gi}].items[${ii}]`;
       candidates.push({
         candidateType: 'concept',
         text: label,
         subject: title,
         techniqueLabels: [],
         ingredientLabels: [normalizeLabel(label)],
+        sourcePath: path,
+        candidateRole: 'concept',
+        occurrenceKey: String(ingredientIndex++),
+        contentFingerprint: normalizeLabel(label),
       });
     }
   }
 
+  let techniqueIndex = 0;
   for (const pattern of TECHNIQUE_PATTERNS) {
     if (pattern.test(instructionText) || pattern.test(title)) {
       const match = instructionText.match(pattern) ?? title.match(pattern);
@@ -52,6 +68,10 @@ export function discoverCandidates(recipe: RecipeJson): DiscoveredCandidate[] {
         subject: title,
         techniqueLabels: [normalizeLabel(technique)],
         ingredientLabels: [],
+        sourcePath: `recipe.instructions.technique[${techniqueIndex}]`,
+        candidateRole: 'concept',
+        occurrenceKey: `technique-${techniqueIndex++}`,
+        contentFingerprint: normalizeLabel(technique),
       });
     }
   }
@@ -72,6 +92,10 @@ export function discoverCandidates(recipe: RecipeJson): DiscoveredCandidate[] {
       aspect: 'preparation',
       techniqueLabels: [],
       ingredientLabels: [],
+      sourcePath: 'recipe.knowledge_object',
+      candidateRole: 'knowledge_object',
+      occurrenceKey: '0',
+      contentFingerprint: normalizeLabel(knowledgeText.slice(0, 256)),
     });
   }
 
@@ -81,7 +105,7 @@ export function discoverCandidates(recipe: RecipeJson): DiscoveredCandidate[] {
 function dedupeCandidates(candidates: DiscoveredCandidate[]): DiscoveredCandidate[] {
   const seen = new Set<string>();
   return candidates.filter((c) => {
-    const key = `${c.candidateType}:${normalizeLabel(c.text)}`;
+    const key = `${c.candidateRole}:${c.sourcePath}:${c.occurrenceKey}`;
     if (seen.has(key)) return false;
     seen.add(key);
     return true;

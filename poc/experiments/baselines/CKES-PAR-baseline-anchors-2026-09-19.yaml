@@ -1,0 +1,47 @@
+# DEPRECATED: use experiments/run-profiles/CKES-BENCHMARK-RUN-PROFILE-001.json (npm run benchmark:migrate-profile)
+# Legacy YAML anchors — not a reference baseline.
+
+baseline_id: CKES-PAR-BASELINE-001
+recorded_date: 2026-09-19
+purpose: >-
+  Initial baseline for Confirmed CKES-PAR requirements and matrix T-01–T-16;
+  compare future W-LIFECYCLE / W-MULTI / W-VEC work against this series.
+
+anchors:
+  git_commit: 3264eadeda8bffad838c5de1ff64c5c976c668b6
+  git_commit_note: Accept ADR-0003 and confirm CKES-PAR provisional requirements
+
+  corpus_manifest: experiments/manifests/CALS-POC-001.yaml
+  corpus_id: CALS-POC-001
+  generation_seed: 18427
+  schema_version: "1.10"
+
+  corpus_stage: seed
+  corpus_stage_target_count: 50
+
+  policy_file: packages/policy/cals-policy.v1.json
+  policy_version: "1.0.0"
+
+  openai_mode: deterministic_off
+  openai_mode_detail:
+    OPENAI_API_KEY: empty_or_unset
+    CKES_DETERMINISTIC_AI: true
+    OPENAI_MODEL: gpt-4o-mini
+    note: >-
+      Pipeline uses deterministic adjudication when key is absent or
+      CKES_DETERMINISTIC_AI=true (see scripts/run-pipeline.ts).
+
+  database_url_pattern: postgresql://ckes:ckes_dev@localhost:5433/ckes_poc
+  database_state_for_first_capture: >-
+    Operator choice — document whether DB was warm (existing corpus) or
+    clean (migrate + bootstrap + corpus:seed only). Warm DB runs are
+    valid snapshots but not comparable to a clean seed replay.
+
+commands:
+  pipeline: npm run pipeline:run -- --stage seed
+  ground_truth: npm run evaluate
+  progressive_optional: npm run experiment:progressive
+
+related_docs:
+  - docs/Architecture/Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md
+  - docs/Architecture/Audits/AAR-0001-poc-vs-economical-canonicalization-direction.md

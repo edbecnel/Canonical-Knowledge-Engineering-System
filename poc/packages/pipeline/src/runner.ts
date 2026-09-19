@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { SyntheticRecipeVaultAdapter } from '@ckes/adapter';
 import { evaluatePolicy, loadPolicy } from '@ckes/policy';
 import { emptyMetrics, formatRunReport, type RunMetrics } from '@ckes/metrics';
-import { discoverCandidates } from './discovery.js';
+import { DISCOVERY_EXTRACTOR_ID, DISCOVERY_EXTRACTOR_VERSION, discoverCandidates } from './discovery.js';
 import { hybridRetrieve } from './retrieval.js';
 import { adjudicateSemantic } from './adjudication.js';
 import { buildStagingFromPolicy, commitStagedChanges, stageChanges } from './commit.js';
@@ -62,9 +62,27 @@ export async function runPipeline(
 
     for (const candidate of candidates) {
       const { rows: candRows } = await pool.query(
-        `INSERT INTO ckes.candidates (id, run_id, candidate_type, candidate_text, discovery_method, status)
-         VALUES ($1, $2, $3, $4, 'rule_based', 'pending') RETURNING id`,
-        [uuidv4(), runId, candidate.candidateType, candidate.text],
+        `INSERT INTO ckes.candidates (
+           id, run_id, source_change_id, source_recipe_id, candidate_type, candidate_text,
+           discovery_method, status, extractor_id, extractor_version, source_path,
+           candidate_role, occurrence_key, content_fingerprint
+         )
+         VALUES ($1, $2, $3, $4, $5, $6, 'rule_based', 'pending', $7, $8, $9, $10, $11, $12)
+         RETURNING id`,
+        [
+          uuidv4(),
+          runId,
+          change.id ?? null,
+          change.sourceObjectId,
+          candidate.candidateType,
+          candidate.text,
+          DISCOVERY_EXTRACTOR_ID,
+          DISCOVERY_EXTRACTOR_VERSION,
+          candidate.sourcePath,
+          candidate.candidateRole,
+          candidate.occurrenceKey,
+          candidate.contentFingerprint ?? null,
+        ],
       );
       const candidateId = candRows[0].id as string;
 

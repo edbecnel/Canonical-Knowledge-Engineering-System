@@ -15,6 +15,8 @@
 - [Recipe Vault Change Proposals](Recipe_Vault_Change_Proposals.md) — superseded; POC synthetic schema notes
 - [POC README](../../poc/README.md) — experimental reference implementation
 - [Economical Canonicalization Handover Integration Report](Economical_Canonicalization_Handover_Integration_Report.md) — 2026-09-19 integration and validation closure
+- [Handover 01 Benchmark Integration Report](Handover_01_Benchmark_Integration_Report.md) — JSON benchmark contracts and evaluator ground truth (2026-09-19)
+- [CKES POC Handover 01 brief](CKES_POC_Handover_01_Benchmark_Architecture_and_JSON_Contracts.md) — archived handover source (integrated)
 
 ## Related Documents
 

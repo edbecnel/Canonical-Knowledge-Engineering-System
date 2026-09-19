@@ -1,0 +1,9 @@
+{
+  "description": "Cross-platform JCS + SHA-256 expectations for hash-test-vectors fixtures",
+  "vectors": [
+    {
+      "file": "pack-minimal-a.json",
+      "contentHash": "2151605fa5d231402787f1e79cc329dce417fe73a25f583411f24e28ef0807f9"
+    }
+  ]
+}

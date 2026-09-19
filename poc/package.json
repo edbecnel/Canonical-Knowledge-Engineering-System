@@ -17,7 +17,12 @@
     "pipeline:run": "tsx scripts/run-pipeline.ts",
     "experiment:progressive": "tsx scripts/run-progressive-experiment.ts",
     "evaluate": "tsx scripts/evaluate-ground-truth.ts",
-    "reproduce": "bash scripts/reproduce-experiment.sh"
+    "reproduce": "bash scripts/reproduce-experiment.sh",
+    "benchmark:validate": "tsx scripts/validate-benchmark-schemas.ts",
+    "benchmark:render-md": "tsx scripts/render-benchmark-markdown.ts",
+    "benchmark:smoke": "tsx scripts/benchmark-smoke.ts",
+    "benchmark:migrate-profile": "tsx scripts/migrate-baseline-yaml-to-run-profile.ts",
+    "benchmark:test": "npm run test --workspace @ckes/benchmark"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
@@ -26,6 +31,7 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "@ckes/benchmark": "*",
     "dotenv": "^16.4.7",
     "openai": "^4.77.0",
     "pg": "^8.13.1",

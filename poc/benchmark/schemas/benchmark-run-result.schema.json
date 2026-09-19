@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ckes.local/schemas/benchmark-run-result.schema.json",
+  "title": "BenchmarkRunResult",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "run", "scenarios", "aggregates"],
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0.0" },
+    "run": { "$ref": "#/$defs/runHeader" },
+    "scenarios": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/scenarioResult" }
+    },
+    "aggregates": { "$ref": "#/$defs/aggregates" }
+  },
+  "$defs": {
+    "runHeader": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["runId", "runType", "packId", "packVersion", "packContentHash", "startedAt", "databaseProfile"],
+      "properties": {
+        "runId": { "type": "string" },
+        "runType": {
+          "type": "string",
+          "enum": ["reference_baseline", "experiment", "corpus_evaluation", "exploratory_trial", "qualification"]
+        },
+        "packId": { "type": "string" },
+        "packVersion": { "type": "string" },
+        "packContentHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "startedAt": { "type": "string", "format": "date-time" },
+        "completedAt": { "type": "string", "format": "date-time" },
+        "gitCommit": { "type": "string" },
+        "gitDirty": { "type": "boolean" },
+        "databaseMigrationLevel": { "type": "string" },
+        "canonicalSeedHash": { "type": "string" },
+        "policyVersion": { "type": "string" },
+        "databaseProfile": { "type": "string", "enum": ["clean", "warm"] },
+        "randomSeed": { "type": "integer" },
+        "retrievalMode": {
+          "type": "string",
+          "enum": ["mocked", "hinted", "live", "deterministic_fixture"]
+        },
+        "executionMode": { "type": "string", "enum": ["full_pipeline", "decision_slice"] }
+      }
+    },
+    "economics": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "currency": { "type": "string", "minLength": 3, "maxLength": 3 },
+        "costKind": { "type": "string", "enum": ["actual", "estimated", "unavailable", "zero"] },
+        "amountUsd": { "type": "number" },
+        "pricingSnapshotId": { "type": "string" },
+        "tokenCountSource": { "type": "string" },
+        "promptTokens": { "type": "integer", "minimum": 0 },
+        "completionTokens": { "type": "integer", "minimum": 0 },
+        "cachedTokensTreatment": { "type": "string" },
+        "infrastructureOverheadIncluded": { "type": "boolean" },
+        "latencyMs": { "type": "number", "minimum": 0 },
+        "latencyUnit": { "type": "string", "const": "ms" }
+      }
+    },
+    "trialResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["trialIndex"],
+      "properties": {
+        "trialIndex": { "type": "integer", "minimum": 0 },
+        "actualDecisionClass": { "type": "string" },
+        "economics": { "$ref": "#/$defs/economics" },
+        "outcome": {
+          "type": "string",
+          "enum": ["pass", "fail", "acceptable_alternative", "infrastructure_error", "not_evaluated"]
+        }
+      }
+    },
+    "scenarioResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scenarioId", "executionMode", "outcome"],
+      "properties": {
+        "scenarioId": { "type": "string" },
+        "executionMode": { "type": "string", "enum": ["full_pipeline", "decision_slice"] },
+        "outcome": {
+          "type": "string",
+          "enum": ["pass", "fail", "acceptable_alternative", "infrastructure_error", "not_evaluated"]
+        },
+        "failureClassification": {
+          "type": "string",
+          "enum": [
+            "false_merge",
+            "missed_match",
+            "unnecessary_new_identity",
+            "unnecessary_deferral",
+            "applicability_error",
+            "policy_violation"
+          ]
+        },
+        "actualDecisionClass": { "type": "string" },
+        "explanation": { "type": "string" },
+        "economics": { "$ref": "#/$defs/economics" },
+        "trialsRequested": { "type": "integer", "minimum": 1 },
+        "trialsCompleted": { "type": "integer", "minimum": 0 },
+        "aggregateStability": { "type": "number" },
+        "disagreementRate": { "type": "number" },
+        "incompleteTrialReason": { "type": "string" },
+        "trials": { "type": "array", "items": { "$ref": "#/$defs/trialResult" } }
+      }
+    },
+    "aggregates": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "passCount": { "type": "integer", "minimum": 0 },
+        "failCount": { "type": "integer", "minimum": 0 },
+        "falseMergeCount": { "type": "integer", "minimum": 0 },
+        "byRetrievalMode": { "type": "object", "additionalProperties": { "type": "integer" } },
+        "byFailureClassification": { "type": "object", "additionalProperties": { "type": "integer" } }
+      }
+    }
+  }
+}

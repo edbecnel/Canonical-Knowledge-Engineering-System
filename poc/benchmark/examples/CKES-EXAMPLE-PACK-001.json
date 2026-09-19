@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "1.0.0",
+  "pack": {
+    "packId": "CKES-EXAMPLE-PACK-001",
+    "name": "Handover 1 minimal example pack",
+    "suiteClass": "anchor",
+    "packVersion": "1.0.0",
+    "status": "released",
+    "description": "Contract validation example only; not a production benchmark suite.",
+    "createdAt": "2026-09-19T00:00:00.000Z",
+    "contentHash": "89752fc1c3e5d6277f1a0e08159030c629dab27f8e5cb3a398d81b81a166b03e",
+    "canonicalSeedHash": "b6551ac5426944714e313f1dcc70f2f34e3bb54fcc543bd08ebd5683b35e5c28",
+    "domains": [
+      "culinary"
+    ],
+    "compatibleHarnessVersions": [
+      "0.1.0"
+    ]
+  },
+  "executionRequirements": {
+    "supportedExecutionModes": [
+      "decision_slice",
+      "full_pipeline"
+    ],
+    "defaultExecutionMode": "decision_slice",
+    "databaseProfile": "clean",
+    "scenarioIsolationRequired": true,
+    "retrievalModesAllowed": [
+      "deterministic_fixture",
+      "live"
+    ],
+    "llmPolicy": "not_required"
+  },
+  "canonicalSeedMaterial": [
+    {
+      "seedId": "CK-BOOT-0001",
+      "entityType": "concept",
+      "label": "Fried chicken technique",
+      "statement": "Deep frying is a high-heat cooking technique.",
+      "domain": "culinary"
+    }
+  ],
+  "scenarios": [
+    {
+      "scenarioId": "H1-EX-001",
+      "title": "Decision slice paraphrase match",
+      "status": "released",
+      "suite": "anchor",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "deep fry"
+      },
+      "expectedDecisionClass": "match_existing",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-BOOT-0001"
+      },
+      "labelConfidenceClass": "strong_expectation",
+      "ckesParRefs": [
+        "CKES-PAR-0005"
+      ],
+      "validationMatrixRefs": [
+        "T-01"
+      ]
+    },
+    {
+      "scenarioId": "H1-EX-002",
+      "title": "Full pipeline source text stub",
+      "status": "released",
+      "suite": "anchor",
+      "domain": "culinary",
+      "executionMode": "full_pipeline",
+      "sourceText": "Marinate chicken, dredge in seasoned flour, deep fry until golden.",
+      "candidateType": "knowledge_object",
+      "expectedDecisionClass": "propose_new_identity",
+      "labelConfidenceClass": "acceptable_result_set",
+      "validationMatrixRefs": [
+        "T-03"
+      ]
+    }
+  ]
+}

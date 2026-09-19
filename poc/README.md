@@ -38,6 +38,19 @@ npm run experiment:progressive
 | `@ckes/corpus` | Synthetic generation, ground truth, lifecycle |
 | `@ckes/policy` | CALS policy engine |
 | `@ckes/metrics` | Instrumentation and reports |
+| `@ckes/benchmark` | Benchmark JSON contracts, hashing, leakage-safe projection (Handover 1) |
+
+## Benchmark evaluation (Handover 1)
+
+Three facilities: **corpus** (`npm run evaluate`), **reviewed benchmark** (JSON packs under `benchmark/`), **exploratory** (draft packs — not scored). JSON is authoritative for packs, [run profiles](experiments/run-profiles/), and run results. Corpus/bootstrap YAML is unchanged.
+
+```bash
+npm run benchmark:test
+npm run benchmark:validate
+npm run benchmark:smoke   # contract only — not a benchmark runner
+```
+
+Architecture: [Benchmark Evaluation Architecture](../docs/Architecture/Benchmark_Evaluation_Architecture.md).
 
 ## Target architecture (direction vs current)
 

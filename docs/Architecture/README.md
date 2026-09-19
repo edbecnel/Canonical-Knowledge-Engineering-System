@@ -10,6 +10,7 @@ System architecture, technical design, diagrams, and architecture decisions.
 
 - [Reference Implementation Role and Domain Independence](Reference_Implementation_Role_and_Domain_Independence.md)
 - [Economical LLM-Assisted Canonicalization, Discovery, and Revalidation](Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md)
+- [Benchmark Evaluation Architecture](Benchmark_Evaluation_Architecture.md)
 - [Architecture Audits](Audits/README.md)
 - [Architecture Decision Records](ADRs/README.md)
 - [Project Architecture Decisions](../../ARCHITECTURE_DECISIONS.md)

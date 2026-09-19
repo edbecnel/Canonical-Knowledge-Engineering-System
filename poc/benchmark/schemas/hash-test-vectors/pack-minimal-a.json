@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "pack": {
+    "packId": "HASH-VECTOR-A",
+    "name": "Hash vector A",
+    "suiteClass": "anchor",
+    "packVersion": "1.0.0",
+    "status": "released",
+    "description": "Cross-platform JCS hash test fixture",
+    "contentHash": "2151605fa5d231402787f1e79cc329dce417fe73a25f583411f24e28ef0807f9",
+    "canonicalSeedHash": "62752dcd2e4ad83d5986590c5d47543ea3404cbb2828ef875c28e86666a0009b"
+  },
+  "executionRequirements": {
+    "supportedExecutionModes": [
+      "decision_slice"
+    ],
+    "defaultExecutionMode": "decision_slice",
+    "databaseProfile": "clean"
+  },
+  "canonicalSeedMaterial": [
+    {
+      "seedId": "SEED-1",
+      "entityType": "concept",
+      "label": "Test",
+      "statement": "Test seed"
+    }
+  ],
+  "scenarios": [
+    {
+      "scenarioId": "S1",
+      "title": "Vector",
+      "status": "released",
+      "suite": "anchor",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "salt"
+      },
+      "expectedDecisionClass": "match_existing",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "SEED-1"
+      },
+      "labelConfidenceClass": "deterministic_by_construction"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ckes.local/schemas/benchmark-run-profile.schema.json",
+  "title": "BenchmarkRunProfile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "profileId", "anchors", "databaseProfile"],
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0.0" },
+    "profileId": { "type": "string" },
+    "description": { "type": "string" },
+    "recordedDate": { "type": "string", "format": "date" },
+    "anchors": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["gitCommit"],
+      "properties": {
+        "gitCommit": { "type": "string" },
+        "corpusManifest": { "type": "string" },
+        "corpusId": { "type": "string" },
+        "generationSeed": { "type": "integer" },
+        "corpusStage": { "type": "string" },
+        "policyFile": { "type": "string" },
+        "policyVersion": { "type": "string" },
+        "openaiMode": { "type": "string" },
+        "openaiModeDetail": { "type": "object", "additionalProperties": true }
+      }
+    },
+    "databaseProfile": { "type": "string", "enum": ["clean", "warm"] },
+    "warmStateRef": { "type": "string" },
+    "commands": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pipeline": { "type": "string" },
+        "groundTruth": { "type": "string" }
+      }
+    },
+    "relatedDocs": { "type": "array", "items": { "type": "string" } }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0.0",
+  "profileId": "CKES-BENCHMARK-RUN-PROFILE-001",
+  "description": "Run configuration migrated from legacy YAML anchors; not a reference baseline.",
+  "recordedDate": "2026-09-19",
+  "anchors": {
+    "gitCommit": "3264eadeda8bffad838c5de1ff64c5c976c668b6",
+    "corpusManifest": "experiments/manifests/CALS-POC-001.yaml",
+    "corpusId": "CALS-POC-001",
+    "generationSeed": 18427,
+    "corpusStage": "seed",
+    "policyFile": "packages/policy/cals-policy.v1.json",
+    "policyVersion": "1.0.0",
+    "openaiMode": "deterministic_off",
+    "openaiModeDetail": {
+      "CKES_DETERMINISTIC_AI": true,
+      "OPENAI_API_KEY": "empty_or_unset"
+    }
+  },
+  "databaseProfile": "clean",
+  "commands": {
+    "pipeline": "npm run pipeline:run -- --stage seed",
+    "groundTruth": "npm run evaluate"
+  },
+  "relatedDocs": [
+    "docs/Architecture/Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md",
+    "docs/Architecture/Benchmark_Evaluation_Architecture.md"
+  ]
+}

@@ -8,7 +8,7 @@ Glossaries, standards, terminology, conventions, and external references.
 
 ## Authoritative Documents
 
-- Add links to authoritative documents in this domain.
+- [Benchmark Terminology and Decision Vocabulary](Benchmark_Terminology_and_Decision_Vocabulary.md) — provisional benchmark enums (Handover 1)
 
 ## What Belongs Here
 
