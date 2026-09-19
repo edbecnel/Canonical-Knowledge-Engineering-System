@@ -25,7 +25,8 @@
 - [Handover 03 G3 Freeze and G4 Readiness Report](Handover_03_G3_Freeze_and_G4_Readiness_Report.md) — official frozen packs (G3 accepted)
 - [Handover 03 G3.1 G4 Readiness Remediation Report](Handover_03_G31_G4_Readiness_Remediation_Report.md) — evaluation identity capture (G3.1 accepted)
 - [Handover 03 G4 Official Execution and G5 Readiness Report](Handover_03_G4_Official_Execution_and_G5_Readiness_Report.md) — first official matrix (historical evidence)
-- [Handover 03 G4.1 Baseline Validity and G5 Readiness Report](Handover_03_G41_Baseline_Validity_and_G5_Readiness_Report.md) — measurement remediation + `-002` runs (awaiting G5)
+- [Handover 03 G4.1 Baseline Validity and G5 Readiness Report](Handover_03_G41_Baseline_Validity_and_G5_Readiness_Report.md) — measurement remediation + `-002` runs (G4.1 accepted)
+- [Handover 03 G5 Reference Baseline Designation and G6 Readiness Report](Handover_03_G5_Reference_Baseline_Designation_and_G6_Readiness_Report.md) — `reference_baseline_001` (awaiting G6)
 - [CKES POC Handover 03 brief](CKES_POC_Handover_03_Benchmark_Generation_and_Reference_Baseline.md) — handover source (planning)
 
 ## Related Documents

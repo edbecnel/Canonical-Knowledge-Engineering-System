@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "designationId": "reference_baseline_001",
+  "designatedRunId": "RUN-REF-CLEAN-ANCHOR-002",
+  "designationEventId": "ad7539ba-699b-432d-ab36-af4f20bbed43",
+  "designatedAt": "2026-09-19T08:38:43.696Z",
+  "designatedBy": "g5-designate-reference-baseline.ts",
+  "architectAuthorizationReference": "G5 authorized 2026-09-19 — Handover 03 architect review",
+  "status": "active",
+  "baselineValidityStatus": "passed_g4_1_measurement_validity_gates",
+  "immutableRunResult": {
+    "path": "poc/experiments/baseline-evidence/g4-1-official-runs/RUN-REF-CLEAN-ANCHOR-002.json",
+    "sha256": "c5e690b260f5a061b24b59bb1cb5835adbf211d5ec418ea108af2b8f752ac573"
+  },
+  "anchorPack": {
+    "packId": "CKES-BENCHMARK-ANCHOR-001",
+    "packVersion": "1.0.0",
+    "contentHash": "2d65a6cf59c486ffba20c3571d69a918ac414f1d89d2641d25973f29e249a76c",
+    "jsonPath": "poc/benchmark/releases/anchor/CKES-BENCHMARK-ANCHOR-001.json"
+  },
+  "runProfile": {
+    "profileId": "CKES-BENCHMARK-RUN-PROFILE-REF-CLEAN-001",
+    "contentHash": "a69d5677856931ab7617ef64eb0072e2fb1b52254952077035d0acbcc14586de"
+  },
+  "scorer": {
+    "version": "1.0.0-g1",
+    "contentHash": "bd2c0c6bed3375f4ec43b922b9946b33c4e81a7845172393f8f9772e0d925d55"
+  },
+  "revisions": {
+    "ckesGitCommit": "956c93f9e7b2e2a519fbc8a909667df9de8f454c",
+    "pipelinePackageVersion": "0.1.0",
+    "harnessPackageVersion": "0.1.0",
+    "evaluationInfrastructureRevision": "g4.1-baseline-validity-2026-09-19"
+  },
+  "lineage": {
+    "preservedInvalidPredecessorExecution": {
+      "runId": "RUN-REF-CLEAN-ANCHOR-001",
+      "notDesignated": true,
+      "reason": "G4 measurement-validity defects (infrastructure errors, present_unmapped)",
+      "immutableRunResultSha256": "7e10d14d39fe768c1e80d142e59b0c371d346df32db1c25b3e8225e80532524b",
+      "evidencePath": "poc/experiments/baseline-evidence/g4-official-runs/RUN-REF-CLEAN-ANCHOR-001.json"
+    },
+    "note": "reference_baseline_001 names the first designated CKES reference baseline; run id suffix 002 is intentional."
+  },
+  "preservedBaselineFindings": {
+    "falseMergeCount": 18,
+    "falseMergeRate": 0.45,
+    "falseMergeRateCi95": {
+      "lower": 0.30705075280944705,
+      "upper": 0.6017117011155924
+    },
+    "criticalFalseMergeScenarioIds": [
+      "ANC-0017",
+      "ANC-0018",
+      "ANC-0019",
+      "ANC-0020"
+    ],
+    "mustNotMatchViolationCount": 4,
+    "mustNotMatchScenarioIds": [
+      "ANC-0018",
+      "ANC-0019",
+      "ANC-0020",
+      "ANC-0031"
+    ],
+    "missedMatchCount": 4,
+    "unnecessaryDeferralCount": 1,
+    "disclaimer": "Pre-improvement CKES behavior; not sanitized for designation."
+  },
+  "designationSidecarSha256": "0461b8609271179954cd5211d608f9c88b2fbae72f3249d662c4aff18ed3e149"
+}

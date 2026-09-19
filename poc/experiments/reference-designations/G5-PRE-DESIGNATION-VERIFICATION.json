@@ -1,0 +1,14 @@
+{
+  "verifiedAt": "2026-09-19T08:38:43.700Z",
+  "passed": true,
+  "runResultHash": "c5e690b260f5a061b24b59bb1cb5835adbf211d5ec418ea108af2b8f752ac573",
+  "checks": {
+    "packHash": "2d65a6cf59c486ffba20c3571d69a918ac414f1d89d2641d25973f29e249a76c",
+    "scenarios": 40,
+    "infrastructureErrors": 0,
+    "presentUnmapped": 0,
+    "dryRun": false,
+    "leakage": true,
+    "completeness": true
+  }
+}

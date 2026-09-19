@@ -161,4 +161,4 @@ These are **legitimate baseline findings**; no CKES tuning was performed.
 
 ## Git commit
 
-Recorded in repository after push-ready commit on `main`.
+- `e5e460c66b956a6f49beebff574bb57f8813fd7f` — G4.1 remediation, `-002` evidence, this report
