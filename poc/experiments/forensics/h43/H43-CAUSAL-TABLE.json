@@ -1,0 +1,370 @@
+{
+  "rows": [
+    {
+      "scenarioId": "ANC-0001",
+      "suite": "anchor",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "adjudication",
+      "rootCause": "adjudication",
+      "contributingCauses": [
+        "retrieval_high_similarity"
+      ],
+      "downstreamManifestations": [
+        "scorer_pass"
+      ],
+      "confidence": "high",
+      "evidenceArtifact": "investigations/INV-ANC-0001.json"
+    },
+    {
+      "scenarioId": "ANC-0002",
+      "suite": "anchor",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "adjudication_or_retrieval",
+      "rootCause": "unknown_unresolved",
+      "contributingCauses": [],
+      "downstreamManifestations": [
+        "scorer_missed_match"
+      ],
+      "confidence": "low",
+      "evidenceArtifact": "investigations/INV-ANC-0002.json"
+    },
+    {
+      "scenarioId": "ANC-0017",
+      "suite": "anchor",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "adjudication",
+      "rootCause": "adjudication",
+      "contributingCauses": [
+        "retrieval_primary_match",
+        "deterministic_equivalence_rule"
+      ],
+      "downstreamManifestations": [
+        "scorer_false_merge",
+        "policy_reuse_existing_manifestation"
+      ],
+      "confidence": "high",
+      "evidenceArtifact": "investigations/INV-ANC-0017.json"
+    },
+    {
+      "scenarioId": "ANC-0018",
+      "suite": "anchor",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "adjudication",
+      "rootCause": "adjudication",
+      "contributingCauses": [
+        "retrieval_primary_match",
+        "deterministic_equivalence_rule"
+      ],
+      "downstreamManifestations": [
+        "scorer_false_merge",
+        "policy_reuse_existing_manifestation"
+      ],
+      "confidence": "high",
+      "evidenceArtifact": "investigations/INV-ANC-0018.json"
+    },
+    {
+      "scenarioId": "ANC-0019",
+      "suite": "anchor",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "adjudication",
+      "rootCause": "adjudication",
+      "contributingCauses": [
+        "retrieval_primary_match",
+        "deterministic_equivalence_rule"
+      ],
+      "downstreamManifestations": [
+        "scorer_false_merge",
+        "policy_reuse_existing_manifestation"
+      ],
+      "confidence": "high",
+      "evidenceArtifact": "investigations/INV-ANC-0019.json"
+    },
+    {
+      "scenarioId": "ANC-0020",
+      "suite": "anchor",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "adjudication",
+      "rootCause": "adjudication",
+      "contributingCauses": [
+        "retrieval_primary_match",
+        "deterministic_equivalence_rule"
+      ],
+      "downstreamManifestations": [
+        "scorer_false_merge",
+        "policy_reuse_existing_manifestation"
+      ],
+      "confidence": "high",
+      "evidenceArtifact": "investigations/INV-ANC-0020.json"
+    },
+    {
+      "scenarioId": "ANC-0023",
+      "suite": "anchor",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "adjudication",
+      "rootCause": "adjudication",
+      "contributingCauses": [
+        "retrieval_high_similarity"
+      ],
+      "downstreamManifestations": [
+        "scorer_false_merge"
+      ],
+      "confidence": "high",
+      "evidenceArtifact": "investigations/INV-ANC-0023.json"
+    },
+    {
+      "scenarioId": "ANC-0024",
+      "suite": "anchor",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "adjudication",
+      "rootCause": "adjudication",
+      "contributingCauses": [
+        "retrieval_primary_match",
+        "deterministic_equivalence_rule"
+      ],
+      "downstreamManifestations": [
+        "scorer_false_merge",
+        "policy_reuse_existing_manifestation"
+      ],
+      "confidence": "high",
+      "evidenceArtifact": "investigations/INV-ANC-0024.json"
+    },
+    {
+      "scenarioId": "ANC-0027",
+      "suite": "anchor",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "adjudication",
+      "rootCause": "adjudication",
+      "contributingCauses": [
+        "retrieval_high_similarity"
+      ],
+      "downstreamManifestations": [
+        "scorer_false_merge"
+      ],
+      "confidence": "high",
+      "evidenceArtifact": "investigations/INV-ANC-0027.json"
+    },
+    {
+      "scenarioId": "ANC-0029",
+      "suite": "anchor",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "adjudication",
+      "rootCause": "adjudication",
+      "contributingCauses": [
+        "retrieval_high_similarity"
+      ],
+      "downstreamManifestations": [
+        "scorer_false_merge"
+      ],
+      "confidence": "high",
+      "evidenceArtifact": "investigations/INV-ANC-0029.json"
+    },
+    {
+      "scenarioId": "ANC-0030",
+      "suite": "anchor",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "adjudication_or_retrieval",
+      "rootCause": "unknown_unresolved",
+      "contributingCauses": [],
+      "downstreamManifestations": [
+        "scorer_pass"
+      ],
+      "confidence": "low",
+      "evidenceArtifact": "investigations/INV-ANC-0030.json"
+    },
+    {
+      "scenarioId": "ANC-0031",
+      "suite": "anchor",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "adjudication",
+      "rootCause": "adjudication",
+      "contributingCauses": [
+        "retrieval_primary_match",
+        "deterministic_equivalence_rule"
+      ],
+      "downstreamManifestations": [
+        "scorer_false_merge",
+        "policy_reuse_existing_manifestation"
+      ],
+      "confidence": "high",
+      "evidenceArtifact": "investigations/INV-ANC-0031.json"
+    },
+    {
+      "scenarioId": "ANC-0034",
+      "suite": "anchor",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "adjudication_or_retrieval",
+      "rootCause": "unknown_unresolved",
+      "contributingCauses": [],
+      "downstreamManifestations": [
+        "scorer_pass"
+      ],
+      "confidence": "low",
+      "evidenceArtifact": "investigations/INV-ANC-0034.json"
+    },
+    {
+      "scenarioId": "ANC-0035",
+      "suite": "anchor",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "adjudication",
+      "rootCause": "adjudication",
+      "contributingCauses": [
+        "retrieval_high_similarity"
+      ],
+      "downstreamManifestations": [
+        "scorer_false_merge"
+      ],
+      "confidence": "high",
+      "evidenceArtifact": "investigations/INV-ANC-0035.json"
+    },
+    {
+      "scenarioId": "ANC-0038",
+      "suite": "anchor",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "adjudication_or_retrieval",
+      "rootCause": "unknown_unresolved",
+      "contributingCauses": [],
+      "downstreamManifestations": [
+        "scorer_pass"
+      ],
+      "confidence": "low",
+      "evidenceArtifact": "investigations/INV-ANC-0038.json"
+    },
+    {
+      "scenarioId": "ANC-0040",
+      "suite": "anchor",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "adjudication",
+      "rootCause": "adjudication",
+      "contributingCauses": [
+        "retrieval_primary_match",
+        "deterministic_equivalence_rule"
+      ],
+      "downstreamManifestations": [
+        "scorer_false_merge",
+        "policy_reuse_existing_manifestation"
+      ],
+      "confidence": "high",
+      "evidenceArtifact": "investigations/INV-ANC-0040.json"
+    },
+    {
+      "scenarioId": "CHL-0002",
+      "suite": "challenge",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "policy_expectation_mismatch",
+      "rootCause": "benchmark_policy_semantics_mismatch",
+      "contributingCauses": [
+        "adjudication_distinct",
+        "policy_evaluate_new_identity"
+      ],
+      "downstreamManifestations": [
+        "scorer_unnecessary_deferral"
+      ],
+      "confidence": "medium",
+      "evidenceArtifact": "investigations/INV-CHL-0002.json"
+    },
+    {
+      "scenarioId": "CHL-0003",
+      "suite": "challenge",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "policy_expectation_mismatch",
+      "rootCause": "benchmark_policy_semantics_mismatch",
+      "contributingCauses": [
+        "adjudication_distinct",
+        "policy_evaluate_new_identity"
+      ],
+      "downstreamManifestations": [
+        "scorer_unnecessary_deferral"
+      ],
+      "confidence": "medium",
+      "evidenceArtifact": "investigations/INV-CHL-0003.json"
+    },
+    {
+      "scenarioId": "CHL-0006",
+      "suite": "challenge",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "policy_expectation_mismatch",
+      "rootCause": "benchmark_policy_semantics_mismatch",
+      "contributingCauses": [
+        "adjudication_distinct",
+        "policy_evaluate_new_identity"
+      ],
+      "downstreamManifestations": [
+        "scorer_unnecessary_deferral"
+      ],
+      "confidence": "medium",
+      "evidenceArtifact": "investigations/INV-CHL-0006.json"
+    },
+    {
+      "scenarioId": "CHL-0010",
+      "suite": "challenge",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "policy_expectation_mismatch",
+      "rootCause": "benchmark_policy_semantics_mismatch",
+      "contributingCauses": [
+        "adjudication_distinct",
+        "policy_evaluate_new_identity"
+      ],
+      "downstreamManifestations": [
+        "scorer_unnecessary_deferral"
+      ],
+      "confidence": "medium",
+      "evidenceArtifact": "investigations/INV-CHL-0010.json"
+    },
+    {
+      "scenarioId": "STA-0008",
+      "suite": "statistical",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "adjudication",
+      "rootCause": "adjudication",
+      "contributingCauses": [
+        "retrieval_primary_match",
+        "deterministic_equivalence_rule"
+      ],
+      "downstreamManifestations": [
+        "scorer_false_merge",
+        "policy_reuse_existing_manifestation"
+      ],
+      "confidence": "high",
+      "evidenceArtifact": "investigations/INV-STA-0008.json"
+    },
+    {
+      "scenarioId": "STA-0014",
+      "suite": "statistical",
+      "reproduced": true,
+      "reproductionStatus": "reproduced_rb001",
+      "firstDivergenceLayer": "adjudication",
+      "rootCause": "adjudication",
+      "contributingCauses": [
+        "retrieval_primary_match",
+        "deterministic_equivalence_rule"
+      ],
+      "downstreamManifestations": [
+        "scorer_pass",
+        "policy_reuse_existing_manifestation"
+      ],
+      "confidence": "high",
+      "evidenceArtifact": "investigations/INV-STA-0014.json"
+    }
+  ]
+}

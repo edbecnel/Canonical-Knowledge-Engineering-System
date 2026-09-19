@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordKind": "INV",
+  "gate": "H4.3",
+  "scenarioId": "ANC-0023",
+  "suite": "anchor",
+  "priority": "P1+",
+  "reproductionStatus": "reproduced_rb001",
+  "baselineReference": "RUN-REF-CLEAN-ANCHOR-002.json",
+  "baselineTerminal": {
+    "outcome": "fail",
+    "failureClassification": "false_merge",
+    "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+    "policyAction": "reject_new_identity"
+  },
+  "harnessReproductionTerminal": {
+    "outcome": "fail",
+    "failureClassification": "false_merge",
+    "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+    "policyAction": "reject_new_identity"
+  },
+  "reproRunPath": "poc/experiments/forensics/h43/repro-runs/H43-REPRO-ANC-0023-bcdc6a15.json",
+  "disposableTrace": {
+    "projectedPipelineInput": {
+      "scenarioId": "ANC-0023",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Blanch vegetables method"
+      },
+      "mustNotMatchInProjection": false
+    },
+    "extractionTrace": {},
+    "candidateEnteredRetrieval": {
+      "candidateType": "concept",
+      "text": "Blanch vegetables method",
+      "techniqueLabels": [],
+      "ingredientLabels": [],
+      "sourcePath": "harness.directCandidate",
+      "candidateRole": "concept",
+      "occurrenceKey": "0"
+    },
+    "rankedRetrievalMatches": [
+      {
+        "id": "b6030d9b-0812-4fd6-a734-71bf5eb1e1b1",
+        "matchType": "concept",
+        "label": "Blanch vegetables",
+        "score": 0.8,
+        "method": "normalized"
+      }
+    ],
+    "primaryMatch": {
+      "id": "b6030d9b-0812-4fd6-a734-71bf5eb1e1b1",
+      "matchType": "concept",
+      "label": "Blanch vegetables",
+      "score": 0.8,
+      "method": "normalized"
+    },
+    "canonicalSeedForPrimary": {
+      "seedId": "CK-CUL-07",
+      "label": "Blanch vegetables",
+      "statement": "Blanching briefly boils then shocks vegetables in ice water."
+    },
+    "dbConceptDescription": "Blanching briefly boils then shocks vegetables in ice water.",
+    "adjudication": {
+      "classification": "SUBSUMED_BY_EXISTING",
+      "confidence": 0.8,
+      "rationale": "Deterministic: high similarity to existing concept",
+      "usedAi": false,
+      "inferredDeterministicBranch": "deterministic_subsumed"
+    },
+    "policy": {
+      "action": "reject_new_identity",
+      "admit": false,
+      "rationale": "Policy mapped SUBSUMED_BY_EXISTING → reject_new_identity"
+    },
+    "candidateVsPrimaryLabel": {
+      "candidateText": "Blanch vegetables method",
+      "primaryLabel": "Blanch vegetables",
+      "normalizedEqual": false,
+      "literalEqual": false
+    }
+  },
+  "scorerFromTrace": {
+    "outcome": "fail",
+    "failureClassification": "false_merge",
+    "failureLayer": "adjudication"
+  },
+  "causalAttribution": {
+    "firstDivergenceLayer": "adjudication",
+    "primaryRootCause": "adjudication",
+    "contributingCauses": [
+      "retrieval_high_similarity"
+    ],
+    "downstreamManifestations": [
+      "scorer_false_merge"
+    ],
+    "diagnosisConfidence": "high",
+    "notEstablishedAsGovernanceRootCause": false
+  },
+  "immutabilityNote": "Baseline -002 files not modified"
+}

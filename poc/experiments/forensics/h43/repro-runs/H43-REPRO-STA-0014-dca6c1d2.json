@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "1.0.0",
+  "run": {
+    "runId": "H43-REPRO-STA-0014-dca6c1d2",
+    "runType": "experiment",
+    "lifecycleState": "completed",
+    "packId": "CKES-BENCHMARK-STATISTICAL-001",
+    "packVersion": "1.0.0",
+    "packContentHash": "5e5d0af0a409548ba0f889f8c0f4d5d96334d2c2412d746a8a535ff057dfcc18",
+    "startedAt": "2026-09-19T11:13:53.558Z",
+    "completedAt": "2026-09-19T11:13:53.558Z",
+    "databaseProfile": "clean",
+    "retrievalMode": "deterministic_fixture",
+    "executionMode": "decision_slice",
+    "gitCommit": "REPLACE_AT_EXECUTION",
+    "dryRun": false,
+    "runProfileId": "CKES-BENCHMARK-RUN-PROFILE-REF-CLEAN-001",
+    "runProfileContentHash": "a69d5677856931ab7617ef64eb0072e2fb1b52254952077035d0acbcc14586de",
+    "scorerVersion": "1.0.0-g1",
+    "trialPolicySnapshot": {
+      "defaultTrials": 1,
+      "byExecutionClass": [
+        {
+          "executionMode": "decision_slice",
+          "llmPolicy": "required",
+          "trials": 3
+        },
+        {
+          "executionMode": "full_pipeline",
+          "llmPolicy": "required",
+          "trials": 3
+        }
+      ],
+      "modelCallLimit": 5000,
+      "tokenCeiling": 2000000,
+      "budgetUsdCeiling": 25,
+      "timeoutMsPerTrial": 120000,
+      "maxRetriesPerTrial": 1,
+      "onCeilingExhausted": "fail_run",
+      "incompleteTrialsInvalidate": "run",
+      "aggregation": "worst_case_safety"
+    }
+  },
+  "scenarios": [
+    {
+      "scenarioId": "STA-0014",
+      "executionMode": "decision_slice",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "failureLayer": "decision_slice_outcome",
+      "actualDecisionClass": "EQUIVALENT",
+      "explanation": "policy=reuse_existing",
+      "trialsRequested": 1,
+      "trialsCompleted": 1,
+      "trials": [
+        {
+          "trialIndex": 0,
+          "outcome": "fail",
+          "actualDecisionClass": "EQUIVALENT",
+          "economics": {
+            "currency": "USD",
+            "costKind": "zero",
+            "amountUsd": 0,
+            "pricingSnapshotId": "harness-default",
+            "latencyMs": 4,
+            "latencyUnit": "ms"
+          }
+        }
+      ],
+      "economics": {
+        "currency": "USD",
+        "costKind": "zero",
+        "amountUsd": 0,
+        "pricingSnapshotId": "harness-default",
+        "latencyMs": 4,
+        "latencyUnit": "ms"
+      },
+      "scoring": {
+        "expectedDecisionClass": "match_existing",
+        "expectedVersusActual": {
+          "expected": "match_existing",
+          "actual": "EQUIVALENT",
+          "policyAction": "reuse_existing"
+        }
+      },
+      "evaluationCapture": {
+        "evaluationMatchedIdentityRef": {
+          "present": true,
+          "canonicalLabel": "PWM duty cycle",
+          "canonicalId": "41a61250-c658-44a1-a6a4-f5059d398d44"
+        },
+        "benchmarkLocalSeedId": "CK-ELS-03",
+        "identityEvidenceStatus": "present_mapped"
+      }
+    }
+  ],
+  "aggregates": {
+    "passCount": 0,
+    "failCount": 1,
+    "falseMergeCount": 1,
+    "byExecutionMode": {
+      "decision_slice": 1
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "1.0.0",
+  "run": {
+    "runId": "H43-REPRO-CHL-0002-02c74a62",
+    "runType": "experiment",
+    "lifecycleState": "completed",
+    "packId": "CKES-BENCHMARK-CHALLENGE-001",
+    "packVersion": "1.0.0",
+    "packContentHash": "00d339d3c33c09d6c2276ac9222c588d22c1a28d1510b2c310da8da40e954ecc",
+    "startedAt": "2026-09-19T11:13:30.272Z",
+    "completedAt": "2026-09-19T11:13:30.272Z",
+    "databaseProfile": "clean",
+    "retrievalMode": "deterministic_fixture",
+    "executionMode": "decision_slice",
+    "gitCommit": "REPLACE_AT_EXECUTION",
+    "dryRun": false,
+    "runProfileId": "CKES-BENCHMARK-RUN-PROFILE-REF-CLEAN-001",
+    "runProfileContentHash": "a69d5677856931ab7617ef64eb0072e2fb1b52254952077035d0acbcc14586de",
+    "scorerVersion": "1.0.0-g1",
+    "trialPolicySnapshot": {
+      "defaultTrials": 1,
+      "byExecutionClass": [
+        {
+          "executionMode": "decision_slice",
+          "llmPolicy": "required",
+          "trials": 3
+        },
+        {
+          "executionMode": "full_pipeline",
+          "llmPolicy": "required",
+          "trials": 3
+        }
+      ],
+      "modelCallLimit": 5000,
+      "tokenCeiling": 2000000,
+      "budgetUsdCeiling": 25,
+      "timeoutMsPerTrial": 120000,
+      "maxRetriesPerTrial": 1,
+      "onCeilingExhausted": "fail_run",
+      "incompleteTrialsInvalidate": "run",
+      "aggregation": "worst_case_safety"
+    }
+  },
+  "scenarios": [
+    {
+      "scenarioId": "CHL-0002",
+      "executionMode": "decision_slice",
+      "outcome": "fail",
+      "failureClassification": "unnecessary_deferral",
+      "failureLayer": "decision_slice_outcome",
+      "actualDecisionClass": "DISTINCT",
+      "explanation": "policy=evaluate_new_identity",
+      "trialsRequested": 1,
+      "trialsCompleted": 1,
+      "trials": [
+        {
+          "trialIndex": 0,
+          "outcome": "fail",
+          "actualDecisionClass": "DISTINCT",
+          "economics": {
+            "currency": "USD",
+            "costKind": "zero",
+            "amountUsd": 0,
+            "pricingSnapshotId": "harness-default",
+            "latencyMs": 1,
+            "latencyUnit": "ms"
+          }
+        }
+      ],
+      "economics": {
+        "currency": "USD",
+        "costKind": "zero",
+        "amountUsd": 0,
+        "pricingSnapshotId": "harness-default",
+        "latencyMs": 1,
+        "latencyUnit": "ms"
+      },
+      "scoring": {
+        "expectedDecisionClass": "defer_human",
+        "expectedVersusActual": {
+          "expected": "defer_human",
+          "actual": "DISTINCT",
+          "policyAction": "evaluate_new_identity"
+        }
+      },
+      "evaluationCapture": {
+        "evaluationMatchedIdentityRef": {
+          "present": false,
+          "reason": "no_retrieval_matches"
+        },
+        "identityEvidenceStatus": "absent_no_retrieval"
+      }
+    }
+  ],
+  "aggregates": {
+    "passCount": 0,
+    "failCount": 1,
+    "falseMergeCount": 0,
+    "byExecutionMode": {
+      "decision_slice": 1
+    }
+  }
+}

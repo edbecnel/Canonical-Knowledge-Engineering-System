@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordKind": "INV",
+  "gate": "H4.3",
+  "scenarioId": "ANC-0002",
+  "suite": "anchor",
+  "priority": "P1+",
+  "reproductionStatus": "reproduced_rb001",
+  "baselineReference": "RUN-REF-CLEAN-ANCHOR-002.json",
+  "baselineTerminal": {
+    "outcome": "fail",
+    "failureClassification": "missed_match",
+    "actualDecisionClass": "DISTINCT",
+    "policyAction": "evaluate_new_identity"
+  },
+  "harnessReproductionTerminal": {
+    "outcome": "fail",
+    "failureClassification": "missed_match",
+    "actualDecisionClass": "DISTINCT",
+    "policyAction": "evaluate_new_identity"
+  },
+  "reproRunPath": "poc/experiments/forensics/h43/repro-runs/H43-REPRO-ANC-0002-d742d090.json",
+  "disposableTrace": {
+    "projectedPipelineInput": {
+      "scenarioId": "ANC-0002",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Maillard"
+      },
+      "mustNotMatchInProjection": false
+    },
+    "extractionTrace": {},
+    "candidateEnteredRetrieval": {
+      "candidateType": "concept",
+      "text": "process of Maillard",
+      "techniqueLabels": [],
+      "ingredientLabels": [],
+      "sourcePath": "harness.directCandidate",
+      "candidateRole": "concept",
+      "occurrenceKey": "0"
+    },
+    "rankedRetrievalMatches": [
+      {
+        "id": "81ec3f95-66c6-4751-a136-43be5e19cdc6",
+        "matchType": "concept",
+        "label": "Maillard browning",
+        "score": 0.31034482,
+        "method": "normalized"
+      }
+    ],
+    "primaryMatch": {
+      "id": "81ec3f95-66c6-4751-a136-43be5e19cdc6",
+      "matchType": "concept",
+      "label": "Maillard browning",
+      "score": 0.31034482,
+      "method": "normalized"
+    },
+    "canonicalSeedForPrimary": {
+      "seedId": "CK-CUL-02",
+      "label": "Maillard browning",
+      "statement": "Maillard reactions create flavor when proteins and sugars heat."
+    },
+    "dbConceptDescription": "Maillard reactions create flavor when proteins and sugars heat.",
+    "adjudication": {
+      "classification": "DISTINCT",
+      "confidence": 0.7,
+      "rationale": "Deterministic: low similarity — treat as distinct",
+      "usedAi": false,
+      "inferredDeterministicBranch": "deterministic_distinct"
+    },
+    "policy": {
+      "action": "evaluate_new_identity",
+      "admit": true,
+      "rationale": "Synthetic provenance — experimental admission only when policy permits"
+    },
+    "candidateVsPrimaryLabel": {
+      "candidateText": "process of Maillard",
+      "primaryLabel": "Maillard browning",
+      "normalizedEqual": false,
+      "literalEqual": false
+    }
+  },
+  "scorerFromTrace": {
+    "outcome": "fail",
+    "failureClassification": "missed_match",
+    "failureLayer": "decision_slice_outcome"
+  },
+  "causalAttribution": {
+    "firstDivergenceLayer": "adjudication_or_retrieval",
+    "primaryRootCause": "unknown_unresolved",
+    "contributingCauses": [],
+    "downstreamManifestations": [
+      "scorer_missed_match"
+    ],
+    "diagnosisConfidence": "low",
+    "notEstablishedAsGovernanceRootCause": true
+  },
+  "immutabilityNote": "Baseline -002 files not modified"
+}

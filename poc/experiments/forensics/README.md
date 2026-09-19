@@ -13,3 +13,10 @@ Gate H4.1 static inventory from immutable Reference Baseline 001 evidence.
 - `h42/H42-ANCHOR-FM-CLUSTER-REGISTRY.json`
 - `h42/H42-INVESTIGATION-MATRIX.json`
 - Report: `docs/Development/Handover_04_H42_Causal_Clustering_Report.md`
+
+## H4.3 (debug-assisted investigation)
+
+- `h43/investigations/INV-*.json` — per-scenario forensic records
+- `h43/repro-runs/H43-REPRO-*.json` — non-baseline harness reproductions
+- `h43/H43-CAUSAL-TABLE.json`, `H43-UPDATED-CLUSTERS.json`
+- Report: `docs/Development/Handover_04_H43_Debug_Forensic_Investigation_Report.md`

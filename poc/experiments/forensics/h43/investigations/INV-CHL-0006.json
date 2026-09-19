@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordKind": "INV",
+  "gate": "H4.3",
+  "scenarioId": "CHL-0006",
+  "suite": "challenge",
+  "priority": "P1+",
+  "reproductionStatus": "reproduced_rb001",
+  "baselineReference": "RUN-REF-CLEAN-CHALLENGE-002.json",
+  "baselineTerminal": {
+    "outcome": "fail",
+    "failureClassification": "unnecessary_deferral",
+    "actualDecisionClass": "DISTINCT",
+    "policyAction": "evaluate_new_identity"
+  },
+  "harnessReproductionTerminal": {
+    "outcome": "fail",
+    "failureClassification": "unnecessary_deferral",
+    "actualDecisionClass": "DISTINCT",
+    "policyAction": "evaluate_new_identity"
+  },
+  "reproRunPath": "poc/experiments/forensics/h43/repro-runs/H43-REPRO-CHL-0006-fc3897f3.json",
+  "disposableTrace": {
+    "projectedPipelineInput": {
+      "scenarioId": "CHL-0006",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "ambiguous electronics process 6"
+      },
+      "mustNotMatchInProjection": false
+    },
+    "extractionTrace": {},
+    "candidateEnteredRetrieval": {
+      "candidateType": "concept",
+      "text": "ambiguous electronics process 6",
+      "techniqueLabels": [],
+      "ingredientLabels": [],
+      "sourcePath": "harness.directCandidate",
+      "candidateRole": "concept",
+      "occurrenceKey": "0"
+    },
+    "rankedRetrievalMatches": [],
+    "primaryMatch": null,
+    "canonicalSeedForPrimary": null,
+    "dbConceptDescription": null,
+    "adjudication": {
+      "classification": "DISTINCT",
+      "confidence": 0.9,
+      "rationale": "No existing matches retrieved",
+      "usedAi": false,
+      "inferredDeterministicBranch": "no_matches_distinct"
+    },
+    "policy": {
+      "action": "evaluate_new_identity",
+      "admit": true,
+      "rationale": "Synthetic provenance — experimental admission only when policy permits"
+    },
+    "candidateVsPrimaryLabel": {
+      "candidateText": "ambiguous electronics process 6"
+    }
+  },
+  "scorerFromTrace": {
+    "outcome": "fail",
+    "failureClassification": "unnecessary_deferral",
+    "failureLayer": "policy"
+  },
+  "causalAttribution": {
+    "firstDivergenceLayer": "policy_expectation_mismatch",
+    "primaryRootCause": "benchmark_policy_semantics_mismatch",
+    "contributingCauses": [
+      "adjudication_distinct",
+      "policy_evaluate_new_identity"
+    ],
+    "downstreamManifestations": [
+      "scorer_unnecessary_deferral"
+    ],
+    "diagnosisConfidence": "medium",
+    "notEstablishedAsGovernanceRootCause": true
+  },
+  "immutabilityNote": "Baseline -002 files not modified"
+}

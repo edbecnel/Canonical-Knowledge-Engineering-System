@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordKind": "INV",
+  "gate": "H4.3",
+  "scenarioId": "ANC-0024",
+  "suite": "anchor",
+  "priority": "P1+",
+  "reproductionStatus": "reproduced_rb001",
+  "baselineReference": "RUN-REF-CLEAN-ANCHOR-002.json",
+  "baselineTerminal": {
+    "outcome": "fail",
+    "failureClassification": "false_merge",
+    "actualDecisionClass": "EQUIVALENT",
+    "policyAction": "reuse_existing"
+  },
+  "harnessReproductionTerminal": {
+    "outcome": "fail",
+    "failureClassification": "false_merge",
+    "actualDecisionClass": "EQUIVALENT",
+    "policyAction": "reuse_existing"
+  },
+  "reproRunPath": "poc/experiments/forensics/h43/repro-runs/H43-REPRO-ANC-0024-e1b15ece.json",
+  "disposableTrace": {
+    "projectedPipelineInput": {
+      "scenarioId": "ANC-0024",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "uart framing"
+      },
+      "mustNotMatchInProjection": false
+    },
+    "extractionTrace": {},
+    "candidateEnteredRetrieval": {
+      "candidateType": "concept",
+      "text": "uart framing",
+      "techniqueLabels": [],
+      "ingredientLabels": [],
+      "sourcePath": "harness.directCandidate",
+      "candidateRole": "concept",
+      "occurrenceKey": "0"
+    },
+    "rankedRetrievalMatches": [
+      {
+        "id": "3ad7dede-81d8-4606-a9fa-94952fa99512",
+        "matchType": "concept",
+        "label": "UART framing",
+        "score": 1,
+        "method": "exact"
+      }
+    ],
+    "primaryMatch": {
+      "id": "3ad7dede-81d8-4606-a9fa-94952fa99512",
+      "matchType": "concept",
+      "label": "UART framing",
+      "score": 1,
+      "method": "exact"
+    },
+    "canonicalSeedForPrimary": {
+      "seedId": "CK-ELS-07",
+      "label": "UART framing",
+      "statement": "UART frames bytes with start and stop bits."
+    },
+    "dbConceptDescription": "UART frames bytes with start and stop bits.",
+    "adjudication": {
+      "classification": "EQUIVALENT",
+      "confidence": 0.92,
+      "rationale": "Deterministic: exact or near-exact label match",
+      "usedAi": false,
+      "inferredDeterministicBranch": "deterministic_equivalent"
+    },
+    "policy": {
+      "action": "reuse_existing",
+      "admit": true,
+      "rationale": "Policy mapped EQUIVALENT → reuse_existing"
+    },
+    "candidateVsPrimaryLabel": {
+      "candidateText": "uart framing",
+      "primaryLabel": "UART framing",
+      "normalizedEqual": true,
+      "literalEqual": true
+    }
+  },
+  "scorerFromTrace": {
+    "outcome": "fail",
+    "failureClassification": "false_merge",
+    "failureLayer": "policy"
+  },
+  "causalAttribution": {
+    "firstDivergenceLayer": "adjudication",
+    "primaryRootCause": "adjudication",
+    "contributingCauses": [
+      "retrieval_primary_match",
+      "deterministic_equivalence_rule"
+    ],
+    "downstreamManifestations": [
+      "scorer_false_merge",
+      "policy_reuse_existing_manifestation"
+    ],
+    "diagnosisConfidence": "high",
+    "notEstablishedAsGovernanceRootCause": false
+  },
+  "immutabilityNote": "Baseline -002 files not modified"
+}

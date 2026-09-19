@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordKind": "INV",
+  "gate": "H4.3",
+  "scenarioId": "ANC-0029",
+  "suite": "anchor",
+  "priority": "P1+",
+  "reproductionStatus": "reproduced_rb001",
+  "baselineReference": "RUN-REF-CLEAN-ANCHOR-002.json",
+  "baselineTerminal": {
+    "outcome": "fail",
+    "failureClassification": "false_merge",
+    "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+    "policyAction": "reject_new_identity"
+  },
+  "harnessReproductionTerminal": {
+    "outcome": "fail",
+    "failureClassification": "false_merge",
+    "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+    "policyAction": "reject_new_identity"
+  },
+  "reproRunPath": "poc/experiments/forensics/h43/repro-runs/H43-REPRO-ANC-0029-57a291ff.json",
+  "disposableTrace": {
+    "projectedPipelineInput": {
+      "scenarioId": "ANC-0029",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Temper chocolate"
+      },
+      "mustNotMatchInProjection": false
+    },
+    "extractionTrace": {},
+    "candidateEnteredRetrieval": {
+      "candidateType": "concept",
+      "text": "technique: Temper chocolate",
+      "techniqueLabels": [],
+      "ingredientLabels": [],
+      "sourcePath": "harness.directCandidate",
+      "candidateRole": "concept",
+      "occurrenceKey": "0"
+    },
+    "rankedRetrievalMatches": [
+      {
+        "id": "4ca613bd-c92e-49a6-aa11-56b4a8d708d7",
+        "matchType": "concept",
+        "label": "Temper chocolate",
+        "score": 0.8,
+        "method": "normalized"
+      }
+    ],
+    "primaryMatch": {
+      "id": "4ca613bd-c92e-49a6-aa11-56b4a8d708d7",
+      "matchType": "concept",
+      "label": "Temper chocolate",
+      "score": 0.8,
+      "method": "normalized"
+    },
+    "canonicalSeedForPrimary": {
+      "seedId": "CK-CUL-10",
+      "label": "Temper chocolate",
+      "statement": "Tempering stabilizes cocoa butter crystals in chocolate."
+    },
+    "dbConceptDescription": "Tempering stabilizes cocoa butter crystals in chocolate.",
+    "adjudication": {
+      "classification": "SUBSUMED_BY_EXISTING",
+      "confidence": 0.8,
+      "rationale": "Deterministic: high similarity to existing concept",
+      "usedAi": false,
+      "inferredDeterministicBranch": "deterministic_subsumed"
+    },
+    "policy": {
+      "action": "reject_new_identity",
+      "admit": false,
+      "rationale": "Policy mapped SUBSUMED_BY_EXISTING → reject_new_identity"
+    },
+    "candidateVsPrimaryLabel": {
+      "candidateText": "technique: Temper chocolate",
+      "primaryLabel": "Temper chocolate",
+      "normalizedEqual": false,
+      "literalEqual": false
+    }
+  },
+  "scorerFromTrace": {
+    "outcome": "fail",
+    "failureClassification": "false_merge",
+    "failureLayer": "decision_slice_outcome"
+  },
+  "causalAttribution": {
+    "firstDivergenceLayer": "adjudication",
+    "primaryRootCause": "adjudication",
+    "contributingCauses": [
+      "retrieval_high_similarity"
+    ],
+    "downstreamManifestations": [
+      "scorer_false_merge"
+    ],
+    "diagnosisConfidence": "high",
+    "notEstablishedAsGovernanceRootCause": false
+  },
+  "immutabilityNote": "Baseline -002 files not modified"
+}

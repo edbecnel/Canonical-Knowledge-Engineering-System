@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordKind": "INV",
+  "gate": "H4.3",
+  "scenarioId": "ANC-0035",
+  "suite": "anchor",
+  "priority": "P1+",
+  "reproductionStatus": "reproduced_rb001",
+  "baselineReference": "RUN-REF-CLEAN-ANCHOR-002.json",
+  "baselineTerminal": {
+    "outcome": "fail",
+    "failureClassification": "false_merge",
+    "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+    "policyAction": "reject_new_identity"
+  },
+  "harnessReproductionTerminal": {
+    "outcome": "fail",
+    "failureClassification": "false_merge",
+    "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+    "policyAction": "reject_new_identity"
+  },
+  "reproRunPath": "poc/experiments/forensics/h43/repro-runs/H43-REPRO-ANC-0035-56525a3c.json",
+  "disposableTrace": {
+    "projectedPipelineInput": {
+      "scenarioId": "ANC-0035",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "GPIO pin method"
+      },
+      "mustNotMatchInProjection": false
+    },
+    "extractionTrace": {},
+    "candidateEnteredRetrieval": {
+      "candidateType": "concept",
+      "text": "GPIO pin method",
+      "techniqueLabels": [],
+      "ingredientLabels": [],
+      "sourcePath": "harness.directCandidate",
+      "candidateRole": "concept",
+      "occurrenceKey": "0"
+    },
+    "rankedRetrievalMatches": [
+      {
+        "id": "4a71460f-d3e8-421e-a1b0-9cff5080cad3",
+        "matchType": "concept",
+        "label": "GPIO pin",
+        "score": 0.8,
+        "method": "normalized"
+      }
+    ],
+    "primaryMatch": {
+      "id": "4a71460f-d3e8-421e-a1b0-9cff5080cad3",
+      "matchType": "concept",
+      "label": "GPIO pin",
+      "score": 0.8,
+      "method": "normalized"
+    },
+    "canonicalSeedForPrimary": {
+      "seedId": "CK-ELS-01",
+      "label": "GPIO pin",
+      "statement": "A GPIO pin is a general-purpose digital I/O line."
+    },
+    "dbConceptDescription": "A GPIO pin is a general-purpose digital I/O line.",
+    "adjudication": {
+      "classification": "SUBSUMED_BY_EXISTING",
+      "confidence": 0.8,
+      "rationale": "Deterministic: high similarity to existing concept",
+      "usedAi": false,
+      "inferredDeterministicBranch": "deterministic_subsumed"
+    },
+    "policy": {
+      "action": "reject_new_identity",
+      "admit": false,
+      "rationale": "Policy mapped SUBSUMED_BY_EXISTING → reject_new_identity"
+    },
+    "candidateVsPrimaryLabel": {
+      "candidateText": "GPIO pin method",
+      "primaryLabel": "GPIO pin",
+      "normalizedEqual": false,
+      "literalEqual": false
+    }
+  },
+  "scorerFromTrace": {
+    "outcome": "fail",
+    "failureClassification": "false_merge",
+    "failureLayer": "decision_slice_outcome"
+  },
+  "causalAttribution": {
+    "firstDivergenceLayer": "adjudication",
+    "primaryRootCause": "adjudication",
+    "contributingCauses": [
+      "retrieval_high_similarity"
+    ],
+    "downstreamManifestations": [
+      "scorer_false_merge"
+    ],
+    "diagnosisConfidence": "high",
+    "notEstablishedAsGovernanceRootCause": false
+  },
+  "immutabilityNote": "Baseline -002 files not modified"
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordKind": "INV",
+  "gate": "H4.3",
+  "scenarioId": "ANC-0030",
+  "suite": "anchor",
+  "priority": "P1+",
+  "reproductionStatus": "reproduced_rb001",
+  "baselineReference": "RUN-REF-CLEAN-ANCHOR-002.json",
+  "baselineTerminal": {
+    "outcome": "pass",
+    "actualDecisionClass": "DISTINCT",
+    "policyAction": "evaluate_new_identity"
+  },
+  "harnessReproductionTerminal": {
+    "outcome": "pass",
+    "actualDecisionClass": "DISTINCT",
+    "policyAction": "evaluate_new_identity"
+  },
+  "reproRunPath": "poc/experiments/forensics/h43/repro-runs/H43-REPRO-ANC-0030-a579c2df.json",
+  "disposableTrace": {
+    "projectedPipelineInput": {
+      "scenarioId": "ANC-0030",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "process of Crystal"
+      },
+      "mustNotMatchInProjection": false
+    },
+    "extractionTrace": {},
+    "candidateEnteredRetrieval": {
+      "candidateType": "concept",
+      "text": "process of Crystal",
+      "techniqueLabels": [],
+      "ingredientLabels": [],
+      "sourcePath": "harness.directCandidate",
+      "candidateRole": "concept",
+      "occurrenceKey": "0"
+    },
+    "rankedRetrievalMatches": [
+      {
+        "id": "2b7b646f-9b6c-48e6-a869-f7e533456c84",
+        "matchType": "concept",
+        "label": "Crystal oscillator",
+        "score": 0.31034482,
+        "method": "normalized"
+      }
+    ],
+    "primaryMatch": {
+      "id": "2b7b646f-9b6c-48e6-a869-f7e533456c84",
+      "matchType": "concept",
+      "label": "Crystal oscillator",
+      "score": 0.31034482,
+      "method": "normalized"
+    },
+    "canonicalSeedForPrimary": {
+      "seedId": "CK-ELS-10",
+      "label": "Crystal oscillator",
+      "statement": "A crystal sets a stable clock frequency for a MCU."
+    },
+    "dbConceptDescription": "A crystal sets a stable clock frequency for a MCU.",
+    "adjudication": {
+      "classification": "DISTINCT",
+      "confidence": 0.7,
+      "rationale": "Deterministic: low similarity — treat as distinct",
+      "usedAi": false,
+      "inferredDeterministicBranch": "deterministic_distinct"
+    },
+    "policy": {
+      "action": "evaluate_new_identity",
+      "admit": true,
+      "rationale": "Synthetic provenance — experimental admission only when policy permits"
+    },
+    "candidateVsPrimaryLabel": {
+      "candidateText": "process of Crystal",
+      "primaryLabel": "Crystal oscillator",
+      "normalizedEqual": false,
+      "literalEqual": false
+    }
+  },
+  "scorerFromTrace": {
+    "outcome": "pass",
+    "failureLayer": "decision_slice_outcome"
+  },
+  "causalAttribution": {
+    "firstDivergenceLayer": "adjudication_or_retrieval",
+    "primaryRootCause": "unknown_unresolved",
+    "contributingCauses": [],
+    "downstreamManifestations": [
+      "scorer_pass"
+    ],
+    "diagnosisConfidence": "low",
+    "notEstablishedAsGovernanceRootCause": true
+  },
+  "immutabilityNote": "Baseline -002 files not modified"
+}

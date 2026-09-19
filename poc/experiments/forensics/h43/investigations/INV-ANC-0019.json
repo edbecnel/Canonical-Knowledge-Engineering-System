@@ -1,0 +1,112 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordKind": "INV",
+  "gate": "H4.3",
+  "scenarioId": "ANC-0019",
+  "suite": "anchor",
+  "priority": "P0",
+  "reproductionStatus": "reproduced_rb001",
+  "baselineReference": "RUN-REF-CLEAN-ANCHOR-002.json",
+  "baselineTerminal": {
+    "outcome": "fail",
+    "failureClassification": "false_merge",
+    "actualDecisionClass": "EQUIVALENT",
+    "policyAction": "reuse_existing"
+  },
+  "harnessReproductionTerminal": {
+    "outcome": "fail",
+    "failureClassification": "false_merge",
+    "actualDecisionClass": "EQUIVALENT",
+    "policyAction": "reuse_existing"
+  },
+  "reproRunPath": "poc/experiments/forensics/h43/repro-runs/H43-REPRO-ANC-0019-0c518fef.json",
+  "disposableTrace": {
+    "projectedPipelineInput": {
+      "scenarioId": "ANC-0019",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "Sous vide"
+      },
+      "mustNotMatchInProjection": false
+    },
+    "extractionTrace": {},
+    "candidateEnteredRetrieval": {
+      "candidateType": "concept",
+      "text": "Sous vide",
+      "techniqueLabels": [],
+      "ingredientLabels": [],
+      "sourcePath": "harness.directCandidate",
+      "candidateRole": "concept",
+      "occurrenceKey": "0"
+    },
+    "rankedRetrievalMatches": [
+      {
+        "id": "2e09136a-50a0-479b-af4f-ebf921bcaed7",
+        "matchType": "concept",
+        "label": "Sous vide",
+        "score": 1,
+        "method": "exact"
+      }
+    ],
+    "primaryMatch": {
+      "id": "2e09136a-50a0-479b-af4f-ebf921bcaed7",
+      "matchType": "concept",
+      "label": "Sous vide",
+      "score": 1,
+      "method": "exact"
+    },
+    "canonicalSeedForPrimary": {
+      "seedId": "CK-CUL-03",
+      "label": "Sous vide",
+      "statement": "Sous vide cooks food in a temperature-controlled water bath."
+    },
+    "dbConceptDescription": "Sous vide cooks food in a temperature-controlled water bath.",
+    "adjudication": {
+      "classification": "EQUIVALENT",
+      "confidence": 0.92,
+      "rationale": "Deterministic: exact or near-exact label match",
+      "usedAi": false,
+      "inferredDeterministicBranch": "deterministic_equivalent"
+    },
+    "policy": {
+      "action": "reuse_existing",
+      "admit": true,
+      "rationale": "Policy mapped EQUIVALENT → reuse_existing"
+    },
+    "candidateVsPrimaryLabel": {
+      "candidateText": "Sous vide",
+      "primaryLabel": "Sous vide",
+      "normalizedEqual": true,
+      "literalEqual": true
+    }
+  },
+  "scorerFromTrace": {
+    "outcome": "fail",
+    "failureClassification": "false_merge",
+    "failureLayer": "decision_slice_outcome"
+  },
+  "causalAttribution": {
+    "firstDivergenceLayer": "adjudication",
+    "primaryRootCause": "adjudication",
+    "contributingCauses": [
+      "retrieval_primary_match",
+      "deterministic_equivalence_rule"
+    ],
+    "downstreamManifestations": [
+      "scorer_false_merge",
+      "policy_reuse_existing_manifestation"
+    ],
+    "diagnosisConfidence": "high",
+    "notEstablishedAsGovernanceRootCause": false
+  },
+  "mnmtForensicQuestions": {
+    "A_distinguishingInCandidateRepresentation": "Only directCandidate.text (and extraction output for full_pipeline) enters pipeline; qualifiers/context/applicability fields not in projection for these scenarios",
+    "B_distinguishingInMatchedCanonical": "Seed statement/description present in corpus: Sous vide cooks food in a temperature-controlled water bath.",
+    "C_layerLostOrIgnored": "Pending: if B present but adjudication uses label-only deterministic rule, distinction in statement may not reach adjudication prompt",
+    "D_benchmarkExpectationWithoutCkesInfo": "mustNotMatchIdentities is scorer-only; benchmark related_distinct may still require semantics beyond literal label",
+    "E_literalEqualityTriggersDeterministicEquivalent": true,
+    "F_negativeIdentityRequired": "provisional_no — literal/score collapse may explain without negative identity if distinction not in candidate representation"
+  },
+  "immutabilityNote": "Baseline -002 files not modified"
+}

@@ -1,0 +1,112 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordKind": "INV",
+  "gate": "H4.3",
+  "scenarioId": "ANC-0020",
+  "suite": "anchor",
+  "priority": "P0",
+  "reproductionStatus": "reproduced_rb001",
+  "baselineReference": "RUN-REF-CLEAN-ANCHOR-002.json",
+  "baselineTerminal": {
+    "outcome": "fail",
+    "failureClassification": "false_merge",
+    "actualDecisionClass": "EQUIVALENT",
+    "policyAction": "reuse_existing"
+  },
+  "harnessReproductionTerminal": {
+    "outcome": "fail",
+    "failureClassification": "false_merge",
+    "actualDecisionClass": "EQUIVALENT",
+    "policyAction": "reuse_existing"
+  },
+  "reproRunPath": "poc/experiments/forensics/h43/repro-runs/H43-REPRO-ANC-0020-27996913.json",
+  "disposableTrace": {
+    "projectedPipelineInput": {
+      "scenarioId": "ANC-0020",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "I2C bus"
+      },
+      "mustNotMatchInProjection": false
+    },
+    "extractionTrace": {},
+    "candidateEnteredRetrieval": {
+      "candidateType": "concept",
+      "text": "I2C bus",
+      "techniqueLabels": [],
+      "ingredientLabels": [],
+      "sourcePath": "harness.directCandidate",
+      "candidateRole": "concept",
+      "occurrenceKey": "0"
+    },
+    "rankedRetrievalMatches": [
+      {
+        "id": "e3a0ca2e-1eaa-4f9f-a6b6-1e2db8f8039e",
+        "matchType": "concept",
+        "label": "I2C bus",
+        "score": 1,
+        "method": "exact"
+      }
+    ],
+    "primaryMatch": {
+      "id": "e3a0ca2e-1eaa-4f9f-a6b6-1e2db8f8039e",
+      "matchType": "concept",
+      "label": "I2C bus",
+      "score": 1,
+      "method": "exact"
+    },
+    "canonicalSeedForPrimary": {
+      "seedId": "CK-ELS-04",
+      "label": "I2C bus",
+      "statement": "I2C is a two-wire serial bus for peripherals."
+    },
+    "dbConceptDescription": "I2C is a two-wire serial bus for peripherals.",
+    "adjudication": {
+      "classification": "EQUIVALENT",
+      "confidence": 0.92,
+      "rationale": "Deterministic: exact or near-exact label match",
+      "usedAi": false,
+      "inferredDeterministicBranch": "deterministic_equivalent"
+    },
+    "policy": {
+      "action": "reuse_existing",
+      "admit": true,
+      "rationale": "Policy mapped EQUIVALENT → reuse_existing"
+    },
+    "candidateVsPrimaryLabel": {
+      "candidateText": "I2C bus",
+      "primaryLabel": "I2C bus",
+      "normalizedEqual": true,
+      "literalEqual": true
+    }
+  },
+  "scorerFromTrace": {
+    "outcome": "fail",
+    "failureClassification": "false_merge",
+    "failureLayer": "decision_slice_outcome"
+  },
+  "causalAttribution": {
+    "firstDivergenceLayer": "adjudication",
+    "primaryRootCause": "adjudication",
+    "contributingCauses": [
+      "retrieval_primary_match",
+      "deterministic_equivalence_rule"
+    ],
+    "downstreamManifestations": [
+      "scorer_false_merge",
+      "policy_reuse_existing_manifestation"
+    ],
+    "diagnosisConfidence": "high",
+    "notEstablishedAsGovernanceRootCause": false
+  },
+  "mnmtForensicQuestions": {
+    "A_distinguishingInCandidateRepresentation": "Only directCandidate.text (and extraction output for full_pipeline) enters pipeline; qualifiers/context/applicability fields not in projection for these scenarios",
+    "B_distinguishingInMatchedCanonical": "Seed statement/description present in corpus: I2C is a two-wire serial bus for peripherals.",
+    "C_layerLostOrIgnored": "Pending: if B present but adjudication uses label-only deterministic rule, distinction in statement may not reach adjudication prompt",
+    "D_benchmarkExpectationWithoutCkesInfo": "mustNotMatchIdentities is scorer-only; benchmark related_distinct may still require semantics beyond literal label",
+    "E_literalEqualityTriggersDeterministicEquivalent": true,
+    "F_negativeIdentityRequired": "provisional_no — literal/score collapse may explain without negative identity if distinction not in candidate representation"
+  },
+  "immutabilityNote": "Baseline -002 files not modified"
+}

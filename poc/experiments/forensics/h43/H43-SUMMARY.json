@@ -1,0 +1,15 @@
+{
+  "gate": "H4.3",
+  "generatedAt": "2026-09-19T11:13:53.624Z",
+  "investigated": [
+    "STA-0014",
+    "STA-0008"
+  ],
+  "invArtifacts": [
+    "investigations/INV-STA-0014.json",
+    "investigations/INV-STA-0008.json"
+  ],
+  "disposableTracingInScriptOnly": true,
+  "persistentInstrumentation": false,
+  "ckesRemediation": false
+}

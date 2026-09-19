@@ -1,0 +1,72 @@
+{
+  "gate": "H4.3",
+  "generatedAt": "2026-09-19T11:14:00.657Z",
+  "clusters": [
+    {
+      "clusterId": "CL-DET-ADJ-EQUIV",
+      "status": "mechanism_established_high_confidence",
+      "description": "Exact normalized label match (score 1.0) → deterministic EQUIVALENT → reuse_existing → scorer false_merge when benchmark expects non-merge",
+      "scenariosConfirmed": [
+        "ANC-0017",
+        "ANC-0018",
+        "ANC-0019",
+        "ANC-0020",
+        "ANC-0031",
+        "ANC-0024",
+        "ANC-0040",
+        "STA-0014"
+      ],
+      "rootCause": "adjudication",
+      "contributing": [
+        "retrieval_exact_match",
+        "missing_distinguishing_representation_in_candidate"
+      ]
+    },
+    {
+      "clusterId": "CL-DET-ADJ-SUBSUMED",
+      "status": "mechanism_established_high_confidence",
+      "description": "Fuzzy retrieval score ≥0.7 → deterministic SUBSUMED_BY_EXISTING; policy may reject but scorer still false_merges for several expected classes",
+      "scenariosConfirmed": [
+        "ANC-0023",
+        "ANC-0027",
+        "ANC-0029",
+        "ANC-0035",
+        "STA-0008"
+      ],
+      "rootCause": "adjudication",
+      "contributing": [
+        "retrieval_normalized_overlap",
+        "qualifier_context_loss_in_candidate_text"
+      ]
+    },
+    {
+      "clusterId": "CL-RETRIEVAL-EMPTY-DISTINCT",
+      "status": "control_pass_mechanism",
+      "description": "No retrieval match → DISTINCT → evaluate_new_identity (pass for related_distinct)",
+      "scenariosConfirmed": [
+        "ANC-0038",
+        "ANC-0030",
+        "ANC-0034"
+      ],
+      "rootCause": "n/a_control"
+    },
+    {
+      "clusterId": "CL-CHL-DEFER-EXPECTATION",
+      "status": "mechanism_established_medium_confidence",
+      "description": "Benchmark expects defer_human but adjudication returns DISTINCT (no matches) with confidence 0.9 → policy evaluate_new_identity, not defer — scorer unnecessary_deferral",
+      "scenariosConfirmed": [
+        "CHL-0003",
+        "CHL-0010",
+        "CHL-0002",
+        "CHL-0006"
+      ],
+      "rootCause": "benchmark_policy_semantics_mismatch",
+      "contributing": [
+        "adjudication_distinct",
+        "policy_semanticActions_mapping"
+      ],
+      "limitation": "No passing defer_human cases in Challenge -002 for in-suite control"
+    }
+  ],
+  "splitRecommendation": "CL-EQUIV-REUSE and CL-SUBSUMED-REJECT from H4.2 should be treated as two deterministic adjudication branches, not one cluster"
+}

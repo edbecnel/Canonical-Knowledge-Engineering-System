@@ -2,7 +2,7 @@
 
 [Home](../../README.md) › [Project Index](../../PROJECT_INDEX.md) › [Development](README.md) › Handover 04 Implementation Plan
 
-> **Status:** H4.2 complete — see [H4.2 Report](Handover_04_H42_Causal_Clustering_Report.md); **H4.3 not authorized**
+> **Status:** H4.3 complete — see [H4.3 Report](Handover_04_H43_Debug_Forensic_Investigation_Report.md); **H4.4 not authorized**
 > **Owner:** Architecture Team
 > **Applies To:** Post–Reference Baseline 001 forensic research (non-remediating)
 > **Last Reviewed:** 2026-09-19

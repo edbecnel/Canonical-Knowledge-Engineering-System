@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordKind": "INV",
+  "gate": "H4.3",
+  "scenarioId": "ANC-0001",
+  "suite": "anchor",
+  "priority": "P1+",
+  "reproductionStatus": "reproduced_rb001",
+  "baselineReference": "RUN-REF-CLEAN-ANCHOR-002.json",
+  "baselineTerminal": {
+    "outcome": "pass",
+    "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+    "policyAction": "reject_new_identity"
+  },
+  "harnessReproductionTerminal": {
+    "outcome": "pass",
+    "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+    "policyAction": "reject_new_identity"
+  },
+  "reproRunPath": "poc/experiments/forensics/h43/repro-runs/H43-REPRO-ANC-0001-5e117265.json",
+  "disposableTrace": {
+    "projectedPipelineInput": {
+      "scenarioId": "ANC-0001",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "technique: Deep fry"
+      },
+      "mustNotMatchInProjection": false
+    },
+    "extractionTrace": {},
+    "candidateEnteredRetrieval": {
+      "candidateType": "concept",
+      "text": "technique: Deep fry",
+      "techniqueLabels": [],
+      "ingredientLabels": [],
+      "sourcePath": "harness.directCandidate",
+      "candidateRole": "concept",
+      "occurrenceKey": "0"
+    },
+    "rankedRetrievalMatches": [
+      {
+        "id": "8be673e7-02cd-4742-acca-57facf0ec3c9",
+        "matchType": "concept",
+        "label": "Deep fry",
+        "score": 0.8,
+        "method": "normalized"
+      }
+    ],
+    "primaryMatch": {
+      "id": "8be673e7-02cd-4742-acca-57facf0ec3c9",
+      "matchType": "concept",
+      "label": "Deep fry",
+      "score": 0.8,
+      "method": "normalized"
+    },
+    "canonicalSeedForPrimary": {
+      "seedId": "CK-CUL-01",
+      "label": "Deep fry",
+      "statement": "Deep frying submerges food in hot oil."
+    },
+    "dbConceptDescription": "Deep frying submerges food in hot oil.",
+    "adjudication": {
+      "classification": "SUBSUMED_BY_EXISTING",
+      "confidence": 0.8,
+      "rationale": "Deterministic: high similarity to existing concept",
+      "usedAi": false,
+      "inferredDeterministicBranch": "deterministic_subsumed"
+    },
+    "policy": {
+      "action": "reject_new_identity",
+      "admit": false,
+      "rationale": "Policy mapped SUBSUMED_BY_EXISTING → reject_new_identity"
+    },
+    "candidateVsPrimaryLabel": {
+      "candidateText": "technique: Deep fry",
+      "primaryLabel": "Deep fry",
+      "normalizedEqual": false,
+      "literalEqual": false
+    }
+  },
+  "scorerFromTrace": {
+    "outcome": "pass",
+    "failureLayer": "decision_slice_outcome"
+  },
+  "causalAttribution": {
+    "firstDivergenceLayer": "adjudication",
+    "primaryRootCause": "adjudication",
+    "contributingCauses": [
+      "retrieval_high_similarity"
+    ],
+    "downstreamManifestations": [
+      "scorer_pass"
+    ],
+    "diagnosisConfidence": "high",
+    "notEstablishedAsGovernanceRootCause": false
+  },
+  "immutabilityNote": "Baseline -002 files not modified"
+}

@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "1.0.0",
+  "run": {
+    "runId": "H43-REPRO-ANC-0027-7a8db370",
+    "runType": "experiment",
+    "lifecycleState": "completed",
+    "packId": "CKES-BENCHMARK-ANCHOR-001",
+    "packVersion": "1.0.0",
+    "packContentHash": "2d65a6cf59c486ffba20c3571d69a918ac414f1d89d2641d25973f29e249a76c",
+    "startedAt": "2026-09-19T11:13:29.127Z",
+    "completedAt": "2026-09-19T11:13:29.127Z",
+    "databaseProfile": "clean",
+    "retrievalMode": "deterministic_fixture",
+    "executionMode": "decision_slice",
+    "gitCommit": "REPLACE_AT_EXECUTION",
+    "dryRun": false,
+    "runProfileId": "CKES-BENCHMARK-RUN-PROFILE-REF-CLEAN-001",
+    "runProfileContentHash": "a69d5677856931ab7617ef64eb0072e2fb1b52254952077035d0acbcc14586de",
+    "scorerVersion": "1.0.0-g1",
+    "trialPolicySnapshot": {
+      "defaultTrials": 1,
+      "byExecutionClass": [
+        {
+          "executionMode": "decision_slice",
+          "llmPolicy": "required",
+          "trials": 3
+        },
+        {
+          "executionMode": "full_pipeline",
+          "llmPolicy": "required",
+          "trials": 3
+        }
+      ],
+      "modelCallLimit": 5000,
+      "tokenCeiling": 2000000,
+      "budgetUsdCeiling": 25,
+      "timeoutMsPerTrial": 120000,
+      "maxRetriesPerTrial": 1,
+      "onCeilingExhausted": "fail_run",
+      "incompleteTrialsInvalidate": "run",
+      "aggregation": "worst_case_safety"
+    }
+  },
+  "scenarios": [
+    {
+      "scenarioId": "ANC-0027",
+      "executionMode": "decision_slice",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "failureLayer": "decision_slice_outcome",
+      "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+      "explanation": "policy=reject_new_identity",
+      "trialsRequested": 1,
+      "trialsCompleted": 1,
+      "trials": [
+        {
+          "trialIndex": 0,
+          "outcome": "fail",
+          "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+          "economics": {
+            "currency": "USD",
+            "costKind": "zero",
+            "amountUsd": 0,
+            "pricingSnapshotId": "harness-default",
+            "latencyMs": 1,
+            "latencyUnit": "ms"
+          }
+        }
+      ],
+      "economics": {
+        "currency": "USD",
+        "costKind": "zero",
+        "amountUsd": 0,
+        "pricingSnapshotId": "harness-default",
+        "latencyMs": 1,
+        "latencyUnit": "ms"
+      },
+      "scoring": {
+        "expectedDecisionClass": "related_distinct",
+        "expectedVersusActual": {
+          "expected": "related_distinct",
+          "actual": "SUBSUMED_BY_EXISTING",
+          "policyAction": "reject_new_identity"
+        }
+      },
+      "evaluationCapture": {
+        "evaluationMatchedIdentityRef": {
+          "present": true,
+          "canonicalLabel": "Rest meat",
+          "canonicalId": "887900e5-c3a4-4f01-a047-11e9895cc07e"
+        },
+        "benchmarkLocalSeedId": "CK-CUL-09",
+        "identityEvidenceStatus": "present_mapped"
+      }
+    }
+  ],
+  "aggregates": {
+    "passCount": 0,
+    "failCount": 1,
+    "falseMergeCount": 1,
+    "byExecutionMode": {
+      "decision_slice": 1
+    }
+  }
+}
