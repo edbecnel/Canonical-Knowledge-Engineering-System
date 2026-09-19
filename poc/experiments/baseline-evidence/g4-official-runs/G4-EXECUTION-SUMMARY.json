@@ -1,0 +1,538 @@
+{
+  "generatedAt": "2026-09-19T07:42:42.863Z",
+  "preFlight": {
+    "gitCommit": "291d35f18d7d1e1d461b82decdfb57ac7e564f22",
+    "profileId": "CKES-BENCHMARK-RUN-PROFILE-REF-CLEAN-001",
+    "profileContentHash": "a69d5677856931ab7617ef64eb0072e2fb1b52254952077035d0acbcc14586de",
+    "scorerVersion": "1.0.0-g1",
+    "scorerContentHash": "bd2c0c6bed3375f4ec43b922b9946b33c4e81a7845172393f8f9772e0d925d55",
+    "harnessPackageVersion": "0.1.0",
+    "pipelinePackageVersion": "0.1.0",
+    "profilePath": "/Users/edbecnel/Development/GitHub/Canonical-Knowledge-Engineering-System/poc/experiments/run-profiles/CKES-BENCHMARK-RUN-PROFILE-REF-CLEAN-001.json"
+  },
+  "runs": [
+    {
+      "officialRunId": "RUN-REF-CLEAN-ANCHOR-001",
+      "runId": "RUN-REF-CLEAN-ANCHOR-001",
+      "packId": "CKES-BENCHMARK-ANCHOR-001",
+      "releasedScenarios": 40,
+      "scenarioResults": 40,
+      "resultPath": "/Users/edbecnel/Development/GitHub/Canonical-Knowledge-Engineering-System/poc/experiments/baseline-evidence/g4-official-runs/RUN-REF-CLEAN-ANCHOR-001.json",
+      "resultContentHash": "7e10d14d39fe768c1e80d142e59b0c371d346df32db1c25b3e8225e80532524b",
+      "lifecycleState": "completed",
+      "postVerificationPassed": true,
+      "postErrors": [],
+      "completenessWarnings": [
+        "Infrastructure error on ANC-0017",
+        "Infrastructure error on ANC-0034"
+      ],
+      "evaluationCapture": {
+        "byStatus": {
+          "present_mapped": 28,
+          "absent_no_merge": 3,
+          "absent_no_retrieval": 6,
+          "missing_capture": 2,
+          "present_unmapped": 1
+        },
+        "presentUnmapped": [
+          {
+            "scenarioId": "ANC-0025",
+            "capture": {
+              "evaluationMatchedIdentityRef": {
+                "present": true,
+                "canonicalLabel": "onion"
+              },
+              "identityEvidenceStatus": "present_unmapped"
+            }
+          }
+        ],
+        "mustNotMatchViolations": [
+          "ANC-0018",
+          "ANC-0019",
+          "ANC-0020",
+          "ANC-0023",
+          "ANC-0024",
+          "ANC-0025",
+          "ANC-0027",
+          "ANC-0028",
+          "ANC-0029",
+          "ANC-0031",
+          "ANC-0032",
+          "ANC-0033",
+          "ANC-0035",
+          "ANC-0036",
+          "ANC-0037",
+          "ANC-0039",
+          "ANC-0040"
+        ]
+      },
+      "aggregates": {
+        "passCount": 16,
+        "failCount": 22,
+        "falseMergeCount": 17,
+        "byExecutionMode": {
+          "decision_slice": 38,
+          "full_pipeline": 2
+        }
+      },
+      "derivedFalseMerge": {
+        "falseMergeCount": 17,
+        "falseMergeRate": 0.425,
+        "falseMergeRateCi95": {
+          "lower": 0.2850916852481588,
+          "upper": 0.5780519956394001
+        },
+        "bySeverity": {
+          "critical": 3,
+          "unspecified": 14
+        },
+        "byTransformationType": {
+          "adversarial_false_merge_candidate": 4,
+          "contradiction": 1,
+          "qualification": 1,
+          "emerging_process_revalidation": 2,
+          "objective_to_method": 1,
+          "method_to_objective": 2,
+          "compound_assertion": 1,
+          "paraphrase_same_identity": 1,
+          "narrow_applicability": 1,
+          "broaden_applicability": 1,
+          "change_subject_object_context": 1,
+          "supporting_observation": 1
+        },
+        "byDomain": {
+          "electronics": 9,
+          "culinary": 8
+        },
+        "highSeverityScenarioIds": [],
+        "criticalSeverityScenarioIds": [
+          "ANC-0018",
+          "ANC-0019",
+          "ANC-0020"
+        ]
+      },
+      "baselineGateProbe": "assertDesignatableReferenceBaseline: ok (designation not performed)"
+    },
+    {
+      "officialRunId": "RUN-REF-CLEAN-STAT-001",
+      "runId": "RUN-REF-CLEAN-STAT-001",
+      "packId": "CKES-BENCHMARK-STATISTICAL-001",
+      "releasedScenarios": 200,
+      "scenarioResults": 200,
+      "resultPath": "/Users/edbecnel/Development/GitHub/Canonical-Knowledge-Engineering-System/poc/experiments/baseline-evidence/g4-official-runs/RUN-REF-CLEAN-STAT-001.json",
+      "resultContentHash": "7764a25448f9293d936c41deb548081354e72aa8ea139acb57a14477cd73a26d",
+      "lifecycleState": "completed",
+      "postVerificationPassed": true,
+      "postErrors": [],
+      "completenessWarnings": [
+        "Infrastructure error on STA-0017",
+        "Infrastructure error on STA-0034",
+        "Infrastructure error on STA-0051",
+        "Infrastructure error on STA-0068",
+        "Infrastructure error on STA-0085",
+        "Infrastructure error on STA-0102",
+        "Infrastructure error on STA-0119",
+        "Infrastructure error on STA-0136",
+        "Infrastructure error on STA-0153",
+        "Infrastructure error on STA-0170",
+        "Infrastructure error on STA-0187"
+      ],
+      "evaluationCapture": {
+        "byStatus": {
+          "present_mapped": 121,
+          "absent_no_retrieval": 42,
+          "present_unmapped": 15,
+          "absent_no_merge": 11,
+          "missing_capture": 11
+        },
+        "presentUnmapped": [
+          {
+            "scenarioId": "STA-0007",
+            "capture": {
+              "evaluationMatchedIdentityRef": {
+                "present": true,
+                "canonicalLabel": "onion"
+              },
+              "identityEvidenceStatus": "present_unmapped"
+            }
+          },
+          {
+            "scenarioId": "STA-0011",
+            "capture": {
+              "evaluationMatchedIdentityRef": {
+                "present": true,
+                "canonicalLabel": "Stock"
+              },
+              "identityEvidenceStatus": "present_unmapped"
+            }
+          },
+          {
+            "scenarioId": "STA-0029",
+            "capture": {
+              "evaluationMatchedIdentityRef": {
+                "present": true,
+                "canonicalLabel": "onion"
+              },
+              "identityEvidenceStatus": "present_unmapped"
+            }
+          },
+          {
+            "scenarioId": "STA-0033",
+            "capture": {
+              "evaluationMatchedIdentityRef": {
+                "present": true,
+                "canonicalLabel": "Stock"
+              },
+              "identityEvidenceStatus": "present_unmapped"
+            }
+          },
+          {
+            "scenarioId": "STA-0055",
+            "capture": {
+              "evaluationMatchedIdentityRef": {
+                "present": true,
+                "canonicalLabel": "Stock"
+              },
+              "identityEvidenceStatus": "present_unmapped"
+            }
+          },
+          {
+            "scenarioId": "STA-0073",
+            "capture": {
+              "evaluationMatchedIdentityRef": {
+                "present": true,
+                "canonicalLabel": "onion"
+              },
+              "identityEvidenceStatus": "present_unmapped"
+            }
+          },
+          {
+            "scenarioId": "STA-0077",
+            "capture": {
+              "evaluationMatchedIdentityRef": {
+                "present": true,
+                "canonicalLabel": "Stock"
+              },
+              "identityEvidenceStatus": "present_unmapped"
+            }
+          },
+          {
+            "scenarioId": "STA-0095",
+            "capture": {
+              "evaluationMatchedIdentityRef": {
+                "present": true,
+                "canonicalLabel": "onion"
+              },
+              "identityEvidenceStatus": "present_unmapped"
+            }
+          },
+          {
+            "scenarioId": "STA-0099",
+            "capture": {
+              "evaluationMatchedIdentityRef": {
+                "present": true,
+                "canonicalLabel": "Stock"
+              },
+              "identityEvidenceStatus": "present_unmapped"
+            }
+          },
+          {
+            "scenarioId": "STA-0117",
+            "capture": {
+              "evaluationMatchedIdentityRef": {
+                "present": true,
+                "canonicalLabel": "onion"
+              },
+              "identityEvidenceStatus": "present_unmapped"
+            }
+          },
+          {
+            "scenarioId": "STA-0121",
+            "capture": {
+              "evaluationMatchedIdentityRef": {
+                "present": true,
+                "canonicalLabel": "Stock"
+              },
+              "identityEvidenceStatus": "present_unmapped"
+            }
+          },
+          {
+            "scenarioId": "STA-0139",
+            "capture": {
+              "evaluationMatchedIdentityRef": {
+                "present": true,
+                "canonicalLabel": "onion"
+              },
+              "identityEvidenceStatus": "present_unmapped"
+            }
+          },
+          {
+            "scenarioId": "STA-0143",
+            "capture": {
+              "evaluationMatchedIdentityRef": {
+                "present": true,
+                "canonicalLabel": "Stock"
+              },
+              "identityEvidenceStatus": "present_unmapped"
+            }
+          },
+          {
+            "scenarioId": "STA-0165",
+            "capture": {
+              "evaluationMatchedIdentityRef": {
+                "present": true,
+                "canonicalLabel": "Stock"
+              },
+              "identityEvidenceStatus": "present_unmapped"
+            }
+          },
+          {
+            "scenarioId": "STA-0183",
+            "capture": {
+              "evaluationMatchedIdentityRef": {
+                "present": true,
+                "canonicalLabel": "onion"
+              },
+              "identityEvidenceStatus": "present_unmapped"
+            }
+          }
+        ],
+        "mustNotMatchViolations": [
+          "STA-0008",
+          "STA-0009",
+          "STA-0013",
+          "STA-0014",
+          "STA-0015",
+          "STA-0024",
+          "STA-0025",
+          "STA-0029",
+          "STA-0030",
+          "STA-0031",
+          "STA-0040",
+          "STA-0041",
+          "STA-0045",
+          "STA-0047",
+          "STA-0056",
+          "STA-0057",
+          "STA-0061",
+          "STA-0062",
+          "STA-0063",
+          "STA-0072",
+          "STA-0073",
+          "STA-0077",
+          "STA-0078",
+          "STA-0079",
+          "STA-0088",
+          "STA-0089",
+          "STA-0093",
+          "STA-0094",
+          "STA-0095",
+          "STA-0104",
+          "STA-0105",
+          "STA-0109",
+          "STA-0110",
+          "STA-0111",
+          "STA-0120",
+          "STA-0121",
+          "STA-0125",
+          "STA-0126",
+          "STA-0127",
+          "STA-0137",
+          "STA-0141",
+          "STA-0142",
+          "STA-0143",
+          "STA-0152",
+          "STA-0157",
+          "STA-0158",
+          "STA-0159",
+          "STA-0168",
+          "STA-0169",
+          "STA-0173",
+          "STA-0174",
+          "STA-0175",
+          "STA-0185",
+          "STA-0189",
+          "STA-0190",
+          "STA-0191",
+          "STA-0200"
+        ]
+      },
+      "aggregates": {
+        "passCount": 100,
+        "failCount": 89,
+        "falseMergeCount": 57,
+        "byExecutionMode": {
+          "decision_slice": 189,
+          "full_pipeline": 11
+        }
+      },
+      "derivedFalseMerge": {
+        "falseMergeCount": 57,
+        "falseMergeRate": 0.285,
+        "falseMergeRateCi95": {
+          "lower": 0.22694905173277294,
+          "upper": 0.3511547308121051
+        },
+        "bySeverity": {
+          "unspecified": 54,
+          "high": 3
+        },
+        "byTransformationType": {
+          "contradiction": 11,
+          "qualification": 11,
+          "irrelevant_near_neighbor": 12,
+          "adversarial_false_merge_candidate": 11,
+          "emerging_process_revalidation": 12
+        },
+        "byDomain": {
+          "culinary": 30,
+          "electronics": 27
+        },
+        "highSeverityScenarioIds": [
+          "STA-0030",
+          "STA-0110",
+          "STA-0190"
+        ],
+        "criticalSeverityScenarioIds": []
+      },
+      "baselineGateProbe": "assertDesignatableReferenceBaseline: ok (designation not performed)"
+    },
+    {
+      "officialRunId": "RUN-REF-CLEAN-CHALLENGE-001",
+      "runId": "RUN-REF-CLEAN-CHALLENGE-001",
+      "packId": "CKES-BENCHMARK-CHALLENGE-001",
+      "releasedScenarios": 80,
+      "scenarioResults": 80,
+      "resultPath": "/Users/edbecnel/Development/GitHub/Canonical-Knowledge-Engineering-System/poc/experiments/baseline-evidence/g4-official-runs/RUN-REF-CLEAN-CHALLENGE-001.json",
+      "resultContentHash": "4e68448916dd75efc72da5a95db364db892a900064784969ca0b87e4102d88c2",
+      "lifecycleState": "completed",
+      "postVerificationPassed": true,
+      "postErrors": [],
+      "completenessWarnings": [
+        "Infrastructure error on CHL-0017",
+        "Infrastructure error on CHL-0034",
+        "Infrastructure error on CHL-0051",
+        "Infrastructure error on CHL-0068"
+      ],
+      "evaluationCapture": {
+        "byStatus": {
+          "absent_no_retrieval": 53,
+          "present_mapped": 19,
+          "present_unmapped": 4,
+          "missing_capture": 4
+        },
+        "presentUnmapped": [
+          {
+            "scenarioId": "CHL-0011",
+            "capture": {
+              "evaluationMatchedIdentityRef": {
+                "present": true,
+                "canonicalLabel": "Stock"
+              },
+              "identityEvidenceStatus": "present_unmapped"
+            }
+          },
+          {
+            "scenarioId": "CHL-0033",
+            "capture": {
+              "evaluationMatchedIdentityRef": {
+                "present": true,
+                "canonicalLabel": "Stock"
+              },
+              "identityEvidenceStatus": "present_unmapped"
+            }
+          },
+          {
+            "scenarioId": "CHL-0055",
+            "capture": {
+              "evaluationMatchedIdentityRef": {
+                "present": true,
+                "canonicalLabel": "Stock"
+              },
+              "identityEvidenceStatus": "present_unmapped"
+            }
+          },
+          {
+            "scenarioId": "CHL-0077",
+            "capture": {
+              "evaluationMatchedIdentityRef": {
+                "present": true,
+                "canonicalLabel": "Stock"
+              },
+              "identityEvidenceStatus": "present_unmapped"
+            }
+          }
+        ],
+        "mustNotMatchViolations": [
+          "CHL-0008",
+          "CHL-0011",
+          "CHL-0012",
+          "CHL-0016",
+          "CHL-0024",
+          "CHL-0026",
+          "CHL-0028",
+          "CHL-0032",
+          "CHL-0033",
+          "CHL-0040",
+          "CHL-0044",
+          "CHL-0048",
+          "CHL-0055",
+          "CHL-0056",
+          "CHL-0060",
+          "CHL-0064",
+          "CHL-0072",
+          "CHL-0076",
+          "CHL-0077",
+          "CHL-0080"
+        ]
+      },
+      "aggregates": {
+        "passCount": 8,
+        "failCount": 68,
+        "falseMergeCount": 20,
+        "byExecutionMode": {
+          "decision_slice": 76,
+          "full_pipeline": 4
+        }
+      },
+      "derivedFalseMerge": {
+        "falseMergeCount": 20,
+        "falseMergeRate": 0.25,
+        "falseMergeRateCi95": {
+          "lower": 0.1680610581209431,
+          "upper": 0.35484881001134444
+        },
+        "bySeverity": {
+          "unspecified": 14,
+          "critical": 5,
+          "high": 1
+        },
+        "byTransformationType": {
+          "contradiction": 5,
+          "terminology_substitution_same_identity": 1,
+          "change_subject_object_context": 5,
+          "paraphrase_same_identity": 5,
+          "adversarial_false_merge_candidate": 1,
+          "broaden_applicability": 1,
+          "objective_to_method": 1,
+          "supporting_observation": 1
+        },
+        "byDomain": {
+          "electronics": 7,
+          "culinary": 13
+        },
+        "highSeverityScenarioIds": [
+          "CHL-0033"
+        ],
+        "criticalSeverityScenarioIds": [
+          "CHL-0012",
+          "CHL-0024",
+          "CHL-0048",
+          "CHL-0060",
+          "CHL-0072"
+        ]
+      },
+      "baselineGateProbe": "assertDesignatableReferenceBaseline: ok (designation not performed)"
+    }
+  ]
+}

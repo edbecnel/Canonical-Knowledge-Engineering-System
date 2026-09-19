@@ -42,6 +42,8 @@ export interface HarnessRunOptions {
   retrievalMode?: string;
   runProfile?: Record<string, unknown>;
   dryRun?: boolean;
+  /** Official matrix run id (e.g. RUN-REF-CLEAN-ANCHOR-001); defaults to random UUID. */
+  runId?: string;
 }
 
 export interface RunEvent {
@@ -67,7 +69,7 @@ export class HarnessRunner extends EventEmitter {
       throw new Error(`concurrency > ${HARNESS_CONCURRENCY_MAX} is disabled in Handover 2`);
     }
     validateBenchmarkPack(options.pack);
-    const runId = randomUUID();
+    const runId = options.runId ?? randomUUID();
     const state: RunLifecycleState = 'queued';
     this.emitEvent('run_state', runId, { state });
 

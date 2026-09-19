@@ -1,0 +1,1344 @@
+{
+  "reportKind": "derived_run_report",
+  "schemaVersion": "1.0.0",
+  "scorerVersion": "1.0.0-g1",
+  "scorerContentHash": "bd2c0c6bed3375f4ec43b922b9946b33c4e81a7845172393f8f9772e0d925d55",
+  "sourceRunId": "RUN-REF-CLEAN-STAT-001",
+  "sourceRunResultPath": "/Users/edbecnel/Development/GitHub/Canonical-Knowledge-Engineering-System/poc/experiments/baseline-evidence/g4-official-runs/RUN-REF-CLEAN-STAT-001.json",
+  "sourceRunResultHash": "7764a25448f9293d936c41deb548081354e72aa8ea139acb57a14477cd73a26d",
+  "generatedAt": "2026-09-19T07:42:42.356Z",
+  "dryRun": false,
+  "falseMergeSafety": {
+    "falseMergeCount": 57,
+    "falseMergeRate": 0.285,
+    "falseMergeRateCi95": {
+      "lower": 0.22694905173277294,
+      "upper": 0.3511547308121051
+    },
+    "bySeverity": {
+      "unspecified": 54,
+      "high": 3
+    },
+    "byTransformationType": {
+      "contradiction": 11,
+      "qualification": 11,
+      "irrelevant_near_neighbor": 12,
+      "adversarial_false_merge_candidate": 11,
+      "emerging_process_revalidation": 12
+    },
+    "byDomain": {
+      "culinary": 30,
+      "electronics": 27
+    },
+    "highSeverityScenarioIds": [
+      "STA-0030",
+      "STA-0110",
+      "STA-0190"
+    ],
+    "criticalSeverityScenarioIds": []
+  },
+  "rates": {
+    "passRate": 0.5,
+    "missedMatchRate": 0.12,
+    "unnecessaryDeferralRate": 0.04,
+    "infrastructureFailureRate": 0.055
+  },
+  "scenarioOutcomes": [
+    {
+      "scenarioId": "STA-0001",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "STA-0002",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "culinary",
+      "transformationType": "narrow_applicability"
+    },
+    {
+      "scenarioId": "STA-0003",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "broaden_applicability"
+    },
+    {
+      "scenarioId": "STA-0004",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "change_subject_object_context"
+    },
+    {
+      "scenarioId": "STA-0005",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "objective_to_method"
+    },
+    {
+      "scenarioId": "STA-0006",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "culinary",
+      "transformationType": "method_to_objective"
+    },
+    {
+      "scenarioId": "STA-0007",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "supporting_observation"
+    },
+    {
+      "scenarioId": "STA-0008",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0009",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0010",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0011",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "compound_assertion"
+    },
+    {
+      "scenarioId": "STA-0012",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0013",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0014",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "adversarial_false_merge_candidate"
+    },
+    {
+      "scenarioId": "STA-0015",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0016",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "STA-0017",
+      "outcome": "infrastructure_error",
+      "domain": "electronics",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "STA-0018",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "electronics",
+      "transformationType": "narrow_applicability"
+    },
+    {
+      "scenarioId": "STA-0019",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "broaden_applicability"
+    },
+    {
+      "scenarioId": "STA-0020",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "change_subject_object_context"
+    },
+    {
+      "scenarioId": "STA-0021",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "objective_to_method"
+    },
+    {
+      "scenarioId": "STA-0022",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "culinary",
+      "transformationType": "method_to_objective"
+    },
+    {
+      "scenarioId": "STA-0023",
+      "outcome": "fail",
+      "failureClassification": "unnecessary_deferral",
+      "domain": "culinary",
+      "transformationType": "supporting_observation"
+    },
+    {
+      "scenarioId": "STA-0024",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0025",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0026",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0027",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "compound_assertion"
+    },
+    {
+      "scenarioId": "STA-0028",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0029",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0030",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "failureSeverity": "high",
+      "domain": "culinary",
+      "transformationType": "adversarial_false_merge_candidate"
+    },
+    {
+      "scenarioId": "STA-0031",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0032",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "STA-0033",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "STA-0034",
+      "outcome": "infrastructure_error",
+      "domain": "electronics",
+      "transformationType": "narrow_applicability"
+    },
+    {
+      "scenarioId": "STA-0035",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "broaden_applicability"
+    },
+    {
+      "scenarioId": "STA-0036",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "change_subject_object_context"
+    },
+    {
+      "scenarioId": "STA-0037",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "objective_to_method"
+    },
+    {
+      "scenarioId": "STA-0038",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "electronics",
+      "transformationType": "method_to_objective"
+    },
+    {
+      "scenarioId": "STA-0039",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "supporting_observation"
+    },
+    {
+      "scenarioId": "STA-0040",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0041",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0042",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0043",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "compound_assertion"
+    },
+    {
+      "scenarioId": "STA-0044",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0045",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0046",
+      "outcome": "fail",
+      "failureClassification": "unnecessary_deferral",
+      "domain": "culinary",
+      "transformationType": "adversarial_false_merge_candidate"
+    },
+    {
+      "scenarioId": "STA-0047",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0048",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "STA-0049",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "STA-0050",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "culinary",
+      "transformationType": "narrow_applicability"
+    },
+    {
+      "scenarioId": "STA-0051",
+      "outcome": "infrastructure_error",
+      "domain": "culinary",
+      "transformationType": "broaden_applicability"
+    },
+    {
+      "scenarioId": "STA-0052",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "change_subject_object_context"
+    },
+    {
+      "scenarioId": "STA-0053",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "objective_to_method"
+    },
+    {
+      "scenarioId": "STA-0054",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "culinary",
+      "transformationType": "method_to_objective"
+    },
+    {
+      "scenarioId": "STA-0055",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "supporting_observation"
+    },
+    {
+      "scenarioId": "STA-0056",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0057",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0058",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0059",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "compound_assertion"
+    },
+    {
+      "scenarioId": "STA-0060",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0061",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0062",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "adversarial_false_merge_candidate"
+    },
+    {
+      "scenarioId": "STA-0063",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0064",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "STA-0065",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "STA-0066",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "culinary",
+      "transformationType": "narrow_applicability"
+    },
+    {
+      "scenarioId": "STA-0067",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "broaden_applicability"
+    },
+    {
+      "scenarioId": "STA-0068",
+      "outcome": "infrastructure_error",
+      "domain": "culinary",
+      "transformationType": "change_subject_object_context"
+    },
+    {
+      "scenarioId": "STA-0069",
+      "outcome": "fail",
+      "failureClassification": "unnecessary_deferral",
+      "domain": "culinary",
+      "transformationType": "objective_to_method"
+    },
+    {
+      "scenarioId": "STA-0070",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "culinary",
+      "transformationType": "method_to_objective"
+    },
+    {
+      "scenarioId": "STA-0071",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "supporting_observation"
+    },
+    {
+      "scenarioId": "STA-0072",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0073",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0074",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0075",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "compound_assertion"
+    },
+    {
+      "scenarioId": "STA-0076",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0077",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0078",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "adversarial_false_merge_candidate"
+    },
+    {
+      "scenarioId": "STA-0079",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0080",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "STA-0081",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "STA-0082",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "electronics",
+      "transformationType": "narrow_applicability"
+    },
+    {
+      "scenarioId": "STA-0083",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "broaden_applicability"
+    },
+    {
+      "scenarioId": "STA-0084",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "change_subject_object_context"
+    },
+    {
+      "scenarioId": "STA-0085",
+      "outcome": "infrastructure_error",
+      "domain": "electronics",
+      "transformationType": "objective_to_method"
+    },
+    {
+      "scenarioId": "STA-0086",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "electronics",
+      "transformationType": "method_to_objective"
+    },
+    {
+      "scenarioId": "STA-0087",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "supporting_observation"
+    },
+    {
+      "scenarioId": "STA-0088",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0089",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0090",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0091",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "compound_assertion"
+    },
+    {
+      "scenarioId": "STA-0092",
+      "outcome": "fail",
+      "failureClassification": "unnecessary_deferral",
+      "domain": "culinary",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0093",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0094",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "adversarial_false_merge_candidate"
+    },
+    {
+      "scenarioId": "STA-0095",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0096",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "STA-0097",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "STA-0098",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "culinary",
+      "transformationType": "narrow_applicability"
+    },
+    {
+      "scenarioId": "STA-0099",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "broaden_applicability"
+    },
+    {
+      "scenarioId": "STA-0100",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "change_subject_object_context"
+    },
+    {
+      "scenarioId": "STA-0101",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "objective_to_method"
+    },
+    {
+      "scenarioId": "STA-0102",
+      "outcome": "infrastructure_error",
+      "domain": "electronics",
+      "transformationType": "method_to_objective"
+    },
+    {
+      "scenarioId": "STA-0103",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "supporting_observation"
+    },
+    {
+      "scenarioId": "STA-0104",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0105",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0106",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0107",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "compound_assertion"
+    },
+    {
+      "scenarioId": "STA-0108",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0109",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0110",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "failureSeverity": "high",
+      "domain": "culinary",
+      "transformationType": "adversarial_false_merge_candidate"
+    },
+    {
+      "scenarioId": "STA-0111",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0112",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "STA-0113",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "STA-0114",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "culinary",
+      "transformationType": "narrow_applicability"
+    },
+    {
+      "scenarioId": "STA-0115",
+      "outcome": "fail",
+      "failureClassification": "unnecessary_deferral",
+      "domain": "culinary",
+      "transformationType": "broaden_applicability"
+    },
+    {
+      "scenarioId": "STA-0116",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "change_subject_object_context"
+    },
+    {
+      "scenarioId": "STA-0117",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "objective_to_method"
+    },
+    {
+      "scenarioId": "STA-0118",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "culinary",
+      "transformationType": "method_to_objective"
+    },
+    {
+      "scenarioId": "STA-0119",
+      "outcome": "infrastructure_error",
+      "domain": "culinary",
+      "transformationType": "supporting_observation"
+    },
+    {
+      "scenarioId": "STA-0120",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0121",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0122",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0123",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "compound_assertion"
+    },
+    {
+      "scenarioId": "STA-0124",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0125",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0126",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "adversarial_false_merge_candidate"
+    },
+    {
+      "scenarioId": "STA-0127",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0128",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "STA-0129",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "STA-0130",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "electronics",
+      "transformationType": "narrow_applicability"
+    },
+    {
+      "scenarioId": "STA-0131",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "broaden_applicability"
+    },
+    {
+      "scenarioId": "STA-0132",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "change_subject_object_context"
+    },
+    {
+      "scenarioId": "STA-0133",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "objective_to_method"
+    },
+    {
+      "scenarioId": "STA-0134",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "culinary",
+      "transformationType": "method_to_objective"
+    },
+    {
+      "scenarioId": "STA-0135",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "supporting_observation"
+    },
+    {
+      "scenarioId": "STA-0136",
+      "outcome": "infrastructure_error",
+      "domain": "culinary",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0137",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0138",
+      "outcome": "fail",
+      "failureClassification": "unnecessary_deferral",
+      "domain": "culinary",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0139",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "compound_assertion"
+    },
+    {
+      "scenarioId": "STA-0140",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0141",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0142",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "adversarial_false_merge_candidate"
+    },
+    {
+      "scenarioId": "STA-0143",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0144",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "STA-0145",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "STA-0146",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "electronics",
+      "transformationType": "narrow_applicability"
+    },
+    {
+      "scenarioId": "STA-0147",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "broaden_applicability"
+    },
+    {
+      "scenarioId": "STA-0148",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "change_subject_object_context"
+    },
+    {
+      "scenarioId": "STA-0149",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "objective_to_method"
+    },
+    {
+      "scenarioId": "STA-0150",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "electronics",
+      "transformationType": "method_to_objective"
+    },
+    {
+      "scenarioId": "STA-0151",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "supporting_observation"
+    },
+    {
+      "scenarioId": "STA-0152",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0153",
+      "outcome": "infrastructure_error",
+      "domain": "electronics",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0154",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0155",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "compound_assertion"
+    },
+    {
+      "scenarioId": "STA-0156",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0157",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0158",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "adversarial_false_merge_candidate"
+    },
+    {
+      "scenarioId": "STA-0159",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0160",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "STA-0161",
+      "outcome": "fail",
+      "failureClassification": "unnecessary_deferral",
+      "domain": "culinary",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "STA-0162",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "culinary",
+      "transformationType": "narrow_applicability"
+    },
+    {
+      "scenarioId": "STA-0163",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "broaden_applicability"
+    },
+    {
+      "scenarioId": "STA-0164",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "change_subject_object_context"
+    },
+    {
+      "scenarioId": "STA-0165",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "objective_to_method"
+    },
+    {
+      "scenarioId": "STA-0166",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "electronics",
+      "transformationType": "method_to_objective"
+    },
+    {
+      "scenarioId": "STA-0167",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "supporting_observation"
+    },
+    {
+      "scenarioId": "STA-0168",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0169",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0170",
+      "outcome": "infrastructure_error",
+      "domain": "electronics",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0171",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "compound_assertion"
+    },
+    {
+      "scenarioId": "STA-0172",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0173",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0174",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "adversarial_false_merge_candidate"
+    },
+    {
+      "scenarioId": "STA-0175",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0176",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "STA-0177",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "STA-0178",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "culinary",
+      "transformationType": "narrow_applicability"
+    },
+    {
+      "scenarioId": "STA-0179",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "broaden_applicability"
+    },
+    {
+      "scenarioId": "STA-0180",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "change_subject_object_context"
+    },
+    {
+      "scenarioId": "STA-0181",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "objective_to_method"
+    },
+    {
+      "scenarioId": "STA-0182",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "culinary",
+      "transformationType": "method_to_objective"
+    },
+    {
+      "scenarioId": "STA-0183",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "supporting_observation"
+    },
+    {
+      "scenarioId": "STA-0184",
+      "outcome": "fail",
+      "failureClassification": "unnecessary_deferral",
+      "domain": "culinary",
+      "transformationType": "contradiction"
+    },
+    {
+      "scenarioId": "STA-0185",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "qualification"
+    },
+    {
+      "scenarioId": "STA-0186",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "related_distinct"
+    },
+    {
+      "scenarioId": "STA-0187",
+      "outcome": "infrastructure_error",
+      "domain": "culinary",
+      "transformationType": "compound_assertion"
+    },
+    {
+      "scenarioId": "STA-0188",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "genuinely_novel"
+    },
+    {
+      "scenarioId": "STA-0189",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "irrelevant_near_neighbor"
+    },
+    {
+      "scenarioId": "STA-0190",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "failureSeverity": "high",
+      "domain": "electronics",
+      "transformationType": "adversarial_false_merge_candidate"
+    },
+    {
+      "scenarioId": "STA-0191",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "electronics",
+      "transformationType": "emerging_process_revalidation"
+    },
+    {
+      "scenarioId": "STA-0192",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "paraphrase_same_identity"
+    },
+    {
+      "scenarioId": "STA-0193",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "terminology_substitution_same_identity"
+    },
+    {
+      "scenarioId": "STA-0194",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "electronics",
+      "transformationType": "narrow_applicability"
+    },
+    {
+      "scenarioId": "STA-0195",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "broaden_applicability"
+    },
+    {
+      "scenarioId": "STA-0196",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "change_subject_object_context"
+    },
+    {
+      "scenarioId": "STA-0197",
+      "outcome": "pass",
+      "domain": "electronics",
+      "transformationType": "objective_to_method"
+    },
+    {
+      "scenarioId": "STA-0198",
+      "outcome": "fail",
+      "failureClassification": "missed_match",
+      "domain": "culinary",
+      "transformationType": "method_to_objective"
+    },
+    {
+      "scenarioId": "STA-0199",
+      "outcome": "pass",
+      "domain": "culinary",
+      "transformationType": "supporting_observation"
+    },
+    {
+      "scenarioId": "STA-0200",
+      "outcome": "fail",
+      "failureClassification": "false_merge",
+      "domain": "culinary",
+      "transformationType": "contradiction"
+    }
+  ],
+  "limitations": [
+    "POC rates are not production accuracy or prevalence estimates.",
+    "Composite pass rate must not override false-merge safety findings."
+  ]
+}

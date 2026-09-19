@@ -23,7 +23,8 @@
 - [Handover 03 G1 Implementation Report](Handover_03_G1_Implementation_Report.md) — qualification/scoring tooling (2026-09-19)
 - [Handover 03 G2 Review Package](Handover_03_G2_Review_Package.md) — candidate benchmark packs (G2 accepted)
 - [Handover 03 G3 Freeze and G4 Readiness Report](Handover_03_G3_Freeze_and_G4_Readiness_Report.md) — official frozen packs (G3 accepted)
-- [Handover 03 G3.1 G4 Readiness Remediation Report](Handover_03_G31_G4_Readiness_Remediation_Report.md) — evaluation identity capture (awaiting G4)
+- [Handover 03 G3.1 G4 Readiness Remediation Report](Handover_03_G31_G4_Readiness_Remediation_Report.md) — evaluation identity capture (G3.1 accepted)
+- [Handover 03 G4 Official Execution and G5 Readiness Report](Handover_03_G4_Official_Execution_and_G5_Readiness_Report.md) — official matrix results (awaiting G5)
 - [CKES POC Handover 03 brief](CKES_POC_Handover_03_Benchmark_Generation_and_Reference_Baseline.md) — handover source (planning)
 
 ## Related Documents

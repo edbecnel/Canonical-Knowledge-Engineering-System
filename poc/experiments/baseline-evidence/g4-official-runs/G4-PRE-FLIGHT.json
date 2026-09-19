@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "errors": [],
+  "anchors": {
+    "gitCommit": "291d35f18d7d1e1d461b82decdfb57ac7e564f22",
+    "profileId": "CKES-BENCHMARK-RUN-PROFILE-REF-CLEAN-001",
+    "profileContentHash": "a69d5677856931ab7617ef64eb0072e2fb1b52254952077035d0acbcc14586de",
+    "scorerVersion": "1.0.0-g1",
+    "scorerContentHash": "bd2c0c6bed3375f4ec43b922b9946b33c4e81a7845172393f8f9772e0d925d55",
+    "harnessPackageVersion": "0.1.0",
+    "pipelinePackageVersion": "0.1.0",
+    "profilePath": "/Users/edbecnel/Development/GitHub/Canonical-Knowledge-Engineering-System/poc/experiments/run-profiles/CKES-BENCHMARK-RUN-PROFILE-REF-CLEAN-001.json"
+  }
+}
