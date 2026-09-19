@@ -290,7 +290,7 @@ Prior gates: `poc/experiments/forensics/` (H4.1–H4.3 trees).
 
 ## Git commit
 
-Recorded after commit.
+`3046d647028e8997fd44418e1abb69972100390c` — Complete Handover 04 H4.4 forensic synthesis for Reference Baseline 001.
 
 ---
 
