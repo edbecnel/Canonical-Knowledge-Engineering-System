@@ -52,6 +52,17 @@ npm run benchmark:smoke   # contract only — not a benchmark runner
 
 Architecture: [Benchmark Evaluation Architecture](../docs/Architecture/Benchmark_Evaluation_Architecture.md).
 
+## Scenario Lab (Handover 2)
+
+```bash
+npm run scenario-lab:api    # 127.0.0.1:3847
+npm run scenario-lab:dev    # Vite UI → /api proxy
+npm run benchmark:cli run --pack=CKES-SMOKE-HARNESS-001.json
+npm run harness:test
+```
+
+Packages: `@ckes/harness`, `@ckes/scenario-lab-api`, `ckes-scenario-lab` (UI). See [Handover 02 Integration Report](../docs/Development/Handover_02_Benchmark_Integration_Report.md).
+
 ## Target architecture (direction vs current)
 
 Authoritative direction: [Economical LLM-Assisted Canonicalization, Discovery, and Revalidation](../docs/Architecture/Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md) (`CKES-PAR-*` provisionals). [AAR-0001](../docs/Architecture/Audits/AAR-0001-poc-vs-economical-canonicalization-direction.md) records gaps.

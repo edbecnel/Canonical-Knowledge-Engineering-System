@@ -1,17 +1,20 @@
 {
-  "name": "@ckes/pipeline",
+  "name": "@ckes/harness",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "scripts": {
+    "test": "node --import tsx --test test/**/*.test.ts"
+  },
   "dependencies": {
-    "@ckes/adapter": "*",
     "@ckes/benchmark": "*",
-    "@ckes/policy": "*",
-    "@ckes/metrics": "*",
-    "openai": "^4.77.0",
+    "@ckes/pipeline": "*",
     "pg": "^8.13.1",
     "uuid": "^11.0.3"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
   }
 }

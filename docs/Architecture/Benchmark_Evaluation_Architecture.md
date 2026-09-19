@@ -9,7 +9,9 @@
 
 ## Purpose
 
-Define how CKES evaluates canonicalization decisions using versioned JSON contracts, three distinct evaluation facilities, and leakage-safe boundaries—without claiming CRA normative conformance or designating reference baselines (Handover 3).
+Define how CKES evaluates canonicalization decisions using versioned JSON contracts, three distinct evaluation facilities, and leakage-safe boundaries—without claiming CRA normative conformance.
+
+**Reference-baseline capture and comparison capability** exists in Handover 2 (`@ckes/harness`, Scenario Lab). **First official reference-baseline evidence** (`REFERENCE-BASELINE-001`) is Handover 3.
 
 ## Terminology
 
@@ -19,7 +21,8 @@ Define how CKES evaluates canonicalization decisions using versioned JSON contra
 | Benchmark Pack | Importable JSON artifact (`benchmark-pack.schema.json`) |
 | Run profile | JSON run configuration (`benchmark-run-profile.schema.json`) — **not** a reference baseline |
 | Benchmark Run | One execution under a run profile (Handover 2 runner) |
-| Reference Baseline | A designated completed run result (Handover 3) |
+| Reference Baseline (official) | Designated completed run — official series in Handover 3 |
+| Comparison reference (H2) | Sidecar designation on a completed run (smoke/dev/harness fixture labels only) |
 
 ## Three evaluation facilities
 
@@ -53,9 +56,12 @@ Expected outcomes, prohibited identities, scoring metadata, and retrieval hints 
 
 Pack `contentHash` = SHA-256(RFC 8785 JCS(hash document)). See [poc/benchmark/schemas/README.md](../../poc/benchmark/schemas/README.md).
 
-## Handover 2 boundary
+## Handover 2 execution
 
-Execution is implemented by `HarnessRunner` (interfaces in `@ckes/benchmark`). Handover 1 provides `benchmark:smoke` (contract validation only).
+- **`@ckes/harness`**: serial runs (`concurrency = 1`), `TRUNCATE`/reset isolation between scenarios (see Handover 02 integration report), CLI + Scenario Lab API.
+- **`@ckes/benchmark`**: contracts, hashing, `toBrowserPackView`, pure scoring/render — no dependency on harness.
+- **Scenario Lab**: Vite + React → localhost API (`127.0.0.1`) → harness only.
+- **Designations**: append-only sidecar JSONL — never mutates immutable run-result files.
 
 ## Related documents
 

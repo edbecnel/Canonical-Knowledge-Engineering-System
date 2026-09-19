@@ -1,0 +1,140 @@
+{
+  "schemaVersion": "1.0.0",
+  "pack": {
+    "packId": "CKES-SMOKE-HARNESS-001",
+    "name": "Harness smoke fixtures (non-architectural)",
+    "suiteClass": "anchor",
+    "packVersion": "1.0.0",
+    "status": "released",
+    "description": "Handover 2 smoke only — not Anchor/Statistical/Challenge release.",
+    "contentHash": "6f473f65003f3380fa90b841f93276f2cd6a7d5022591dff91482242528a5089",
+    "canonicalSeedHash": "8ced62f02c62893b107106f6f78721f9ba6bfd036e0a180bada67e5da5ccb9fb",
+    "domains": [
+      "culinary",
+      "electronics"
+    ]
+  },
+  "executionRequirements": {
+    "supportedExecutionModes": [
+      "decision_slice",
+      "full_pipeline"
+    ],
+    "defaultExecutionMode": "decision_slice",
+    "databaseProfile": "clean",
+    "scenarioIsolationRequired": true,
+    "retrievalModesAllowed": [
+      "deterministic_fixture"
+    ],
+    "llmPolicy": "not_required"
+  },
+  "canonicalSeedMaterial": [
+    {
+      "seedId": "CK-SMOKE-01",
+      "entityType": "concept",
+      "label": "Deep fry",
+      "statement": "Deep frying submerges food in hot oil.",
+      "domain": "culinary"
+    },
+    {
+      "seedId": "CK-SMOKE-ELS-01",
+      "entityType": "concept",
+      "label": "GPIO pin",
+      "statement": "A GPIO pin is a general-purpose digital I/O line on a microcontroller.",
+      "domain": "electronics"
+    }
+  ],
+  "scenarios": [
+    {
+      "scenarioId": "SMOKE-01-exact",
+      "title": "Exact match culinary",
+      "status": "released",
+      "suite": "smoke",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "deep fry"
+      },
+      "expectedDecisionClass": "match_existing",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-SMOKE-01"
+      },
+      "labelConfidenceClass": "deterministic_by_construction"
+    },
+    {
+      "scenarioId": "SMOKE-02-paraphrase",
+      "title": "Paraphrase culinary",
+      "status": "released",
+      "suite": "smoke",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "fry in hot oil"
+      },
+      "expectedDecisionClass": "match_existing",
+      "labelConfidenceClass": "strong_expectation"
+    },
+    {
+      "scenarioId": "SMOKE-03-distinct",
+      "title": "Pastry vs cookie distinct",
+      "status": "released",
+      "suite": "smoke",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "shortbread cookie"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "strong_expectation"
+    },
+    {
+      "scenarioId": "SMOKE-04-defer",
+      "title": "Ambiguous defer",
+      "status": "released",
+      "suite": "smoke",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "cooking technique"
+      },
+      "expectedDecisionClass": "defer_human",
+      "labelConfidenceClass": "expected_deferral"
+    },
+    {
+      "scenarioId": "SMOKE-05-objective",
+      "title": "Objective vs method",
+      "status": "released",
+      "suite": "smoke",
+      "domain": "culinary",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "reach 165F internal temperature"
+      },
+      "expectedDecisionClass": "related_distinct",
+      "labelConfidenceClass": "acceptable_result_set"
+    },
+    {
+      "scenarioId": "SMOKE-06-els",
+      "title": "ELS GPIO snippet",
+      "status": "released",
+      "suite": "smoke",
+      "domain": "electronics",
+      "executionMode": "decision_slice",
+      "directCandidate": {
+        "candidateType": "concept",
+        "text": "GPIO pin"
+      },
+      "expectedDecisionClass": "match_existing",
+      "expectedIdentity": {
+        "referenceKind": "local",
+        "seedId": "CK-SMOKE-ELS-01"
+      },
+      "labelConfidenceClass": "deterministic_by_construction"
+    }
+  ]
+}

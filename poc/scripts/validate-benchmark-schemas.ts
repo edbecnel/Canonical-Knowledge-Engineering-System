@@ -18,9 +18,13 @@ function load(rel: string): Record<string, unknown> {
 
 function main(): void {
   const examplesDir = join(root, 'benchmark/examples');
-  const jsonFiles = readdirSync(examplesDir).filter((f) => f.endsWith('.json'));
-  for (const file of jsonFiles) {
-    const doc = load(`benchmark/examples/${file}`);
+  const exampleDirs = [examplesDir, join(root, 'benchmark/fixtures')];
+  const jsonFiles = exampleDirs.flatMap((dir) =>
+    readdirSync(dir).filter((f) => f.endsWith('.json')).map((f) => ({ dir, file: f })),
+  );
+  for (const { dir, file } of jsonFiles) {
+    const relDir = dir.endsWith('fixtures') ? 'benchmark/fixtures' : 'benchmark/examples';
+    const doc = load(`${relDir}/${file}`);
     if (file.includes('RUN-RESULT')) {
       validateBenchmarkRunResult(doc);
       console.log(`OK result: ${file}`);

@@ -5,3 +5,5 @@ export * from './projection.js';
 export * from './validate.js';
 export * from './render-markdown.js';
 export * from './harness-interfaces.js';
+export * from './browser-projection.js';
+export * from './scoring.js';

@@ -41,7 +41,23 @@
           "type": "string",
           "enum": ["mocked", "hinted", "live", "deterministic_fixture"]
         },
-        "executionMode": { "type": "string", "enum": ["full_pipeline", "decision_slice"] }
+        "executionMode": { "type": "string", "enum": ["full_pipeline", "decision_slice"] },
+        "lifecycleState": {
+          "type": "string",
+          "enum": [
+            "queued",
+            "preparing",
+            "running",
+            "cancel_requested",
+            "provider_request_inflight",
+            "cost_ceiling_reached",
+            "completed",
+            "completed_partial",
+            "cancelled",
+            "failed_infrastructure",
+            "failed_validation"
+          ]
+        }
       }
     },
     "economics": {
@@ -105,7 +121,19 @@
         "aggregateStability": { "type": "number" },
         "disagreementRate": { "type": "number" },
         "incompleteTrialReason": { "type": "string" },
-        "trials": { "type": "array", "items": { "$ref": "#/$defs/trialResult" } }
+        "trials": { "type": "array", "items": { "$ref": "#/$defs/trialResult" } },
+        "failureLayer": {
+          "type": "string",
+          "enum": ["extraction", "retrieval", "adjudication", "policy", "decision_slice_outcome"]
+        },
+        "scoring": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "expectedDecisionClass": { "type": "string" },
+            "expectedVersusActual": { "type": "object", "additionalProperties": true }
+          }
+        }
       }
     },
     "aggregates": {
@@ -116,7 +144,8 @@
         "failCount": { "type": "integer", "minimum": 0 },
         "falseMergeCount": { "type": "integer", "minimum": 0 },
         "byRetrievalMode": { "type": "object", "additionalProperties": { "type": "integer" } },
-        "byFailureClassification": { "type": "object", "additionalProperties": { "type": "integer" } }
+        "byFailureClassification": { "type": "object", "additionalProperties": { "type": "integer" } },
+        "byExecutionMode": { "type": "object", "additionalProperties": { "type": "integer" } }
       }
     }
   }

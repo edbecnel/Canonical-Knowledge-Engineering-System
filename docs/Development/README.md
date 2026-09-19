@@ -17,6 +17,8 @@
 - [Economical Canonicalization Handover Integration Report](Economical_Canonicalization_Handover_Integration_Report.md) — 2026-09-19 integration and validation closure
 - [Handover 01 Benchmark Integration Report](Handover_01_Benchmark_Integration_Report.md) — JSON benchmark contracts and evaluator ground truth (2026-09-19)
 - [CKES POC Handover 01 brief](CKES_POC_Handover_01_Benchmark_Architecture_and_JSON_Contracts.md) — archived handover source (integrated)
+- [Handover 02 Benchmark Integration Report](Handover_02_Benchmark_Integration_Report.md) — harness, Scenario Lab, smoke pack (2026-09-19)
+- [CKES POC Handover 02 brief](CKES_POC_Handover_02_Scenario_Harness_and_Lab.md) — archived handover source (integrated)
 
 ## Related Documents
 

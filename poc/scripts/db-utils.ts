@@ -19,6 +19,7 @@ export async function runMigrations(pool: pg.Pool): Promise<void> {
     join(root, 'db/ckes/002_candidate_coordinates.sql'),
     join(root, 'db/synthetic/001_schema.sql'),
     join(root, 'db/synthetic/002_evaluator_ground_truth.sql'),
+    join(root, 'db/harness/001_schema.sql'),
   ];
   for (const file of files) {
     const sql = readFileSync(file, 'utf8');
