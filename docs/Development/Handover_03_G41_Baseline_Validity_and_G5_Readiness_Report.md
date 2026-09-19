@@ -161,4 +161,4 @@ These are **legitimate baseline findings**; no CKES tuning was performed.
 
 ## Git commit
 
-Recorded after commit.
+Recorded in repository after push-ready commit on `main`.
