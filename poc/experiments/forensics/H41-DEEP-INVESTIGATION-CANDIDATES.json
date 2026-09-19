@@ -1,0 +1,41 @@
+{
+  "tier0_critical_and_mnmt": [
+    "ANC-0017",
+    "ANC-0018",
+    "ANC-0019",
+    "ANC-0020",
+    "ANC-0031"
+  ],
+  "allFalseMergesLowConfidenceCausality": [
+    "ANC-0017",
+    "ANC-0018",
+    "ANC-0019",
+    "ANC-0020",
+    "ANC-0023",
+    "ANC-0024",
+    "ANC-0025",
+    "ANC-0027",
+    "ANC-0028",
+    "ANC-0029",
+    "ANC-0031",
+    "ANC-0032",
+    "ANC-0033",
+    "ANC-0035",
+    "ANC-0036",
+    "ANC-0037",
+    "ANC-0039",
+    "ANC-0040"
+  ],
+  "challengeDeferralSampleSuggestedForH42": [
+    "CHL-0001",
+    "CHL-0002",
+    "CHL-0003",
+    "CHL-0005",
+    "CHL-0006",
+    "CHL-0007",
+    "CHL-0009",
+    "CHL-0010",
+    "CHL-0014",
+    "CHL-0015"
+  ]
+}

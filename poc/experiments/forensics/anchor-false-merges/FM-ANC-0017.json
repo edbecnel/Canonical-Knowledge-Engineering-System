@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordKind": "FM-ANC",
+  "gate": "H4.1",
+  "scenarioId": "ANC-0017",
+  "expectedSemanticOutcome": "related_distinct",
+  "actualOutcome": "fail",
+  "actualDecisionClass": "EQUIVALENT",
+  "failureClassification": "false_merge",
+  "policyAction": "reuse_existing",
+  "actualMatchedIdentity": {
+    "benchmarkLocalSeedId": "CK-CUL-01",
+    "canonicalLabel": "Deep fry",
+    "canonicalId": "8be673e7-02cd-4742-acca-57facf0ec3c9",
+    "identityEvidenceStatus": "present_mapped"
+  },
+  "packContext": {
+    "transformationType": "related_distinct",
+    "domain": "culinary",
+    "executionMode": "full_pipeline",
+    "failureSeverity": "critical"
+  },
+  "suspectedFirstDivergenceLayer": "decision_slice_outcome_or_scorer_visible",
+  "primaryCausalCategory": "unknown_unresolved",
+  "contributingCausalCategories": [
+    "evaluation_scorer_manifestation_only",
+    "adjudication_merge_class_emitted",
+    "policy_merge_action_emitted"
+  ],
+  "diagnosisConfidence": "low",
+  "debugInvestigationRequired": true,
+  "evidenceGaps": [
+    "full_retrieval_ranked_candidates",
+    "adjudication_confidence_and_rationale",
+    "adjudication_prompt_payload",
+    "policy_input_confidence"
+  ],
+  "supportingEvidenceRef": "poc/experiments/baseline-evidence/g4-1-official-runs/RUN-REF-CLEAN-ANCHOR-002.json#ANC-0017",
+  "notes": "H4.1 static only; causal categories provisional unless noted."
+}

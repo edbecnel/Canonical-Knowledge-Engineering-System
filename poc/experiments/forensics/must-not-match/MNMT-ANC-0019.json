@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordKind": "MNMT-ANC",
+  "gate": "H4.1",
+  "scenarioId": "ANC-0019",
+  "mustNotMatchTargets": [
+    {
+      "referenceKind": "local",
+      "seedId": "CK-CUL-03"
+    }
+  ],
+  "candidateFromPack": {
+    "candidateType": "concept",
+    "text": "Sous vide"
+  },
+  "expectedDecisionClass": "related_distinct",
+  "actualDecisionClass": "EQUIVALENT",
+  "policyAction": "reuse_existing",
+  "matchedIdentityFromEvaluationCapture": {
+    "present": true,
+    "canonicalLabel": "Sous vide",
+    "canonicalId": "2e09136a-50a0-479b-af4f-ebf921bcaed7"
+  },
+  "benchmarkLocalSeedId": "CK-CUL-03",
+  "identityEvidenceStatus": "present_mapped",
+  "forbiddenSeedMatched": true,
+  "distinguishingSemanticInfoInArtifacts": {
+    "packStatementFromSeeds": "see canonicalSeedMaterial for forbidden seed labels",
+    "candidateText": "Sous vide",
+    "note": "No explicit negative-equivalence representation in run JSON"
+  },
+  "staticEvidenceAvailable": [
+    "immutable run row",
+    "evaluationCapture",
+    "pack mustNotMatchIdentities",
+    "pack directCandidate"
+  ],
+  "representationIssuesObserved": [
+    "Run JSON does not expose whether CKES represented must-not-match constraints",
+    "Only post-hoc benchmark scorer applied mustNotMatchIdentities rule"
+  ],
+  "evidenceGaps": [
+    "retrieval_rank_list",
+    "adjudication_rationale",
+    "whether pipeline consumed forbidden-identity signal"
+  ],
+  "negativeIdentityMechanismConclusion": "not_determined_at_h4_1",
+  "supportingEvidenceRef": "poc/experiments/baseline-evidence/g4-1-official-runs/RUN-REF-CLEAN-ANCHOR-002.json#ANC-0019"
+}

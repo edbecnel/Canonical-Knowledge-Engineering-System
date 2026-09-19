@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordKind": "MNMT-ANC",
+  "gate": "H4.1",
+  "scenarioId": "ANC-0031",
+  "mustNotMatchTargets": [
+    {
+      "referenceKind": "local",
+      "seedId": "CK-CUL-09"
+    }
+  ],
+  "candidateFromPack": {
+    "candidateType": "concept",
+    "text": "Rest meat"
+  },
+  "expectedDecisionClass": "related_distinct",
+  "actualDecisionClass": "EQUIVALENT",
+  "policyAction": "reuse_existing",
+  "matchedIdentityFromEvaluationCapture": {
+    "present": true,
+    "canonicalLabel": "Rest meat",
+    "canonicalId": "887900e5-c3a4-4f01-a047-11e9895cc07e"
+  },
+  "benchmarkLocalSeedId": "CK-CUL-09",
+  "identityEvidenceStatus": "present_mapped",
+  "forbiddenSeedMatched": true,
+  "distinguishingSemanticInfoInArtifacts": {
+    "packStatementFromSeeds": "see canonicalSeedMaterial for forbidden seed labels",
+    "candidateText": "Rest meat",
+    "note": "No explicit negative-equivalence representation in run JSON"
+  },
+  "staticEvidenceAvailable": [
+    "immutable run row",
+    "evaluationCapture",
+    "pack mustNotMatchIdentities",
+    "pack directCandidate"
+  ],
+  "representationIssuesObserved": [
+    "Run JSON does not expose whether CKES represented must-not-match constraints",
+    "Only post-hoc benchmark scorer applied mustNotMatchIdentities rule"
+  ],
+  "evidenceGaps": [
+    "retrieval_rank_list",
+    "adjudication_rationale",
+    "whether pipeline consumed forbidden-identity signal"
+  ],
+  "negativeIdentityMechanismConclusion": "not_determined_at_h4_1",
+  "supportingEvidenceRef": "poc/experiments/baseline-evidence/g4-1-official-runs/RUN-REF-CLEAN-ANCHOR-002.json#ANC-0031"
+}

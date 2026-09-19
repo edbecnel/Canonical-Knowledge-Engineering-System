@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordKind": "FM-ANC",
+  "gate": "H4.1",
+  "scenarioId": "ANC-0035",
+  "expectedSemanticOutcome": "related_distinct",
+  "actualOutcome": "fail",
+  "actualDecisionClass": "SUBSUMED_BY_EXISTING",
+  "failureClassification": "false_merge",
+  "policyAction": "reject_new_identity",
+  "actualMatchedIdentity": {
+    "benchmarkLocalSeedId": "CK-ELS-01",
+    "canonicalLabel": "GPIO pin",
+    "canonicalId": "4a71460f-d3e8-421e-a1b0-9cff5080cad3",
+    "identityEvidenceStatus": "present_mapped"
+  },
+  "packContext": {
+    "transformationType": "narrow_applicability",
+    "domain": "electronics",
+    "executionMode": "decision_slice"
+  },
+  "suspectedFirstDivergenceLayer": "decision_slice_outcome_or_scorer_visible",
+  "primaryCausalCategory": "unknown_unresolved",
+  "contributingCausalCategories": [
+    "evaluation_scorer_manifestation_only",
+    "adjudication_merge_class_emitted"
+  ],
+  "diagnosisConfidence": "low",
+  "debugInvestigationRequired": true,
+  "evidenceGaps": [
+    "full_retrieval_ranked_candidates",
+    "adjudication_confidence_and_rationale",
+    "adjudication_prompt_payload",
+    "policy_input_confidence"
+  ],
+  "supportingEvidenceRef": "poc/experiments/baseline-evidence/g4-1-official-runs/RUN-REF-CLEAN-ANCHOR-002.json#ANC-0035",
+  "notes": "H4.1 static only; causal categories provisional unless noted."
+}

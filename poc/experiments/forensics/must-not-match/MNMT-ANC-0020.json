@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordKind": "MNMT-ANC",
+  "gate": "H4.1",
+  "scenarioId": "ANC-0020",
+  "mustNotMatchTargets": [
+    {
+      "referenceKind": "local",
+      "seedId": "CK-ELS-04"
+    }
+  ],
+  "candidateFromPack": {
+    "candidateType": "concept",
+    "text": "I2C bus"
+  },
+  "expectedDecisionClass": "related_distinct",
+  "actualDecisionClass": "EQUIVALENT",
+  "policyAction": "reuse_existing",
+  "matchedIdentityFromEvaluationCapture": {
+    "present": true,
+    "canonicalLabel": "I2C bus",
+    "canonicalId": "e3a0ca2e-1eaa-4f9f-a6b6-1e2db8f8039e"
+  },
+  "benchmarkLocalSeedId": "CK-ELS-04",
+  "identityEvidenceStatus": "present_mapped",
+  "forbiddenSeedMatched": true,
+  "distinguishingSemanticInfoInArtifacts": {
+    "packStatementFromSeeds": "see canonicalSeedMaterial for forbidden seed labels",
+    "candidateText": "I2C bus",
+    "note": "No explicit negative-equivalence representation in run JSON"
+  },
+  "staticEvidenceAvailable": [
+    "immutable run row",
+    "evaluationCapture",
+    "pack mustNotMatchIdentities",
+    "pack directCandidate"
+  ],
+  "representationIssuesObserved": [
+    "Run JSON does not expose whether CKES represented must-not-match constraints",
+    "Only post-hoc benchmark scorer applied mustNotMatchIdentities rule"
+  ],
+  "evidenceGaps": [
+    "retrieval_rank_list",
+    "adjudication_rationale",
+    "whether pipeline consumed forbidden-identity signal"
+  ],
+  "negativeIdentityMechanismConclusion": "not_determined_at_h4_1",
+  "supportingEvidenceRef": "poc/experiments/baseline-evidence/g4-1-official-runs/RUN-REF-CLEAN-ANCHOR-002.json#ANC-0020"
+}

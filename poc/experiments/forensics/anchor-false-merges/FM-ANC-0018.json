@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordKind": "FM-ANC",
+  "gate": "H4.1",
+  "scenarioId": "ANC-0018",
+  "expectedSemanticOutcome": "related_distinct",
+  "actualOutcome": "fail",
+  "actualDecisionClass": "EQUIVALENT",
+  "failureClassification": "false_merge",
+  "policyAction": "reuse_existing",
+  "actualMatchedIdentity": {
+    "benchmarkLocalSeedId": "CK-ELS-01",
+    "canonicalLabel": "GPIO pin",
+    "canonicalId": "4a71460f-d3e8-421e-a1b0-9cff5080cad3",
+    "identityEvidenceStatus": "present_mapped"
+  },
+  "packContext": {
+    "transformationType": "adversarial_false_merge_candidate",
+    "domain": "electronics",
+    "executionMode": "decision_slice",
+    "failureSeverity": "critical",
+    "mustNotMatchIdentities": [
+      {
+        "referenceKind": "local",
+        "seedId": "CK-ELS-01"
+      }
+    ]
+  },
+  "suspectedFirstDivergenceLayer": "decision_slice_outcome_or_scorer_visible",
+  "primaryCausalCategory": "unknown_unresolved",
+  "contributingCausalCategories": [
+    "evaluation_scorer_manifestation_only",
+    "adjudication_merge_class_emitted",
+    "policy_merge_action_emitted",
+    "matched_forbidden_benchmark_seed"
+  ],
+  "diagnosisConfidence": "low",
+  "debugInvestigationRequired": true,
+  "evidenceGaps": [
+    "full_retrieval_ranked_candidates",
+    "adjudication_confidence_and_rationale",
+    "adjudication_prompt_payload",
+    "policy_input_confidence"
+  ],
+  "supportingEvidenceRef": "poc/experiments/baseline-evidence/g4-1-official-runs/RUN-REF-CLEAN-ANCHOR-002.json#ANC-0018",
+  "notes": "H4.1 static only; causal categories provisional unless noted."
+}

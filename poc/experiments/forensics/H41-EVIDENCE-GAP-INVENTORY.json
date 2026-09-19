@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "1.0.0",
+  "gate": "H4.1",
+  "globalGapsNotInImmutableRunJson": [
+    "complete_ranked_retrieval_candidates_with_scores",
+    "retrieval_method_per_candidate",
+    "adjudication_confidence_numeric",
+    "adjudication_rationale_text",
+    "adjudication_llm_prompt_and_response",
+    "policy_confidence_inputs",
+    "policy_rule_trace",
+    "candidate_full_structured_attributes",
+    "intermediate_discovery_extraction_artifacts_for_full_pipeline"
+  ],
+  "perScenarioFlags": [
+    {
+      "scenarioId": "ANC-0017",
+      "hasEvaluationCapture": true,
+      "missingForCausalAttribution": [
+        "full_retrieval_rank_list",
+        "adjudication_confidence_and_rationale"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0018",
+      "hasEvaluationCapture": true,
+      "missingForCausalAttribution": [
+        "full_retrieval_rank_list",
+        "adjudication_confidence_and_rationale"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0019",
+      "hasEvaluationCapture": true,
+      "missingForCausalAttribution": [
+        "full_retrieval_rank_list",
+        "adjudication_confidence_and_rationale"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0020",
+      "hasEvaluationCapture": true,
+      "missingForCausalAttribution": [
+        "full_retrieval_rank_list",
+        "adjudication_confidence_and_rationale"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0023",
+      "hasEvaluationCapture": true,
+      "missingForCausalAttribution": [
+        "full_retrieval_rank_list",
+        "adjudication_confidence_and_rationale"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0024",
+      "hasEvaluationCapture": true,
+      "missingForCausalAttribution": [
+        "full_retrieval_rank_list",
+        "adjudication_confidence_and_rationale"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0025",
+      "hasEvaluationCapture": true,
+      "missingForCausalAttribution": [
+        "full_retrieval_rank_list",
+        "adjudication_confidence_and_rationale"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0027",
+      "hasEvaluationCapture": true,
+      "missingForCausalAttribution": [
+        "full_retrieval_rank_list",
+        "adjudication_confidence_and_rationale"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0028",
+      "hasEvaluationCapture": true,
+      "missingForCausalAttribution": [
+        "full_retrieval_rank_list",
+        "adjudication_confidence_and_rationale"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0029",
+      "hasEvaluationCapture": true,
+      "missingForCausalAttribution": [
+        "full_retrieval_rank_list",
+        "adjudication_confidence_and_rationale"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0031",
+      "hasEvaluationCapture": true,
+      "missingForCausalAttribution": [
+        "full_retrieval_rank_list",
+        "adjudication_confidence_and_rationale"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0032",
+      "hasEvaluationCapture": true,
+      "missingForCausalAttribution": [
+        "full_retrieval_rank_list",
+        "adjudication_confidence_and_rationale"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0033",
+      "hasEvaluationCapture": true,
+      "missingForCausalAttribution": [
+        "full_retrieval_rank_list",
+        "adjudication_confidence_and_rationale"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0035",
+      "hasEvaluationCapture": true,
+      "missingForCausalAttribution": [
+        "full_retrieval_rank_list",
+        "adjudication_confidence_and_rationale"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0036",
+      "hasEvaluationCapture": true,
+      "missingForCausalAttribution": [
+        "full_retrieval_rank_list",
+        "adjudication_confidence_and_rationale"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0037",
+      "hasEvaluationCapture": true,
+      "missingForCausalAttribution": [
+        "full_retrieval_rank_list",
+        "adjudication_confidence_and_rationale"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0039",
+      "hasEvaluationCapture": true,
+      "missingForCausalAttribution": [
+        "full_retrieval_rank_list",
+        "adjudication_confidence_and_rationale"
+      ]
+    },
+    {
+      "scenarioId": "ANC-0040",
+      "hasEvaluationCapture": true,
+      "missingForCausalAttribution": [
+        "full_retrieval_rank_list",
+        "adjudication_confidence_and_rationale"
+      ]
+    }
+  ],
+  "informsGates": [
+    "H4.2",
+    "H4.3",
+    "H4.O_optional"
+  ]
+}

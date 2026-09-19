@@ -1,0 +1,23 @@
+{
+  "suite": "statistical",
+  "runId": "RUN-REF-CLEAN-STAT-002",
+  "scenarioCount": 200,
+  "packReleasedCount": 200,
+  "byOutcome": {
+    "pass": 107,
+    "fail": 93
+  },
+  "byFailureClassification": {
+    "missed_match": 26,
+    "false_merge": 59,
+    "unnecessary_deferral": 8
+  },
+  "byExecutionMode": {
+    "decision_slice": 189,
+    "full_pipeline": 11
+  },
+  "falseMergeCount": 59,
+  "unnecessaryDeferralCount": 8,
+  "presentUnmappedCount": 0,
+  "derivedReportPath": "poc/experiments/baseline-evidence/g4-1-official-runs/RUN-REF-CLEAN-STAT-002.derived-report.json"
+}

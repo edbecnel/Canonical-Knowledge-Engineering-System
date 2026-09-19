@@ -1,0 +1,23 @@
+{
+  "suite": "challenge",
+  "runId": "RUN-REF-CLEAN-CHALLENGE-002",
+  "scenarioCount": 80,
+  "packReleasedCount": 80,
+  "byOutcome": {
+    "fail": 71,
+    "pass": 9
+  },
+  "byFailureClassification": {
+    "unnecessary_deferral": 49,
+    "false_merge": 20,
+    "missed_match": 2
+  },
+  "byExecutionMode": {
+    "decision_slice": 76,
+    "full_pipeline": 4
+  },
+  "falseMergeCount": 20,
+  "unnecessaryDeferralCount": 49,
+  "presentUnmappedCount": 0,
+  "derivedReportPath": "poc/experiments/baseline-evidence/g4-1-official-runs/RUN-REF-CLEAN-CHALLENGE-002.derived-report.json"
+}

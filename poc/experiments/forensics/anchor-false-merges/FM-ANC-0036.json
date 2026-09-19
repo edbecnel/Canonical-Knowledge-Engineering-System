@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "recordKind": "FM-ANC",
+  "gate": "H4.1",
+  "scenarioId": "ANC-0036",
+  "expectedSemanticOutcome": "related_distinct",
+  "actualOutcome": "fail",
+  "actualDecisionClass": "EQUIVALENT",
+  "failureClassification": "false_merge",
+  "policyAction": "reuse_existing",
+  "actualMatchedIdentity": {
+    "benchmarkLocalSeedId": "CK-ELS-02",
+    "canonicalLabel": "Pull-up resistor",
+    "canonicalId": "867713d0-ce48-4887-a95d-36642ab4a85f",
+    "identityEvidenceStatus": "present_mapped"
+  },
+  "packContext": {
+    "transformationType": "broaden_applicability",
+    "domain": "electronics",
+    "executionMode": "decision_slice"
+  },
+  "suspectedFirstDivergenceLayer": "decision_slice_outcome_or_scorer_visible",
+  "primaryCausalCategory": "unknown_unresolved",
+  "contributingCausalCategories": [
+    "evaluation_scorer_manifestation_only",
+    "adjudication_merge_class_emitted",
+    "policy_merge_action_emitted"
+  ],
+  "diagnosisConfidence": "low",
+  "debugInvestigationRequired": true,
+  "evidenceGaps": [
+    "full_retrieval_ranked_candidates",
+    "adjudication_confidence_and_rationale",
+    "adjudication_prompt_payload",
+    "policy_input_confidence"
+  ],
+  "supportingEvidenceRef": "poc/experiments/baseline-evidence/g4-1-official-runs/RUN-REF-CLEAN-ANCHOR-002.json#ANC-0036",
+  "notes": "H4.1 static only; causal categories provisional unless noted."
+}
