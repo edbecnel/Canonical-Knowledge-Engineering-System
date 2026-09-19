@@ -6,7 +6,7 @@
 > **Owner:** Architecture Team
 > **Applies To:** CKES source adapters, Recipe Vault integration planning
 > **Classification:** CKES implementation choice + source capability reference (non-normative for Recipe Vault)
-> **Last Reviewed:** 2026-08-22
+> **Last Reviewed:** 2026-09-19
 > **Supersedes:** [Recipe Vault Change Proposals](../Development/Recipe_Vault_Change_Proposals.md) (requirements framing only; POC schema remains valid for experiments)
 
 ## 1. Purpose
@@ -21,6 +21,8 @@ CKES is in an **early experimental phase** and is **not yet ready** to consume p
 4. Lists **optional future optimizations** deferred until a joint integration milestone.
 
 Recipe Vault engineering priorities (Launch 1.0, version history, product fixes) proceed **independently** of CKES timelines.
+
+When TRV (or an adapter) already invokes an LLM for recipe conversion or enrichment, CKES **may** piggyback candidate extraction and preliminary canonicality assessment on that inference if privacy, cost, and output-quality controls are preserved (`CKES-PAR-0007` in [Economical LLM-Assisted Canonicalization, Discovery, and Revalidation](Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md)). This is an optimization to measure, not a default coupling.
 
 ---
 

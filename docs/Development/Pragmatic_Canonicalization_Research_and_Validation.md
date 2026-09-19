@@ -3,7 +3,7 @@
 > **Status:** Draft
 > **Owner:** Architecture Team
 > **Classification:** CKES research direction / experimental program (non-normative)
-> **Last Reviewed:** 2026-08-22
+> **Last Reviewed:** 2026-09-19
 
 # CKES — Pragmatic Canonicalization Research and Validation
 
@@ -208,6 +208,13 @@ The exact modes and names remain experimental.
 ## 6. Default Versus Escalated Processing
 
 CKES should test whether most ordinary knowledge can use an inexpensive default path while exceptional cases receive additional scrutiny.
+
+The layered discovery cascade, prior-adjudication reuse, batching, and
+revalidation economics are specified provisionally in
+[Economical LLM-Assisted Canonicalization, Discovery, and
+Revalidation](../Architecture/Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md)
+(`CKES-PAR-*`, validation matrix T-01–T-16). POC evidence must record
+baselines before claiming cost decline.
 
 ```text
 Incoming Knowledge

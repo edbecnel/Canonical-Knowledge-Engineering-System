@@ -8,11 +8,11 @@ Functional requirements, non-functional requirements, feature specifications, an
 
 ## Authoritative Documents
 
-- Add links to authoritative documents in this domain.
+Normative `CKES-0001+` specifications remain **deferred** per [ADR-0001](../Architecture/ADRs/ADR-0001-ckes-adopts-edf-asr-bootstrap.md) until POC evidence is reviewed and the [human promotion gate](../Architecture/Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md#13-human-promotion-gate-for-ckes-0001) is satisfied.
 
-## What Belongs Here
+Until then, traceable **provisional** architectural requirements (`CKES-PAR-*`) and the validation matrix live in:
 
-Add documents whose primary responsibility matches this domain.
+- [Economical LLM-Assisted Canonicalization, Discovery, and Revalidation](../Architecture/Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md)
 
 ## Navigation
 

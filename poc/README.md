@@ -39,8 +39,36 @@ npm run experiment:progressive
 | `@ckes/policy` | CALS policy engine |
 | `@ckes/metrics` | Instrumentation and reports |
 
+## Target architecture (direction vs current)
+
+Authoritative direction: [Economical LLM-Assisted Canonicalization, Discovery, and Revalidation](../docs/Architecture/Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md) (`CKES-PAR-*` provisionals). [AAR-0001](../docs/Architecture/Audits/AAR-0001-poc-vs-economical-canonicalization-direction.md) records gaps.
+
+| Capability | Direction | POC today |
+|------------|-----------|-----------|
+| Discovery cascade | Exact → lexical/NLP → vector → compatibility | Exact + `pg_trgm` in `hybridRetrieve` |
+| LLM adjudication | Escalation-gated; batch/reuse | Per-candidate `adjudicateSemantic` |
+| Prior decision reuse | Adjudication store | Not implemented |
+| Vector indexes | Derived, rebuildable | Not implemented |
+| Candidate lifecycle | Explicit states; identity layers | `pending` candidates only |
+| False-merge rollback | PAR-0031–0035 | Not implemented |
+| Multi-domain evidence | Required for CKES-0001 promotion | Culinary/recipe-centric |
+
+This documentation pass does **not** implement deferred features; see work items below.
+
+## POC evidence program
+
+Record **baselines** before claiming improved economics (direction doc §12): corpus mix, candidates per source, LLM calls per candidate, tokens/USD, matching accuracy, false-merge and missed-match methods, latency, human review effort, comparable runs at fixed policy version and commit.
+
+**Collect evidence for:** matching accuracy; false merges; escalation; LLM-cost reduction; prior-decision reuse; batching; vector-index rebuild; revalidation; multi-domain applicability (W-MULTI).
+
+## Traceable work items
+
+Linked to [integration report](../docs/Development/Economical_Canonicalization_Handover_Integration_Report.md#poc-work-items-deferred-implementation): W-VEC, W-BATCH, W-REUSE, W-LIFECYCLE, W-REVAL, W-ROLLBACK, W-MULTI — each maps to `CKES-PAR-*` and validation matrix rows T-01–T-16.
+
 ## Related Documents
 
 - [Reference Implementation Role and Domain Independence](../docs/Architecture/Reference_Implementation_Role_and_Domain_Independence.md)
+- [Economical LLM-Assisted Canonicalization, Discovery, and Revalidation](../docs/Architecture/Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md)
 - [Source Change Contract](../docs/Architecture/Source_Change_Contract.md)
 - [ADR-0002](../docs/Architecture/ADRs/ADR-0002-poc-typescript-postgresql.md)
+- [ADR-0003](../docs/Architecture/ADRs/ADR-0003-economical-llm-canonicalization-cascade.md) (Proposed)

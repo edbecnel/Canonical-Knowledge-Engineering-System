@@ -14,6 +14,7 @@
 - [Recipe Vault Source Integration](../Architecture/Recipe_Vault_Source_Integration.md) — authoritative TRV integration architecture
 - [Recipe Vault Change Proposals](Recipe_Vault_Change_Proposals.md) — superseded; POC synthetic schema notes
 - [POC README](../../poc/README.md) — experimental reference implementation
+- [Economical Canonicalization Handover Integration Report](Economical_Canonicalization_Handover_Integration_Report.md) — 2026-09-19 integration and validation closure
 
 ## Related Documents
 

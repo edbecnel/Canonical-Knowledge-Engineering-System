@@ -294,6 +294,14 @@ Candidate generic CKES capabilities include:
 -   canonicalization rigor and escalation;
 -   cost and quality measurement.
 
+The economical LLM-assisted **discovery cascade**, provisional
+requirements (`CKES-PAR-*`), and validation matrix are defined in
+[Economical LLM-Assisted Canonicalization, Discovery, and
+Revalidation](Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md)
+(see [ADR-0003](ADRs/ADR-0003-economical-llm-canonicalization-cascade.md),
+Proposed). LLM outputs remain governed assessments, not canonical truth;
+vectors and lexical indexes are derived discovery mechanisms only.
+
 Some remain experimental until cross-domain evidence shows they are
 genuinely reusable.
 

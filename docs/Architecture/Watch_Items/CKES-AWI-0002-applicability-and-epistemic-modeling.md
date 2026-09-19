@@ -20,3 +20,4 @@ How should context, applicability, and epistemic status affect canonicalization 
 
 - [CRA AWI-0002](https://github.com/edbecnel/Canonical-Representation-Architecture/blob/main/docs/Architecture/Watch_Items/AWI-0002-applicability-and-epistemic-modeling.md)
 - [CALS Canonicalization Policy](../../../../poc/packages/policy/CALS_Culinary_Knowledge_Canonicalization_Policy.md)
+- [Economical LLM-Assisted Canonicalization, Discovery, and Revalidation](../Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md) — compatibility analysis (`CKES-PAR-0013`), matrix T-04–T-05

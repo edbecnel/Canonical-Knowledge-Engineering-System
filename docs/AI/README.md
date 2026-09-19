@@ -8,7 +8,7 @@ AI-assisted engineering practices, tool roles, model selection, prompting, verif
 
 ## Authoritative Documents
 
-- Add links to authoritative documents in this domain.
+- [Cost Optimization](Cost_Optimization.md) — economic canonicalization principles and POC instrumentation
 
 ## What Belongs Here
 
@@ -18,6 +18,7 @@ Add documents whose primary responsibility matches this domain.
 
 - [Project Index](../../PROJECT_INDEX.md)
 - [Project README](../../README.md)
+- [Economical LLM-Assisted Canonicalization, Discovery, and Revalidation](../Architecture/Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md)
 
 ## Maintenance
 

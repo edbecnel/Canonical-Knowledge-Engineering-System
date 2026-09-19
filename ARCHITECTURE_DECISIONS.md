@@ -8,6 +8,7 @@
 |-----|-------|--------|
 | [ADR-0001](docs/Architecture/ADRs/ADR-0001-ckes-adopts-edf-asr-bootstrap.md) | CKES Adopts EDF ASR Bootstrap with Core Profile | Accepted |
 | [ADR-0002](docs/Architecture/ADRs/ADR-0002-poc-typescript-postgresql.md) | POC Uses TypeScript and PostgreSQL | Accepted |
+| [ADR-0003](docs/Architecture/ADRs/ADR-0003-economical-llm-canonicalization-cascade.md) | Economical LLM-Assisted Canonicalization Cascade | Proposed |
 
 ## Related Documents
 
