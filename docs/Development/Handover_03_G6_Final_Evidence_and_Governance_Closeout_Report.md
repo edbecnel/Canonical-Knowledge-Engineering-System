@@ -131,7 +131,7 @@ Accepted for Handover 3 scope: documentation-tier scores; navigation/governance 
 
 ## Git commit
 
-Recorded after commit.
+- `c159272d34f161f33623b9ff3d7e8fb09bee4122` — G6 manifest, report, AAR-0002, governance reconciliation
 
 ---
 
