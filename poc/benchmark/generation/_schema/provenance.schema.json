@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BenchmarkPackProvenance",
+  "type": "object",
+  "required": ["packId", "generator", "counts"],
+  "properties": {
+    "packId": { "type": "string" },
+    "generator": {
+      "type": "object",
+      "properties": {
+        "tool": { "type": "string" },
+        "modelId": { "type": "string" },
+        "promptTemplateVersionOrHash": { "type": "string" },
+        "seedSourceHash": { "type": "string" }
+      }
+    },
+    "distributions": {
+      "type": "object",
+      "properties": {
+        "transformationType": { "type": "object" },
+        "domain": { "type": "object" },
+        "labelConfidenceClass": { "type": "object" }
+      }
+    },
+    "review": {
+      "type": "object",
+      "properties": {
+        "method": { "type": "string" },
+        "reviewerId": { "type": "string" },
+        "reviewerModelFamily": { "type": "string" },
+        "independentOfGenerator": { "type": "boolean" },
+        "humanApprovalEvent": { "type": "string" }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "required": ["generated", "rejected", "disputed", "released"],
+      "properties": {
+        "generated": { "type": "integer" },
+        "rejected": { "type": "integer" },
+        "disputed": { "type": "integer" },
+        "released": { "type": "integer" },
+        "exclusionReasons": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "constructionRulesDocumented": { "type": "boolean" }
+  }
+}

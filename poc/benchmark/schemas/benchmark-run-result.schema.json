@@ -57,7 +57,12 @@
             "failed_infrastructure",
             "failed_validation"
           ]
-        }
+        },
+        "dryRun": { "type": "boolean" },
+        "runProfileId": { "type": "string" },
+        "runProfileContentHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "scorerVersion": { "type": "string" },
+        "trialPolicySnapshot": { "type": "object", "additionalProperties": true }
       }
     },
     "economics": {

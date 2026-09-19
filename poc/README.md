@@ -63,6 +63,17 @@ npm run harness:test
 
 Packages: `@ckes/harness`, `@ckes/scenario-lab-api`, `ckes-scenario-lab` (UI). See [Handover 02 Integration Report](../docs/Development/Handover_02_Benchmark_Integration_Report.md).
 
+## Handover 3 G1 (qualification & scoring tooling)
+
+```bash
+npm run benchmark:qualify -- --pack=benchmark/fixtures/CKES-SMOKE-HARNESS-001.json
+npm run benchmark:profile-validate
+npm run benchmark:integrity -- --pack=benchmark/fixtures/CKES-SMOKE-HARNESS-001.json
+npm run benchmark:report -- --run=experiments/runs/<id>.json --pack=benchmark/fixtures/CKES-SMOKE-HARNESS-001.json
+```
+
+Official packs, frozen runs, and Reference Baseline 001 require G2–G5 authorization. See [Handover 03 G1 Report](../docs/Development/Handover_03_G1_Implementation_Report.md).
+
 ## Target architecture (direction vs current)
 
 Authoritative direction: [Economical LLM-Assisted Canonicalization, Discovery, and Revalidation](../docs/Architecture/Economical_LLM_Assisted_Canonicalization_Discovery_and_Revalidation.md) (`CKES-PAR-*` provisionals). [AAR-0001](../docs/Architecture/Audits/AAR-0001-poc-vs-economical-canonicalization-direction.md) records gaps.

@@ -7,8 +7,9 @@ import {
   HarnessRunner,
   compareRunCompatibility,
   designateReference,
-  defaultHarnessRoots,
+  assertDesignatableReferenceBaseline,
 } from '@ckes/harness';
+import { validateBenchmarkRunProfile } from '@ckes/benchmark';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const pocRoot = join(__dirname, '..');
@@ -23,9 +24,20 @@ async function main(): Promise<void> {
   try {
     if (cmd === 'run') {
       const packArg = rest.find((a) => a.startsWith('--pack='))?.split('=')[1];
-      if (!packArg) throw new Error('Usage: benchmark-cli run --pack=<file.json>');
-      const packPath = join(pocRoot, 'benchmark/fixtures', packArg);
+      const profileArg = rest.find((a) => a.startsWith('--profile='))?.split('=')[1];
+      if (!packArg) throw new Error('Usage: benchmark-cli run --pack=<path-or-file.json> [--profile=<profile.json>]');
+      const packPath = packArg.includes('/')
+        ? join(pocRoot, packArg)
+        : join(pocRoot, 'benchmark/fixtures', packArg);
       const pack = await HarnessRunner.loadPack(packPath);
+      let runProfile: Record<string, unknown> | undefined;
+      if (profileArg) {
+        const profilePath = profileArg.includes('/')
+          ? join(pocRoot, profileArg)
+          : join(pocRoot, 'experiments/run-profiles', profileArg);
+        runProfile = JSON.parse(await readFile(profilePath, 'utf8')) as Record<string, unknown>;
+        validateBenchmarkRunProfile(runProfile);
+      }
       const runner = new HarnessRunner();
       const result = await runner.startRun({
         packPath,
@@ -33,9 +45,11 @@ async function main(): Promise<void> {
         runsDir,
         pool,
         concurrency: 1,
-        deterministicAi: true,
-        databaseProfile: 'clean',
-        retrievalMode: 'deterministic_fixture',
+        deterministicAi: runProfile?.deterministicAi as boolean ?? true,
+        databaseProfile: (runProfile?.databaseProfile as 'clean' | 'warm') ?? 'clean',
+        retrievalMode: (runProfile?.retrievalMode as string) ?? 'deterministic_fixture',
+        runProfile,
+        dryRun: runProfile?.dryRun as boolean,
       });
       console.log(JSON.stringify(result, null, 2));
     } else if (cmd === 'reference' && rest[0] === 'designate') {
@@ -43,6 +57,9 @@ async function main(): Promise<void> {
       const label = rest.find((a) => a.startsWith('--label='))?.split('=')[1];
       const hash = rest.find((a) => a.startsWith('--hash='))?.split('=')[1];
       if (!runId || !label || !hash) throw new Error('reference designate --run= --label= --hash=');
+      if (label === 'reference_baseline_001') {
+        throw new Error('reference_baseline_001 designation requires G5 authorization');
+      }
       const event = await designateReference({
         designationsDir,
         runId,

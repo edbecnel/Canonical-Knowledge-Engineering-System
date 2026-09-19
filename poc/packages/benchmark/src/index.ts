@@ -7,3 +7,8 @@ export * from './render-markdown.js';
 export * from './harness-interfaces.js';
 export * from './browser-projection.js';
 export * from './scoring.js';
+export * from './scorer-meta.js';
+export * from './trial-policy.js';
+export * from './profile-hash.js';
+export * from './qualify.js';
+export * from './report.js';

@@ -5,3 +5,4 @@ export * from './reference-designation.js';
 export * from './compare.js';
 export * from './run-state.js';
 export * from './atomic-write.js';
+export * from './run-integrity.js';

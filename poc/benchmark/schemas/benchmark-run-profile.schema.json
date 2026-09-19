@@ -10,6 +10,10 @@
     "profileId": { "type": "string" },
     "description": { "type": "string" },
     "recordedDate": { "type": "string", "format": "date" },
+    "dryRun": { "type": "boolean" },
+    "retrievalMode": { "type": "string" },
+    "isolationMode": { "type": "string", "enum": ["truncate_between_scenarios"] },
+    "deterministicAi": { "type": "boolean" },
     "anchors": {
       "type": "object",
       "additionalProperties": false,
@@ -23,11 +27,19 @@
         "policyFile": { "type": "string" },
         "policyVersion": { "type": "string" },
         "openaiMode": { "type": "string" },
-        "openaiModeDetail": { "type": "object", "additionalProperties": true }
+        "openaiModeDetail": { "type": "object", "additionalProperties": true },
+        "harnessPackageVersion": { "type": "string" },
+        "scorerVersion": { "type": "string" }
       }
     },
     "databaseProfile": { "type": "string", "enum": ["clean", "warm"] },
     "warmStateRef": { "type": "string" },
+    "trialPolicy": { "$ref": "#/$defs/trialPolicy" },
+    "dryRunScenarioIds": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Optional subset for dry runs only"
+    },
     "commands": {
       "type": "object",
       "additionalProperties": false,
@@ -37,5 +49,36 @@
       }
     },
     "relatedDocs": { "type": "array", "items": { "type": "string" } }
+  },
+  "$defs": {
+    "trialPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["defaultTrials", "onCeilingExhausted", "incompleteTrialsInvalidate", "aggregation"],
+      "properties": {
+        "defaultTrials": { "type": "integer", "minimum": 1 },
+        "byExecutionClass": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["executionMode", "trials"],
+            "properties": {
+              "executionMode": { "type": "string", "enum": ["decision_slice", "full_pipeline"] },
+              "llmPolicy": { "type": "string", "enum": ["required", "allowed", "not_required", "prohibited"] },
+              "trials": { "type": "integer", "minimum": 1 }
+            }
+          }
+        },
+        "modelCallLimit": { "type": "integer", "minimum": 0 },
+        "tokenCeiling": { "type": "integer", "minimum": 0 },
+        "budgetUsdCeiling": { "type": "number", "minimum": 0 },
+        "timeoutMsPerTrial": { "type": "integer", "minimum": 0 },
+        "maxRetriesPerTrial": { "type": "integer", "minimum": 0 },
+        "onCeilingExhausted": { "type": "string", "enum": ["fail_scenario", "fail_run"] },
+        "incompleteTrialsInvalidate": { "type": "string", "enum": ["scenario", "run"] },
+        "aggregation": { "type": "string", "enum": ["majority_pass", "worst_case_safety"] }
+      }
+    }
   }
 }

@@ -111,11 +111,16 @@ function validatePackSemantics(doc: Record<string, unknown>): void {
     }
   }
 
+  const unresolvedLabels = new Set(['human_review_required', 'research_unresolved']);
   if (packStatus === 'released') {
     for (const scenario of scenarios) {
       const st = scenario.status as string;
-      if (st === 'draft') {
-        throw new Error(`Released pack cannot contain draft scenario ${scenario.scenarioId}`);
+      const sid = scenario.scenarioId as string;
+      if (st === 'draft' || st === 'reviewed') {
+        throw new Error(`Released pack cannot contain non-released scenario ${sid} (status=${st})`);
+      }
+      if (st === 'released' && unresolvedLabels.has(scenario.labelConfidenceClass as string)) {
+        throw new Error(`Released pack cannot contain unresolved label on scenario ${sid}`);
       }
     }
   }

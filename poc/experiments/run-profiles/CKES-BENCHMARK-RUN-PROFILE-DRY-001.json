@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "profileId": "CKES-BENCHMARK-RUN-PROFILE-DRY-001",
+  "description": "Dry-run profile — never designatable as Reference Baseline 001.",
+  "recordedDate": "2026-09-19",
+  "dryRun": true,
+  "retrievalMode": "deterministic_fixture",
+  "isolationMode": "truncate_between_scenarios",
+  "deterministicAi": true,
+  "anchors": {
+    "gitCommit": "REPLACE_AT_EXECUTION",
+    "harnessPackageVersion": "0.1.0",
+    "scorerVersion": "1.0.0-g1"
+  },
+  "databaseProfile": "clean",
+  "dryRunScenarioIds": [],
+  "trialPolicy": {
+    "defaultTrials": 1,
+    "onCeilingExhausted": "fail_scenario",
+    "incompleteTrialsInvalidate": "scenario",
+    "aggregation": "majority_pass"
+  },
+  "relatedDocs": [
+    "docs/Development/Handover_03_Implementation_Plan.md"
+  ]
+}

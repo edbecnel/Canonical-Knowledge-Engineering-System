@@ -4,12 +4,17 @@ import { join } from 'node:path';
 import { randomUUID } from 'node:crypto';
 import type { Pool } from 'pg';
 import {
+  aggregateTrialScores,
+  computeProfileContentHash,
   renderBenchmarkRunResultMarkdown,
+  resolveTrialCount,
   scoreScenario,
+  SCORER_VERSION,
   toPipelineInput,
   validateBenchmarkPack,
   validateBenchmarkRunResult,
   type PipelineScenarioInput,
+  type TrialPolicy,
 } from '@ckes/benchmark';
 import { runDecisionSlice, runFullPipelineSlice } from '@ckes/pipeline';
 import { writeFileAtomic } from './atomic-write.js';
@@ -33,6 +38,8 @@ export interface HarnessRunOptions {
   gitCommit?: string;
   databaseProfile?: 'clean' | 'warm';
   retrievalMode?: string;
+  runProfile?: Record<string, unknown>;
+  dryRun?: boolean;
 }
 
 export interface RunEvent {
@@ -63,16 +70,30 @@ export class HarnessRunner extends EventEmitter {
     this.emitEvent('run_state', runId, { state });
 
     const packMeta = options.pack.pack as Record<string, unknown>;
-    const scenarios = (options.pack.scenarios as Record<string, unknown>[]).filter((s) =>
+    const profile = options.runProfile;
+    const dryRun = options.dryRun ?? (profile?.dryRun as boolean) ?? false;
+    const trialPolicy = profile?.trialPolicy as TrialPolicy | undefined;
+    const profileId = profile?.profileId as string | undefined;
+    let profileHash: string | undefined;
+    if (profile) {
+      profileHash = computeProfileContentHash(profile);
+    }
+    const dryIds = profile?.dryRunScenarioIds as string[] | undefined;
+    let scenarios = (options.pack.scenarios as Record<string, unknown>[]).filter((s) =>
       options.scenarioIds?.length ? options.scenarioIds.includes(s.scenarioId as string) : true,
     );
+    if (dryRun && dryIds?.length) {
+      scenarios = scenarios.filter((s) => dryIds.includes(s.scenarioId as string));
+    }
 
     let lifecycle: RunLifecycleState = 'preparing';
     this.emitEvent('run_state', runId, { state: lifecycle });
     await resetHarnessSandbox(options.pool);
 
     let totalCost = 0;
+    let modelCalls = 0;
     let cancelled = false;
+    let runFailedOnCeiling = false;
     const scenarioResults: Record<string, unknown>[] = [];
     lifecycle = 'running';
     this.emitEvent('run_state', runId, { state: lifecycle });
@@ -96,63 +117,131 @@ export class HarnessRunner extends EventEmitter {
           packId: packMeta.packId as string,
           packVersion: packMeta.packVersion as string,
         });
-        if (options.costCeilingUsd != null && totalCost >= options.costCeilingUsd) {
+        const ceiling =
+          options.costCeilingUsd ??
+          trialPolicy?.budgetUsdCeiling ??
+          undefined;
+        if (ceiling != null && totalCost >= ceiling) {
           lifecycle = 'cost_ceiling_reached';
+          runFailedOnCeiling = trialPolicy?.onCeilingExhausted === 'fail_run';
           scenarioResults.push({
             scenarioId,
             executionMode: projected.executionMode,
             outcome: 'not_evaluated',
             explanation: 'Cost ceiling reached before dispatch',
+            incompleteTrialReason: 'budget_ceiling',
           });
-          break;
+          if (runFailedOnCeiling) break;
+          continue;
         }
 
-        const sliceResult =
-          projected.executionMode === 'full_pipeline'
-            ? await runFullPipelineSlice(options.pool, projected, {
-                openaiKey: options.openaiKey,
-                openaiModel: options.openaiModel,
-                deterministicAi: options.deterministicAi ?? true,
-                retrievalMode: options.retrievalMode,
-              })
-            : await runDecisionSlice(options.pool, projected, {
-                openaiKey: options.openaiKey,
-                openaiModel: options.openaiModel,
-                deterministicAi: options.deterministicAi ?? true,
-                retrievalMode: options.retrievalMode,
-              });
+        const trialsRequested = trialPolicy
+          ? resolveTrialCount(trialPolicy, {
+              executionMode: projected.executionMode,
+              llmPolicy: scenario.llmPolicy as string | undefined,
+            })
+          : 1;
+        const trialScores: ReturnType<typeof scoreScenario>[] = [];
+        const trialRows: Record<string, unknown>[] = [];
+        let trialsCompleted = 0;
+        let lastSlice: Awaited<ReturnType<typeof runDecisionSlice>> | undefined;
 
-        totalCost += sliceResult.aiCostUsd;
-        const score = scoreScenario(
-          { expectedDecisionClass: scenario.expectedDecisionClass as string },
-          {
+        for (let trialIndex = 0; trialIndex < trialsRequested; trialIndex += 1) {
+          if (trialPolicy?.modelCallLimit != null && modelCalls >= trialPolicy.modelCallLimit) {
+            if (trialPolicy.onCeilingExhausted === 'fail_run') {
+              runFailedOnCeiling = true;
+              break;
+            }
+            break;
+          }
+          const sliceResult =
+            projected.executionMode === 'full_pipeline'
+              ? await runFullPipelineSlice(options.pool, projected, {
+                  openaiKey: options.openaiKey,
+                  openaiModel: options.openaiModel,
+                  deterministicAi: options.deterministicAi ?? true,
+                  retrievalMode: options.retrievalMode ?? (profile?.retrievalMode as string),
+                })
+              : await runDecisionSlice(options.pool, projected, {
+                  openaiKey: options.openaiKey,
+                  openaiModel: options.openaiModel,
+                  deterministicAi: options.deterministicAi ?? true,
+                  retrievalMode: options.retrievalMode ?? (profile?.retrievalMode as string),
+                });
+          lastSlice = sliceResult;
+          if (sliceResult.usedAi) modelCalls += 1;
+          totalCost += sliceResult.aiCostUsd;
+          trialsCompleted += 1;
+          const expectations = {
+            expectedDecisionClass: scenario.expectedDecisionClass as string,
+            expectedIdentity: scenario.expectedIdentity as Record<string, unknown> | undefined,
+            mustNotMatchIdentities: scenario.mustNotMatchIdentities as unknown[],
+            acceptableAlternatives: scenario.acceptableAlternatives as unknown[],
+            labelConfidenceClass: scenario.labelConfidenceClass as string,
+          };
+          const score = scoreScenario(expectations, {
             adjudicationClass: sliceResult.adjudicationClass,
             policyAction: sliceResult.policyAction,
-          },
-        );
+            matchedSeedId: undefined,
+          });
+          trialScores.push(score);
+          trialRows.push({
+            trialIndex,
+            outcome: score.outcome,
+            actualDecisionClass: sliceResult.adjudicationClass,
+            economics: {
+              currency: 'USD',
+              costKind: sliceResult.usedAi ? 'estimated' : 'zero',
+              amountUsd: sliceResult.aiCostUsd,
+              pricingSnapshotId: options.pricingSnapshotId ?? 'harness-default',
+              latencyMs: sliceResult.latencyMs,
+              latencyUnit: 'ms',
+            },
+          });
+        }
+
+        if (runFailedOnCeiling) break;
+
+        const agg =
+          trialScores.length > 0
+            ? aggregateTrialScores(trialScores, trialPolicy?.aggregation ?? 'worst_case_safety')
+            : { outcome: 'not_evaluated' as const };
+        const sliceResult = lastSlice;
+        if (
+          trialPolicy &&
+          trialsCompleted < trialsRequested &&
+          trialPolicy.incompleteTrialsInvalidate === 'run'
+        ) {
+          runFailedOnCeiling = true;
+        }
 
         scenarioResults.push({
           scenarioId,
           executionMode: projected.executionMode,
-          outcome: score.outcome,
-          failureClassification: score.failureClassification,
-          failureLayer: sliceResult.failureLayer,
-          actualDecisionClass: sliceResult.adjudicationClass,
-          explanation: `policy=${sliceResult.policyAction}`,
-          economics: {
-            currency: 'USD',
-            costKind: sliceResult.usedAi ? 'estimated' : 'zero',
-            amountUsd: sliceResult.aiCostUsd,
-            pricingSnapshotId: options.pricingSnapshotId ?? 'harness-default',
-            latencyMs: sliceResult.latencyMs,
-            latencyUnit: 'ms',
-          },
+          outcome: agg.outcome,
+          failureClassification: agg.failureClassification,
+          failureLayer: sliceResult?.failureLayer,
+          actualDecisionClass: sliceResult?.adjudicationClass,
+          explanation: sliceResult ? `policy=${sliceResult.policyAction}` : 'no trial completed',
+          trialsRequested,
+          trialsCompleted,
+          trials: trialRows,
+          economics: sliceResult
+            ? {
+                currency: 'USD',
+                costKind: sliceResult.usedAi ? 'estimated' : 'zero',
+                amountUsd: sliceResult.aiCostUsd,
+                pricingSnapshotId: options.pricingSnapshotId ?? 'harness-default',
+                latencyMs: sliceResult.latencyMs,
+                latencyUnit: 'ms',
+              }
+            : undefined,
           scoring: {
             expectedDecisionClass: scenario.expectedDecisionClass,
             expectedVersusActual: {
               expected: scenario.expectedDecisionClass,
-              actual: sliceResult.adjudicationClass,
-              policyAction: sliceResult.policyAction,
+              actual: sliceResult?.adjudicationClass,
+              policyAction: sliceResult?.policyAction,
             },
           },
         });
@@ -168,25 +257,33 @@ export class HarnessRunner extends EventEmitter {
     }
 
     if (cancelled) lifecycle = 'cancelled';
-    else if (lifecycle === 'cost_ceiling_reached') lifecycle = 'completed_partial';
+    else if (lifecycle === 'cost_ceiling_reached' || runFailedOnCeiling) lifecycle = 'completed_partial';
     else lifecycle = 'completed';
 
     const result = {
       schemaVersion: '1.0.0',
       run: {
         runId,
-        runType: 'experiment',
+        runType: dryRun ? 'qualification' : 'experiment',
         lifecycleState: lifecycle,
         packId: packMeta.packId,
         packVersion: packMeta.packVersion,
         packContentHash: packMeta.contentHash,
         startedAt: new Date().toISOString(),
         completedAt: new Date().toISOString(),
-        databaseProfile: options.databaseProfile ?? 'clean',
-        retrievalMode: options.retrievalMode ?? 'deterministic_fixture',
+        databaseProfile:
+          options.databaseProfile ?? (profile?.databaseProfile as 'clean' | 'warm') ?? 'clean',
+        retrievalMode:
+          options.retrievalMode ??
+          (profile?.retrievalMode as string) ??
+          'deterministic_fixture',
         executionMode: 'decision_slice',
-        gitCommit: options.gitCommit ?? 'unknown',
-        lifecycleState: lifecycle,
+        gitCommit: options.gitCommit ?? (profile?.anchors as Record<string, string>)?.gitCommit ?? 'unknown',
+        dryRun,
+        runProfileId: profileId,
+        runProfileContentHash: profileHash,
+        scorerVersion: SCORER_VERSION,
+        trialPolicySnapshot: trialPolicy ?? undefined,
       },
       scenarios: scenarioResults,
       aggregates: {

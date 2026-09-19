@@ -7,7 +7,8 @@ export type ReferenceDesignationLabel =
   | 'smoke_reference'
   | 'development_reference'
   | 'harness_comparison_fixture'
-  | 'non_architectural_test_baseline';
+  | 'non_architectural_test_baseline'
+  | 'reference_baseline_001';
 
 export interface ReferenceDesignationEvent {
   eventId: string;
@@ -36,7 +37,12 @@ export async function designateReference(params: {
   label: ReferenceDesignationLabel;
   designatedBy: string;
   runTerminalState: string;
+  /** Set true only after architect G5 authorization. */
+  allowOfficialReferenceBaseline?: boolean;
 }): Promise<ReferenceDesignationEvent> {
+  if (params.label === 'reference_baseline_001' && !params.allowOfficialReferenceBaseline) {
+    throw new Error('reference_baseline_001 designation requires G5 authorization');
+  }
   if (params.runTerminalState !== 'completed') {
     throw new Error(
       'Only fully completed runs may be designated; partial or cancelled runs are excluded',

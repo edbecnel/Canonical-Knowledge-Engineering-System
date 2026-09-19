@@ -25,6 +25,10 @@
     "benchmark:migrate-profile": "tsx scripts/migrate-baseline-yaml-to-run-profile.ts",
     "benchmark:test": "npm run test --workspace @ckes/benchmark",
     "benchmark:cli": "tsx scripts/benchmark-cli.ts",
+    "benchmark:qualify": "tsx scripts/benchmark-qualify.ts",
+    "benchmark:report": "tsx scripts/benchmark-report.ts",
+    "benchmark:profile-validate": "tsx scripts/benchmark-profile-validate.ts",
+    "benchmark:integrity": "tsx scripts/benchmark-integrity.ts",
     "harness:test": "npm run test --workspace @ckes/harness",
     "scenario-lab:api": "tsx packages/scenario-lab-api/src/server.ts",
     "scenario-lab:dev": "npm run dev --workspace ckes-scenario-lab"

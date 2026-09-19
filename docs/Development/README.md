@@ -19,6 +19,9 @@
 - [CKES POC Handover 01 brief](CKES_POC_Handover_01_Benchmark_Architecture_and_JSON_Contracts.md) — archived handover source (integrated)
 - [Handover 02 Benchmark Integration Report](Handover_02_Benchmark_Integration_Report.md) — harness, Scenario Lab, smoke pack (2026-09-19)
 - [CKES POC Handover 02 brief](CKES_POC_Handover_02_Scenario_Harness_and_Lab.md) — archived handover source (integrated)
+- [Handover 03 Implementation Plan](Handover_03_Implementation_Plan.md) — benchmark generation, qualification, Reference Baseline 001 (G1 complete)
+- [Handover 03 G1 Implementation Report](Handover_03_G1_Implementation_Report.md) — qualification/scoring tooling (2026-09-19)
+- [CKES POC Handover 03 brief](CKES_POC_Handover_03_Benchmark_Generation_and_Reference_Baseline.md) — handover source (planning)
 
 ## Related Documents
 

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "profileId": "CKES-BENCHMARK-RUN-PROFILE-REF-CLEAN-001",
+  "description": "Reference clean profile template (G1 — not frozen until G3). Official baseline run matrix only after G4.",
+  "recordedDate": "2026-09-19",
+  "dryRun": false,
+  "retrievalMode": "deterministic_fixture",
+  "isolationMode": "truncate_between_scenarios",
+  "deterministicAi": true,
+  "anchors": {
+    "gitCommit": "REPLACE_AT_EXECUTION",
+    "policyFile": "packages/policy/cals-policy.v1.json",
+    "policyVersion": "1.0.0",
+    "openaiMode": "deterministic_off",
+    "harnessPackageVersion": "0.1.0",
+    "scorerVersion": "1.0.0-g1"
+  },
+  "databaseProfile": "clean",
+  "trialPolicy": {
+    "defaultTrials": 1,
+    "byExecutionClass": [
+      { "executionMode": "decision_slice", "llmPolicy": "required", "trials": 3 },
+      { "executionMode": "full_pipeline", "llmPolicy": "required", "trials": 3 }
+    ],
+    "modelCallLimit": 5000,
+    "tokenCeiling": 2000000,
+    "budgetUsdCeiling": 25,
+    "timeoutMsPerTrial": 120000,
+    "maxRetriesPerTrial": 1,
+    "onCeilingExhausted": "fail_run",
+    "incompleteTrialsInvalidate": "run",
+    "aggregation": "worst_case_safety"
+  },
+  "relatedDocs": [
+    "docs/Development/Handover_03_Implementation_Plan.md",
+    "docs/Architecture/Benchmark_Evaluation_Architecture.md"
+  ]
+}
