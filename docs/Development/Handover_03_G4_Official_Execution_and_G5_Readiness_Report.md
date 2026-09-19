@@ -213,7 +213,9 @@ Failed/partial safety posture requires investigation before G5; designation must
 
 ## Git commit
 
-Recorded after commit.
+- `93549f85b0ef1e95de31b2cb22694a63ffdac92e` — G4 driver, immutable results, derived reports, this document
+
+Official runs were executed at CKES git `291d35f18d7d1e1d461b82decdfb57ac7e564f22` (recorded in each run header).
 
 ---
 

@@ -135,7 +135,7 @@ function analyzeEvaluationCapture(runResult: Record<string, unknown>): {
   const scenarios = runResult.scenarios as Record<string, unknown>[];
   const byStatus: Record<string, number> = {};
   const presentUnmapped: Array<{ scenarioId: string; capture: unknown }> = [];
-  const mustNotMatchViolations: string[] = [];
+  const falseMergeScenarioIds: string[] = [];
   for (const s of scenarios) {
     const cap = s.evaluationCapture as Record<string, unknown> | undefined;
     const status = (cap?.identityEvidenceStatus as string) ?? 'missing_capture';
@@ -144,10 +144,10 @@ function analyzeEvaluationCapture(runResult: Record<string, unknown>): {
       presentUnmapped.push({ scenarioId: s.scenarioId as string, capture: cap });
     }
     if (s.failureClassification === 'false_merge') {
-      mustNotMatchViolations.push(s.scenarioId as string);
+      falseMergeScenarioIds.push(s.scenarioId as string);
     }
   }
-  return { byStatus, presentUnmapped, mustNotMatchViolations };
+  return { byStatus, presentUnmapped, falseMergeScenarioIds };
 }
 
 function trialCompliance(runResult: Record<string, unknown>): string[] {
