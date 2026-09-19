@@ -128,4 +128,4 @@ These reflect pre-improvement CKES behavior under REF-CLEAN measurement and are 
 
 ## Git commit
 
-Recorded after commit.
+- `353b47f7d12a68cdc34d09dd43deafcf2dd70c32` — G5 designation script, sidecars, this report
