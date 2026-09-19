@@ -103,7 +103,7 @@ Adjudication and policy code paths unmodified. Post-decision evaluation field on
 
 ## Git commit
 
-Recorded after commit.
+- `830e4a9a5169be4383e69e7be33ede261be3be54` — G3.1 implementation, schema, report, Development README index
 
 ## Next step
 
