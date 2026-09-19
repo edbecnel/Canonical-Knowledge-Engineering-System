@@ -145,7 +145,7 @@ Deterministic adjudication in [`adjudication.ts`](../../poc/packages/pipeline/sr
 
 ## Git commit
 
-Recorded after commit.
+`a2beafd24a71f8c77c9f6ea7471d1fa2bbfa5f87` — Complete Handover 04 H4.3 debug-assisted forensic investigations.
 
 ---
 
